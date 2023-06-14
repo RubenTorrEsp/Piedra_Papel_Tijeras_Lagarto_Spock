@@ -7,9 +7,20 @@ public class Programa {
 
     String entrada = "";
     String seleccionJuego = "";
-    String victoriaPapel = "el papel ENVUELVE a la piedra";
+
+    //Victorias papel
+    String victoriaPapelvsPiedra = "el papel ENVUELVE a la piedra";
+    String victoriaPapelvsSpock = "el papel DESAUTORIZA a Spock";
+
+    //Victorias piedra
     String victoriaPiedra = "la piedra ROMPE a las tijeras";
+
+    //Victorias tijeras
     String victoriaTijeras = "las tijeras CORTAN al papel";
+
+    //Victorias lagarto
+
+    //Victorias spock
 
     List<String> elementos = List.of(new String[]{"piedra", "papel", "tijeras", "salir", "1", "2", "3", "0"});
 
@@ -59,10 +70,10 @@ public class Programa {
                 switch (entrada) {
                     case "piedra","1":
                         if (seleccionJuego == "tijeras") System.out.println("¡¡¡Has ganado!!! Porque " + victoriaPiedra);
-                        else System.out.println("Lo siento, has perdido, porque " + victoriaPapel);
+                        else System.out.println("Lo siento, has perdido, porque " + victoriaPapelvsPiedra);
                         break;
                     case "papel","2":
-                        if (seleccionJuego == "piedra") System.out.println("¡¡¡Has ganado!!! Porque " + victoriaPapel);
+                        if (seleccionJuego == "piedra") System.out.println("¡¡¡Has ganado!!! Porque " + victoriaPapelvsPiedra);
                         else System.out.println("Lo siento, has perdido, porque " + victoriaTijeras);
                         break;
                     case "tijeras","3":

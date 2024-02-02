@@ -22,7 +22,7 @@ public class Programa {
 
     //Victorias spock
 
-    List<String> elementos = List.of(new String[]{"piedra", "papel", "tijeras", "salir", "1", "2", "3", "0"});
+    List<String> elementos = List.of(new String[]{"piedra", "papel", "tijeras", "lagarto", "Spock", "salir", "1", "2", "3", "0"});
 
     Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +35,7 @@ public class Programa {
 
     public void darBienvenida() {
         System.out.println("Bienvenido al juego Piedra, Papel, Tijeras!\nSeleccione su opción con nombre o número, o elija salir:");
-        System.out.println("1 - Piedra\n2 - Papel\n3 - Tijeras\n\n0 - Salir");
+        System.out.println("1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir");
         System.out.println("-----------------------------------------------");
     }
 
@@ -83,6 +83,9 @@ public class Programa {
                         else System.out.println("Lo siento, has perdido, porque " + victoriaPiedra);
                         break;
                     case "lagarto","4":
+                        System.out.println("Todavía no disponible. Vuelva a intentarlo pronto");
+                        break;
+                    case "Spock","5":
                         System.out.println("Todavía no disponible. Vuelva a intentarlo pronto");
                         break;
                 }

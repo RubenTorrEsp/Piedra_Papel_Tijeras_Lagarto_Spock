@@ -8,6 +8,7 @@ public class Main {
         boolean rejugar = false;
         if(!entrada.contains("salir")) {
             System.out.println("Si quiere volver a jugar, escriba \"si\"");
+            @SuppressWarnings("resource")
             Scanner scanner = new Scanner(System.in);
             String respuesta = scanner.nextLine().toLowerCase();
             if (respuesta.contains("si")) rejugar = true;

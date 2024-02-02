@@ -56,6 +56,8 @@ public class Programa {
         if (entrada.equals("1")) nuevaEntrada = "piedra";
         if (entrada.equals("2")) nuevaEntrada = "papel";
         if (entrada.equals("3")) nuevaEntrada = "tijeras";
+        if (entrada.equals("4")) nuevaEntrada = "lagarto";
+        if (entrada.equals("5")) nuevaEntrada = "Spock";
         if (entrada.equals("0")) nuevaEntrada = "salir";
         return nuevaEntrada;
     }

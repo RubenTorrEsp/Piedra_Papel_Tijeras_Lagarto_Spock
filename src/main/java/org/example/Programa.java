@@ -82,6 +82,9 @@ public class Programa {
                         if (seleccionJuego == "papel") System.out.println("¡¡¡Has ganado!!! Porque " + victoriaTijeras);
                         else System.out.println("Lo siento, has perdido, porque " + victoriaPiedra);
                         break;
+                    case "lagarto","4":
+                        System.out.println("Todavía no disponible. Vuelva a intentarlo pronto");
+                        break;
                 }
             }
         }

@@ -1,37 +1,26 @@
 1 Piedra
 TIJERAS
 LAGARTO
-Papel
-Spock
-
 
 
 2 Papel
 PIEDRA
 SPOCK
-Tijera
-Lagarto
 
 
 
 3 Tijera
 PAPEL
 LAGARTO
-Spock
-Piedra
 
 
 
 4 Lagarto
 PAPEL
 SPOCK
-Piedra
-Tijera
 
 
 
 5 Spock
 PIEDRA
 TIJERAS
-Lagarto
-Papel

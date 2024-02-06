@@ -18,12 +18,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Programa programa;
-        boolean otraPartida = true;
-        while (otraPartida) {
-            programa = new Programa();
-            otraPartida = jugarDeNuevo(programa.entrada);
-        }
+        new ProgramaFinal();
     }
 
 }

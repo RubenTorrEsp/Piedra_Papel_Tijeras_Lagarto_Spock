@@ -21,12 +21,11 @@ public class ProgramaFinal {
         comprobarVictoria();
     }
 
+    //Inicio del programa y presentación de opciones
     public void darBienvenida() {
-        System.out.println("Bienvenido al juego Piedra, Papel, Tijeras!\nSeleccione su opción con nombre o número, o elija salir:");
-        System.out.println("1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir");
-        System.out.println("-----------------------------------------------");
+        System.out.println(Textos.bienvenida);
+        System.out.println(Textos.opciones);
     }
-
     
     public void obtenerEntrada() {
         /*

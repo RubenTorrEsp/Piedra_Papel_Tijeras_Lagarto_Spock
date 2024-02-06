@@ -21,18 +21,18 @@ public class ProgramaFinal {
         comprobarVictoria();
     }
 
-    //Inicio del programa y presentación de opciones
+    // Inicio del programa y presentación de opciones
     public void darBienvenida() {
         System.out.println(Textos.bienvenida);
         System.out.println(Textos.opciones);
     }
     
-    public void obtenerEntrada() {
-        /*
-        entrada = convertirNumeroEnElemento(scanner.nextLine().toLowerCase());
-        System.out.println("Ha seleccionado: \""+entrada+"\"");
-        return entrada;
-        */
+    // Obtener la elección del jugador
+    public String obtenerEntrada() {
+        seleccionJugador = scanner.nextLine().toLowerCase();
+        if(elementos.contains(seleccionJugador)) System.out.println("Has elegido "+seleccionJugador);
+        else System.out.println("Eleccion no permitida");
+        return seleccionJugador;
     }
 
     public void obtenerSeleccionMaquina() {

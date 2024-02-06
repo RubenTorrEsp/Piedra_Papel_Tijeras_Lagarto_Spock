@@ -71,7 +71,7 @@ public class Programa {
             else {
                 switch (entrada) {
                     case "piedra","1":
-                        if (seleccionJuego == "tijeras") System.out.println("¡¡¡Has ganado!!! Porque " + victoriaPiedra);
+                        if (seleccionJuego == "tijeras") System.out.println("¡¡¡Has ganado!!! Porque " + Textos.PiedraTijeras);
                         else System.out.println("Lo siento, has perdido, porque " + victoriaPapelvsPiedra);
                         break;
                     case "papel","2":

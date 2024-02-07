@@ -17,7 +17,6 @@ public class ProgramaFinal {
     public ProgramaFinal(){
         darBienvenida();
         obtenerEntrada();
-        System.out.println("La máquina ha elegido "+obtenerSeleccionMaquina());
         comprobarVictoria();
     }
 
@@ -30,28 +29,33 @@ public class ProgramaFinal {
     // Obtener la elección del jugador
     public String obtenerEntrada() {
         seleccionJugador = scanner.nextLine().toLowerCase();
-        if(elementos.contains(seleccionJugador)) System.out.println("Has elegido "+seleccionJugador);
-        else System.out.println("Eleccion no permitida");
+        if(elementos.contains(seleccionJugador)) {
+            System.out.println("Has elegido "+seleccionJugador);
+            convertirElementoEnNumero(seleccionJugador);
+            obtenerSeleccionMaquina();
+        }
+        else {
+            System.out.println("Eleccion no permitida");
+        }
         return seleccionJugador;
     }
 
+    // Selección de elemento por parte de la máquina
     public String obtenerSeleccionMaquina() {
         int valorJuego = (int) (Math.random() * 5);
         seleccionOrdenador = elementos.get(valorJuego);
         return seleccionOrdenador;
     }
 
-    public void convertirElementoEnNumero(String entrada) {
-        /*
-        String nuevaEntrada = entrada;
-        if (entrada.equals("1")) nuevaEntrada = "piedra";
-        if (entrada.equals("2")) nuevaEntrada = "papel";
-        if (entrada.equals("3")) nuevaEntrada = "tijeras";
-        if (entrada.equals("4")) nuevaEntrada = "lagarto";
-        if (entrada.equals("5")) nuevaEntrada = "Spock";
-        if (entrada.equals("0")) nuevaEntrada = "salir";
+    public int convertirElementoEnNumero(String entrada) {
+        int nuevaEntrada = 0;
+        if (entrada.equals("piedra")) nuevaEntrada = 1;
+        if (entrada.equals("papel")) nuevaEntrada = 2;
+        if (entrada.equals("tijeras")) nuevaEntrada = 3;
+        if (entrada.equals("spock")) nuevaEntrada = 4;
+        if (entrada.equals("lagarto")) nuevaEntrada = 5;
+        if (entrada.equals("salir")) nuevaEntrada = 0;
         return nuevaEntrada;
-        */
     }
 
     public void comprobarVictoria() {

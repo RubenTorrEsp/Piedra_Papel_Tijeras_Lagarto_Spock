@@ -11,7 +11,7 @@ public class ProgramaFinal {
     String seleccionOrdenador;
 
     // Lista de elementos aceptados
-    List<String> elementos = List.of(new String[]{"piedra", "papel", "tijeras", "lagarto", "Spock", "salir", "1", "2", "3", "4", "5", "0"});
+    List<String> elementos = List.of(new String[]{"piedra", "papel", "tijeras", "spock", "lagarto", "salir", "1", "2", "3", "4", "5", "0"});
 
     // Constructor del programa y ciclo de vida
     public ProgramaFinal(){
@@ -31,8 +31,8 @@ public class ProgramaFinal {
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(elementos.contains(seleccionJugador)) {
             System.out.println("Has elegido "+seleccionJugador);
+            obtenerSeleccionMaquina();
             convertirElementoEnNumero(seleccionJugador);
-            System.out.println("La máquina ha elegido "+obtenerSeleccionMaquina());
         }
         else {
             System.out.println("Selección no válida");
@@ -41,12 +41,14 @@ public class ProgramaFinal {
     }
 
     // Selección de elemento por parte de la máquina
-    public String obtenerSeleccionMaquina() {
+    public int obtenerSeleccionMaquina() {
         int valorJuego = (int) (Math.random() * 5);
-        seleccionOrdenador = elementos.get(valorJuego);
-        return seleccionOrdenador;
+        System.out.println("La máquina ha elegido "+elementos.get(valorJuego));
+        System.out.println("El valor de la eleccion de la máquina es "+Integer.toString(valorJuego));
+        return valorJuego;
     }
 
+    // Comportamiento para convertir la eleccion del jugador en un valor numérico para realizar el juego
     public int convertirElementoEnNumero(String entrada) {
         int nuevaEntrada = 0;
 
@@ -63,13 +65,13 @@ public class ProgramaFinal {
             case "3":
                 nuevaEntrada = 3;
                 break;
-            case "lagarto":
-            case "4":
-                nuevaEntrada = 5;
-                break;
             case "spock":
             case "5":
                 nuevaEntrada = 4;
+                break;
+            case "lagarto":
+            case "4":
+                nuevaEntrada = 5;
                 break;
             default:
                 break;
@@ -81,36 +83,7 @@ public class ProgramaFinal {
     }
 
     public void comprobarVictoria() {
-        /*
-        if(entrada.equals("salir")) System.out.println("Gracias por jugar a Piedra, Papel, Tijeras.");
-        else if(!elementos.contains(entrada)) System.out.println("El elemento seleccionado no es correcto. Ahora moriré.");
-        else {
-            System.out.println("El ordenador ha seleccionado \"" + seleccionJuego + "\"");
-            if (seleccionJuego.contains(entrada)) System.out.println("Empate!!");
-            else {
-                switch (entrada) {
-                    case "piedra","1":
-                        if (seleccionJuego == "tijeras") System.out.println(Textos.victoria + Textos.PiedraTijeras);
-                        else System.out.println(Textos.derrota + Textos.PapelPiedra);
-                        break;
-                    case "papel","2":
-                        if (seleccionJuego == "piedra") System.out.println("¡¡¡Has ganado!!! Porque " + victoriaPapelvsPiedra);
-                        else System.out.println("Lo siento, has perdido, porque " + victoriaTijeras);
-                        break;
-                    case "tijeras","3":
-                        if (seleccionJuego == "papel") System.out.println("¡¡¡Has ganado!!! Porque " + victoriaTijeras);
-                        else System.out.println("Lo siento, has perdido, porque " + victoriaPiedra);
-                        break;
-                    case "lagarto","4":
-                        System.out.println("Todavía no disponible. Vuelva a intentarlo pronto");
-                        break;
-                    case "Spock","5":
-                        System.out.println("Todavía no disponible. Vuelva a intentarlo pronto");
-                        break;
-                }
-            }
-        }
-        */
+
     }
 
 }

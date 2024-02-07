@@ -7,8 +7,8 @@ public class ProgramaFinal {
 
     // Creacion del elemento scanner y strings en los que se guarda el texto captado
     Scanner scanner = new Scanner(System.in);
-    String seleccionJugador = "";
-    String seleccionOrdenador = "";
+    String seleccionJugador;
+    String seleccionOrdenador;
 
     // Lista de elementos aceptados
     List<String> elementos = List.of(new String[]{"piedra", "papel", "tijeras", "lagarto", "Spock", "salir", "1", "2", "3", "4", "5", "0"});
@@ -17,7 +17,7 @@ public class ProgramaFinal {
     public ProgramaFinal(){
         darBienvenida();
         obtenerEntrada();
-        obtenerSeleccionMaquina();
+        System.out.println("La máquina ha elegido "+obtenerSeleccionMaquina());
         comprobarVictoria();
     }
 
@@ -35,15 +35,13 @@ public class ProgramaFinal {
         return seleccionJugador;
     }
 
-    public void obtenerSeleccionMaquina() {
-        /*
-        int valorJuego = (int) (Math.random() * 3);
-        seleccionJuego = elementos.get(valorJuego);
-        return seleccionJuego;
-        */
+    public String obtenerSeleccionMaquina() {
+        int valorJuego = (int) (Math.random() * 5);
+        seleccionOrdenador = elementos.get(valorJuego);
+        return seleccionOrdenador;
     }
 
-    public void convertirNumeroEnElemento(String entrada) {
+    public void convertirElementoEnNumero(String entrada) {
         /*
         String nuevaEntrada = entrada;
         if (entrada.equals("1")) nuevaEntrada = "piedra";

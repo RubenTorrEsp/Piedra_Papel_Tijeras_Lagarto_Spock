@@ -32,7 +32,7 @@ public class ProgramaFinal {
         if(elementos.contains(seleccionJugador)) {
             System.out.println("Has elegido "+seleccionJugador);
             convertirElementoEnNumero(seleccionJugador);
-            obtenerSeleccionMaquina();
+            System.out.println("La máquina ha elegido "+obtenerSeleccionMaquina());
         }
         else {
             System.out.println("Eleccion no permitida");
@@ -49,12 +49,40 @@ public class ProgramaFinal {
 
     public int convertirElementoEnNumero(String entrada) {
         int nuevaEntrada = 0;
+
+        switch (entrada) {
+            case "piedra":
+                System.out.println("La opción es 1");
+                break;
+            case "papel":
+                System.out.println("La opción es 2");
+                break;
+            case "tijeras":
+                System.out.println("La opción es 3");
+                break;
+            case "spock":
+                System.out.println("La opción es 4");
+                break;
+            case "lagarto":
+                System.out.println("La opción es 5");
+                break;
+            case "salir":
+                System.out.println("La opción es 0");
+                break;
+            default:
+                System.out.println("Opción no válida");
+                break;
+        }
+
+        /*
         if (entrada.equals("piedra")) nuevaEntrada = 1;
         if (entrada.equals("papel")) nuevaEntrada = 2;
         if (entrada.equals("tijeras")) nuevaEntrada = 3;
         if (entrada.equals("spock")) nuevaEntrada = 4;
         if (entrada.equals("lagarto")) nuevaEntrada = 5;
         if (entrada.equals("salir")) nuevaEntrada = 0;
+        */
+
         return nuevaEntrada;
     }
 

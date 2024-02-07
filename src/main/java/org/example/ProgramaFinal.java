@@ -35,7 +35,7 @@ public class ProgramaFinal {
             System.out.println("La máquina ha elegido "+obtenerSeleccionMaquina());
         }
         else {
-            System.out.println("Eleccion no permitida");
+            System.out.println("Selección no válida");
         }
         return seleccionJugador;
     }
@@ -52,36 +52,30 @@ public class ProgramaFinal {
 
         switch (entrada) {
             case "piedra":
-                System.out.println("La opción es 1");
+            case "1":
+                nuevaEntrada = 1;
                 break;
             case "papel":
-                System.out.println("La opción es 2");
+            case "2":
+                nuevaEntrada = 2;
                 break;
             case "tijeras":
-                System.out.println("La opción es 3");
-                break;
-            case "spock":
-                System.out.println("La opción es 4");
+            case "3":
+                nuevaEntrada = 3;
                 break;
             case "lagarto":
-                System.out.println("La opción es 5");
+            case "4":
+                nuevaEntrada = 5;
                 break;
-            case "salir":
-                System.out.println("La opción es 0");
+            case "spock":
+            case "5":
+                nuevaEntrada = 4;
                 break;
             default:
-                System.out.println("Opción no válida");
                 break;
         }
 
-        /*
-        if (entrada.equals("piedra")) nuevaEntrada = 1;
-        if (entrada.equals("papel")) nuevaEntrada = 2;
-        if (entrada.equals("tijeras")) nuevaEntrada = 3;
-        if (entrada.equals("spock")) nuevaEntrada = 4;
-        if (entrada.equals("lagarto")) nuevaEntrada = 5;
-        if (entrada.equals("salir")) nuevaEntrada = 0;
-        */
+        System.out.println("El nuevo valor de tu eleccion es " + Integer.toString(nuevaEntrada));
 
         return nuevaEntrada;
     }

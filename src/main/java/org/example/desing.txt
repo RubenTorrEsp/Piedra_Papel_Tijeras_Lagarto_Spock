@@ -8,9 +8,5 @@
  
 5 Lagarto
 
-6 Piedra
-
-7 Papel
-
 
 -Un jugador gana si la posicion de la máquina es Jugador-1 o Jugador+2

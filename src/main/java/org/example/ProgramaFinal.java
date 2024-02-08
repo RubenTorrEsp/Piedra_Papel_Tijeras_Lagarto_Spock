@@ -63,7 +63,7 @@ public class ProgramaFinal {
     public int obtenerSeleccionMaquina() {
         Random random = new Random();
         int valorJuego = random.nextInt(5) + 1;
-        System.out.println("La máquina ha elegido "+elementos.get(valorJuego));
+        System.out.println("La máquina ha elegido "+elementos.get(valorJuego-1));
         System.out.println("El valor de la eleccion de la máquina es "+Integer.toString(valorJuego));
         return valorJuego;
     }

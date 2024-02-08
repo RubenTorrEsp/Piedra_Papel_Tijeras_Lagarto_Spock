@@ -51,7 +51,6 @@ public class ProgramaFinal {
                     break;
             }
             System.out.println("Has elegido "+seleccionJugador);
-            obtenerSeleccionMaquina();
             convertirElementoEnNumero(seleccionJugador);
         }
         else {
@@ -70,7 +69,7 @@ public class ProgramaFinal {
     }
 
     // Comportamiento para convertir la eleccion del jugador en un valor numérico para realizar el juego
-    public int convertirElementoEnNumero(String entrada) {
+    public void convertirElementoEnNumero(String entrada) {
         int nuevaEntrada = 0;
 
         switch (entrada) {
@@ -100,7 +99,8 @@ public class ProgramaFinal {
 
         System.out.println("El nuevo valor de tu eleccion es " + Integer.toString(nuevaEntrada));
 
-        return nuevaEntrada;
+        int valorMaquina = obtenerSeleccionMaquina();
+        comprobarVictoria(nuevaEntrada, valorMaquina);
     }
 
     public void comprobarVictoria(int jugador, int maquina) {

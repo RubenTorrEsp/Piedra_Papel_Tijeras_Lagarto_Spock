@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class ProgramaFinal {
@@ -17,7 +18,7 @@ public class ProgramaFinal {
     public ProgramaFinal(){
         darBienvenida();
         obtenerEntrada();
-        comprobarVictoria();
+        comprobarVictoria(1,1);
     }
 
     // Inicio del programa y presentación de opciones
@@ -30,6 +31,25 @@ public class ProgramaFinal {
     public String obtenerEntrada() {
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(elementos.contains(seleccionJugador)) {
+            switch (seleccionJugador) {
+                case "1":
+                    seleccionJugador = "piedra";
+                    break;
+                case "2":
+                    seleccionJugador = "papel";
+                    break;
+                case "3":
+                    seleccionJugador = "tijeras";
+                    break;
+                case "5":
+                    seleccionJugador = "spock";
+                    break;
+                case "4":
+                    seleccionJugador = "lagarto";
+                    break;
+                default:
+                    break;
+            }
             System.out.println("Has elegido "+seleccionJugador);
             obtenerSeleccionMaquina();
             convertirElementoEnNumero(seleccionJugador);
@@ -42,7 +62,8 @@ public class ProgramaFinal {
 
     // Selección de elemento por parte de la máquina
     public int obtenerSeleccionMaquina() {
-        int valorJuego = (int) (Math.random() * 5);
+        Random random = new Random();
+        int valorJuego = random.nextInt(5) + 1;
         System.out.println("La máquina ha elegido "+elementos.get(valorJuego));
         System.out.println("El valor de la eleccion de la máquina es "+Integer.toString(valorJuego));
         return valorJuego;
@@ -82,8 +103,8 @@ public class ProgramaFinal {
         return nuevaEntrada;
     }
 
-    public void comprobarVictoria() {
-
+    public void comprobarVictoria(int jugador, int maquina) {
+        
     }
 
 }

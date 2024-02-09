@@ -102,6 +102,7 @@ public class ProgramaFinal {
     public void comprobarVictoria(int jugador, int maquina) {
 
         if(jugador-maquina==0) System.out.println("Empate");
+        else if (jugador-maquina==1) System.out.println("Victoria");
         else System.out.println("No empate");
 
     }

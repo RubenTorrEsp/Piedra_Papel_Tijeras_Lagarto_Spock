@@ -49,8 +49,8 @@ public class ProgramaFinal {
                 default:
                     break;
             }
-            System.out.println("Has elegido "+seleccionJugador);
-            convertirElementoEnNumero(seleccionJugador);
+            String valorMaquina = obtenerSeleccionMaquina();
+            comprobarVictoria(seleccionJugador, valorMaquina);
         }
         else {
             System.out.println("Selección no válida");
@@ -58,53 +58,52 @@ public class ProgramaFinal {
         return seleccionJugador;
     }
 
-    // Comportamiento para convertir la eleccion del jugador en un valor numérico para realizar el juego
-    public void convertirElementoEnNumero(String entrada) {
-        int nuevaEntrada = 0;
+    // Selección de elemento por parte de la máquina
+    public String obtenerSeleccionMaquina() {
+        Random random = new Random();
+        int valorJuego = random.nextInt(5) + 1;
+        String valorMaquina = elementos.get(valorJuego-1);
+        return valorMaquina;
+    }
 
-        switch (entrada) {
+    // 
+    public void comprobarVictoria(String jugador, String maquina) {
+        System.out.println("Has elegido "+jugador);
+        System.out.println("La máquina ha elegido "+maquina);
+
+        if(jugador == maquina) System.out.println("Empate");
+        else if (comprobarLista(jugador, maquina, ListasDeVictoria.piedra, ListasDeVictoria.papel, ListasDeVictoria.tijeras, ListasDeVictoria.lagarto, ListasDeVictoria.spock)){
+            System.out.println("Victoria");
+        }
+        else {
+            System.out.println("Derrota");
+        }
+
+    }
+
+    // Método que toma un String como parámetro y accede a una de las listas en función de ese String
+    public boolean comprobarLista(String jugador, String maquina, List<String> piedra, List<String> papel, List<String> tijeras, List<String> lagarto, List<String> spock) {
+        boolean victoria = false;
+        switch (jugador) {
             case "piedra":
-            case "1":
-                nuevaEntrada = 1;
+                if(piedra.contains(maquina)) victoria = true;
                 break;
             case "papel":
-            case "2":
-                nuevaEntrada = 2;
+                if(papel.contains(maquina)) victoria = true;
                 break;
             case "tijeras":
-            case "3":
-                nuevaEntrada = 3;
-                break;
-            case "spock":
-            case "5":
-                nuevaEntrada = 4;
+                if(tijeras.contains(maquina)) victoria = true;
                 break;
             case "lagarto":
-            case "4":
-                nuevaEntrada = 5;
+                if(lagarto.contains(maquina)) victoria = true;
+                break;
+            case "spock":
+                if(spock.contains(maquina)) victoria = true;
                 break;
             default:
                 break;
         }
-
-        int valorMaquina = obtenerSeleccionMaquina();
-        comprobarVictoria(nuevaEntrada, valorMaquina);
-    }
-
-    // Selección de elemento por parte de la máquina
-    public int obtenerSeleccionMaquina() {
-        Random random = new Random();
-        int valorJuego = random.nextInt(5) + 1;
-        System.out.println("La máquina ha elegido "+elementos.get(valorJuego-1));
-        return valorJuego;
-    }
-
-    public void comprobarVictoria(int jugador, int maquina) {
-
-        if(jugador-maquina==0) System.out.println("Empate");
-        else if (jugador-maquina==1) System.out.println("Victoria");
-        else System.out.println("No empate");
-
+        return victoria;
     }
 
 }

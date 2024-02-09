@@ -5,6 +5,10 @@ import java.util.Arrays;
 
 public class ListasDeVictoria {
     
-    List<Integer> piedra = Arrays.asList(2, 4);
+    List<String> piedra = Arrays.asList("tijeras", "lagarto");
+    List<String> papel = Arrays.asList("piedra", "spock");
+    List<String> tijeras = Arrays.asList("papel", "lagarto");
+    List<String> lagarto = Arrays.asList("spock", "papel");
+    List<String> spock = Arrays.asList("tijeras", "piedra");
 
 }

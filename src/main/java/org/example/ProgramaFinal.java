@@ -18,7 +18,6 @@ public class ProgramaFinal {
     public ProgramaFinal(){
         darBienvenida();
         obtenerEntrada();
-        comprobarVictoria(1,1);
     }
 
     // Inicio del programa y presentación de opciones
@@ -59,15 +58,6 @@ public class ProgramaFinal {
         return seleccionJugador;
     }
 
-    // Selección de elemento por parte de la máquina
-    public int obtenerSeleccionMaquina() {
-        Random random = new Random();
-        int valorJuego = random.nextInt(5) + 1;
-        System.out.println("La máquina ha elegido "+elementos.get(valorJuego-1));
-        System.out.println("El valor de la eleccion de la máquina es "+Integer.toString(valorJuego));
-        return valorJuego;
-    }
-
     // Comportamiento para convertir la eleccion del jugador en un valor numérico para realizar el juego
     public void convertirElementoEnNumero(String entrada) {
         int nuevaEntrada = 0;
@@ -97,14 +87,23 @@ public class ProgramaFinal {
                 break;
         }
 
-        System.out.println("El nuevo valor de tu eleccion es " + Integer.toString(nuevaEntrada));
-
         int valorMaquina = obtenerSeleccionMaquina();
         comprobarVictoria(nuevaEntrada, valorMaquina);
     }
 
+    // Selección de elemento por parte de la máquina
+    public int obtenerSeleccionMaquina() {
+        Random random = new Random();
+        int valorJuego = random.nextInt(5) + 1;
+        System.out.println("La máquina ha elegido "+elementos.get(valorJuego-1));
+        return valorJuego;
+    }
+
     public void comprobarVictoria(int jugador, int maquina) {
-        
+
+        if(jugador-maquina==0) System.out.println("Empate");
+        else System.out.println("No empate");
+
     }
 
 }

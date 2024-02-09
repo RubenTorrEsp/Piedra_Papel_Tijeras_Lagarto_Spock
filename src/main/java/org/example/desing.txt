@@ -4,9 +4,9 @@
 
 3 Tijera
 
-4 Spock
+4 Lagarto
  
-5 Lagarto
+5 Spock
 
 
 -Un jugador gana si la posicion de la máquina es Jugador-1 o Jugador+2

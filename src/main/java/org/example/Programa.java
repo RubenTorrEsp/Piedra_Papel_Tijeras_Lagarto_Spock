@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class ProgramaFinal {
+public class Programa {
 
     // Creacion del elemento scanner y strings en los que se guarda el texto captado
     Scanner scanner = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class ProgramaFinal {
     List<String> elementos = List.of(new String[]{"piedra", "papel", "tijeras", "spock", "lagarto", "salir", "1", "2", "3", "4", "5", "0"});
 
     // Constructor del programa y ciclo de vida
-    public ProgramaFinal(){
+    public Programa(){
         darBienvenida();
         obtenerEntrada();
     }

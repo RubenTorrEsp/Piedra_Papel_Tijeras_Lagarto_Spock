@@ -71,6 +71,8 @@ public class Programa {
         System.out.println("Has elegido "+jugador);
         System.out.println("La máquina ha elegido "+maquina);
 
+        crearTextoVictoria(jugador,maquina);
+
         if(jugador == maquina) System.out.println("Empate");
         else if (comprobarLista(jugador, maquina, ListasDeVictoria.piedra, ListasDeVictoria.papel, ListasDeVictoria.tijeras, ListasDeVictoria.lagarto, ListasDeVictoria.spock)){
             System.out.println("Victoria");
@@ -106,8 +108,9 @@ public class Programa {
         return victoria;
     }
 
-    public void crearTextoVictoria(String jugador, String maquina){
-
+    public void crearTextoVictoria(String ganador, String perdedor){
+        String enfrentamiento = ganador.concat("_").concat(perdedor);
+        System.out.println(enfrentamiento);
     }
 
 }

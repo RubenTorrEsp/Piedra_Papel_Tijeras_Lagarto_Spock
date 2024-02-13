@@ -71,14 +71,14 @@ public class Programa {
         System.out.println("Has elegido "+jugador);
         System.out.println("La máquina ha elegido "+maquina);
 
-        crearTextoVictoria(jugador,maquina);
-
         if(jugador == maquina) System.out.println("Empate");
         else if (comprobarLista(jugador, maquina, ListasDeVictoria.piedra, ListasDeVictoria.papel, ListasDeVictoria.tijeras, ListasDeVictoria.lagarto, ListasDeVictoria.spock)){
             System.out.println("Victoria");
+            crearTextoVictoria(jugador,maquina);
         }
         else {
             System.out.println("Derrota");
+            crearTextoVictoria(maquina,jugador);
         }
 
     }

@@ -106,4 +106,8 @@ public class Programa {
         return victoria;
     }
 
+    public void crearTextoVictoria(String jugador, String maquina){
+
+    }
+
 }

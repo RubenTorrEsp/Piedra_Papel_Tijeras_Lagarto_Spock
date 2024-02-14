@@ -64,24 +64,19 @@ public class Programa {
     // Selección de elemento por parte de la máquina
     public String obtenerSeleccionMaquina() {
         Random random = new Random();
-        int valorJuego = random.nextInt(5) + 1;
+        int valorJuego = random.nextInt(5)+1;
         String valorMaquina = elementos.get(valorJuego-1);
         return valorMaquina;
     }
 
-    // 
+    // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
     public void comprobarVictoria(String jugador, String maquina) {
         System.out.println(Textos.seleccionJugador+jugador);
         System.out.println(Textos.seleccionMaquina+maquina);
 
         if(jugador == maquina) System.out.println(Textos.empate);
-        else if (ListasDeVictoria.obtenerVictoria(jugador, maquina)) {
-            System.out.println(Textos.victoria+Textos.obtenerTexto(jugador.concat("_").concat(maquina)));
-        }
-        else {
-            System.out.println(Textos.derrota+Textos.obtenerTexto(maquina.concat("_").concat(jugador)));
-        }
-        
+        else if (ListasDeVictoria.obtenerVictoria(jugador, maquina)) Textos.victoria(jugador, maquina);
+        else Textos.derrota(jugador, maquina);
     }
 
 }

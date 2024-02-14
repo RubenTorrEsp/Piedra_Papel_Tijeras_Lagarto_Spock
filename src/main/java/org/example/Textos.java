@@ -36,4 +36,14 @@ public class Textos {
     public static String obtenerTexto(String nombre) {
         return strings.get(nombre);
     }
+
+    // Comportamiento que genera el texto que resuelve el enfrentamiento como victoria
+    public static void victoria(String jugador, String maquina){
+        System.out.println(victoria+obtenerTexto(jugador.concat("_").concat(maquina)));
+    }
+
+    // Comportamiento que genera el texto que resuelve el enfrentamiento como derrota
+    public static void derrota(String jugador, String maquina){
+        System.out.println(derrota+obtenerTexto(maquina.concat("_").concat(jugador)));
+    }
 }

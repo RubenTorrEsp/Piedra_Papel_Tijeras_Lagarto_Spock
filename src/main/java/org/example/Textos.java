@@ -4,8 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Textos {
+    
+    // Textos generales
+    static String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!\nSeleccione su opción con nombre o número, o elija salir:";
+    static String opciones = "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
+    static String seleccionJugador = "Has elegido ";
+    static String seleccionMaquina = "La máquina ha elegido ";
+    static String seleccionInvalida = "Selección no válida";
 
-    // Textos de victoria en enfrentamientos
+    // Textos de resolución de enfrentamientos
+    static String victoria = "Enhorabuena!! Has ganado, porque ";
+    static String derrota = "Lo siento!! Has perdido, porque ";
+    static String empate = "Empate!! Aprovecha el momento o vuelve a por más.";
+
+    // Mapa de textos de victoria en enfrentamientos
     private static final Map<String, String> strings = new HashMap<>();
     static {
         strings.put("piedra_tijeras", "la piedra ROMPE las tijeras.");
@@ -19,16 +31,9 @@ public class Textos {
         strings.put("spock_piedra", "Spock DESINTEGRA la piedra.");
         strings.put("spock_tijeras", "Spock DESMONTA las tijeras.");
     }
+
+    // Comportamiento para, pasado el nombre del enfrentamiento, obtener el texto
     public static String obtenerTexto(String nombre) {
         return strings.get(nombre);
     }
-    
-    // Textos generales
-    static String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!\nSeleccione su opción con nombre o número, o elija salir:";
-    static String opciones = "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
-
-    // Textos de resolución de enfrentamientos
-    static String victoria = "Enhorabuena!! Has ganado, porque ";
-    static String derrota = "Lo siento!! Has perdido, porque ";
-    static String empate = "Empate!! Aprovecha el momento o vuelve a por más.";
 }

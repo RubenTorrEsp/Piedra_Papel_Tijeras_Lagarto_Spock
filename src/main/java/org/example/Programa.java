@@ -40,11 +40,14 @@ public class Programa {
                 case "3":
                     seleccionJugador = "tijeras";
                     break;
+                case "4":
+                    seleccionJugador = "lagarto";
+                    break;
                 case "5":
                     seleccionJugador = "spock";
                     break;
-                case "4":
-                    seleccionJugador = "lagarto";
+                case "0":
+                    seleccionJugador = "salir";
                     break;
                 default:
                     break;
@@ -53,7 +56,7 @@ public class Programa {
             comprobarVictoria(seleccionJugador, valorMaquina);
         }
         else {
-            System.out.println("Selección no válida");
+            System.out.println(Textos.seleccionInvalida);
         }
         return seleccionJugador;
     }
@@ -68,42 +71,17 @@ public class Programa {
 
     // 
     public void comprobarVictoria(String jugador, String maquina) {
-        System.out.println("Has elegido "+jugador);
-        System.out.println("La máquina ha elegido "+maquina);
+        System.out.println(Textos.seleccionJugador+jugador);
+        System.out.println(Textos.seleccionMaquina+maquina);
 
         if(jugador == maquina) System.out.println(Textos.empate);
-        else if (comprobarLista(jugador, maquina, ListasDeVictoria.piedra, ListasDeVictoria.papel, ListasDeVictoria.tijeras, ListasDeVictoria.lagarto, ListasDeVictoria.spock)){
+        else if (ListasDeVictoria.obtenerVictoria(jugador, maquina)) {
             System.out.println(Textos.victoria+Textos.obtenerTexto(jugador.concat("_").concat(maquina)));
         }
         else {
             System.out.println(Textos.derrota+Textos.obtenerTexto(maquina.concat("_").concat(jugador)));
         }
-
-    }
-
-    // Método que toma un String como parámetro y accede a una de las listas en función de ese String
-    public boolean comprobarLista(String jugador, String maquina, List<String> piedra, List<String> papel, List<String> tijeras, List<String> lagarto, List<String> spock) {
-        boolean victoria = false;
-        switch (jugador) {
-            case "piedra":
-                if(piedra.contains(maquina)) victoria = true;
-                break;
-            case "papel":
-                if(papel.contains(maquina)) victoria = true;
-                break;
-            case "tijeras":
-                if(tijeras.contains(maquina)) victoria = true;
-                break;
-            case "lagarto":
-                if(lagarto.contains(maquina)) victoria = true;
-                break;
-            case "spock":
-                if(spock.contains(maquina)) victoria = true;
-                break;
-            default:
-                break;
-        }
-        return victoria;
+        
     }
 
 }

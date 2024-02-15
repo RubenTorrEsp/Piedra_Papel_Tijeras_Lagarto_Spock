@@ -47,13 +47,15 @@ public class Programa {
                     seleccionJugador = "spock";
                     break;
                 case "0":
+                case "salir":
                     seleccionJugador = "salir";
                     break;
                 default:
                     break;
             }
             String valorMaquina = obtenerSeleccionMaquina();
-            comprobarVictoria(seleccionJugador, valorMaquina);
+            if (seleccionJugador == "salir")  System.out.println(Textos.seleccionSalir);
+            else comprobarVictoria(seleccionJugador, valorMaquina);
         }
         else {
             System.out.println(Textos.seleccionInvalida);

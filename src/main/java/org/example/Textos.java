@@ -11,6 +11,7 @@ public class Textos {
     static String seleccionJugador = "Has elegido ";
     static String seleccionMaquina = "La máquina ha elegido ";
     static String seleccionInvalida = "Selección no válida";
+    static String seleccionSalir = "Ha seleccionado salir. Gracias por jugar";
 
     // Textos de resolución de enfrentamientos
     static String victoria = "Enhorabuena!! Has ganado, porque ";

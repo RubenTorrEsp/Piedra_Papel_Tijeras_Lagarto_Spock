@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static boolean jugarDeNuevo(String entrada){
+    public static void jugarDeNuevo(String entrada){
+        /*
         boolean rejugar = false;
         if(!entrada.contains("salir")) {
             System.out.println("Si quiere volver a jugar, escriba \"si\"");
@@ -15,10 +16,12 @@ public class Main {
             else System.out.println("Gracias por jugar a Piedra, Papel, Tijeras.");
         }
         return rejugar;
+        */
+        new Programa();
     }
 
     public static void main(String[] args) {
-        new Programa();
+        jugarDeNuevo("");
     }
 
 }

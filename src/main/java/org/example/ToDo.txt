@@ -1,6 +1,7 @@
 Programa completado, futuras implementaciones
 
 -Ciclo de rejugabilidad
+-Test unitarios del programa
 -Usuarios
 -Puntuaciones
 -Sistema de apuestas

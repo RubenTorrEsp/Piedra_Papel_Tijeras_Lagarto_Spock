@@ -1,0 +1,8 @@
+Programa completado, futuras implementaciones
+
+-Ciclo de rejugabilidad
+-Usuarios
+-Puntuaciones
+-Sistema de apuestas
+-Interfaz
+-BDD

@@ -1,8 +1,11 @@
-//package org.example;
+package main;
 
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+
+import tools.ListasDeVictoria;
+import tools.Textos;
 
 public class Programa {
 

@@ -19,12 +19,11 @@ public class Programa {
 
     // Constructor del programa y ciclo de vida
     public Programa(){
-        darBienvenida();
         obtenerEntrada();
     }
 
     // Inicio del programa y presentación de opciones
-    public void darBienvenida() {
+    public static void darBienvenida() {
         System.out.println(Textos.bienvenida);
         System.out.println(Textos.opciones);
     }

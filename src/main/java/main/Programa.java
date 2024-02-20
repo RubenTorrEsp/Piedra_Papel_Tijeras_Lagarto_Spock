@@ -29,7 +29,7 @@ public class Programa {
     }
     
     // Obtener la elección del jugador
-    public String obtenerEntrada() {
+    public void obtenerEntrada() {
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(elementos.contains(seleccionJugador)) {
             switch (seleccionJugador) {
@@ -62,7 +62,7 @@ public class Programa {
         else {
             System.out.println(Textos.seleccionInvalida);
         }
-        return seleccionJugador;
+        jugarOtraVez();
     }
 
     // Selección de elemento por parte de la máquina
@@ -81,6 +81,20 @@ public class Programa {
         if(jugador == maquina) System.out.println(Textos.empate);
         else if (ListasDeVictoria.obtenerVictoria(jugador, maquina)) Textos.victoria(jugador, maquina);
         else Textos.derrota(jugador, maquina);
+    }
+
+    public Boolean jugarOtraVez(){
+        Boolean rejugar = false;
+        System.out.println("¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.");
+        String elijeRejugar = scanner.nextLine().toLowerCase();
+        switch (elijeRejugar){
+            case "si":
+                rejugar = true;
+                System.out.println("Has elegido volver a jugar. Pronto estará disponible");
+            default:
+                break;
+        }
+        return rejugar;
     }
 
 }

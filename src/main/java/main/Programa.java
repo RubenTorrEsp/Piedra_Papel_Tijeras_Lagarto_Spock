@@ -19,7 +19,10 @@ public class Programa {
 
     // Constructor del programa y ciclo de vida
     public Programa(){
+
         obtenerEntrada();
+        
+        jugarOtraVez();
     }
 
     // Inicio del programa y presentación de opciones
@@ -62,7 +65,6 @@ public class Programa {
         else {
             System.out.println(Textos.seleccionInvalida);
         }
-        jugarOtraVez();
     }
 
     // Selección de elemento por parte de la máquina

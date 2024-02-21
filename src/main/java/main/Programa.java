@@ -1,10 +1,9 @@
 package main;
 
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import tools.ListasDeVictoria;
+import tools.Listas;
 import tools.Textos;
 
 public class Programa {
@@ -13,9 +12,6 @@ public class Programa {
     Scanner scanner = new Scanner(System.in);
     String seleccionJugador;
     String seleccionOrdenador;
-
-    // Lista de elementos aceptados
-    List<String> elementos = List.of(new String[]{"piedra", "papel", "tijeras", "spock", "lagarto", "salir", "1", "2", "3", "4", "5", "0"});
 
     // Constructor del programa y ciclo de vida
     public Programa(){
@@ -40,7 +36,7 @@ public class Programa {
     public Boolean obtenerEntrada() {
         Boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
-        if(elementos.contains(seleccionJugador)) {
+        if(Listas.elementos.contains(seleccionJugador)) {
             seleccionValida = true;
             switch (seleccionJugador) {
                 case "1":
@@ -76,7 +72,7 @@ public class Programa {
     public String obtenerSeleccionMaquina() {
         Random random = new Random();
         int valorJuego = random.nextInt(5)+1;
-        String valorMaquina = elementos.get(valorJuego-1);
+        String valorMaquina = Listas.elementos.get(valorJuego-1);
         return valorMaquina;
     }
 
@@ -86,7 +82,7 @@ public class Programa {
         System.out.println(Textos.seleccionMaquina+maquina);
 
         if(jugador == maquina) System.out.println(Textos.empate);
-        else if (ListasDeVictoria.obtenerVictoria(jugador, maquina)) Textos.victoria(jugador, maquina);
+        else if (Listas.obtenerVictoria(jugador, maquina)) Textos.victoria(jugador, maquina);
         else Textos.derrota(jugador, maquina);
     }
 

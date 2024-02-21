@@ -20,9 +20,14 @@ public class Programa {
     // Constructor del programa y ciclo de vida
     public Programa(){
 
-        obtenerEntrada();
+        if(obtenerEntrada()){
+            seleccionOrdenador = obtenerSeleccionMaquina();
+            if (seleccionJugador == "salir")  System.out.println(Textos.seleccionSalir);
+            else comprobarVictoria(seleccionJugador, seleccionOrdenador);
+        }
         
         jugarOtraVez();
+        
     }
 
     // Inicio del programa y presentación de opciones
@@ -60,9 +65,6 @@ public class Programa {
                 default:
                     break;
             }
-            seleccionOrdenador = obtenerSeleccionMaquina();
-            if (seleccionJugador == "salir")  System.out.println(Textos.seleccionSalir);
-            else comprobarVictoria(seleccionJugador, seleccionOrdenador);
         }
         else {
             System.out.println(Textos.seleccionInvalida);

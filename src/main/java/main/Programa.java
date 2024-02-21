@@ -32,9 +32,11 @@ public class Programa {
     }
     
     // Obtener la elección del jugador
-    public void obtenerEntrada() {
+    public Boolean obtenerEntrada() {
+        Boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(elementos.contains(seleccionJugador)) {
+            seleccionValida = true;
             switch (seleccionJugador) {
                 case "1":
                     seleccionJugador = "piedra";
@@ -58,13 +60,14 @@ public class Programa {
                 default:
                     break;
             }
-            String valorMaquina = obtenerSeleccionMaquina();
+            seleccionOrdenador = obtenerSeleccionMaquina();
             if (seleccionJugador == "salir")  System.out.println(Textos.seleccionSalir);
-            else comprobarVictoria(seleccionJugador, valorMaquina);
+            else comprobarVictoria(seleccionJugador, seleccionOrdenador);
         }
         else {
             System.out.println(Textos.seleccionInvalida);
         }
+        return seleccionValida;
     }
 
     // Selección de elemento por parte de la máquina

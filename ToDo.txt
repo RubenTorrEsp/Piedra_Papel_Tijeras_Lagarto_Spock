@@ -1,6 +1,7 @@
 Programa completado, futuras implementaciones
 
--Ciclo de rejugabilidad
+-Ciclo de rejugabilidad (EN PROCESO)
+
 -Test unitarios del programa
 -Implementacion juego clásico
 -Usuarios

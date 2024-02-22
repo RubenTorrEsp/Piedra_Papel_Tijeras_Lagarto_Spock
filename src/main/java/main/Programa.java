@@ -22,8 +22,6 @@ public class Programa {
             else comprobarVictoria(seleccionJugador, seleccionOrdenador);
         }
         
-        jugarOtraVez();
-        
     }
 
     // Inicio del programa y presentación de opciones
@@ -84,20 +82,6 @@ public class Programa {
         if(jugador == maquina) System.out.println(Textos.empate);
         else if (Listas.obtenerVictoria(jugador, maquina)) Textos.victoria(jugador, maquina);
         else Textos.derrota(jugador, maquina);
-    }
-
-    public Boolean jugarOtraVez(){
-        Boolean rejugar = false;
-        System.out.println("¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.");
-        String elijeRejugar = scanner.nextLine().toLowerCase();
-        switch (elijeRejugar){
-            case "si":
-                rejugar = true;
-                System.out.println("Has elegido volver a jugar. Pronto estará disponible");
-            default:
-                break;
-        }
-        return rejugar;
     }
 
 }

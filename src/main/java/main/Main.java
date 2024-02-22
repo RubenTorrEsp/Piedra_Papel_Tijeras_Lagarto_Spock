@@ -19,8 +19,7 @@ public class Main {
     private static Boolean reJugar(){
         Boolean reJugar = false;
         System.out.println("¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.");
-        String elijeRejugar = scanner.nextLine().toLowerCase();
-        switch (elijeRejugar){
+        switch (scanner.nextLine().toLowerCase()){
             case "si":
                 reJugar = true;
                 System.out.println("Has elegido volver a jugar. Pronto estará disponible");

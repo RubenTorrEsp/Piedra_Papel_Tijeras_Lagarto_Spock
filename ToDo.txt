@@ -8,3 +8,4 @@ Programa completado, futuras implementaciones
 -Sistema de apuestas
 -Interfaz
 -BDD
+-Idiomas

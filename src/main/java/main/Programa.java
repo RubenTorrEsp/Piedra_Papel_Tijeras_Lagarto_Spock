@@ -11,19 +11,14 @@ public class Programa {
     // Creacion del elemento scanner y strings en los que se guarda el texto captado
     Scanner scanner = new Scanner(System.in);
     String seleccionJugador;
-    String seleccionOrdenador;
 
     // Constructor del programa y ciclo de vida
     public Programa(){
-
         System.out.println(Textos.opciones);
-
         if(obtenerEntrada()){
-            seleccionOrdenador = obtenerSeleccionMaquina();
             if (seleccionJugador == "salir")  System.out.println(Textos.seleccionSalir);
-            else comprobarVictoria(seleccionJugador, seleccionOrdenador);
+            else comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina());
         }
-        
     }
     
     // Obtener la elección del jugador
@@ -32,38 +27,12 @@ public class Programa {
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(Listas.elementos.contains(seleccionJugador)) {
             seleccionValida = true;
-            refactorizar();
+            seleccionJugador = Common.refactorizar(seleccionJugador);
         }
         else {
             System.out.println(Textos.seleccionInvalida);
         }
         return seleccionValida;
-    }
-
-    public void refactorizar(){
-        switch (seleccionJugador) {
-            case "1":
-                seleccionJugador = "piedra";
-                break;
-            case "2":
-                seleccionJugador = "papel";
-                break;
-            case "3":
-                seleccionJugador = "tijeras";
-                break;
-            case "4":
-                seleccionJugador = "lagarto";
-                break;
-            case "5":
-                seleccionJugador = "spock";
-                break;
-            case "0":
-            case "salir":
-                seleccionJugador = "salir";
-                break;
-            default:
-                break;
-        }   
     }
 
     // Selección de elemento por parte de la máquina

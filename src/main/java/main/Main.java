@@ -2,18 +2,26 @@ package main;
 
 import java.util.Scanner;
 
+import tools.Textos;
+
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Programa.darBienvenida();
-        jugarDeNuevo("");
+        darBienvenida();
+        jugarDeNuevo();
     }
 
-    public static void jugarDeNuevo(String entrada){
+    public static void jugarDeNuevo(){
         new Programa();
         reJugar();
+    }
+
+    // Inicio del programa y presentación de opciones
+    public static void darBienvenida() {
+        System.out.println(Textos.bienvenida);
+        System.out.println(Textos.opciones);
     }
 
     private static Boolean reJugar(){

@@ -23,12 +23,6 @@ public class Programa {
         }
         
     }
-
-    // Inicio del programa y presentación de opciones
-    public static void darBienvenida() {
-        System.out.println(Textos.bienvenida);
-        System.out.println(Textos.opciones);
-    }
     
     // Obtener la elección del jugador
     public Boolean obtenerEntrada() {

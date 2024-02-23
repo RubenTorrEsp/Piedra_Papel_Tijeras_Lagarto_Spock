@@ -8,7 +8,20 @@ import java.util.Arrays;
 public class Listas {
 
     // Lista de elementos aceptados
-    public static List<String> elementos = List.of(new String[]{"piedra", "papel", "tijeras", "spock", "lagarto", "salir", "1", "2", "3", "4", "5", "0"});
+    public static List<String> elementos = List.of(new String[]{
+        "piedra",
+        "papel",
+        "tijeras",
+        "spock",
+        "lagarto",
+        "salir",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "0"
+    });
 
     // Listas de elementos a los que vence cada uno
     private static final Map<String, List<String>> listasVictoria = new HashMap<>();

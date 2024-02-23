@@ -32,34 +32,38 @@ public class Programa {
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(Listas.elementos.contains(seleccionJugador)) {
             seleccionValida = true;
-            switch (seleccionJugador) {
-                case "1":
-                    seleccionJugador = "piedra";
-                    break;
-                case "2":
-                    seleccionJugador = "papel";
-                    break;
-                case "3":
-                    seleccionJugador = "tijeras";
-                    break;
-                case "4":
-                    seleccionJugador = "lagarto";
-                    break;
-                case "5":
-                    seleccionJugador = "spock";
-                    break;
-                case "0":
-                case "salir":
-                    seleccionJugador = "salir";
-                    break;
-                default:
-                    break;
-            }
+            refactorizar();
         }
         else {
             System.out.println(Textos.seleccionInvalida);
         }
         return seleccionValida;
+    }
+
+    public void refactorizar(){
+        switch (seleccionJugador) {
+            case "1":
+                seleccionJugador = "piedra";
+                break;
+            case "2":
+                seleccionJugador = "papel";
+                break;
+            case "3":
+                seleccionJugador = "tijeras";
+                break;
+            case "4":
+                seleccionJugador = "lagarto";
+                break;
+            case "5":
+                seleccionJugador = "spock";
+                break;
+            case "0":
+            case "salir":
+                seleccionJugador = "salir";
+                break;
+            default:
+                break;
+        }   
     }
 
     // Selección de elemento por parte de la máquina

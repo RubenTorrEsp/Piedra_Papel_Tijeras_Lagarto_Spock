@@ -13,6 +13,9 @@ public class Textos {
     public static String seleccionMaquina = "La máquina ha elegido ";
     public static String seleccionInvalida = "Selección no válida";
     public static String seleccionSalir = "Ha seleccionado salir. Gracias por jugar";
+    public static String seleccionRejugar = "¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.";
+    public static String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número";
+    public static String rejugarNegativo = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";
 
     // Textos de resolución de enfrentamientos
     public static String victoria = "Enhorabuena!! Has ganado, porque ";

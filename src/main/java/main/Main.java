@@ -10,7 +10,7 @@ public class Main {
     static Boolean reJugar = true;
 
     public static void main(String[] args) {
-        darBienvenida();
+        System.out.println(Textos.bienvenida);
         jugarDeNuevo();
     }
 
@@ -21,20 +21,16 @@ public class Main {
         }    
     }
 
-    // Inicio del programa y presentación de opciones
-    public static void darBienvenida() {
-        System.out.println(Textos.bienvenida);
-    }
-
     private static void reJugar(){
-        System.out.println("¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.");
+        System.out.println(Textos.seleccionRejugar);
         switch (scanner.nextLine().toLowerCase()){
             case "si":
                 reJugar = true;
-                System.out.println("Has elegido volver a jugar. Elija su opción con nombre o número");
+                System.out.println(Textos.rejugarAfirmativo);
                 break;
             default:
                 reJugar = false;
+                System.out.println(Textos.rejugarNegativo);
                 break;
         }
     }

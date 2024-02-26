@@ -16,7 +16,10 @@ public class Programa {
     public Programa(){
         System.out.println(Textos.opciones);
         if(obtenerEntrada()){
-            if (seleccionJugador == "salir")  System.out.println(Textos.seleccionSalir);
+            if (seleccionJugador == "salir")  {
+                Main.reJugar = false;
+                System.out.println(Textos.seleccionSalir);
+            }
             else comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina());
         }
     }

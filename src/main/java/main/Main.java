@@ -25,7 +25,6 @@ public class Main {
         System.out.println(Textos.seleccionRejugar);
         switch (scanner.nextLine().toLowerCase()){
             case "si":
-                reJugar = true;
                 System.out.println(Textos.rejugarAfirmativo);
                 break;
             default:

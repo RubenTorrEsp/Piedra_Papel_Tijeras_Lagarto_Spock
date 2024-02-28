@@ -14,12 +14,15 @@ public class Programa {
 
     // Constructor del programa y ciclo de vida
     public Programa(){
+        /*
         if(obtenerEntrada()){
             if (seleccionJugador == "salir")  System.out.println(Textos.seleccionSalir);
             else comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina());
         }
+        */
     }
     
+    /*
     // Obtener la elección del jugador
     public Boolean obtenerEntrada() {
         Boolean seleccionValida = false;
@@ -33,6 +36,7 @@ public class Programa {
         }
         return seleccionValida;
     }
+    */
 
     // Selección de elemento por parte de la máquina
     public String obtenerSeleccionMaquina() {

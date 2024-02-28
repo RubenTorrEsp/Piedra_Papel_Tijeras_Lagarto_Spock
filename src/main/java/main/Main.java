@@ -2,10 +2,12 @@ package main;
 
 import java.util.Scanner;
 
+import tools.Listas;
 import tools.Textos;
 
 public class Main {
 
+    static String seleccionJugador;
     static Scanner scanner = new Scanner(System.in);
     static Boolean reJugar = true;
 
@@ -21,12 +23,34 @@ public class Main {
         System.out.println(Textos.cabeceraSeleccion);
         System.out.println(Textos.opciones);
 
+        if(obtenerEntrada()){
+            if (seleccionJugador == "salir") {
+                System.out.println(Textos.seleccionSalir);
+                System.out.println(Textos.rejugarNegativo);
+            }
+            //else comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina());
+        }
+
         /*
         while(reJugar) {
             new Programa();
             reJugar();
         }
         */    
+    }
+
+    // Obtener la elección del jugador
+    public static Boolean obtenerEntrada() {
+        Boolean seleccionValida = false;
+        seleccionJugador = scanner.nextLine().toLowerCase();
+        if(Listas.elementos.contains(seleccionJugador)) {
+            seleccionValida = true;
+            seleccionJugador = Common.refactorizar(seleccionJugador);
+        }
+        else {
+            System.out.println(Textos.seleccionInvalida);
+        }
+        return seleccionValida;
     }
 
     private static void reJugar(){

@@ -14,7 +14,6 @@ public class Programa {
 
     // Constructor del programa y ciclo de vida
     public Programa(){
-        System.out.println(Textos.opciones);
         if(obtenerEntrada()){
             if (seleccionJugador == "salir")  System.out.println(Textos.seleccionSalir);
             else comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina());

@@ -10,15 +10,23 @@ public class Main {
     static Boolean reJugar = true;
 
     public static void main(String[] args) {
+        // Bienvenida
         System.out.println(Textos.bienvenida);
+
         jugarDeNuevo();
     }
 
     public static void jugarDeNuevo(){
+        //Seleccion del jugador
+        System.out.println(Textos.cabeceraSeleccion);
+        System.out.println(Textos.opciones);
+
+        /*
         while(reJugar) {
             new Programa();
             reJugar();
-        }    
+        }
+        */    
     }
 
     private static void reJugar(){

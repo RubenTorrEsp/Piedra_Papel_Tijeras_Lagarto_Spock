@@ -39,7 +39,7 @@ public class Programa {
     */
 
     // Selección de elemento por parte de la máquina
-    public String obtenerSeleccionMaquina() {
+    public static String obtenerSeleccionMaquina() {
         Random random = new Random();
         int valorJuego = random.nextInt(5)+1;
         String valorMaquina = Listas.elementos.get(valorJuego-1);
@@ -47,7 +47,7 @@ public class Programa {
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
-    public void comprobarVictoria(String jugador, String maquina) {
+    public static void comprobarVictoria(String jugador, String maquina) {
         System.out.println(Textos.seleccionJugador+jugador);
         System.out.println(Textos.seleccionMaquina+maquina);
 

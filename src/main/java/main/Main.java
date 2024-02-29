@@ -28,8 +28,13 @@ public class Main {
                 System.out.println(Textos.seleccionSalir);
                 System.out.println(Textos.rejugarNegativo);
             }
-            //else comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina());
+            else {
+                Programa.comprobarVictoria(seleccionJugador, Programa.obtenerSeleccionMaquina());
+                //reJugar();
+                //System.out.println(reJugar);
+            }
         }
+    }
 
         /*
         while(reJugar) {
@@ -37,7 +42,6 @@ public class Main {
             reJugar();
         }
         */    
-    }
 
     // Obtener la elección del jugador
     public static Boolean obtenerEntrada() {

@@ -19,7 +19,6 @@ public class Main {
     }
 
     public static void jugarDeNuevo(){
-        //Seleccion del jugador
         System.out.println(Textos.cabeceraSeleccion);
         System.out.println(Textos.opciones);
 

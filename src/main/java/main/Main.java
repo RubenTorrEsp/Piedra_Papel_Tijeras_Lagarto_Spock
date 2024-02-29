@@ -31,7 +31,7 @@ public class Main {
             else {
                 Programa.comprobarVictoria(seleccionJugador, Programa.obtenerSeleccionMaquina());
                 //reJugar();
-                //System.out.println(reJugar);
+                System.out.println(reJugar);
             }
         }
     }

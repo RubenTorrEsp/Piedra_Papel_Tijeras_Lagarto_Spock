@@ -15,7 +15,7 @@ public class Main {
         // Bienvenida
         System.out.println(Textos.bienvenida);
 
-        jugarDeNuevo();
+        while(reJugar) jugarDeNuevo();
     }
 
     public static void jugarDeNuevo(){
@@ -27,10 +27,11 @@ public class Main {
             if (seleccionJugador == "salir") {
                 System.out.println(Textos.seleccionSalir);
                 System.out.println(Textos.rejugarNegativo);
+                reJugar = false;
             }
             else {
                 Programa.comprobarVictoria(seleccionJugador, Programa.obtenerSeleccionMaquina());
-                //reJugar();
+                reJugar();
                 System.out.println(reJugar);
             }
         }

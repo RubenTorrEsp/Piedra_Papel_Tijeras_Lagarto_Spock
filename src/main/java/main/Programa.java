@@ -14,30 +14,9 @@ public class Programa {
 
     // Constructor del programa y ciclo de vida
     public Programa(){
-        /*
-        if(obtenerEntrada()){
-            if (seleccionJugador == "salir")  System.out.println(Textos.seleccionSalir);
-            else comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina());
-        }
-        */
+
     }
     
-    /*
-    // Obtener la elección del jugador
-    public Boolean obtenerEntrada() {
-        Boolean seleccionValida = false;
-        seleccionJugador = scanner.nextLine().toLowerCase();
-        if(Listas.elementos.contains(seleccionJugador)) {
-            seleccionValida = true;
-            seleccionJugador = Common.refactorizar(seleccionJugador);
-        }
-        else {
-            System.out.println(Textos.seleccionInvalida);
-        }
-        return seleccionValida;
-    }
-    */
-
     // Selección de elemento por parte de la máquina
     public static String obtenerSeleccionMaquina() {
         Random random = new Random();

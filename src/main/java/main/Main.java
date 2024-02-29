@@ -37,13 +37,6 @@ public class Main {
         }
     }
 
-        /*
-        while(reJugar) {
-            new Programa();
-            reJugar();
-        }
-        */    
-
     // Obtener la elección del jugador
     public static Boolean obtenerEntrada() {
         Boolean seleccionValida = false;

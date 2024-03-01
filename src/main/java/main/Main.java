@@ -1,26 +1,21 @@
 package main;
 
-import java.util.Scanner;
-
-import tools.Listas;
 import tools.Textos;
 
 public class Main {
 
-    static String seleccionJugador;
-    static Scanner scanner = new Scanner(System.in);
-    static Boolean reJugar = true;
 
     public static void main(String[] args) {
         // Bienvenida
         System.out.println(Textos.bienvenida);
 
-        while(reJugar) jugarDeNuevo();
+        while(Programa.reJugar) Programa.jugarDeNuevo();
     }
 
+    /*
     public static void jugarDeNuevo(){
         System.out.println(Textos.cabeceraSeleccion);
-        System.out.println(Textos.opciones);
+        System.out.println(Textos.opciones);wisel
 
         if(obtenerEntrada()){
             if (seleccionJugador == "salir") {
@@ -31,7 +26,6 @@ public class Main {
             else {
                 Programa.comprobarVictoria(seleccionJugador, Programa.obtenerSeleccionMaquina());
                 reJugar();
-                System.out.println(reJugar);
             }
         }
     }
@@ -46,7 +40,9 @@ public class Main {
         }
         else {
             System.out.println(Textos.seleccionInvalida);
+            seleccionValida = false;
         }
+        System.out.println(seleccionValida);
         return seleccionValida;
     }
 
@@ -62,5 +58,6 @@ public class Main {
                 break;
         }
     }
+    */
 
 }

@@ -1,6 +1,5 @@
 Programa completado, futuras implementaciones
 
--Rediseñar el flujo según maqueta
 -Test unitarios del programa
 -Implementacion juego clásico
 -Usuarios
@@ -9,3 +8,7 @@ Programa completado, futuras implementaciones
 -Interfaz
 -BDD
 -Idiomas
+-Añadir nuevos juegos
+    -Cara o cruz
+    -Pares o nones
+    -Dados

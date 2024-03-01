@@ -15,9 +15,10 @@ public class Programa {
 
     // Constructor del programa y ciclo de vida
     public Programa(){
-
+        jugarDeNuevo();
     }
 
+    // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
     public static void jugarDeNuevo(){
         System.out.println(Textos.cabeceraSeleccion);
         System.out.println(Textos.opciones);
@@ -53,6 +54,7 @@ public class Programa {
         return seleccionValida;
     }
 
+    // Método por el que se pregunta al jugador si quiere jugar de nuevo
     private static void reJugar(){
         System.out.println(Textos.seleccionRejugar);
         switch (scanner.nextLine().toLowerCase()){

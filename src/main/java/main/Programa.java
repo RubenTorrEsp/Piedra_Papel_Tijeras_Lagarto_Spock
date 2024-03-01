@@ -50,7 +50,6 @@ public class Programa {
             System.out.println(Textos.seleccionInvalida);
             seleccionValida = false;
         }
-        System.out.println(seleccionValida);
         return seleccionValida;
     }
 

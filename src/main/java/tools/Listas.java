@@ -7,8 +7,8 @@ import java.util.Arrays;
 
 public class Listas {
 
-    // Lista de elementos aceptados
-    public static List<String> elementos = List.of(new String[]{
+    // Lista de elementos aceptados en el juego extendido
+    public static List<String> elementosJuegoExtendido = List.of(new String[]{
         "piedra",
         "papel",
         "tijeras",
@@ -20,6 +20,18 @@ public class Listas {
         "3",
         "4",
         "5",
+        "0"
+    });
+
+    // Lista de elementos aceptados en el juego extendido
+    public static List<String> elementosJuegoClasico = List.of(new String[]{
+        "piedra",
+        "papel",
+        "tijeras",
+        "salir",
+        "1",
+        "2",
+        "3",
         "0"
     });
 

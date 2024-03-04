@@ -8,7 +8,8 @@ public class Textos {
     // Textos generales
     public static String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!";
     public static String cabeceraSeleccion = "Seleccione su opción con nombre o número, o elija salir:";
-    public static String opciones = "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
+    public static String opcionesJuegoExtendido = "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
+    public static String opcionesJuegoClasico = "1 - Piedra\n2 - Papel\n3 - Tijeras\n\n0 - Salir\n-----------------------------------------------";
     public static String seleccionJugador = "Has elegido ";
     public static String seleccionMaquina = "La máquina ha elegido ";
     public static String seleccionInvalida = "Selección no válida.";

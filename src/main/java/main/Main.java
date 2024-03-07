@@ -21,7 +21,7 @@ public class Main {
     public static void seleccion(){
         System.out.println("Elija a qué quiere jugar indicando el numero");
         System.out.println("1- Juego extendido");
-        System.out.println("2- Juego clásico (Próximamente)");
+        System.out.println("2- Juego clásico");
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case "1":

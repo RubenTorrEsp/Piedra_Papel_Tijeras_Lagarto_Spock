@@ -1,7 +1,6 @@
 Programa completado, futuras implementaciones
 
 -Test unitarios del programa
--Implementacion juego clásico (En proceso)
 -Usuarios
 -Puntuaciones
 -Sistema de apuestas

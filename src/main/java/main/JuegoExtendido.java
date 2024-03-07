@@ -1,6 +1,5 @@
 package main;
 
-import java.util.Random;
 import java.util.Scanner;
 
 import tools.Listas;
@@ -11,7 +10,6 @@ public class JuegoExtendido {
     // Creacion del elemento scanner y strings en los que se guarda el texto captado
     static Scanner scanner = new Scanner(System.in);
     static String seleccionJugador;
-    static Boolean reJugar = true;
 
     // Constructor del programa y ciclo de vida
     public JuegoExtendido(){
@@ -27,15 +25,15 @@ public class JuegoExtendido {
             if (seleccionJugador == "salir") {
                 System.out.println(Textos.seleccionSalir);
                 System.out.println(Textos.rejugarNegativo);
-                reJugar = false;
+                Common.reJugar = false;
             }
             else {
-                comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina());
-                reJugar();
+                Common.comprobarVictoria(seleccionJugador, Common.obtenerSeleccionMaquina(5));
+                Common.reJugar();
             }
         }
         else{
-            reJugar();
+            Common.reJugar();
         }
     }
 
@@ -52,38 +50,6 @@ public class JuegoExtendido {
             seleccionValida = false;
         }
         return seleccionValida;
-    }
-
-    // Método por el que se pregunta al jugador si quiere jugar de nuevo
-    private static void reJugar(){
-        System.out.println(Textos.seleccionRejugar);
-        switch (scanner.nextLine().toLowerCase()){
-            case "si":
-                System.out.println(Textos.rejugarAfirmativo);
-                break;
-            default:
-                reJugar = false;
-                System.out.println(Textos.rejugarNegativo);
-                break;
-        }
-    }
-    
-    // Selección de elemento por parte de la máquina
-    public static String obtenerSeleccionMaquina() {
-        Random random = new Random();
-        int valorJuego = random.nextInt(5)+1;
-        String valorMaquina = Listas.elementosJuegoExtendido.get(valorJuego-1);
-        return valorMaquina;
-    }
-
-    // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
-    public static void comprobarVictoria(String jugador, String maquina) {
-        System.out.println(Textos.seleccionJugador+jugador);
-        System.out.println(Textos.seleccionMaquina+maquina);
-
-        if(jugador == maquina) System.out.println(Textos.empate);
-        else if (Listas.obtenerVictoria(jugador, maquina)) Textos.victoria(jugador, maquina);
-        else Textos.derrota(jugador, maquina);
     }
 
 }

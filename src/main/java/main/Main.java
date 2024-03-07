@@ -9,7 +9,6 @@ public class Main {
 
     public static void main(String[] args) {
         inicio();
-        //while(ProgramaExtendido.reJugar) new ProgramaExtendido();
     }
 
     public static void inicio(){
@@ -18,10 +17,10 @@ public class Main {
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case "1":
-                while(JuegoExtendido.reJugar) new JuegoExtendido();
+                while(Common.reJugar) new JuegoExtendido();
                 break;
             case "2":
-                while(JuegoClasico.reJugar) new JuegoClasico();
+                while(Common.reJugar) new JuegoClasico();
                 break;
             default:
                 System.out.println(Textos.seleccionInvalida);

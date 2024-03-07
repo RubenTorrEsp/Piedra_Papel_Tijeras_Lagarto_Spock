@@ -25,7 +25,7 @@ public class Main {
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case "1":
-                while(ProgramaExtendido.reJugar) new ProgramaExtendido();
+                while(JuegoExtendido.reJugar) new JuegoExtendido();
                 break;
             case "2":
                 System.out.println("Opcion no disponible en este momento. Disculpe las molestias");

@@ -30,7 +30,7 @@ public class JuegoClasico {
                 reJugar = false;
             }
             else {
-                ProgramaExtendido.comprobarVictoria(seleccionJugador, ProgramaExtendido.obtenerSeleccionMaquina());
+                JuegoExtendido.comprobarVictoria(seleccionJugador, JuegoExtendido.obtenerSeleccionMaquina());
                 reJugar();
             }
         }

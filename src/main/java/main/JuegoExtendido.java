@@ -6,7 +6,7 @@ import java.util.Scanner;
 import tools.Listas;
 import tools.Textos;
 
-public class ProgramaExtendido {
+public class JuegoExtendido {
 
     // Creacion del elemento scanner y strings en los que se guarda el texto captado
     static Scanner scanner = new Scanner(System.in);
@@ -14,7 +14,7 @@ public class ProgramaExtendido {
     static Boolean reJugar = true;
 
     // Constructor del programa y ciclo de vida
-    public ProgramaExtendido(){
+    public JuegoExtendido(){
         jugarDeNuevo();
     }
 
@@ -30,7 +30,7 @@ public class ProgramaExtendido {
                 reJugar = false;
             }
             else {
-                ProgramaExtendido.comprobarVictoria(seleccionJugador, ProgramaExtendido.obtenerSeleccionMaquina());
+                JuegoExtendido.comprobarVictoria(seleccionJugador, JuegoExtendido.obtenerSeleccionMaquina());
                 reJugar();
             }
         }

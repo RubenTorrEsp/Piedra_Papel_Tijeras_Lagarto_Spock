@@ -21,7 +21,7 @@ public class JuegoClasico {
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
     public static void jugarDeNuevo(){
         System.out.println(Textos.cabeceraSeleccion);
-        System.out.println(Textos.opcionesJuegoExtendido);
+        System.out.println(Textos.opcionesJuegoClasico);
 
         if(obtenerEntrada()){
             if (seleccionJugador == "salir") {
@@ -30,7 +30,7 @@ public class JuegoClasico {
                 reJugar = false;
             }
             else {
-                JuegoExtendido.comprobarVictoria(seleccionJugador, JuegoExtendido.obtenerSeleccionMaquina());
+                comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina());
                 reJugar();
             }
         }
@@ -43,7 +43,7 @@ public class JuegoClasico {
     public static Boolean obtenerEntrada() {
         Boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
-        if(Listas.elementosJuegoExtendido.contains(seleccionJugador)) {
+        if(Listas.elementosJuegoClasico.contains(seleccionJugador)) {
             seleccionValida = true;
             seleccionJugador = Common.refactorizar(seleccionJugador);
         }
@@ -71,8 +71,8 @@ public class JuegoClasico {
     // Selección de elemento por parte de la máquina
     public static String obtenerSeleccionMaquina() {
         Random random = new Random();
-        int valorJuego = random.nextInt(5)+1;
-        String valorMaquina = Listas.elementosJuegoExtendido.get(valorJuego-1);
+        int valorJuego = random.nextInt(3)+1;
+        String valorMaquina = Listas.elementosJuegoClasico.get(valorJuego-1);
         return valorMaquina;
     }
 

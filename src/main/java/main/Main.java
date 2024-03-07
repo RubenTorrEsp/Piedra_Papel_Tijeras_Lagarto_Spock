@@ -28,7 +28,7 @@ public class Main {
                 while(JuegoExtendido.reJugar) new JuegoExtendido();
                 break;
             case "2":
-                System.out.println("Opcion no disponible en este momento. Disculpe las molestias");
+                while(JuegoClasico.reJugar) new JuegoClasico();
                 break;
             default:
                 System.out.println(Textos.seleccionInvalida);

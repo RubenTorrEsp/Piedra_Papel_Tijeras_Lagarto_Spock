@@ -14,14 +14,7 @@ public class Main {
 
     public static void inicio(){
         System.out.println(Textos.bienvenida);
-        seleccion();
-    }
-
-    //Comportamiento de prueba para no interferir en el main. A eliminar
-    public static void seleccion(){
-        System.out.println("Elija a qué quiere jugar indicando el numero");
-        System.out.println("1- Juego extendido");
-        System.out.println("2- Juego clásico");
+        System.out.println(Textos.seleccionJuego);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case "1":

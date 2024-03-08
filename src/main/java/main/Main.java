@@ -8,7 +8,8 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        inicio();
+        //inicio();
+        new User();
     }
 
     public static void inicio(){

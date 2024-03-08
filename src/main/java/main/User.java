@@ -10,7 +10,7 @@ public class User {
     public Integer puntuacion;
 
     public User(){
-        leerArchivo("E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt");
+        
     }
     
     public static void leerArchivo(String nombreArchivo) {

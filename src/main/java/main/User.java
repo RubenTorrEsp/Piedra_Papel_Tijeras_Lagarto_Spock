@@ -1,7 +1,9 @@
 package main;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class User {
@@ -23,7 +25,6 @@ public class User {
                 // Si hay al menos una palabra en la línea, mostrar la primera palabra
                 if (usuarios.length > 0) {
                     System.out.println(usuarios[0]+", con "+usuarios[1]+" puntos.");
-                    
                 }
             }
         } catch (IOException e) {

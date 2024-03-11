@@ -1,3 +1,4 @@
-Franco;100
-Hitler;20
+Hitler;100
 Stalin;50
+Franco;120
+PolPot;80

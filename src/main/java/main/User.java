@@ -16,12 +16,13 @@ public class User {
     public static void leerArchivo(String nombreArchivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
             String linea;
+            System.out.println("Lista de usuarios existentes:");
             while ((linea = br.readLine()) != null) {
                 // Dividir la línea en palabras utilizando el espacio como delimitador
-                String[] palabras = linea.split(" ");
+                String[] palabras = linea.split(";");
                 // Si hay al menos una palabra en la línea, mostrar la primera palabra
                 if (palabras.length > 0) {
-                    System.out.println(palabras[0].toUpperCase());
+                    System.out.println(palabras[0]+", con "+palabras[1]+" puntos.");
                 }
             }
         } catch (IOException e) {

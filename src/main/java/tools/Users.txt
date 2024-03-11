@@ -1,3 +1,3 @@
-Comerme la cabeza para leer el archivo con
-los usuarios no es agradable, manda
-huevos, como diría aquel
+Franco;100
+Hitler;20
+Stalin;50

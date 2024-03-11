@@ -19,10 +19,11 @@ public class User {
             System.out.println("Lista de usuarios existentes:");
             while ((linea = br.readLine()) != null) {
                 // Dividir la línea en palabras utilizando el espacio como delimitador
-                String[] palabras = linea.split(";");
+                String[] usuarios = linea.split(";");
                 // Si hay al menos una palabra en la línea, mostrar la primera palabra
-                if (palabras.length > 0) {
-                    System.out.println(palabras[0]+", con "+palabras[1]+" puntos.");
+                if (usuarios.length > 0) {
+                    System.out.println(usuarios[0]+", con "+usuarios[1]+" puntos.");
+                    
                 }
             }
         } catch (IOException e) {

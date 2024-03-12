@@ -15,18 +15,27 @@ public class User {
         
     }
     
-    public static void leerArchivo(String nombreArchivo) {
-        try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
+    public static void leerArchivo(String nombreArchivo, String nuevoArchivo) {
+        try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(nuevoArchivo))) {
             String linea;
-            System.out.println("Lista de usuarios existentes:");
             while ((linea = br.readLine()) != null) {
                 // Dividir la línea en palabras utilizando el espacio como delimitador
-                String[] usuarios = linea.split(";");
-                // Si hay al menos una palabra en la línea, mostrar la primera palabra
-                if (usuarios.length > 0) {
-                    System.out.println(usuarios[0]+", con "+usuarios[1]+" puntos.");
+                String[] palabras = linea.split(";");
+                // Si hay al menos una palabra en la línea, modificar la primera palabra
+                if (palabras.length > 0) {
+                    palabras[0] = "NuevaPalabra"; // Modificar la primera palabra según sea necesario
+                    // Reconstruir la línea con las palabras modificadas
+                    StringBuilder nuevaLinea = new StringBuilder();
+                    for (String palabra : palabras) {
+                        nuevaLinea.append(palabra).append(" ");
+                    }
+                    // Escribir la línea modificada en el archivo de salida
+                    bw.write(nuevaLinea.toString().trim());
+                    bw.newLine();
                 }
             }
+            System.out.println("Archivo modificado creado con éxito.");
         } catch (IOException e) {
             e.printStackTrace();
         }

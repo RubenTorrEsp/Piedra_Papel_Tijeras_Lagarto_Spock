@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class User {
 
@@ -17,26 +18,33 @@ public class User {
     
     public static void leerArchivo(String nombreArchivo, String nuevoArchivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
-        BufferedWriter bw = new BufferedWriter(new FileWriter(nuevoArchivo))) {
+             PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(nombreArchivo + ".temp")))) {
             String linea;
             while ((linea = br.readLine()) != null) {
-            // Dividir la línea en dos partes: usuario y puntuación
-            String[] partes = linea.split(";");
-            if (partes.length == 2) { // Verificar que la línea tenga el formato correcto
-                // Modificar el nombre de usuario a mayúsculas y mantener la puntuación
-                String usuarioMayusculas = partes[0].toUpperCase();
-                String puntuacion = partes[1];
-                // Escribir la línea modificada en el archivo de salida
-                bw.write(usuarioMayusculas + ";" + puntuacion);
-                bw.newLine();
-            } else {
-                System.out.println("Error: Formato incorrecto en la línea - " + linea);
+                // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
+                String[] partes = linea.split(";");
+                if (partes.length == 2) {
+                    // Modificar el usuario para que esté en mayúsculas
+                    partes[0] = partes[0].toUpperCase();
+                    // Reconstruir la línea con las partes modificadas y escribir en el archivo temporal
+                    pw.println(partes[0] + ";" + partes[1]);
+                }
             }
-       }
-       System.out.println("Archivo de usuarios modificado creado con éxito.");
-   } catch (IOException e) {
-       e.printStackTrace();
-   }
+            System.out.println("Archivo de usuarios modificado con éxito.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Renombrar el archivo temporal para reemplazar el archivo original
+        try {
+            java.nio.file.Files.move(
+                java.nio.file.Paths.get(nombreArchivo + ".temp"),
+                java.nio.file.Paths.get(nombreArchivo),
+                java.nio.file.StandardCopyOption.REPLACE_EXISTING
+            );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

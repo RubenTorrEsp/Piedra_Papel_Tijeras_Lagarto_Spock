@@ -24,8 +24,15 @@ public class User {
                 // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                 String[] partes = linea.split(";");
                 if (partes.length == 2) {
+
                     // Modificar el usuario para que esté en mayúsculas
                     partes[0] = partes[0].toUpperCase();
+
+                    // Actualizar puntuacion
+                    Integer puntuacion = Integer.parseInt(partes[1]);
+                    puntuacion = actualizarPuntuacion(puntuacion);
+                    partes[1] = String.valueOf(puntuacion);
+
                     // Reconstruir la línea con las partes modificadas y escribir en el archivo temporal
                     pw.println(partes[0] + ";" + partes[1]);
                 }
@@ -45,6 +52,11 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static Integer actualizarPuntuacion(Integer puntuacion){
+        puntuacion++;
+        return puntuacion;
     }
 
 }

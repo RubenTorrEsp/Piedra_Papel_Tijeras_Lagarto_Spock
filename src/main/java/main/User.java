@@ -16,7 +16,7 @@ public class User {
         
     }
     
-    public static void leerArchivo(String nombreArchivo, String nuevoArchivo) {
+    public static void leerArchivo(String nombreArchivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
              PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(nombreArchivo + ".temp")))) {
             String linea;

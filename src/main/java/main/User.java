@@ -29,8 +29,7 @@ public class User {
                     partes[0] = partes[0].toUpperCase();
 
                     // Actualizar puntuacion
-                    Integer puntuacion = Integer.parseInt(partes[1]);
-                    puntuacion = actualizarPuntuacion(puntuacion);
+                    Integer puntuacion = actualizarPuntuacion(Integer.parseInt(partes[1]));
                     partes[1] = String.valueOf(puntuacion);
 
                     // Reconstruir la línea con las partes modificadas y escribir en el archivo temporal

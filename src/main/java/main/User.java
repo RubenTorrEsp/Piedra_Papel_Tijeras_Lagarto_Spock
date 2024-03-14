@@ -12,13 +12,14 @@ public class User {
     public static String nombre;
     public static Integer puntuacion;
     public static String linea;
+    private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
 
     public User(String user){
-        leerArchivo(user);    
+        leerArchivo(user);   
     }
     
-    public static void establecerUsuario(String nombreArchivo) {
-        try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
+    public static void establecerUsuario(String nombreUsuario) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios))) {
             while ((linea = br.readLine()) != null) {
                 // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                 String[] partes = linea.split(";");
@@ -39,8 +40,8 @@ public class User {
     }
 
     public static void leerArchivo(String nombreArchivo) {
-        try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
-             PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(nombreArchivo + ".temp")))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios));
+             PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(archivoUsuarios + ".temp")))) {
             
             while ((linea = br.readLine()) != null) {
                 // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
@@ -66,8 +67,8 @@ public class User {
         // Renombrar el archivo temporal para reemplazar el archivo original
         try {
             java.nio.file.Files.move(
-                java.nio.file.Paths.get(nombreArchivo + ".temp"),
-                java.nio.file.Paths.get(nombreArchivo),
+                java.nio.file.Paths.get(archivoUsuarios + ".temp"),
+                java.nio.file.Paths.get(archivoUsuarios),
                 java.nio.file.StandardCopyOption.REPLACE_EXISTING
             );
         } catch (IOException e) {

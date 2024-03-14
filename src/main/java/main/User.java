@@ -18,9 +18,7 @@ public class User {
     }
     
     public static void establecerUsuario(String nombreArchivo) {
-        try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
-             PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(nombreArchivo + ".temp")))) {
-            
+        try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
             while ((linea = br.readLine()) != null) {
                 // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                 String[] partes = linea.split(";");
@@ -28,19 +26,13 @@ public class User {
                     // Establecer nombre y puntuacion del usuario
                     nombre = partes[0];
                     puntuacion = Integer.parseInt(partes[1]);
+
+                    System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
+
+                    // Actualizar puntuacion
+                    //partes[1] = String.valueOf(actualizarPuntuacion(puntuacion));
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        // Renombrar el archivo temporal para reemplazar el archivo original
-        try {
-            java.nio.file.Files.move(
-                java.nio.file.Paths.get(nombreArchivo + ".temp"),
-                java.nio.file.Paths.get(nombreArchivo),
-                java.nio.file.StandardCopyOption.REPLACE_EXISTING
-            );
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -50,7 +50,9 @@ public class Common {
             Textos.victoria(jugador, maquina);
             User.leerArchivo("E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt");
         }
-        else Textos.derrota(jugador, maquina);
+        else {
+            Textos.derrota(jugador, maquina);
+        }
     }
 
     // Selección de elemento por parte de la máquina

@@ -1,4 +1,4 @@
-user1;111
-user2;151
-user3;131
-user4;-2
+user1;113
+user2;153
+user3;133
+user4;0

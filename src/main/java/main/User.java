@@ -9,8 +9,9 @@ import java.io.PrintWriter;
 
 public class User {
 
-    public String nombre;
-    public Integer puntuacion;
+    public static String nombre;
+    public static Integer puntuacion;
+    public static String linea;
 
     public User(){
         
@@ -19,11 +20,17 @@ public class User {
     public static void leerArchivo(String nombreArchivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
              PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(nombreArchivo + ".temp")))) {
-            String linea;
+            
             while ((linea = br.readLine()) != null) {
                 // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                 String[] partes = linea.split(";");
                 if (partes.length == 2) {
+                    // Establecer nombre y puntuacion del usuario
+                    nombre = partes[0];
+                    puntuacion = Integer.parseInt(partes[1]);
+
+                    System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
+
                     // Actualizar puntuacion
                     partes[1] = String.valueOf(actualizarPuntuacion(Integer.parseInt(partes[1])));
                     // Reconstruir la línea con las partes modificadas y escribir en el archivo temporal

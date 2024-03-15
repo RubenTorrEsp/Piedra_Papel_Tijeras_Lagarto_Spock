@@ -22,7 +22,8 @@ public class User {
     // Método que recibe el posible nombre de usuario y devuelve el objeto
     public static void establecerUsuario(String nombreUsuario) {
 
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             while ((linea = br.readLine()) != null) {
 
                 // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
@@ -36,7 +37,11 @@ public class User {
                         puntuacion = Integer.parseInt(partes[1]);
                         
                         if(nombre.equals(nombreUsuario)) System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
-                        else System.out.println("No se encuentra el usuario");
+                        else {
+                            System.out.println("Usuario creado");
+                            bw.newLine();
+                            bw.write("Esta es una nueva línea.");
+                        }
                     
                     // Actualizar puntuacion
                     //partes[1] = String.valueOf(actualizarPuntuacion(puntuacion));

@@ -14,27 +14,30 @@ public class User {
     public static String linea;
     private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
 
-    public User(String user){
+    public User(){
         establecerUsuario("user1");
     }
     
 
     // Método que recibe el posible nombre de usuario y devuelve el objeto
     public static void establecerUsuario(String nombreUsuario) {
+
         try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios))) {
             while ((linea = br.readLine()) != null) {
+
                 // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                 String[] partes = linea.split(";");
+                
                 if (partes.length == 2) {
+
                     // Establecer nombre y puntuacion del usuario
-                    if (nombreUsuario == partes[0]){
+                    
                         nombre = partes[0];
                         puntuacion = Integer.parseInt(partes[1]);
-                        System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
-                    }
-                    else{
-                        System.out.println("No se encuentra el usuario");
-                    }
+                        
+                        if(nombre.equals(nombreUsuario)) System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
+                        else System.out.println("No se encuentra el usuario");
+                    
                     // Actualizar puntuacion
                     //partes[1] = String.valueOf(actualizarPuntuacion(puntuacion));
                 }
@@ -42,6 +45,7 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
 

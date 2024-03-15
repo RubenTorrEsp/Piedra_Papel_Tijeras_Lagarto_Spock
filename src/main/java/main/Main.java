@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         //inicio();
-        new User("E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt");
+        new User();
     }
 
     public static void inicio(){

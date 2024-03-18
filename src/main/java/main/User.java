@@ -9,16 +9,17 @@ import java.io.PrintWriter;
 
 public class User {
 
+    private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
+    
     public static String nombre;
     public static Integer puntuacion;
     public static String linea;
-    private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
 
+    // Constructor
     public User(){
         establecerUsuario("user1");
     }
     
-
     // Método que recibe el posible nombre de usuario y devuelve el objeto
     public static void establecerUsuario(String nombreUsuario) {
 
@@ -30,21 +31,19 @@ public class User {
                 String[] partes = linea.split(";");
                 
                 if (partes.length == 2) {
-
                     // Establecer nombre y puntuacion del usuario
+                    nombre = partes[0];
+                    puntuacion = Integer.parseInt(partes[1]);
                     
-                        nombre = partes[0];
-                        puntuacion = Integer.parseInt(partes[1]);
-                        
-                        if(nombre.equals(nombreUsuario)) System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
-                        else {
-                            System.out.println("Usuario creado");
-                            bw.newLine();
-                            bw.write("Esta es una nueva línea.");
-                        }
+                    if(nombre.equals(nombreUsuario)) System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
                     
                     // Actualizar puntuacion
                     //partes[1] = String.valueOf(actualizarPuntuacion(puntuacion));
+                    else {
+                        System.out.println("Usuario creado");
+                        bw.newLine();
+                        bw.write("Esta es una nueva línea.");
+                    }
                 }
             }
         } catch (IOException e) {

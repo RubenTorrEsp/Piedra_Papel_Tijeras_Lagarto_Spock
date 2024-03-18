@@ -14,10 +14,11 @@ public class User {
     public static String nombre;
     public static Integer puntuacion;
     public static String linea;
+    public static Boolean usuarioNoExiste = true;
 
     // Constructor
     public User(){
-        establecerUsuario("user1");
+        establecerUsuario("user6");
     }
     
     // Método que recibe el posible nombre de usuario y devuelve el objeto
@@ -25,27 +26,37 @@ public class User {
 
         try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
-            while ((linea = br.readLine()) != null) {
+            
+                while ((linea = br.readLine()) != null) {
 
-                // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
-                String[] partes = linea.split(";");
-                
-                if (partes.length == 2) {
-                    // Establecer nombre y puntuacion del usuario
-                    nombre = partes[0];
-                    puntuacion = Integer.parseInt(partes[1]);
+                    // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
+                    String[] partes = linea.split(";");
+
                     
-                    if(nombre.equals(nombreUsuario)) System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
-                    
-                    // Actualizar puntuacion
-                    //partes[1] = String.valueOf(actualizarPuntuacion(puntuacion));
-                    else {
-                        System.out.println("Usuario creado");
-                        bw.newLine();
-                        bw.write("Esta es una nueva línea.");
+                    if (partes[0].equals(nombreUsuario)) {
+                        
+                        // Establecer nombre y puntuacion del usuario
+                        nombre = partes[0];
+                        puntuacion = Integer.parseInt(partes[1]);
+                        
+                        System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
+
+                        usuarioNoExiste = false;
+                        
+                        // Actualizar puntuacion
+                        //partes[1] = String.valueOf(actualizarPuntuacion(puntuacion));
+                        /* 
+                        else {
+                            System.out.println("Usuario creado");
+                            bw.newLine();
+                            bw.write("Esta es una nueva línea.");
+                        }
+                        */
                     }
+
                 }
-            }
+                if(usuarioNoExiste) System.out.println("El usuario no existe");
+
         } catch (IOException e) {
             e.printStackTrace();
         }

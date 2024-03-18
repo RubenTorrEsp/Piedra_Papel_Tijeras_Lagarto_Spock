@@ -48,7 +48,7 @@ public class Common {
         if(jugador == maquina) System.out.println(Textos.empate);
         else if (Listas.obtenerVictoria(jugador, maquina)) {
             Textos.victoria(jugador, maquina);
-            User.leerArchivo("E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt");
+            //User.leerArchivo("E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt");
         }
         else {
             Textos.derrota(jugador, maquina);

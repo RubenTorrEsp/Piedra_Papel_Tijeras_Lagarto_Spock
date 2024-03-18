@@ -18,7 +18,7 @@ public class User {
 
     // Constructor
     public User(){
-        establecerUsuario("user6");
+        establecerUsuario("user5");
     }
     
     // Método que recibe el posible nombre de usuario y devuelve el objeto
@@ -55,8 +55,20 @@ public class User {
                     }
 
                 }
-                if(usuarioNoExiste) System.out.println("El usuario no existe");
+                if(usuarioNoExiste) crearNuevoUsuario(nombreUsuario);
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void crearNuevoUsuario(String usuario){
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
+            System.out.println("Usuario creado con 50 puntos.");
+            bw.newLine();
+            bw.write(usuario+";50");
         } catch (IOException e) {
             e.printStackTrace();
         }

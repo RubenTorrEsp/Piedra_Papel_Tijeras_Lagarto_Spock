@@ -11,7 +11,7 @@ public class User {
     private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
     
     public String nombre;
-    public static Integer puntuacion;
+    public Integer puntuacion;
     public static String linea;
     public static Boolean usuarioNoExiste = true;
 
@@ -27,7 +27,6 @@ public class User {
                         // Establecer nombre y puntuacion del usuario
                         nombre = partes[0];
                         puntuacion = Integer.parseInt(partes[1]);
-                        System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
                         usuarioNoExiste = false;
                     }
                 }

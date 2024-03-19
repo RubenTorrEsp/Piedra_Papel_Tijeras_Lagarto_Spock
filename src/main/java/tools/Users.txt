@@ -1,5 +1,5 @@
 user1;113
 user2;153
 user3;133
-user4;0
-user5;50
+user4;17
+user5;59

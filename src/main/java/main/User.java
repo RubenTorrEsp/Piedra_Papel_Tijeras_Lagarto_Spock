@@ -5,7 +5,6 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class User {
 
@@ -32,39 +31,25 @@ public class User {
                     // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                     String[] partes = linea.split(";");
 
-                    
+                    // Comprobar si el usuario existe
                     if (partes[0].equals(nombreUsuario)) {
-                        
                         // Establecer nombre y puntuacion del usuario
                         nombre = partes[0];
                         puntuacion = Integer.parseInt(partes[1]);
-                        
                         System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
-
                         usuarioNoExiste = false;
-                        
-                        // Actualizar puntuacion
-                        //partes[1] = String.valueOf(actualizarPuntuacion(puntuacion));
-                        /* 
-                        else {
-                            System.out.println("Usuario creado");
-                            bw.newLine();
-                            bw.write("Esta es una nueva línea.");
-                        }
-                        */
                     }
 
                 }
+                // Si no existe, crearlo
                 if(usuarioNoExiste) crearNuevoUsuario(nombreUsuario);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public static void crearNuevoUsuario(String usuario){
-
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             System.out.println("Usuario creado con 50 puntos.");
             bw.newLine();
@@ -72,7 +57,6 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public static Integer actualizarPuntuacion(Integer puntuacion){

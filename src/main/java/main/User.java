@@ -10,7 +10,7 @@ public class User {
 
     private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
     
-    public static String nombre;
+    public String nombre;
     public static Integer puntuacion;
     public static String linea;
     public static Boolean usuarioNoExiste = true;

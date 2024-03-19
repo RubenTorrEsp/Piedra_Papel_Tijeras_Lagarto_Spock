@@ -9,7 +9,14 @@ public class Main {
 
     public static void main(String[] args) {
         //inicio();
-        new User("Ruben");
+        new User(establecerUsuario());
+    }
+
+    public static String establecerUsuario(){
+        System.out.println("Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.");
+        String user = scanner.nextLine();
+        User usuario = new User(user);
+        return usuario.nombre;
     }
 
     public static void inicio(){

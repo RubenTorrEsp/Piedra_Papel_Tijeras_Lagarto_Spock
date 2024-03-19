@@ -16,21 +16,12 @@ public class User {
     public static Boolean usuarioNoExiste = true;
 
     // Constructor
-    public User(){
-        establecerUsuario("user5");
-    }
-    
-    // Método que recibe el posible nombre de usuario y devuelve el objeto
-    public static void establecerUsuario(String nombreUsuario) {
-
+    public User(String nombreUsuario){
         try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
-            
                 while ((linea = br.readLine()) != null) {
-
                     // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                     String[] partes = linea.split(";");
-
                     // Comprobar si el usuario existe
                     if (partes[0].equals(nombreUsuario)) {
                         // Establecer nombre y puntuacion del usuario
@@ -39,16 +30,15 @@ public class User {
                         System.out.println("El usuario "+nombre+" tiene una puntuacion de "+puntuacion+" puntos.");
                         usuarioNoExiste = false;
                     }
-
                 }
                 // Si no existe, crearlo
                 if(usuarioNoExiste) crearNuevoUsuario(nombreUsuario);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
+    
+    
     public static void crearNuevoUsuario(String usuario){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             System.out.println("Usuario creado con 50 puntos.");

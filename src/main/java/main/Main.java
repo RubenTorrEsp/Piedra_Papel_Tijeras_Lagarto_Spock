@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         //inicio();
-        new User("user1");
+        new User("Ruben");
     }
 
     public static void inicio(){

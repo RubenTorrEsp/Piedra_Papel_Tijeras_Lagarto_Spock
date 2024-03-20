@@ -17,6 +17,8 @@ public class User {
 
     // Constructor
     public User(String nombreUsuario){
+
+        /*
         try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
                 while ((linea = br.readLine()) != null) {
@@ -35,14 +37,29 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        */
+
+
+
     }
     
-    
+
     // Método que comprueba si el usuario existe
-    public Boolean usuarioExiste(){
+    public Boolean usuarioExiste(String nombreUsuario){
+        
         Boolean usuarioExiste = false;
 
-
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios))) {
+                while ((linea = br.readLine()) != null) {
+                    // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
+                    String[] partes = linea.split(";");
+                    // Comprobar si el usuario existe
+                    if (partes[0].equals(nombreUsuario)) System.out.println("El usuario existe");
+                    else System.out.println("El usuario no existe");
+                }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return usuarioExiste;
     }

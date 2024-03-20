@@ -12,13 +12,20 @@ public class Main {
         new User(establecerUsuario());
     }
 
-    
+
     public static String establecerUsuario(){
+        /*
         System.out.println("Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.");
         String user = scanner.nextLine();
         User usuario = new User(user);
         System.out.println("El usuario "+usuario.nombre+" tiene una puntuacion de "+usuario.puntuacion+" puntos.");
         return usuario.nombre;
+        */
+
+        
+
+        String respuesta = "";
+        return respuesta;
     }
 
     public static void inicio(){

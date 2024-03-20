@@ -21,10 +21,9 @@ public class Main {
         System.out.println("El usuario "+usuario.nombre+" tiene una puntuacion de "+usuario.puntuacion+" puntos.");
         return usuario.nombre;
         */
-
         
-
-        String respuesta = "";
+        System.out.println("Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.");
+        String respuesta = scanner.nextLine();
         return respuesta;
     }
 

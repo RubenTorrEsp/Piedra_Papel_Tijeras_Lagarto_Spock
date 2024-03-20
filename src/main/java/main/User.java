@@ -39,7 +39,9 @@ public class User {
         }
         */
 
-
+        
+        if(usuarioExiste(nombreUsuario)) System.out.println("El usuario existe");
+        else System.out.println("El usuario no existe");
 
     }
     
@@ -54,8 +56,7 @@ public class User {
                     // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                     String[] partes = linea.split(";");
                     // Comprobar si el usuario existe
-                    if (partes[0].equals(nombreUsuario)) System.out.println("El usuario existe");
-                    else System.out.println("El usuario no existe");
+                    if (partes[0].equals(nombreUsuario)) usuarioExiste = true;
                 }
         } catch (IOException e) {
             e.printStackTrace();

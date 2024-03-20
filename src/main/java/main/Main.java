@@ -12,6 +12,7 @@ public class Main {
         new User(establecerUsuario());
     }
 
+    
     public static String establecerUsuario(){
         System.out.println("Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.");
         String user = scanner.nextLine();

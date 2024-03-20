@@ -38,6 +38,17 @@ public class User {
     }
     
     
+    // Método que comprueba si el usuario existe
+    public Boolean usuarioExiste(){
+        Boolean usuarioExiste = false;
+
+
+
+        return usuarioExiste;
+    }
+
+
+
     public static void crearNuevoUsuario(String usuario){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             System.out.println("Usuario creado con 50 puntos.");

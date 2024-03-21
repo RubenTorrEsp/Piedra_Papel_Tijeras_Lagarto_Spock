@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class User {
 
-    private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
+    private static String archivoUsuarios = "..\\tools\\Users.txt";
     
     public String nombre;
     public Integer puntuacion;
@@ -48,25 +48,18 @@ public class User {
 
     // Método que comprueba si el usuario existe
     public Boolean usuarioExiste(String nombreUsuario){
-        
         Boolean usuarioExiste = false;
-
         try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios))) {
-                while ((linea = br.readLine()) != null) {
-                    // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
-                    String[] partes = linea.split(";");
-                    // Comprobar si el usuario existe
-                    if (partes[0].equals(nombreUsuario)) usuarioExiste = true;
-                }
+            while ((linea = br.readLine()) != null) {
+                if(linea.contains(nombreUsuario)) usuarioExiste = true;
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return usuarioExiste;
     }
 
-
-
+    // Método que crea un usuario nuevo
     public static void crearNuevoUsuario(String usuario){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             System.out.println("Usuario creado con 50 puntos.");

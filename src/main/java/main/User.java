@@ -8,43 +8,37 @@ import java.io.IOException;
 
 public class User {
 
-    private static String archivoUsuarios = "..\\tools\\Users.txt";
+    private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
     
-    public String nombre;
-    public Integer puntuacion;
+    public static String nombre;
+    public static Integer puntuacion;
     public static String linea;
-    public static Boolean usuarioNoExiste = true;
 
     // Constructor
     public User(String nombreUsuario){
-
-        /*
+        if(usuarioExiste(nombreUsuario)) establecerUsuario(nombreUsuario);      
+        else crearNuevoUsuario(nombreUsuario);
+    }
+    
+    // Método para establecer el usuario
+    public void establecerUsuario(String nombreUsuario) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
-                while ((linea = br.readLine()) != null) {
-                    // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
-                    String[] partes = linea.split(";");
-                    // Comprobar si el usuario existe
-                    if (partes[0].equals(nombreUsuario)) {
-                        // Establecer nombre y puntuacion del usuario
-                        nombre = partes[0];
-                        puntuacion = Integer.parseInt(partes[1]);
-                        usuarioNoExiste = false;
-                    }
-                }
-                // Si no existe, crearlo
-                if(usuarioNoExiste) crearNuevoUsuario(nombreUsuario);
+        BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
+           while ((linea = br.readLine()) != null) {
+               // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
+               String[] partes = linea.split(";");
+               // Comprobar si el usuario existe
+               if (partes[0].equals(nombreUsuario)) {
+                   // Establecer nombre y puntuacion del usuario
+                   nombre = partes[0];
+                   puntuacion = Integer.parseInt(partes[1]);
+               }
+           }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        */
-
-        
-        if(usuarioExiste(nombreUsuario)) System.out.println("El usuario existe");
-        else System.out.println("El usuario no existe");
-
     }
-    
+
 
     // Método que comprueba si el usuario existe
     public Boolean usuarioExiste(String nombreUsuario){
@@ -65,6 +59,8 @@ public class User {
             System.out.println("Usuario creado con 50 puntos.");
             bw.newLine();
             bw.write(usuario+";50");
+            nombre = usuario;
+            puntuacion = 50;
         } catch (IOException e) {
             e.printStackTrace();
         }

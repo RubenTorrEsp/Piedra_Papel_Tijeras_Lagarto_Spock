@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import tools.Textos;
+
 public class User {
 
     private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
@@ -56,7 +58,7 @@ public class User {
     // Método que crea un usuario nuevo
     public static void crearNuevoUsuario(String usuario){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
-            System.out.println("Usuario creado con 50 puntos.");
+            System.out.println(Textos.usuarioCreado);
             bw.newLine();
             bw.write(usuario+";50");
             nombre = usuario;

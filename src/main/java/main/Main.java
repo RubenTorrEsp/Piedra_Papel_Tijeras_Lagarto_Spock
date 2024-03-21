@@ -12,20 +12,12 @@ public class Main {
         new User(establecerUsuario());
     }
 
-
+    // Método que establece el jugador
     public static String establecerUsuario(){
-        /*
-        System.out.println("Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.");
-        String user = scanner.nextLine();
-        User usuario = new User(user);
-        System.out.println("El usuario "+usuario.nombre+" tiene una puntuacion de "+usuario.puntuacion+" puntos.");
-        return usuario.nombre;
-        */
-        
-        System.out.println("Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.");
+        System.out.println(Textos.comprobarUsuario);
         String respuesta = scanner.nextLine();
-        User jugador = new User(respuesta);
-        System.out.println("El jugador "+jugador.nombre+" está ahora activo con "+jugador.puntuacion+" puntos.");
+        new User(respuesta);
+        Textos.definicionUser(User.nombre, User.puntuacion);
         return respuesta;
     }
 

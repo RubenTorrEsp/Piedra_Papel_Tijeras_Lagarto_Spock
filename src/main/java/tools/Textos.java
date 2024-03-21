@@ -19,6 +19,13 @@ public class Textos {
     public static String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número:";
     public static String rejugarNegativo = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";
 
+    //Textos de usuario
+    public static String comprobarUsuario = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";
+    public static String usuarioCreado = "Usuario creado.";
+    public static void definicionUser(String nombre, Integer puntuacion){
+        System.out.println("El jugador "+nombre+" está ahora activo con "+puntuacion+" puntos.");
+    }
+
     // Textos de resolución de enfrentamientos
     public static String victoria = "Enhorabuena!! Has ganado, porque ";
     public static String derrota = "Lo siento!! Has perdido, porque ";

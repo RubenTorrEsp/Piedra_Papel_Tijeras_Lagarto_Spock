@@ -24,6 +24,8 @@ public class Main {
         
         System.out.println("Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.");
         String respuesta = scanner.nextLine();
+        User jugador = new User(respuesta);
+        System.out.println("El jugador "+jugador.nombre+" está ahora activo con "+jugador.puntuacion+" puntos.");
         return respuesta;
     }
 

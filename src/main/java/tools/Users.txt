@@ -4,5 +4,3 @@ user3;133
 user4;17
 user5;59
 Ruben;187
-Hitler;50
-Stalin;50

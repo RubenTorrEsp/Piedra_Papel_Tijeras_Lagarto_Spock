@@ -8,16 +8,16 @@ import tools.Textos;
 public class JuegoClasico {
 
     // Creacion del elemento scanner y strings en los que se guarda el texto captado
-    static Scanner scanner = new Scanner(System.in);
-    static String seleccionJugador;
+    Scanner scanner = new Scanner(System.in);
+    String seleccionJugador;
 
     // Constructor del programa y ciclo de vida
     public JuegoClasico(User jugador){
-        jugarDeNuevo();
+        jugarDeNuevo(jugador);
     }
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
-    public static void jugarDeNuevo(){
+    public void jugarDeNuevo(User jugador){
         System.out.println(Textos.cabeceraSeleccion);
         System.out.println(Textos.opcionesJuegoClasico);
 
@@ -28,7 +28,7 @@ public class JuegoClasico {
                 Common.reJugar = false;
             }
             else {
-                Common.comprobarVictoria(seleccionJugador, Common.obtenerSeleccionMaquina(3));
+                Common.comprobarVictoria(seleccionJugador, Common.obtenerSeleccionMaquina(3), jugador);
                 Common.reJugar();
             }
         }
@@ -38,7 +38,7 @@ public class JuegoClasico {
     }
 
     // Obtener la elección del jugador
-    public static Boolean obtenerEntrada() {
+    public Boolean obtenerEntrada() {
         Boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(Listas.elementosJuegoClasico.contains(seleccionJugador)) {

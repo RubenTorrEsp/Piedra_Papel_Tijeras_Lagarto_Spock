@@ -10,11 +10,11 @@ import tools.Textos;
 
 public class User {
 
-    private static String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
+    private String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
     
     public static String nombre;
     public static Integer puntuacion;
-    public static String linea;
+    public String linea;
 
     // Constructor
     public User(String nombreUsuario){
@@ -56,7 +56,7 @@ public class User {
     }
 
     // Método que crea un usuario nuevo
-    public static void crearNuevoUsuario(String usuario){
+    public void crearNuevoUsuario(String usuario){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             System.out.println(Textos.usuarioCreado);
             bw.newLine();
@@ -68,9 +68,8 @@ public class User {
         }
     }
 
-    public static Integer actualizarPuntuacion(Integer puntuacion){
-        puntuacion++;
-        return puntuacion;
+    public void actualizarPuntuacion(User jugador){
+        jugador.puntuacion++;
     }
 
 }

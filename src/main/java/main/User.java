@@ -68,8 +68,12 @@ public class User {
         }
     }
 
-    public void actualizarPuntuacion(User jugador){
-        jugador.puntuacion++;
+    @SuppressWarnings("static-access")
+    public void actualizarPuntuacion(User jugador, Boolean victoria){
+        System.out.println("La antigua puntuacion era "+jugador.puntuacion);
+        if (victoria) jugador.puntuacion++;
+        else jugador.puntuacion--;
+        System.out.println("La nueva puntuacion es "+jugador.puntuacion);
     }
 
 }

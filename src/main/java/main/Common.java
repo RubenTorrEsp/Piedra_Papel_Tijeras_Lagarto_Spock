@@ -48,10 +48,11 @@ public class Common {
         if(jugador == maquina) System.out.println(Textos.empate);
         else if (Listas.obtenerVictoria(jugador, maquina)) {
             Textos.victoria(jugador, maquina);
-            user.actualizarPuntuacion(user);
+            user.actualizarPuntuacion(user, true);
         }
         else {
             Textos.derrota(jugador, maquina);
+            user.actualizarPuntuacion(user, false);
         }
     }
 

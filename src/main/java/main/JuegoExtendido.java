@@ -12,7 +12,7 @@ public class JuegoExtendido {
     static String seleccionJugador;
 
     // Constructor del programa y ciclo de vida
-    public JuegoExtendido(){
+    public JuegoExtendido(User jugador){
         jugarDeNuevo();
     }
 

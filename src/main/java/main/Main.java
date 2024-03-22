@@ -27,10 +27,10 @@ public class Main {
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case "1":
-                while(Common.reJugar) new JuegoExtendido();
+                while(Common.reJugar) new JuegoExtendido(jugador);
                 break;
             case "2":
-                while(Common.reJugar) new JuegoClasico();
+                while(Common.reJugar) new JuegoClasico(jugador);
                 break;
             default:
                 System.out.println(Textos.seleccionInvalida);

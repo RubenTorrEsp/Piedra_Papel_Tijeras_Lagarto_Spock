@@ -8,8 +8,8 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        new User(establecerUsuario());
-        inicio();
+        User jugador = new User(establecerUsuario());
+        inicio(jugador);
     }
 
     // Método que establece el jugador
@@ -21,7 +21,7 @@ public class Main {
         return respuesta;
     }
 
-    public static void inicio(){
+    public static void inicio(User jugador){
         System.out.println(Textos.bienvenida);
         System.out.println(Textos.seleccionJuego);
         String eleccion = scanner.nextLine();

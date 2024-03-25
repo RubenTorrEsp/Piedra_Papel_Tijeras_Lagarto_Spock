@@ -2,8 +2,8 @@ package main;
 
 import java.util.Scanner;
 
-import tools.Listas;
-import tools.Textos;
+import static tools.Listas.*;
+import static tools.Textos.*;
 
 public class JuegoExtendido extends Common {
 
@@ -18,13 +18,13 @@ public class JuegoExtendido extends Common {
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
     public void jugarDeNuevo(User jugador){
-        System.out.println(Textos.cabeceraSeleccion);
-        System.out.println(Textos.opcionesJuegoExtendido);
+        System.out.println(cabeceraSeleccion);
+        System.out.println(opcionesJuegoExtendido);
 
         if(obtenerEntrada()){
             if (seleccionJugador == "salir") {
-                System.out.println(Textos.seleccionSalir);
-                System.out.println(Textos.rejugarNegativo);
+                System.out.println(seleccionSalir);
+                System.out.println(rejugarNegativo);
                 reJugar = false;
             }
             else {
@@ -41,12 +41,12 @@ public class JuegoExtendido extends Common {
     public Boolean obtenerEntrada() {
         Boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
-        if(Listas.elementosJuegoExtendido.contains(seleccionJugador)) {
+        if(elementosJuegoExtendido.contains(seleccionJugador)) {
             seleccionValida = true;
             seleccionJugador = refactorizar(seleccionJugador);
         }
         else {
-            System.out.println(Textos.seleccionInvalida);
+            System.out.println(seleccionInvalida);
             seleccionValida = false;
         }
         return seleccionValida;

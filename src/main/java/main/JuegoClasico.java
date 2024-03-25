@@ -5,7 +5,7 @@ import java.util.Scanner;
 import tools.Listas;
 import tools.Textos;
 
-public class JuegoClasico {
+public class JuegoClasico extends Common{
 
     // Creacion del elemento scanner y strings en los que se guarda el texto captado
     Scanner scanner = new Scanner(System.in);
@@ -25,15 +25,15 @@ public class JuegoClasico {
             if (seleccionJugador == "salir") {
                 System.out.println(Textos.seleccionSalir);
                 System.out.println(Textos.rejugarNegativo);
-                Common.reJugar = false;
+                reJugar = false;
             }
             else {
-                Common.comprobarVictoria(seleccionJugador, Common.obtenerSeleccionMaquina(3), jugador);
-                Common.reJugar();
+                comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina(3), jugador);
+                reJugar();
             }
         }
         else{
-            Common.reJugar();
+            reJugar();
         }
     }
 
@@ -43,7 +43,7 @@ public class JuegoClasico {
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(Listas.elementosJuegoClasico.contains(seleccionJugador)) {
             seleccionValida = true;
-            seleccionJugador = Common.refactorizar(seleccionJugador);
+            seleccionJugador = refactorizar(seleccionJugador);
         }
         else {
             System.out.println(Textos.seleccionInvalida);
@@ -53,4 +53,3 @@ public class JuegoClasico {
     }
 
 }
-

@@ -2,8 +2,8 @@ package main;
 
 import java.util.Scanner;
 
-import tools.Listas;
-import tools.Textos;
+import static tools.Listas.*;
+import static tools.Textos.*;
 
 public class JuegoClasico extends Common{
 
@@ -18,13 +18,13 @@ public class JuegoClasico extends Common{
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
     public void jugarDeNuevo(User jugador){
-        System.out.println(Textos.cabeceraSeleccion);
-        System.out.println(Textos.opcionesJuegoClasico);
+        System.out.println(cabeceraSeleccion);
+        System.out.println(opcionesJuegoClasico);
 
         if(obtenerEntrada()){
             if (seleccionJugador == "salir") {
-                System.out.println(Textos.seleccionSalir);
-                System.out.println(Textos.rejugarNegativo);
+                System.out.println(seleccionSalir);
+                System.out.println(rejugarNegativo);
                 reJugar = false;
             }
             else {
@@ -41,12 +41,12 @@ public class JuegoClasico extends Common{
     public Boolean obtenerEntrada() {
         Boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
-        if(Listas.elementosJuegoClasico.contains(seleccionJugador)) {
+        if(elementosJuegoClasico.contains(seleccionJugador)) {
             seleccionValida = true;
             seleccionJugador = refactorizar(seleccionJugador);
         }
         else {
-            System.out.println(Textos.seleccionInvalida);
+            System.out.println(seleccionInvalida);
             seleccionValida = false;
         }
         return seleccionValida;

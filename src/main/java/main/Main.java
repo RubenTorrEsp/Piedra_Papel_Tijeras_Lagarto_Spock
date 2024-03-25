@@ -1,6 +1,6 @@
 package main;
 
-import tools.Textos;
+import static tools.Textos.*;
 import java.util.Scanner;
 
 public class Main {
@@ -14,16 +14,16 @@ public class Main {
 
     // Método que establece el jugador
     public static String establecerUsuario(){
-        System.out.println(Textos.comprobarUsuario);
+        System.out.println(comprobarUsuario);
         String respuesta = scanner.nextLine();
         new User(respuesta);
-        Textos.definicionUser(User.nombre, User.puntuacion);
+        definicionUser(User.nombre, User.puntuacion);
         return respuesta;
     }
 
     public static void inicio(User jugador){
-        System.out.println(Textos.bienvenida);
-        System.out.println(Textos.seleccionJuego);
+        System.out.println(bienvenida);
+        System.out.println(seleccionJuego);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case "1":
@@ -33,7 +33,7 @@ public class Main {
                 while(Common.reJugar) new JuegoClasico(jugador);
                 break;
             default:
-                System.out.println(Textos.seleccionInvalida);
+                System.out.println(seleccionInvalida);
                 break;
         }
     }

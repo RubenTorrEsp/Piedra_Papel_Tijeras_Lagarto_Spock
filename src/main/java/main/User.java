@@ -1,16 +1,15 @@
 package main;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 import tools.Textos;
 
 public class User {
 
     private String archivoUsuarios = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
+
+    File archivoOriginal = new File(archivoUsuarios);
+    File archivoTemporal = new File("temp.txt");
     
     public static String nombre;
     public static Integer puntuacion;
@@ -68,12 +67,53 @@ public class User {
         }
     }
 
+    //Método que actualiza la puntuación del jugador
     @SuppressWarnings("static-access")
     public void actualizarPuntuacion(User jugador, Boolean victoria){
-        System.out.println("La antigua puntuacion era "+jugador.puntuacion);
+        
         if (victoria) jugador.puntuacion++;
         else jugador.puntuacion--;
-        System.out.println("La nueva puntuacion es "+jugador.puntuacion);
+        System.out.println("La nueva puntuacion es "+jugador.puntuacion);               
+
+        /*
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+
+            String linea;
+            boolean usuarioEncontrado = false;
+
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(";");
+                if (partes.length > 0 && partes[0].equals(jugador.nombre)) {
+                    // Si se encuentra el usuario, escribir "Hola mundo" en lugar de la línea actual
+                    bw.write("Hola mundo");
+                    usuarioEncontrado = true;
+                } else {
+                    // Escribir la línea original en el archivo temporal
+                    bw.write(linea);
+                }
+                // Escribir un salto de línea después de cada línea
+                bw.newLine();
+            }
+
+            if (!usuarioEncontrado) {
+                System.out.println("El usuario especificado no se encontró en el archivo.");
+            } else {
+                // Eliminar el archivo original y renombrar el archivo temporal
+                if (!archivoOriginal.delete()) {
+                    throw new IOException("No se pudo eliminar el archivo original.");
+                }
+                if (!archivoTemporal.renameTo(archivoOriginal)) {
+                    throw new IOException("No se pudo renombrar el archivo temporal.");
+                }
+                System.out.println("El archivo se ha actualizado correctamente.");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        */
     }
 
+    
 }

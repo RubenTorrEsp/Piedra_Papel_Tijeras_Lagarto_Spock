@@ -2,7 +2,7 @@ package main;
 
 import java.io.*;
 
-import tools.Textos;
+import static tools.Textos.*;
 
 public class User {
 
@@ -57,7 +57,7 @@ public class User {
     // Método que crea un usuario nuevo
     public void crearNuevoUsuario(String usuario){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
-            System.out.println(Textos.usuarioCreado);
+            System.out.println(usuarioCreado);
             bw.newLine();
             bw.write(usuario+";50");
             nombre = usuario;

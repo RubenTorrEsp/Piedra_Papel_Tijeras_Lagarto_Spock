@@ -59,7 +59,7 @@ public class User {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             System.out.println(usuarioCreado);
             bw.newLine();
-            bw.write(usuario+";50");
+            bw.write(usuario+puntuacionInicial);
             nombre = usuario;
             puntuacion = 50;
         } catch (IOException e) {

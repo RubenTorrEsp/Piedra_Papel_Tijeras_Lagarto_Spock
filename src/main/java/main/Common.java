@@ -3,8 +3,8 @@ package main;
 import java.util.Random;
 import java.util.Scanner;
 
-import tools.Listas;
-import tools.Textos;
+import static tools.Listas.*;
+import static tools.Textos.*;
 
 public class Common {
 
@@ -42,16 +42,16 @@ public class Common {
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
     public static void comprobarVictoria(String jugador, String maquina, User user) {
-        System.out.println(Textos.seleccionJugador+jugador);
-        System.out.println(Textos.seleccionMaquina+maquina);
+        System.out.println(seleccionJugador+jugador);
+        System.out.println(seleccionMaquina+maquina);
 
-        if(jugador == maquina) System.out.println(Textos.empate);
-        else if (Listas.obtenerVictoria(jugador, maquina)) {
-            Textos.victoria(jugador, maquina);
+        if(jugador == maquina) System.out.println(empate);
+        else if (obtenerVictoria(jugador, maquina)) {
+            victoria(jugador, maquina);
             user.actualizarPuntuacion(user, true);
         }
         else {
-            Textos.derrota(jugador, maquina);
+            derrota(jugador, maquina);
             user.actualizarPuntuacion(user, false);
         }
     }
@@ -60,20 +60,20 @@ public class Common {
     public static String obtenerSeleccionMaquina(Integer elementos) {
         Random random = new Random();
         int valorJuego = random.nextInt(elementos)+1;
-        String valorMaquina = Listas.elementosJuegoExtendido.get(valorJuego-1);
+        String valorMaquina = elementosJuegoExtendido.get(valorJuego-1);
         return valorMaquina;
     }
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
     public static void reJugar(){
-        System.out.println(Textos.seleccionRejugar);
+        System.out.println(seleccionRejugar);
         switch (scanner.nextLine().toLowerCase()){
             case "si":
-                System.out.println(Textos.rejugarAfirmativo);
+                System.out.println(rejugarAfirmativo);
                 break;
             default:
                 reJugar = false;
-                System.out.println(Textos.rejugarNegativo);
+                System.out.println(rejugarNegativo);
                 break;
         }
     }

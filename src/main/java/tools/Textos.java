@@ -19,6 +19,9 @@ public class Textos {
     public static String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número:";
     public static String rejugarNegativo = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";
 
+    //Textos de configuracion
+    public static String puntuacionInicial = ";50";
+
     //Textos de usuario
     public static String comprobarUsuario = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";
     public static String usuarioCreado = "Usuario creado.";

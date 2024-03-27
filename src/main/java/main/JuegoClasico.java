@@ -29,11 +29,11 @@ public class JuegoClasico extends Common{
             }
             else {
                 comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina(3), jugador);
-                reJugar();
+                reJugar(jugador);
             }
         }
         else{
-            reJugar();
+            reJugar(jugador);
         }
     }
 

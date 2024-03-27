@@ -65,7 +65,8 @@ public class Common {
     }
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
-    public static void reJugar(){
+    @SuppressWarnings("static-access")
+    public static void reJugar(User jugador){
         System.out.println(seleccionRejugar);
         switch (scanner.nextLine().toLowerCase()){
             case "si":
@@ -74,6 +75,7 @@ public class Common {
             default:
                 reJugar = false;
                 System.out.println(rejugarNegativo);
+                jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);
                 break;
         }
     }

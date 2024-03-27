@@ -77,6 +77,7 @@ public class User {
 
     }
 
+    //Método que actualiza la puntuación del jugador en el archivo
     public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion){
         String rutaArchivo = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
         File archivoOriginal = new File(rutaArchivo);

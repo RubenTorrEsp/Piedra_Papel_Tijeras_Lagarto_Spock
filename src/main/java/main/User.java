@@ -80,7 +80,7 @@ public class User {
         File archivoTemporal = new File("temp.txt");
 
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoOriginal))) {
 
             String linea;
             boolean usuarioEncontrado = false;
@@ -89,33 +89,34 @@ public class User {
                 // Dividir la línea en nombre y puntuación utilizando el punto y coma como delimitador
                 String[] partes = linea.split(";");
                 if (partes.length == 2 && partes[0].equals(nombreUsuario)) {
-                    // Si se encuentra el usuario, escribir la línea con la nueva puntuación
-                    bw.write(nombreUsuario + ";" + nuevaPuntuacion);
+                    // Si se encuentra el usuario, actualizar la puntuación
+                    linea = nombreUsuario + ";" + nuevaPuntuacion;
                     usuarioEncontrado = true;
-                } else {
-                    // Escribir la línea original en el archivo temporal
-                    bw.write(linea);
                 }
+                // Escribir la línea en el archivo temporal
+                bw.write(linea);
                 // Escribir un salto de línea después de cada línea
                 bw.newLine();
             }
 
             if (!usuarioEncontrado) {
                 System.out.println("El usuario especificado no se encontró en el archivo.");
-            } else {
-                // Eliminar el archivo original y renombrar el archivo temporal
-                if (!archivoOriginal.delete()) {
-                    throw new IOException("No se pudo eliminar el archivo original.");
-                }
-                if (!archivoTemporal.renameTo(archivoOriginal)) {
-                    throw new IOException("No se pudo renombrar el archivo temporal.");
-                }
-                System.out.println("La puntuación del usuario ha sido actualizada con éxito.");
+                return; // Salir del método si no se encuentra el usuario
             }
+
+            // Renombrar el archivo temporal para reemplazar el archivo original
+            if (!archivoOriginal.delete()) {
+                throw new IOException("No se pudo eliminar el archivo original.");
+            }
+            if (!archivoTemporal.renameTo(archivoOriginal)) {
+                throw new IOException("No se pudo renombrar el archivo temporal.");
+            }
+            System.out.println("La puntuación del usuario ha sido actualizada con éxito.");
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
     
 }

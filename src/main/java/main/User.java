@@ -75,7 +75,13 @@ public class User {
         else jugador.puntuacion--;
         System.out.println("La nueva puntuacion es "+jugador.puntuacion);               
 
-        /*
+    }
+
+    public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion){
+        String rutaArchivo = "E:\\Proyectos\\Piedra_Papel_Tijeras_Lagarto_Spock\\src\\main\\java\\tools\\Users.txt";
+        File archivoOriginal = new File(rutaArchivo);
+        File archivoTemporal = new File("temp.txt");
+
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
 
@@ -83,10 +89,11 @@ public class User {
             boolean usuarioEncontrado = false;
 
             while ((linea = br.readLine()) != null) {
+                // Dividir la línea en nombre y puntuación utilizando el punto y coma como delimitador
                 String[] partes = linea.split(";");
-                if (partes.length > 0 && partes[0].equals(jugador.nombre)) {
-                    // Si se encuentra el usuario, escribir "Hola mundo" en lugar de la línea actual
-                    bw.write("Hola mundo");
+                if (partes.length == 2 && partes[0].equals(nombreUsuario)) {
+                    // Si se encuentra el usuario, escribir la línea con la nueva puntuación
+                    bw.write(nombreUsuario + ";" + nuevaPuntuacion);
                     usuarioEncontrado = true;
                 } else {
                     // Escribir la línea original en el archivo temporal
@@ -106,19 +113,12 @@ public class User {
                 if (!archivoTemporal.renameTo(archivoOriginal)) {
                     throw new IOException("No se pudo renombrar el archivo temporal.");
                 }
-                System.out.println("El archivo se ha actualizado correctamente.");
+                System.out.println("La puntuación del usuario ha sido actualizada con éxito.");
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        */
     }
-
-    public static void reescribirPuntuacion(){
-
-        
-    }
-
     
 }

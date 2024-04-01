@@ -82,7 +82,6 @@ public class User {
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
 
             String linea;
-            boolean usuarioEncontrado = false;
 
             while ((linea = br.readLine()) != null) {
                 // Dividir la línea en nombre y puntuación utilizando el punto y coma como delimitador
@@ -90,17 +89,14 @@ public class User {
                 if (partes.length == 2 && partes[0].equals(nombreUsuario)) {
                     // Si se encuentra el usuario, actualizar la puntuación
                     linea = nombreUsuario + ";" + nuevaPuntuacion;
-                    usuarioEncontrado = true;
                 }
                 // Escribir la línea en el archivo temporal
                 bw.write(linea);
                 // Escribir un salto de línea después de cada línea
                 bw.newLine();
-            }
 
-            if (!usuarioEncontrado) {
-                System.out.println("El usuario especificado no se encontró en el archivo.");
-                return; // Salir del método si no se encuentra el usuario
+                archivoOriginal.delete();
+                archivoTemporal.renameTo(archivoOriginal);
             }
 
             // Renombrar el archivo temporal para reemplazar el archivo original

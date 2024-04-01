@@ -95,9 +95,10 @@ public class User {
                 // Escribir un salto de línea después de cada línea
                 bw.newLine();
 
-                archivoOriginal.delete();
-                archivoTemporal.renameTo(archivoOriginal);
             }
+
+            archivoOriginal.delete();
+            archivoTemporal.renameTo(archivoOriginal);
 
             // Renombrar el archivo temporal para reemplazar el archivo original
             if (!archivoOriginal.delete()) {

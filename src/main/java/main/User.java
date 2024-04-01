@@ -66,21 +66,20 @@ public class User {
 
     //Método que actualiza la puntuación del jugador
     @SuppressWarnings("static-access")
-    public void actualizarPuntuacion(User jugador, Boolean victoria){
-        
+    public void actualizarPuntuacion(User jugador, Boolean victoria){  
         if (victoria) jugador.puntuacion++;
         else jugador.puntuacion--;
         System.out.println("La nueva puntuacion es "+jugador.puntuacion);               
-
     }
 
     //Método que actualiza la puntuación del jugador en el archivo
     public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion){
+
         File archivoOriginal = new File(archivoUsuarios);
         File archivoTemporal = new File("temp.txt");
 
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoOriginal))) {
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
 
             String linea;
             boolean usuarioEncontrado = false;

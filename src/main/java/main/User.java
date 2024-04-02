@@ -7,6 +7,7 @@ import static tools.Textos.*;
 public class User {
 
     private static String archivoUsuarios = "users.txt";
+    private static String archivoUsuariosTemporal = "temp.txt";
     
     public static String nombre;
     public static Integer puntuacion;
@@ -76,7 +77,7 @@ public class User {
     public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion){
 
         File archivoOriginal = new File(archivoUsuarios);
-        File archivoTemporal = new File("temp.txt");
+        File archivoTemporal = new File(archivoUsuariosTemporal);
 
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
@@ -94,7 +95,6 @@ public class User {
                 bw.write(linea);
                 // Escribir un salto de línea después de cada línea
                 bw.newLine();
-
             }
 
             archivoOriginal.delete();

@@ -1,7 +1,0 @@
-user1;112
-user2;153
-user3;133
-user4;17
-user5;59
-Ruben;187
-ruben;50

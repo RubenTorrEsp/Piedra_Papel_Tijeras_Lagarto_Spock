@@ -97,9 +97,6 @@ public class User {
                 bw.newLine();
             }
 
-            archivoOriginal.delete();
-            archivoTemporal.renameTo(archivoOriginal);
-
             // Renombrar el archivo temporal para reemplazar el archivo original
             if (!archivoOriginal.delete()) {
                 throw new IOException("No se pudo eliminar el archivo original.");

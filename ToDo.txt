@@ -1,8 +1,6 @@
 Programa completado, futuras implementaciones
 
--Usuarios (En proceso)
-    Completo: Creacion y lectura de usuarios, conversion a objeto y actualizacion del objeto
-    Pendiente: Que la puntuacion de los usuarios se actualice en el archivo
+-BDD para usuarios
 -Test unitarios del programa
 -Puntuaciones
 -Sistema de apuestas

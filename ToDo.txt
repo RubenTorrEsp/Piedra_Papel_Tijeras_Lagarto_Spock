@@ -6,7 +6,6 @@ Programa completado, futuras implementaciones
 -Puntuaciones
 -Sistema de apuestas
 -Interfaz
--BDD
 -Idiomas
 -Añadir nuevos juegos
     -Cara o cruz

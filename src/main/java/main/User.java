@@ -1,13 +1,14 @@
 package main;
 
 import java.io.*;
+import java.nio.file.*;
 
 import static tools.Textos.*;
 
 public class User {
 
-    private static String archivoUsuarios = "users.txt";
-    private static String archivoUsuariosTemporal = "temp.txt";
+    static String archivoUsuarios = "users.txt";
+    static String archivoUsuariosTemporal = "temp.txt";
     
     public static String nombre;
     public static Integer puntuacion;
@@ -21,18 +22,17 @@ public class User {
     
     // Método para establecer el usuario
     public void establecerUsuario(String nombreUsuario) {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios));
-        BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
-           while ((linea = br.readLine()) != null) {
-               // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
-               String[] partes = linea.split(";");
-               // Comprobar si el usuario existe
-               if (partes[0].equals(nombreUsuario)) {
-                   // Establecer nombre y puntuacion del usuario
-                   nombre = partes[0];
-                   puntuacion = Integer.parseInt(partes[1]);
-               }
-           }
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios))) {
+            while ((linea = br.readLine()) != null) {
+                // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
+                String[] partes = linea.split(";");
+                // Comprobar si el usuario existe
+                if (partes[0].equals(nombreUsuario)) {
+                    // Establecer nombre y puntuacion del usuario
+                    nombre = partes[0];
+                    puntuacion = Integer.parseInt(partes[1]);
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -97,19 +97,24 @@ public class User {
                 bw.newLine();
             }
 
-            // Renombrar el archivo temporal para reemplazar el archivo original
-            if (!archivoOriginal.delete()) {
-                throw new IOException("No se pudo eliminar el archivo original.");
+            if (archivoOriginal.exists()) {
+                System.out.println("El archivo existe");
+                String rutaUsers = "users.txt";
+                Path archivoPath = Paths.get(rutaUsers);
+                try {
+                    // Intentar eliminar el archivo
+                    Files.delete(archivoPath);
+                    System.out.println("El archivo ha sido eliminado con éxito.");
+                } catch (IOException e) {
+                    System.out.println("No se pudo eliminar el archivo: " + e.getMessage());
+                }
             }
-            if (!archivoTemporal.renameTo(archivoOriginal)) {
-                throw new IOException("No se pudo renombrar el archivo temporal.");
-            }
+
             System.out.println("La puntuación del usuario ha sido actualizada con éxito.");
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
     
 }

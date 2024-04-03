@@ -1,6 +1,7 @@
 Programa completado, futuras implementaciones
 
 -BDD para usuarios
+-Solucion de mayusculas/minusculas para usuarios
 -Test unitarios del programa
 -Puntuaciones
 -Sistema de apuestas

@@ -97,21 +97,21 @@ public class User {
                 bw.newLine();
             }
 
-            if (archivoOriginal.exists()) {
-                System.out.println("El archivo existe");
-                String rutaUsers = "users.txt";
-                Path archivoPath = Paths.get(rutaUsers);
-                try {
-                    // Intentar eliminar el archivo
-                    Files.delete(archivoPath);
-                    System.out.println("El archivo ha sido eliminado con éxito.");
-                } catch (IOException e) {
-                    System.out.println("No se pudo eliminar el archivo: " + e.getMessage());
-                }
-            }
-            
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        if (archivoOriginal.exists()) {
+            System.out.println("El archivo existe");
+            String rutaUsers = "users.txt";
+            Path archivoPath = Paths.get(rutaUsers);
+            try {
+                // Intentar eliminar el archivo
+                Files.delete(archivoPath);
+                archivoTemporal.renameTo(archivoOriginal);
+            } catch (IOException e) {
+                System.out.println("No se pudo eliminar el archivo: " + e.getMessage());
+            }
         }
     }
     

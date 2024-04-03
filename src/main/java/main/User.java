@@ -109,9 +109,7 @@ public class User {
                     System.out.println("No se pudo eliminar el archivo: " + e.getMessage());
                 }
             }
-
-            System.out.println("La puntuación del usuario ha sido actualizada con éxito.");
-
+            
         } catch (IOException e) {
             e.printStackTrace();
         }

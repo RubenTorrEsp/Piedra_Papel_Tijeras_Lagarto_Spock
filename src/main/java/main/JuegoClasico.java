@@ -1,5 +1,6 @@
 package main;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import static tools.Listas.*;
@@ -12,12 +13,12 @@ public class JuegoClasico extends Common{
     String seleccionJugador;
 
     // Constructor del programa y ciclo de vida
-    public JuegoClasico(User jugador){
+    public JuegoClasico(User jugador) throws IOException{
         jugarDeNuevo(jugador);
     }
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
-    public void jugarDeNuevo(User jugador){
+    public void jugarDeNuevo(User jugador) throws IOException{
         System.out.println(cabeceraSeleccion);
         System.out.println(opcionesJuegoClasico);
 

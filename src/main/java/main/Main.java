@@ -1,13 +1,15 @@
 package main;
 
 import static tools.Textos.*;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
     
     static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         User jugador = new User(establecerUsuario());
         inicio(jugador);
     }
@@ -21,7 +23,7 @@ public class Main {
         return respuesta;
     }
 
-    public static void inicio(User jugador){
+    public static void inicio(User jugador) throws IOException {
         System.out.println(bienvenida);
         System.out.println(seleccionJuego);
         String eleccion = scanner.nextLine();

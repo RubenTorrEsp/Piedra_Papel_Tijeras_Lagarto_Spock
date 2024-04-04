@@ -1,5 +1,6 @@
 package main;
 
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -66,7 +67,7 @@ public class Common {
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
     @SuppressWarnings("static-access")
-    public static void reJugar(User jugador){
+    public static void reJugar(User jugador) throws IOException {
         System.out.println(seleccionRejugar);
         switch (scanner.nextLine().toLowerCase()){
             case "si":

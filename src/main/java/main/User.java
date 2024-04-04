@@ -1,7 +1,6 @@
 package main;
 
 import java.io.*;
-import java.nio.file.*;
 
 import static tools.Textos.*;
 
@@ -74,7 +73,7 @@ public class User {
     }
 
     //Método que actualiza la puntuación del jugador en el archivo
-    public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion){
+    public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion) throws IOException{
 
         File archivoOriginal = new File(archivoUsuarios);
         File archivoTemporal = new File(archivoUsuariosTemporal);
@@ -102,16 +101,8 @@ public class User {
         }
 
         if (archivoOriginal.exists()) {
-            System.out.println("El archivo existe");
-            String rutaUsers = "users.txt";
-            Path archivoPath = Paths.get(rutaUsers);
-            try {
-                // Intentar eliminar el archivo
-                Files.delete(archivoPath);
-                archivoTemporal.renameTo(archivoOriginal);
-            } catch (IOException e) {
-                System.out.println("No se pudo eliminar el archivo: " + e.getMessage());
-            }
+            archivoOriginal.delete();
+            archivoTemporal.renameTo(archivoOriginal);
         }
     }
     

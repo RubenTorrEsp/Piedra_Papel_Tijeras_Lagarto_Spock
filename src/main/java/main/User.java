@@ -34,7 +34,7 @@ public class User {
     }
 
     // Método que comprueba si el usuario existe
-    public Boolean usuarioExiste(String nombreUsuario){
+    public Boolean usuarioExiste(String nombreUsuario) {
         Boolean usuarioExiste = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             while ((linea = br.readLine()) != null) {
@@ -47,7 +47,7 @@ public class User {
     }
 
     // Método que crea un usuario nuevo
-    public void crearNuevoUsuario(String usuario){
+    public void crearNuevoUsuario(String usuario) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoOriginal))) {
             System.out.println(usuarioCreado);
             bw.newLine();
@@ -59,7 +59,7 @@ public class User {
         }
     }
 
-    //Método que actualiza la puntuación del jugador
+    // Método que actualiza la puntuación del jugador
     @SuppressWarnings("static-access")
     public void actualizarPuntuacion(User jugador, Boolean victoria){  
         if (victoria) jugador.puntuacion++;
@@ -67,7 +67,7 @@ public class User {
         System.out.println(nuevaPuntuacion+jugador.puntuacion);               
     }
 
-    //Método que actualiza la puntuación del jugador en el archivo
+    // Método que actualiza la puntuación del jugador en el archivo
     public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {

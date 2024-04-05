@@ -5,16 +5,12 @@ import java.io.*;
 import static tools.Textos.*;
 
 public class User {
-
-    static String archivoUsuarios = "users.txt";
-    static String archivoUsuariosTemporal = "temp.txt";
-
-    static File archivoOriginal = new File(archivoUsuarios);
-    static File archivoTemporal = new File(archivoUsuariosTemporal);
-    
+   
     public static String nombre;
     public static Integer puntuacion;
     public String linea;
+    static File archivoOriginal = new File(archivoUsuarios);
+    static File archivoTemporal = new File(archivoUsuariosTemporal);
 
     // Constructor
     public User(String nombreUsuario){
@@ -36,7 +32,6 @@ public class User {
             e.printStackTrace();
         }
     }
-
 
     // Método que comprueba si el usuario existe
     public Boolean usuarioExiste(String nombreUsuario){
@@ -69,7 +64,7 @@ public class User {
     public void actualizarPuntuacion(User jugador, Boolean victoria){  
         if (victoria) jugador.puntuacion++;
         else jugador.puntuacion--;
-        System.out.println("La nueva puntuacion es "+jugador.puntuacion);               
+        System.out.println(nuevaPuntuacion+jugador.puntuacion);               
     }
 
     //Método que actualiza la puntuación del jugador en el archivo

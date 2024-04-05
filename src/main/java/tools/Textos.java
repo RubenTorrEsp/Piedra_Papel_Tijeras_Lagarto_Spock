@@ -21,6 +21,9 @@ public class Textos {
 
     //Textos de configuracion
     public static String puntuacionInicial = ";50";
+    public static String nuevaPuntuacion = "La nueva puntuacion es ";
+    public static String archivoUsuarios = "users.txt";
+    public static String archivoUsuariosTemporal = "temp.txt";
 
     //Textos de usuario
     public static String comprobarUsuario = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";

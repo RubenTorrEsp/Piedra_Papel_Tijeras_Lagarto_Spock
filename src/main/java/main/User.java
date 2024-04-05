@@ -26,11 +26,8 @@ public class User {
     public void establecerUsuario(String nombreUsuario) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             while ((linea = br.readLine()) != null) {
-                // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                 String[] partes = linea.split(";");
-                // Comprobar si el usuario existe
                 if (partes[0].equals(nombreUsuario)) {
-                    // Establecer nombre y puntuacion del usuario
                     nombre = partes[0];
                     puntuacion = Integer.parseInt(partes[1]);
                 }

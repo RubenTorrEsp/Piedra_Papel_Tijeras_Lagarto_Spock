@@ -9,8 +9,8 @@ public class User {
     static String archivoUsuarios = "users.txt";
     static String archivoUsuariosTemporal = "temp.txt";
 
-    File archivoOriginal = new File(archivoUsuarios);
-    File archivoTemporal = new File(archivoUsuariosTemporal);
+    static File archivoOriginal = new File(archivoUsuarios);
+    static File archivoTemporal = new File(archivoUsuariosTemporal);
     
     public static String nombre;
     public static Integer puntuacion;
@@ -24,7 +24,7 @@ public class User {
     
     // Método para establecer el usuario
     public void establecerUsuario(String nombreUsuario) {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             while ((linea = br.readLine()) != null) {
                 // Dividir la línea en usuario y puntuación utilizando el punto y coma como delimitador
                 String[] partes = linea.split(";");
@@ -44,7 +44,7 @@ public class User {
     // Método que comprueba si el usuario existe
     public Boolean usuarioExiste(String nombreUsuario){
         Boolean usuarioExiste = false;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             while ((linea = br.readLine()) != null) {
                 if(linea.contains(nombreUsuario)) usuarioExiste = true;
             }
@@ -56,7 +56,7 @@ public class User {
 
     // Método que crea un usuario nuevo
     public void crearNuevoUsuario(String usuario){
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoOriginal))) {
             System.out.println(usuarioCreado);
             bw.newLine();
             bw.write(usuario+puntuacionInicial);
@@ -77,10 +77,6 @@ public class User {
 
     //Método que actualiza la puntuación del jugador en el archivo
     public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion) throws IOException {
-
-        File archivoOriginal = new File(archivoUsuarios);
-        File archivoTemporal = new File(archivoUsuariosTemporal);
-
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             String linea;
@@ -95,7 +91,6 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         archivoOriginal.delete();
         archivoTemporal.renameTo(archivoOriginal);
     }

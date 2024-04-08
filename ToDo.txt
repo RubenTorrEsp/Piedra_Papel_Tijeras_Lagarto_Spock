@@ -1,10 +1,11 @@
 Programa completado, futuras implementaciones
 
+-Solucion de mayusculas/minusculas para usuarios (EN PROCESO)
+
 -Reescribir puntuacion cuando se elije la opcion salir
 -Accion cuando la puntuación llega a 0
 -Podium
 -BDD para usuarios
--Solucion de mayusculas/minusculas para usuarios
 -Test unitarios del programa
 -Puntuaciones
 -Sistema de apuestas

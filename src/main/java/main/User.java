@@ -33,6 +33,14 @@ public class User {
         }
     }
 
+    // Método que arregla el formato del user escrito para evitar repeticiones
+    public String formatoJugador(String jugador) {
+        String jugadorFormateado = jugador;
+
+        return jugadorFormateado;
+    }
+
+
     // Método que comprueba si el usuario existe
     public Boolean usuarioExiste(String nombreUsuario) {
         Boolean usuarioExiste = false;

@@ -56,10 +56,17 @@ public class User {
 
     // Método que crea un usuario nuevo
     public void crearNuevoUsuario(String usuario) {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoOriginal))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoOriginal))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(";");
+                if (partes.length != 2) {
+                    bw.write(usuario+puntuacionInicial);
+                    bw.newLine();
+                }
+            }   
             System.out.println(usuarioCreado);
-            bw.newLine();
-            bw.write(usuario+puntuacionInicial);
             nombre = usuario;
             puntuacion = 50;
         } catch (IOException e) {

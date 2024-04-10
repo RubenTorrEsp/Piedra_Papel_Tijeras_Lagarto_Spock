@@ -1,6 +1,5 @@
 Programa completado, futuras implementaciones
 
--ERROR Cuando se crea un usuario nuevo, se borra el archivo (EN PROCESO)
 -Solucion de mayusculas/minusculas para usuarios (EN PROCESO)
 
 -Reescribir puntuacion cuando se elije la opcion salir

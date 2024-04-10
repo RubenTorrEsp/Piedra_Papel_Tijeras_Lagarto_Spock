@@ -82,11 +82,13 @@ public class User {
             String linea;
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(";");
-                if (partes.length == 2 && partes[0].equals(nombreUsuario)) {
-                    linea = nombreUsuario + ";" + nuevaPuntuacion;
+                if (!linea.trim().isEmpty()) {
+                    if (partes.length == 2 && partes[0].equals(nombreUsuario) && !linea.trim().isEmpty()) {
+                        linea = nombreUsuario + ";" + nuevaPuntuacion;
+                    }
+                    bw.write(linea);
+                    bw.newLine();
                 }
-                bw.write(linea);
-                bw.newLine();
             }
         } catch (IOException e) {
             e.printStackTrace();

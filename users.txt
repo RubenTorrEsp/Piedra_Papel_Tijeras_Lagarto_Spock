@@ -1,5 +1,5 @@
 Ruben;188
-Marta;143
-Ampi;73
+Marta;243
+Ampi;72
 Lucia;18
 Marco;7

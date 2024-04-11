@@ -40,4 +40,11 @@ public class Main {
         }
     }
 
+    // Método que arregla el formato del user escrito para evitar repeticiones
+    public String formatoJugador(String jugador) {
+        String jugadorFormateado = jugador;
+        jugadorFormateado.toLowerCase().substring(0, 1).toUpperCase();
+        return jugadorFormateado;
+    }
+    
 }

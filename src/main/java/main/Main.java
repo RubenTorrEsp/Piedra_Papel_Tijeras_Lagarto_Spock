@@ -17,7 +17,8 @@ public class Main {
     // Método que establece el jugador
     public static String establecerUsuario(){
         System.out.println(comprobarUsuario);
-        String respuesta = scanner.nextLine();
+        String respuestaSinFormato = scanner.nextLine();
+        String respuesta = formatoJugador(respuestaSinFormato);
         new User(respuesta);
         definicionUser(User.nombre, User.puntuacion);
         return respuesta;
@@ -41,10 +42,9 @@ public class Main {
     }
 
     // Método que arregla el formato del user escrito para evitar repeticiones
-    public String formatoJugador(String jugador) {
-        String jugadorFormateado = jugador;
-        jugadorFormateado.toLowerCase().substring(0, 1).toUpperCase();
-        return jugadorFormateado;
+    public static String formatoJugador(String jugador) {
+        jugador.toLowerCase();
+        return jugador;
     }
     
 }

@@ -33,12 +33,14 @@ public class User {
         }
     }
 
+    /*
     // Método que arregla el formato del user escrito para evitar repeticiones
     public String formatoJugador(String jugador) {
         String jugadorFormateado = jugador;
         jugadorFormateado.toLowerCase().substring(0, 1).toUpperCase();
         return jugadorFormateado;
     }
+    */
 
 
     // Método que comprueba si el usuario existe
@@ -61,7 +63,8 @@ public class User {
             bw.newLine();
             // Escribir la nueva línea
             bw.write(nombreJugadorNuevo + ";50");
-            System.out.println("Se ha añadido una nueva línea al final del archivo.");
+            nombre = nombreJugadorNuevo;
+            puntuacion = 50;
         } catch (IOException e) {
             e.printStackTrace();
         }

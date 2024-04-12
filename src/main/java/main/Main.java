@@ -9,6 +9,9 @@ public class Main {
     
     static Scanner scanner = new Scanner(System.in);
 
+    static Integer indiceInicial = 0;
+    static Integer indiceResto = 1;
+
     public static void main(String[] args) throws IOException {
         User jugador = new User(establecerUsuario());
         inicio(jugador);
@@ -43,8 +46,8 @@ public class Main {
 
     // Método que arregla el formato del user escrito para evitar repeticiones
     public static String formatoJugador(String jugador) {
-        String inicial = jugador.substring(0, 1).toUpperCase();
-        String resto = jugador.substring(1).toLowerCase();
+        String inicial = jugador.substring(indiceInicial, indiceResto).toUpperCase();
+        String resto = jugador.substring(indiceResto).toLowerCase();
         return inicial + resto;
     }
     

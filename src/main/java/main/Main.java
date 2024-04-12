@@ -10,19 +10,14 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        //User jugador = new User(establecerUsuario());
-        //inicio(jugador);
-       
-        String respuesta = formatoJugador("hitler");
-        
-        System.out.println("El usuario es "+respuesta);
-
+        User jugador = new User(establecerUsuario());
+        inicio(jugador);
     }
 
     // Método que establece el jugador
     public static String establecerUsuario(){
         System.out.println(comprobarUsuario);
-        String respuestaSinFormato = scanner.nextLine();
+        String respuestaSinFormato = formatoJugador(scanner.nextLine());
         String respuesta = formatoJugador(respuestaSinFormato);
         new User(respuesta);
         definicionUser(User.nombre, User.puntuacion);
@@ -48,12 +43,9 @@ public class Main {
 
     // Método que arregla el formato del user escrito para evitar repeticiones
     public static String formatoJugador(String jugador) {
-        
-        String primeraLetraMayuscula = jugador.substring(0, 1).toUpperCase();
-        String restoMinuscula = jugador.substring(1).toLowerCase();
-        
-        // Combinar la primera letra mayúscula con el resto en minúscula
-        return primeraLetraMayuscula + restoMinuscula;
+        String inicial = jugador.substring(0, 1).toUpperCase();
+        String resto = jugador.substring(1).toLowerCase();
+        return inicial + resto;
     }
     
 }

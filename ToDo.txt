@@ -1,5 +1,7 @@
 Programa completado, futuras implementaciones
 
+-ISSUE: Testeo con nombres vacíos
+
 -Reescribir puntuacion cuando se elije la opcion salir
 -Accion cuando la puntuación llega a 0
 -Podium

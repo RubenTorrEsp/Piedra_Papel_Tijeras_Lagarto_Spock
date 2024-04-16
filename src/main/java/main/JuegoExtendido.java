@@ -23,7 +23,7 @@ public class JuegoExtendido extends Common {
         System.out.println(opcionesJuegoExtendido);
 
         if(obtenerEntrada()){
-            if (seleccionJugador == "salir") {
+            if (seleccionJugador == seleccionSalirTexto) {
                 System.out.println(seleccionSalir);
                 System.out.println(rejugarNegativo);
                 reJugar = false;

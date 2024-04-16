@@ -6,36 +6,51 @@ import java.util.Map;
 public class Textos {
     
     // Textos generales
-    public static String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!";
-    public static String seleccionJuego = "Elija a qué quiere jugar indicando el numero:\n1- Juego extendido\n2- Juego clásico";
-    public static String cabeceraSeleccion = "Seleccione su opción con nombre o número, o elija salir:";
-    public static String opcionesJuegoExtendido = "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
-    public static String opcionesJuegoClasico = "1 - Piedra\n2 - Papel\n3 - Tijeras\n\n0 - Salir\n-----------------------------------------------";
-    public static String seleccionJugador = "Has elegido ";
-    public static String seleccionMaquina = "La máquina ha elegido ";
-    public static String seleccionInvalida = "Selección no válida.";
-    public static String seleccionSalir = "Ha seleccionado salir.";
-    public static String seleccionRejugar = "¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.";
-    public static String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número:";
-    public static String rejugarNegativo = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";
+    public static final String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!";
+    public static final String seleccionJuego = "Elija a qué quiere jugar indicando el numero:\n1- Juego extendido\n2- Juego clásico";
+    public static final String cabeceraSeleccion = "Seleccione su opción con nombre o número, o elija salir:";
+    public static final String opcionesJuegoExtendido = "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
+    public static final String opcionesJuegoClasico = "1 - Piedra\n2 - Papel\n3 - Tijeras\n\n0 - Salir\n-----------------------------------------------";
+    public static final String seleccionJugador = "Has elegido ";
+    public static final String seleccionMaquina = "La máquina ha elegido ";
+    public static final String seleccionInvalida = "Selección no válida.";
+    public static final String seleccionSalir = "Ha seleccionado salir.";
+    public static final String seleccionRejugar = "¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.";
+    public static final String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número:";
+    public static final String rejugarNegativo = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";
 
-    //Textos de configuracion
-    public static String puntuacionInicial = ";50";
-    public static String nuevaPuntuacion = "La nueva puntuacion es ";
-    public static String archivoUsuarios = "users.txt";
-    public static String archivoUsuariosTemporal = "temp.txt";
+    // Textos de seleccion
+    public static final String seleccionPiedraTexto = "piedra";
+    public static final String seleccionPiedraNumero = "1";
+    public static final String seleccionPapelTexto = "papel";
+    public static final String seleccionPapelNumero = "2";
+    public static final String seleccionTijerasTexto = "tijeras";
+    public static final String seleccionTijerasNumero = "3";
+    public static final String seleccionLagartoTexto = "lagarto";
+    public static final String seleccionLagartoNumero = "4";
+    public static final String seleccionSpockTexto = "spock";
+    public static final String seleccionSpockNumero = "5";
+    public static final String seleccionSalirTexto = "salir";
+    public static final String seleccionSalirNumero = "0";
 
-    //Textos de usuario
-    public static String comprobarUsuario = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";
-    public static String usuarioCreado = "Usuario creado.";
+    // Textos de configuracion
+    public static final String separadorUsuarios = ";";
+    public static final String puntuacionInicial = ";50";
+    public static final String nuevaPuntuacion = "La nueva puntuacion es ";
+    public static final String archivoUsuarios = "users.txt";
+    public static final String archivoUsuariosTemporal = "temp.txt";
+
+    // Textos de usuario
+    public static final String comprobarUsuario = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";
+    public static final String usuarioCreado = "Usuario creado.";
     public static void definicionUser(String nombre, Integer puntuacion){
         System.out.println("El jugador "+nombre+" está ahora activo con "+puntuacion+" puntos.");
     }
 
     // Textos de resolución de enfrentamientos
-    public static String victoria = "Enhorabuena!! Has ganado, porque ";
-    public static String derrota = "Lo siento!! Has perdido, porque ";
-    public static String empate = "Empate!! Aprovecha el momento o vuelve a por más.";
+    public static final String victoria = "Enhorabuena!! Has ganado, porque ";
+    public static final String derrota = "Lo siento!! Has perdido, porque ";
+    public static final String empate = "Empate!! Aprovecha el momento o vuelve a por más.";
 
     // Mapa de textos de victoria en enfrentamientos
     public static final Map<String, String> strings = new HashMap<>();

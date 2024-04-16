@@ -33,16 +33,6 @@ public class User {
         }
     }
 
-    /*
-    // Método que arregla el formato del user escrito para evitar repeticiones
-    public String formatoJugador(String jugador) {
-        String jugadorFormateado = jugador;
-        jugadorFormateado.toLowerCase().substring(0, 1).toUpperCase();
-        return jugadorFormateado;
-    }
-    */
-
-
     // Método que comprueba si el usuario existe
     public Boolean usuarioExiste(String nombreUsuario) {
         Boolean usuarioExiste = false;
@@ -59,9 +49,7 @@ public class User {
     // Método que crea un usuario nuevo
     public void crearNuevoUsuario(String nombreJugadorNuevo) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
-            // Ir al final del archivo
             bw.newLine();
-            // Escribir la nueva línea
             bw.write(nombreJugadorNuevo + ";50");
             nombre = nombreJugadorNuevo;
             puntuacion = 50;

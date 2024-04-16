@@ -50,7 +50,7 @@ public class User {
     public void crearNuevoUsuario(String nombreJugadorNuevo) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             bw.newLine();
-            bw.write(nombreJugadorNuevo + ";50");
+            bw.write(nombreJugadorNuevo + puntuacionInicial);
             nombre = nombreJugadorNuevo;
             puntuacion = 50;
         } catch (IOException e) {
@@ -72,10 +72,10 @@ public class User {
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             String linea;
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(";");
+                String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(nombreUsuario) && !linea.trim().isEmpty()) {
-                        linea = nombreUsuario + ";" + nuevaPuntuacion;
+                        linea = nombreUsuario + separadorUsuarios + nuevaPuntuacion;
                     }
                     bw.write(linea);
                     bw.newLine();

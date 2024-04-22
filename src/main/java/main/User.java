@@ -22,7 +22,7 @@ public class User {
     public void establecerUsuario(String nombreUsuario) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(";");
+                String[] partes = linea.split(separadorUsuarios);
                 if (partes[0].equals(nombreUsuario)) {
                     nombre = partes[0];
                     puntuacion = Integer.parseInt(partes[1]);
@@ -59,7 +59,7 @@ public class User {
     }
 
     // Método que actualiza la puntuación del jugador
-    @SuppressWarnings("static-access")
+    @SuppressWarnings(errorEstatico)
     public void actualizarPuntuacion(User jugador, Boolean victoria){  
         if (victoria) jugador.puntuacion++;
         else jugador.puntuacion--;

@@ -39,6 +39,7 @@ public class Textos {
     public static final String nuevaPuntuacion = "La nueva puntuacion es ";
     public static final String archivoUsuarios = "users.txt";
     public static final String archivoUsuariosTemporal = "temp.txt";
+    public static final String errorEstatico = "static-access";
 
     // Textos de usuario
     public static final String comprobarUsuario = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";

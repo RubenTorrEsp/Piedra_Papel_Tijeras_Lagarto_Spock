@@ -32,10 +32,10 @@ public class Main {
         System.out.println(seleccionJuego);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
-            case "1":
+            case seleccionJuegoExtendido:
                 while(Common.reJugar) new JuegoExtendido(jugador);
                 break;
-            case "2":
+            case seleccionJuegoClasico:
                 while(Common.reJugar) new JuegoClasico(jugador);
                 break;
             default:

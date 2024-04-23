@@ -32,6 +32,7 @@ public class Textos {
     public static final String seleccionSpockNumero = "5";
     public static final String seleccionSalirTexto = "salir";
     public static final String seleccionSalirNumero = "0";
+    public static final String seleccionSI = "si";
 
     // Textos de configuracion
     public static final String separadorUsuarios = ";";

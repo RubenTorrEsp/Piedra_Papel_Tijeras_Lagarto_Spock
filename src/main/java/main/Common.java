@@ -70,7 +70,7 @@ public class Common {
     public static void reJugar(User jugador) throws IOException {
         System.out.println(seleccionRejugar);
         switch (scanner.nextLine().toLowerCase()){
-            case "si":
+            case seleccionSI:
                 System.out.println(rejugarAfirmativo);
                 break;
             default:

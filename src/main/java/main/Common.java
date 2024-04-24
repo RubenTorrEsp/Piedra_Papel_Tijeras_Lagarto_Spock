@@ -14,7 +14,8 @@ public class Common {
     static Boolean reJugar = true;
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
-    public static String refactorizar(String seleccionJugador){
+    @SuppressWarnings("static-access")
+    public static String refactorizar(String seleccionJugador, User jugador) throws IOException{
         switch (seleccionJugador) {
             case seleccionPiedraNumero:
                 seleccionJugador = seleccionPiedraTexto;
@@ -34,6 +35,7 @@ public class Common {
             case seleccionSalirNumero:
             case seleccionSalirTexto:
                 seleccionJugador = seleccionSalirTexto;
+                jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);
                 break;
             default:
                 break;

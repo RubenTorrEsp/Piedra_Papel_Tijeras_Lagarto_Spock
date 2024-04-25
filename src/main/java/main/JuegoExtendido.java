@@ -22,7 +22,7 @@ public class JuegoExtendido extends Common {
         System.out.println(cabeceraSeleccion);
         System.out.println(opcionesJuegoExtendido);
 
-        if(obtenerEntrada()){
+        if(obtenerEntrada(jugador)){
             if (seleccionJugador == seleccionSalirTexto) {
                 System.out.println(seleccionSalir);
                 System.out.println(rejugarNegativo);
@@ -39,12 +39,12 @@ public class JuegoExtendido extends Common {
     }
 
     // Obtener la elección del jugador
-    public Boolean obtenerEntrada() {
+    public Boolean obtenerEntrada(User jugador) throws IOException {
         Boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(elementosJuegoExtendido.contains(seleccionJugador)) {
             seleccionValida = true;
-            seleccionJugador = refactorizar(seleccionJugador, );
+            seleccionJugador = refactorizar(seleccionJugador, jugador);
         }
         else {
             System.out.println(seleccionInvalida);

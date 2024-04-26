@@ -44,7 +44,7 @@ public class Common {
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
-    public static void comprobarVictoria(String jugador, String maquina, User user) {
+    public static void comprobarVictoria(String jugador, String maquina, User user) throws IOException {
         System.out.println(seleccionJugador+jugador);
         System.out.println(seleccionMaquina+maquina);
 

@@ -68,7 +68,7 @@ public class User {
 
     // Método que actualiza la puntuación del jugador en el archivo
     public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion) throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
+        /*try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             String linea;
             while ((linea = br.readLine()) != null) {
@@ -85,7 +85,8 @@ public class User {
             e.printStackTrace();
         }
         archivoOriginal.delete();
-        archivoTemporal.renameTo(archivoOriginal);
+        archivoTemporal.renameTo(archivoOriginal);*/
+        eliminarJugador(nombreUsuario);
     }
 
     // Método que elimina el usuario si la puntuacion llega a 0

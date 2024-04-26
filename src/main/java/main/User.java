@@ -87,5 +87,27 @@ public class User {
         archivoOriginal.delete();
         archivoTemporal.renameTo(archivoOriginal);
     }
+
+    // Método que elimina el usuario si la puntuacion llega a 0
+    public static void eliminarJugador(String nombreUsuario) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(separadorUsuarios);
+                if (!linea.trim().isEmpty()) {
+                    if (partes.length == 2 && partes[0].equals(nombreUsuario) && !linea.trim().isEmpty()) {
+                        linea = "";
+                    }
+                    bw.write(linea);
+                    bw.newLine();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        archivoOriginal.delete();
+        archivoTemporal.renameTo(archivoOriginal);
+    }
     
 }

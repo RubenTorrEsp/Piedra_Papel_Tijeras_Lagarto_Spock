@@ -109,6 +109,8 @@ public class User {
         }
         archivoOriginal.delete();
         archivoTemporal.renameTo(archivoOriginal);
+
+        System.out.println(usuarioEliminado);
     }
     
 }

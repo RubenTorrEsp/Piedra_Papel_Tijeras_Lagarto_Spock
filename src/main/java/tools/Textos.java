@@ -46,6 +46,7 @@ public class Textos {
 
     // Textos de usuario
     public static final String comprobarUsuario = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";
+    public static final String usuarioEliminado = "Has llegado a 0 puntos y hemos eliminado al jugador. Eres mas malo que un dolor";
     public static final String usuarioCreado = "Usuario creado.";
     public static void definicionUser(String nombre, Integer puntuacion){
         System.out.println("El jugador "+nombre+" está ahora activo con "+puntuacion+" puntos.");

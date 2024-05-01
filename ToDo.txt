@@ -1,6 +1,8 @@
 Programa completado, futuras implementaciones
 
 -Accion cuando la puntuación llega a 0 (En proceso)
+    Comportamiento completado, falta hacer limpieza de código
+    y revisar los comportamientos semejantes.
 
 -Podium
 -BDD para usuarios

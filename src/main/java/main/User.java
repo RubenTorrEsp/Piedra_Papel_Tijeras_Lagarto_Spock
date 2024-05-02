@@ -98,7 +98,7 @@ public class User {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(nombreUsuario) && !linea.trim().isEmpty()) {
-                        linea = "";
+                        linea = lineaVacia;
                     }
                     bw.write(linea);
                     bw.newLine();

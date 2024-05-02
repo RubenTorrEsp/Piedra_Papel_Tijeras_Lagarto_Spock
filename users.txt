@@ -2,4 +2,3 @@ Ruben;190
 Marta;243
 Ampi;72
 Marco;7
-Lucia;17

@@ -111,10 +111,6 @@ public class User {
         archivoTemporal.renameTo(archivoOriginal);
 
         System.out.println(usuarioEliminado);
-        terminarPrograma();
-    }
-
-    public static void terminarPrograma() {
         System.exit(0);
     }
     

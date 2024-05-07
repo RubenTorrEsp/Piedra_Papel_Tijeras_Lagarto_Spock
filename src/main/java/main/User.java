@@ -3,6 +3,7 @@ package main;
 import java.io.*;
 
 import static tools.Textos.*;
+import static main.Common.*;
 
 public class User {
    
@@ -82,8 +83,7 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        archivoOriginal.delete();
-        archivoTemporal.renameTo(archivoOriginal);
+        reescribirArchivoJugadores();
     }
 
     // Método que elimina el usuario si la puntuacion llega a 0
@@ -101,8 +101,7 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        archivoOriginal.delete();
-        archivoTemporal.renameTo(archivoOriginal);
+        reescribirArchivoJugadores();
         System.out.println(usuarioEliminado);
         System.exit(0);
     }

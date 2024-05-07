@@ -8,7 +8,7 @@ public class User {
    
     public static String nombre;
     public static Integer puntuacion;
-    public String linea;
+    public static String linea;
     static File archivoOriginal = new File(archivoUsuarios);
     static File archivoTemporal = new File(archivoUsuariosTemporal);
 
@@ -71,11 +71,10 @@ public class User {
     public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
-            String linea;
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = nombreUsuario + separadorUsuarios + nuevaPuntuacion;
+                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = nombreUsuario+separadorUsuarios+nuevaPuntuacion;
                     bw.write(linea);
                     bw.newLine();
                 }
@@ -91,7 +90,6 @@ public class User {
     public static void eliminarJugador(String nombreUsuario) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
-            String linea;
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
@@ -105,7 +103,6 @@ public class User {
         }
         archivoOriginal.delete();
         archivoTemporal.renameTo(archivoOriginal);
-
         System.out.println(usuarioEliminado);
         System.exit(0);
     }

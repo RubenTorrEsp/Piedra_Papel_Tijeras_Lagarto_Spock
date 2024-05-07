@@ -1,6 +1,6 @@
 package main;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -12,6 +12,9 @@ public class Common {
     // Creación del scanner
     static Scanner scanner = new Scanner(System.in);
     static Boolean reJugar = true;
+
+    static File archivoOriginal = new File(archivoUsuarios);
+    static File archivoTemporal = new File(archivoUsuariosTemporal);
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
     @SuppressWarnings("static-access")
@@ -81,6 +84,12 @@ public class Common {
                 jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);
                 break;
         }
+    }
+
+    // Método que reescribe el archivo de jugadores
+    public static void reescribirArchivoJugadores () {
+        archivoOriginal.delete();
+        archivoTemporal.renameTo(archivoOriginal);
     }
 
 }

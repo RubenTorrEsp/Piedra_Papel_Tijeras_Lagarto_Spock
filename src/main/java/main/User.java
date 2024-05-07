@@ -75,9 +75,7 @@ public class User {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) {
-                        linea = nombreUsuario + separadorUsuarios + nuevaPuntuacion;
-                    }
+                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = nombreUsuario + separadorUsuarios + nuevaPuntuacion;
                     bw.write(linea);
                     bw.newLine();
                 }
@@ -97,9 +95,7 @@ public class User {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) {
-                        linea = lineaVacia;
-                    }
+                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = lineaVacia;
                     bw.write(linea);
                     bw.newLine();
                 }

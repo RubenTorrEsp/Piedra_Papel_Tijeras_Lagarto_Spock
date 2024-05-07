@@ -13,7 +13,7 @@ public class User {
     static File archivoTemporal = new File(archivoUsuariosTemporal);
 
     // Constructor
-    public User(String nombreUsuario){
+    public User(String nombreUsuario) {
         if(usuarioExiste(nombreUsuario)) establecerUsuario(nombreUsuario);      
         else crearNuevoUsuario(nombreUsuario);
     }
@@ -60,7 +60,7 @@ public class User {
 
     // Método que actualiza la puntuación del jugador
     @SuppressWarnings(errorEstatico)
-    public void actualizarPuntuacion(User jugador, Boolean victoria) throws IOException{  
+    public void actualizarPuntuacion(User jugador, Boolean victoria) throws IOException {  
         if (victoria) jugador.puntuacion++;
         else jugador.puntuacion--;
         System.out.println(nuevaPuntuacion+jugador.puntuacion);

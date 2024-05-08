@@ -17,16 +17,6 @@ public class Main {
         inicio(jugador);
     }
 
-    // Método que establece el jugador
-    public static String establecerUsuario(){
-        System.out.println(comprobarUsuario);
-        String respuestaSinFormato = formatoJugador(scanner.nextLine());
-        String respuesta = formatoJugador(respuestaSinFormato);
-        new User(respuesta);
-        definicionUser(User.nombre, User.puntuacion);
-        return respuesta;
-    }
-
     public static void inicio(User jugador) throws IOException {
         System.out.println(bienvenida);
         System.out.println(seleccionJuego);
@@ -42,6 +32,16 @@ public class Main {
                 System.out.println(seleccionInvalida);
                 break;
         }
+    }
+
+    // Método que establece el jugador
+    public static String establecerUsuario(){
+        System.out.println(comprobarUsuario);
+        String respuestaSinFormato = formatoJugador(scanner.nextLine());
+        String respuesta = formatoJugador(respuestaSinFormato);
+        new User(respuesta);
+        definicionUser(User.nombre, User.puntuacion);
+        return respuesta;
     }
 
     // Método que arregla el formato del user escrito para evitar repeticiones

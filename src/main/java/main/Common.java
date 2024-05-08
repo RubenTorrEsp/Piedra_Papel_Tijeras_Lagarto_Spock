@@ -87,9 +87,10 @@ public class Common {
     }
 
     // Método que reescribe el archivo de jugadores
-    public static void reescribirArchivoJugadores () {
+    public static void reescribirArchivoJugadores (String textoMostrado) {
         archivoOriginal.delete();
         archivoTemporal.renameTo(archivoOriginal);
+        System.out.println(textoMostrado);
     }
 
 }

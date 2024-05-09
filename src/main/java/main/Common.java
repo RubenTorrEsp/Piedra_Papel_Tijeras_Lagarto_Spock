@@ -13,9 +13,6 @@ public class Common {
     static Scanner scanner = new Scanner(System.in);
     static Boolean reJugar = true;
 
-    static File archivoOriginal = new File(archivoUsuarios);
-    static File archivoTemporal = new File(archivoUsuariosTemporal);
-
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
     @SuppressWarnings("static-access")
     public static String refactorizar(String seleccionJugador, User jugador) throws IOException{
@@ -87,10 +84,10 @@ public class Common {
     }
 
     // Método que reescribe el archivo de jugadores
-    public static void reescribirArchivoJugadores (File archivoOriginal, File archivoTemporal, String textoMostrado) {
-        archivoOriginal.delete();
-        archivoTemporal.renameTo(archivoOriginal);
-        System.out.println(textoMostrado);
+    public static void reescribirArchivoJugadores (File original, File temporal, String texto) {
+        original.delete();
+        temporal.renameTo(original);
+        System.out.println(texto);
     }
 
 }

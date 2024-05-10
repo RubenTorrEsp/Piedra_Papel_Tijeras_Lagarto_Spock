@@ -33,9 +33,7 @@ public class JuegoClasico extends Common{
                 reJugar(jugador);
             }
         }
-        else{
-            reJugar(jugador);
-        }
+        else reJugar(jugador);
     }
 
     // Obtener la elección del jugador

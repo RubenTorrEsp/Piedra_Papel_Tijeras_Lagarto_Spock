@@ -25,6 +25,9 @@ public class _Main {
             case seleccionJuegoClasico:
                 while(Common.reJugar) new JuegoClasico(jugador);
                 break;
+            case seleccionUsuarios:
+                System.out.println("Opcion en construcción en estos momentos");
+                break;
             default:
                 System.out.println(seleccionInvalida);
                 break;

@@ -40,6 +40,7 @@ public class Textos {
     public static final String seleccionSI = "si";
     public static final String seleccionJuegoClasico = "2";
     public static final String seleccionJuegoExtendido = "1";
+    public static final String seleccionUsuarios = "9";
 
     // Textos de configuracion
     public static final String separadorUsuarios = ";";

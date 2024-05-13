@@ -7,7 +7,11 @@ public class Textos {
     
     // Textos generales
     public static final String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!";
-    public static final String seleccionJuego = "Elija a qué quiere jugar indicando el numero:\n1- Juego extendido\n2- Juego clásico";
+    public static final String seleccionJuego = "Elija qué desea indicando el numero:"+
+    "\n1- Jugar al juego extendido"+
+    "\n2- Juego clásico"+
+    "\n9- Gestionar usuarios"+
+    "\n0- Salir";
     public static final String cabeceraSeleccion = "Seleccione su opción con nombre o número, o elija salir:";
     public static final String opcionesJuegoExtendido = "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
     public static final String opcionesJuegoClasico = "1 - Piedra\n2 - Papel\n3 - Tijeras\n\n0 - Salir\n-----------------------------------------------";

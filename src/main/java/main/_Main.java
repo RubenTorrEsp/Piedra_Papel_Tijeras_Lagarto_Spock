@@ -8,8 +8,6 @@ import java.util.Scanner;
 public class _Main {
     
     static Scanner scanner = new Scanner(System.in);
-    static Integer indiceInicial = 0;
-    static Integer indiceResto = 1;
 
     public static void main(String[] args) throws IOException {
         User jugador = new User(establecerUsuario());
@@ -45,6 +43,8 @@ public class _Main {
     // Método que arregla el formato del user escrito para evitar repeticiones
     // estableciendo la primera letra en mayúuscula y el resto en minúscula
     public static String formatoJugador(String jugador) {
+        Integer indiceInicial = 0;
+        Integer indiceResto = 1;
         String inicial = jugador.substring(indiceInicial, indiceResto).toUpperCase();
         String resto = jugador.substring(indiceResto).toLowerCase();
         return inicial + resto;

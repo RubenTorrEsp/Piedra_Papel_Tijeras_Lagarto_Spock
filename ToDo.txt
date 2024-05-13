@@ -1,8 +1,9 @@
 Programa completado, futuras implementaciones
 
+-Gestion de usuarios (EN PROCESO)
+
 -Podium
 -BDD para usuarios
--Gestion de usuarios
 -Test unitarios del programa
 -Puntuaciones
 -Sistema de apuestas

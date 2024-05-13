@@ -5,7 +5,7 @@ import static tools.Textos.*;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+public class _Main {
     
     static Scanner scanner = new Scanner(System.in);
     static Integer indiceInicial = 0;

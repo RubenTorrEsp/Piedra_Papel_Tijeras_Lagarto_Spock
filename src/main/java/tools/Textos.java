@@ -12,9 +12,10 @@ public class Textos {
     "\n2- Juego clásico"+
     "\n9- Gestionar usuarios"+
     "\n0- Salir";
-    public static final String cabeceraSeleccion = "Seleccione su opción con nombre o número, o elija salir:";
-    public static final String opcionesJuegoExtendido = "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
-    public static final String opcionesJuegoClasico = "1 - Piedra\n2 - Papel\n3 - Tijeras\n\n0 - Salir\n-----------------------------------------------";
+    public static final String opcionesJuegoExtendido = "Seleccione su opción con nombre o número, o elija salir:\n"+
+    "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
+    public static final String opcionesJuegoClasico = "Seleccione su opción con nombre o número, o elija salir:\n"+
+    "1 - Piedra\n2 - Papel\n3 - Tijeras\n\n0 - Salir\n-----------------------------------------------";
     public static final String seleccionJugador = "Has elegido ";
     public static final String seleccionMaquina = "La máquina ha elegido ";
     public static final String seleccionInvalida = "Selección no válida.";

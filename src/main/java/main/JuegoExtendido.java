@@ -19,7 +19,6 @@ public class JuegoExtendido extends Common {
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
     public void jugarDeNuevo(User jugador) throws IOException {
-        System.out.println(cabeceraSeleccion);
         System.out.println(opcionesJuegoExtendido);
 
         if(obtenerEntrada(jugador)){

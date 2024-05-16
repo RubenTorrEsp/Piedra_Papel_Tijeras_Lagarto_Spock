@@ -6,8 +6,8 @@ import java.util.Map;
 public class Textos {
     
     // Textos generales
-    public static final String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!";
-    public static final String seleccionJuego = "Elija qué desea indicando el numero:"+
+    public static final String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!\n"+
+    "Elija qué desea indicando el numero:"+
     "\n1- Jugar al juego extendido"+
     "\n2- Juego clásico"+
     "\n9- Gestionar usuarios"+

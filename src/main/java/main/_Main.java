@@ -16,7 +16,6 @@ public class _Main {
 
     public static void inicio(User jugador) throws IOException {
         System.out.println(bienvenida);
-        System.out.println(seleccionJuego);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case seleccionJuegoExtendido:

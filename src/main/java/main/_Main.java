@@ -25,7 +25,7 @@ public class _Main {
                 while(Common.reJugar) new JuegoClasico(jugador);
                 break;
             case seleccionUsuarios:
-                System.out.println(opcionNoDisponible);
+                new ControladorUsuarios();
                 break;
             default:
                 System.out.println(seleccionInvalida);

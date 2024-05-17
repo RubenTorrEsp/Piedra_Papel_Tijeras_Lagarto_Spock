@@ -11,7 +11,7 @@ public class ControladorUsuarios {
     static File archivoTemporal = new File(archivoUsuariosTemporal);
 
     public ControladorUsuarios() {
-        System.out.println("Indique qué desea realizar:");
+        System.out.println(opcionesGestorJugadores);
         System.out.println("Método en construccion. Le mostramos una lista de los jugadores disponibles.");
         mostrarJugadores();
     }

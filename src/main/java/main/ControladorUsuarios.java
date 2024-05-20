@@ -44,7 +44,7 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        reescribirArchivoJugadores(archivoOriginal, archivoTemporal, "");
+        reescribirArchivoJugadores(archivoOriginal, archivoTemporal, lineaVacia);
         
     }
     

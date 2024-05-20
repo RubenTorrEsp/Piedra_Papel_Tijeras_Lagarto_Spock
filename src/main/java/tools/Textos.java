@@ -5,21 +5,37 @@ import java.util.Map;
 
 public class Textos {
     
-    // Textos generales
+    // Textos de opciones
     public static final String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!\n"+
     "Elija qué desea indicando el numero:"+
     "\n1- Jugar al juego extendido"+
     "\n2- Juego clásico"+
     "\n9- Gestionar usuarios"+
     "\n0- Salir";
+
     public static final String opcionesJuegoExtendido = "Seleccione su opción con nombre o número, o elija salir:\n"+
-    "1 - Piedra\n2 - Papel\n3 - Tijeras\n4 - Lagarto\n5 - Spock\n\n0 - Salir\n-----------------------------------------------";
+    "1 - Piedra\n"+
+    "2 - Papel\n"+
+    "3 - Tijeras\n"+
+    "4 - Lagarto\n"+
+    "5 - Spock\n\n"+
+    "0 - Salir\n"+
+    "-----------------------------------------------";
+
     public static final String opcionesJuegoClasico = "Seleccione su opción con nombre o número, o elija salir:\n"+
-    "1 - Piedra\n2 - Papel\n3 - Tijeras\n\n0 - Salir\n-----------------------------------------------";
-    public static final String opcionesGestorJugadores = "Indique qué desea realizar:";
+    "1 - Piedra\n"+
+    "2 - Papel\n"+
+    "3 - Tijeras\n\n"+
+    "0 - Salir\n"+
+    "-----------------------------------------------";
+    
+    public static final String opcionesGestorJugadores = "Indique qué desea realizar:"+
+    "1 - Consultar la lista de usuarios\n"+
+    "2 - Crear usuario\n"+
+    "3 - Modificar usuario\n"+
+    "4 - Eliminar usuario";
 
-
-
+    // Textos generales
     public static final String seleccionJugador = "Has elegido ";
     public static final String seleccionMaquina = "La máquina ha elegido ";
     public static final String seleccionInvalida = "Selección no válida.";

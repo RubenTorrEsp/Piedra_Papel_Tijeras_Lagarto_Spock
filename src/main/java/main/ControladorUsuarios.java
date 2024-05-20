@@ -45,7 +45,7 @@ public class ControladorUsuarios {
             e.printStackTrace();
         }
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal, "");
-        System.exit(0);
+        
     }
     
 }

@@ -33,7 +33,9 @@ public class Textos {
     "1 - Consultar la lista de usuarios\n"+
     "2 - Crear usuario\n"+
     "3 - Modificar usuario\n"+
-    "4 - Eliminar usuario";
+    "4 - Eliminar usuario\n"+
+    "5 - Reiniciar usuario\n\n"+
+    "0 - Salir";
 
     // Textos generales
     public static final String seleccionJugador = "Has elegido ";

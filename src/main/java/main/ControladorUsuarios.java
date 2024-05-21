@@ -44,7 +44,7 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        reescribirArchivoJugadores(archivoOriginal, archivoTemporal, lineaVacia);
+        reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
     }
 
     public void editarUsuario(String nombreUsuario, String nuevoNombre) {
@@ -63,7 +63,7 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        reescribirArchivoJugadores(archivoOriginal, archivoTemporal, lineaVacia);
+        reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
     }
     
 }

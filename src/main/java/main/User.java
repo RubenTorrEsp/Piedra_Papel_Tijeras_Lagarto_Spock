@@ -83,7 +83,7 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        reescribirArchivoJugadores(archivoOriginal, archivoTemporal, lineaVacia);
+        reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
     }
 
     // Método que elimina el usuario si la puntuacion llega a 0

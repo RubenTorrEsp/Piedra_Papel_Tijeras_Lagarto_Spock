@@ -88,4 +88,10 @@ public class Common {
         System.out.println(texto);
     }
 
+    // Método que reescribe el archivo de jugadores
+    public static void reescribirArchivoJugadores (File original, File temporal) {
+        original.delete();
+        temporal.renameTo(original);
+    }
+
 }

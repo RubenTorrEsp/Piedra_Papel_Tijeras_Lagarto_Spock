@@ -45,6 +45,9 @@ public class ControladorUsuarios {
             e.printStackTrace();
         }
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal, lineaVacia);
+    }
+
+    public void editarUsuario(String nombreUsuario, String nuevoNombre) {
         
     }
     

@@ -17,6 +17,7 @@ public class ControladorUsuarios {
         mostrarJugadores();
     }
 
+    // Método que muestra una lista de todos los jugadores disponibles
     public void mostrarJugadores(){
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             while ((linea = br.readLine()) != null) {
@@ -30,6 +31,7 @@ public class ControladorUsuarios {
         }
     }
 
+    // Método que elimina un jugador de la lista
     public void eliminarUsuario(String nombreUsuario) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
@@ -47,6 +49,7 @@ public class ControladorUsuarios {
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
     }
 
+    // Método que modifica el nombre de un usuario
     public void editarUsuario(String nombreUsuario, String nuevoNombre) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {

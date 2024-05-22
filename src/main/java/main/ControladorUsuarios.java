@@ -1,13 +1,16 @@
 package main;
 
 import java.io.*;
+import java.util.Scanner;
+
 import static tools.Textos.*;
 import static main.Common.*;
 
 
 public class ControladorUsuarios {
 
-    public static String linea;
+    Scanner scanner = new Scanner(System.in);
+    String linea;
     static File archivoOriginal = new File(archivoUsuarios);
     static File archivoTemporal = new File(archivoUsuariosTemporal);
 

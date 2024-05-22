@@ -13,7 +13,7 @@ public class ControladorUsuarios {
 
     public ControladorUsuarios() {
         System.out.println(opcionesGestorJugadores);
-        System.out.println("Método en construccion. Le mostramos una lista de los jugadores disponibles.");
+        System.out.println(opcionNoDisponible);
         mostrarJugadores();
     }
 

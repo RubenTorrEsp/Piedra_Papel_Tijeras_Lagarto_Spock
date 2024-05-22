@@ -2,6 +2,7 @@ Programa completado, futuras implementaciones
 
 -Gestion de usuarios (EN PROCESO)
 
+-Reestructurar ciclo para que no solicite el jugador hasta que se elija el juego
 -Podium
 -BDD para usuarios
 -Test unitarios del programa

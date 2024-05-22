@@ -13,8 +13,8 @@ public class ControladorUsuarios {
 
     public ControladorUsuarios() {
         System.out.println(opcionesGestorJugadores);
-        System.out.println(opcionNoDisponible);
-        mostrarJugadores();
+        //System.out.println(opcionNoDisponible);
+        //mostrarJugadores();
     }
 
     // Método que muestra una lista de todos los jugadores disponibles

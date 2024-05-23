@@ -19,7 +19,9 @@ public class ControladorUsuarios {
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case "1":
+                System.out.println("Aquí se muestran los jugadores disponibles");
                 mostrarJugadores();
+                break;
             default:
                 System.out.println("Opcion no disponible en estos momentos");
                 break;

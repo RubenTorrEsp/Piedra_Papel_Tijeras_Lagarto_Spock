@@ -16,8 +16,14 @@ public class ControladorUsuarios {
 
     public ControladorUsuarios() {
         System.out.println(opcionesGestorJugadores);
-        //System.out.println(opcionNoDisponible);
-        //mostrarJugadores();
+        String eleccion = scanner.nextLine();
+        switch (eleccion) {
+            case "1":
+                mostrarJugadores();
+            default:
+                System.out.println("Opcion no disponible en estos momentos");
+                break;
+        }
     }
 
     // Método que muestra una lista de todos los jugadores disponibles

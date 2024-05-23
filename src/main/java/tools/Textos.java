@@ -29,7 +29,7 @@ public class Textos {
     "0 - Salir\n"+
     "-----------------------------------------------";
     
-    public static final String opcionesGestorJugadores = "Indique qué desea realizar:"+
+    public static final String opcionesGestorJugadores = "Indique qué desea realizar:\n"+
     "1 - Consultar la lista de usuarios\n"+
     "2 - Crear usuario\n"+
     "3 - Modificar usuario\n"+

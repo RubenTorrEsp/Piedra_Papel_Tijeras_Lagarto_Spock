@@ -25,8 +25,8 @@ public class ControladorUsuarios {
             case "4":
                 System.out.println("Indique qué jugador desea eliminar:");
                 String jugadorBorrado = scanner.nextLine();
-                eliminarUsuario(jugadorBorrado);
-                System.out.println("El jugador "+jugadorBorrado+" ha sido eliminado de la base de datos");
+                if(eliminarUsuario(jugadorBorrado)) System.out.println("El jugador "+jugadorBorrado+" ha sido eliminado de la base de datos");
+                else System.out.println("El jugador "+jugadorBorrado+" no se encuentra en la base de datos");
                 break;
             default:
                 System.out.println("Opcion no disponible en estos momentos");
@@ -49,13 +49,17 @@ public class ControladorUsuarios {
     }
 
     // Método que elimina un jugador de la lista
-    public void eliminarUsuario(String nombreUsuario) {
+    public Boolean eliminarUsuario(String nombreUsuario) {
+        Boolean jugadorEliminado = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = lineaVacia;
+                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) {
+                        linea = lineaVacia;
+                        jugadorEliminado = true;
+                    }
                     bw.write(linea);
                     bw.newLine();
                 }
@@ -64,6 +68,7 @@ public class ControladorUsuarios {
             e.printStackTrace();
         }
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
+        return jugadorEliminado;
     }
 
     // Método que modifica el nombre de un usuario

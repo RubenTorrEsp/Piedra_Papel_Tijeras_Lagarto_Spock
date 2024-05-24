@@ -22,14 +22,23 @@ public class ControladorUsuarios {
                 System.out.println("Aquí se muestran los jugadores disponibles");
                 mostrarJugadores();
                 break;
+            case "2":
+                System.out.println("Opcion no disponible en estos momentos");
+                break;
+            case "3":
+                System.out.println("Opcion no disponible en estos momentos");
+                break;
             case "4":
                 System.out.println("Indique qué jugador desea eliminar:");
                 String jugadorBorrado = scanner.nextLine();
                 if(eliminarUsuario(jugadorBorrado)) System.out.println("El jugador "+jugadorBorrado+" ha sido eliminado de la base de datos");
                 else System.out.println("El jugador "+jugadorBorrado+" no se encuentra en la base de datos");
                 break;
-            default:
+            case "5":
                 System.out.println("Opcion no disponible en estos momentos");
+                break;
+            default:
+                System.out.println("Selección no válida");
                 break;
         }
     }

@@ -29,10 +29,7 @@ public class ControladorUsuarios {
                 System.out.println("Opcion no disponible en estos momentos");
                 break;
             case "4":
-                System.out.println("Indique qué jugador desea eliminar:");
-                String jugadorBorrado = scanner.nextLine();
-                if(eliminarUsuario(jugadorBorrado)) System.out.println("El jugador "+jugadorBorrado+" ha sido eliminado de la base de datos");
-                else System.out.println("El jugador "+jugadorBorrado+" no se encuentra en la base de datos");
+                eliminarUsuario();
                 break;
             case "5":
                 System.out.println("Opcion no disponible en estos momentos");
@@ -58,15 +55,18 @@ public class ControladorUsuarios {
     }
 
     // Método que elimina un jugador de la lista
-    public Boolean eliminarUsuario(String nombreUsuario) {
+    public Boolean eliminarUsuario() {
+        System.out.println("Indique qué jugador desea eliminar:");
+        String jugadorBorrado = scanner.nextLine();
         Boolean jugadorEliminado = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) {
+                    if (partes.length == 2 && partes[0].equals(jugadorBorrado)) {
                         linea = lineaVacia;
+                        System.out.println("El jugador "+jugadorBorrado+" ha sido eliminado de la base de datos");
                         jugadorEliminado = true;
                     }
                     bw.write(linea);
@@ -76,6 +76,7 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        if (!jugadorEliminado) System.out.println("El jugador "+jugadorBorrado+" no se encuentra en la base de datos");
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
         return jugadorEliminado;
     }

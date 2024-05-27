@@ -23,16 +23,16 @@ public class ControladorUsuarios {
                 mostrarJugadores();
                 break;
             case "2":
-                System.out.println("Opcion no disponible en estos momentos");
+                System.out.println(opcionNoDisponible);
                 break;
             case "3":
-                System.out.println("Opcion no disponible en estos momentos");
+                System.out.println(opcionNoDisponible);
                 break;
             case "4":
                 eliminarUsuario();
                 break;
             case "5":
-                System.out.println("Opcion no disponible en estos momentos");
+                System.out.println(opcionNoDisponible);
                 break;
             default:
                 System.out.println("Selección no válida");

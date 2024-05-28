@@ -19,7 +19,6 @@ public class ControladorUsuarios {
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case "1":
-                System.out.println("Aquí se muestran los jugadores disponibles");
                 mostrarJugadores();
                 break;
             case "2":
@@ -43,6 +42,7 @@ public class ControladorUsuarios {
     // Método que muestra una lista de todos los jugadores disponibles
     public void mostrarJugadores(){
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
+            System.out.println("Aquí se muestran los jugadores disponibles");
             while ((linea = br.readLine()) != null) {
                 if(linea.length() > 1) {
                     String[] partes = linea.split(separadorUsuarios);

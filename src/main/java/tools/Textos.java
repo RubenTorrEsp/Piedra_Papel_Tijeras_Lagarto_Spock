@@ -49,22 +49,21 @@ public class Textos {
     public static final String opcionNoDisponible = "Opcion no disponible en estos momentos";
 
     // Textos de seleccion
-    public static final String seleccionPiedraTexto = "piedra";
     public static final String seleccionPiedraNumero = "1";
-    public static final String seleccionPapelTexto = "papel";
     public static final String seleccionPapelNumero = "2";
-    public static final String seleccionTijerasTexto = "tijeras";
     public static final String seleccionTijerasNumero = "3";
-    public static final String seleccionLagartoTexto = "lagarto";
     public static final String seleccionLagartoNumero = "4";
-    public static final String seleccionSpockTexto = "spock";
     public static final String seleccionSpockNumero = "5";
-    public static final String seleccionSalirTexto = "salir";
-    public static final String seleccionSalirNumero = "0";
-    public static final String seleccionSI = "si";
-    public static final String seleccionJuegoClasico = "2";
-    public static final String seleccionJuegoExtendido = "1";
     public static final String seleccionUsuarios = "9";
+    public static final String seleccionSalirNumero = "0";
+
+    public static final String seleccionPiedra = "piedra";
+    public static final String seleccionPapel = "papel";
+    public static final String seleccionTijeras = "tijeras";
+    public static final String seleccionLagarto = "lagarto";
+    public static final String seleccionSpock = "spock";
+    public static final String seleccionSalirTexto = "salir";
+    public static final String seleccionSI = "si";
 
     // Textos de configuracion
     public static final String separadorUsuarios = ";";

@@ -18,10 +18,10 @@ public class _Main {
         System.out.println(bienvenida);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
-            case seleccionJuegoExtendido:
+            case seleccionPiedraNumero:
                 while(Common.reJugar) new JuegoExtendido(jugador);
                 break;
-            case seleccionJuegoClasico:
+            case seleccionPapelNumero:
                 while(Common.reJugar) new JuegoClasico(jugador);
                 break;
             case seleccionUsuarios:

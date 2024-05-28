@@ -18,19 +18,19 @@ public class Common {
     public static String refactorizar(String seleccionJugador, User jugador) throws IOException{
         switch (seleccionJugador) {
             case seleccionPiedraNumero:
-                seleccionJugador = seleccionPiedraTexto;
+                seleccionJugador = seleccionPiedra;
                 break;
             case seleccionPapelNumero:
-                seleccionJugador = seleccionPapelTexto;
+                seleccionJugador = seleccionPapel;
                 break;
             case seleccionTijerasNumero:
-                seleccionJugador = seleccionTijerasTexto;
+                seleccionJugador = seleccionTijeras;
                 break;
             case seleccionLagartoNumero:
-                seleccionJugador = seleccionLagartoTexto;
+                seleccionJugador = seleccionLagarto;
                 break;
             case seleccionSpockNumero:
-                seleccionJugador = seleccionSpockTexto;
+                seleccionJugador = seleccionSpock;
                 break;
             case seleccionSalirNumero:
             case seleccionSalirTexto:

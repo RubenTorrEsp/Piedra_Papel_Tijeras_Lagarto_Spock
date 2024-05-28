@@ -34,7 +34,7 @@ public class ControladorUsuarios {
                 System.out.println(opcionNoDisponible);
                 break;
             default:
-                System.out.println("Selección no válida");
+                System.out.println(seleccionInvalida);
                 break;
         }
     }

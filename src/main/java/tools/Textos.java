@@ -49,13 +49,13 @@ public class Textos {
     public static final String opcionNoDisponible = "Opcion no disponible en estos momentos";
 
     // Textos de seleccion
-    public static final String seleccionPiedraNumero = "1";
-    public static final String seleccionPapelNumero = "2";
-    public static final String seleccionTijerasNumero = "3";
-    public static final String seleccionLagartoNumero = "4";
-    public static final String seleccionSpockNumero = "5";
-    public static final String seleccionUsuarios = "9";
-    public static final String seleccionSalirNumero = "0";
+    public static final String seleccionNumero1 = "1";
+    public static final String seleccionNumero2 = "2";
+    public static final String seleccionNumero3 = "3";
+    public static final String seleccionNumero4 = "4";
+    public static final String seleccionNumero5 = "5";
+    public static final String seleccionNumero9 = "9";
+    public static final String seleccionNumero0 = "0";
 
     public static final String seleccionPiedra = "piedra";
     public static final String seleccionPapel = "papel";

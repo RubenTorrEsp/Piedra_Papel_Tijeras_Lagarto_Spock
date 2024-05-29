@@ -17,22 +17,22 @@ public class Common {
     @SuppressWarnings("static-access")
     public static String refactorizar(String seleccionJugador, User jugador) throws IOException{
         switch (seleccionJugador) {
-            case seleccionPiedraNumero:
+            case seleccionNumero1:
                 seleccionJugador = seleccionPiedra;
                 break;
-            case seleccionPapelNumero:
+            case seleccionNumero2:
                 seleccionJugador = seleccionPapel;
                 break;
-            case seleccionTijerasNumero:
+            case seleccionNumero3:
                 seleccionJugador = seleccionTijeras;
                 break;
-            case seleccionLagartoNumero:
+            case seleccionNumero4:
                 seleccionJugador = seleccionLagarto;
                 break;
-            case seleccionSpockNumero:
+            case seleccionNumero5:
                 seleccionJugador = seleccionSpock;
                 break;
-            case seleccionSalirNumero:
+            case seleccionNumero0:
             case seleccionSalirTexto:
                 seleccionJugador = seleccionSalirTexto;
                 jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);

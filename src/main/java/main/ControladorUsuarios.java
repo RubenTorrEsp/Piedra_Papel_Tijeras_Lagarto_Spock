@@ -22,17 +22,22 @@ public class ControladorUsuarios {
                 mostrarJugadores();
                 break;
             case "2":
+                // Crear usuario
                 System.out.println(opcionNoDisponible);
                 break;
             case "3":
+                // Modificar usuario
                 System.out.println(opcionNoDisponible);
                 break;
             case "4":
                 eliminarUsuario();
                 break;
             case "5":
+                // Reiniciar usuario
                 System.out.println(opcionNoDisponible);
                 break;
+            case "0":
+                //salir
             default:
                 System.out.println(seleccionInvalida);
                 break;

@@ -56,7 +56,6 @@ public class Textos {
     public static final String seleccionNumero5 = "5";
     public static final String seleccionNumero9 = "9";
     public static final String seleccionNumero0 = "0";
-
     public static final String seleccionPiedra = "piedra";
     public static final String seleccionPapel = "papel";
     public static final String seleccionTijeras = "tijeras";

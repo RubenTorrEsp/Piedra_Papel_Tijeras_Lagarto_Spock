@@ -37,7 +37,8 @@ public class ControladorUsuarios {
                 System.out.println(opcionNoDisponible);
                 break;
             case "0":
-                //salir
+                System.out.println(seleccionSalir+"\n"+rejugarNegativo);
+                break;
             default:
                 System.out.println(seleccionInvalida);
                 break;

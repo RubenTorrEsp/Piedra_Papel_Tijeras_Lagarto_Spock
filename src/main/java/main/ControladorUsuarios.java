@@ -30,7 +30,7 @@ public class ControladorUsuarios {
                 System.out.println(opcionNoDisponible);
                 break;
             case "4":
-                eliminarUsuario();
+                eliminarJugador();
                 break;
             case "5":
                 // Reiniciar usuario
@@ -62,11 +62,11 @@ public class ControladorUsuarios {
 
     // Método que crea un jugador y lo incorpora a la lista
     public void crearJugador() {
-        
+
     }
 
     // Método que elimina un jugador de la lista
-    public Boolean eliminarUsuario() {
+    public void eliminarJugador() {
         System.out.println("Indique qué jugador desea eliminar:");
         String jugadorBorrado = scanner.nextLine();
         Boolean jugadorEliminado = false;
@@ -89,7 +89,7 @@ public class ControladorUsuarios {
         }
         if (!jugadorEliminado) System.out.println("El jugador "+jugadorBorrado+" no se encuentra en la base de datos");
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
-        return jugadorEliminado;
+
     }
 
     // Método que modifica el nombre de un usuario

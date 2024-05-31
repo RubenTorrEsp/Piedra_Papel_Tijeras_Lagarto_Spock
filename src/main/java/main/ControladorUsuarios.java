@@ -67,7 +67,7 @@ public class ControladorUsuarios {
 
     // Método que elimina un jugador de la lista
     public void eliminarJugador() {
-        System.out.println("Indique qué jugador desea eliminar:");
+        System.out.println(eliminarJugador);
         String jugadorBorrado = scanner.nextLine();
         Boolean jugadorEliminado = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
@@ -77,7 +77,7 @@ public class ControladorUsuarios {
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(jugadorBorrado)) {
                         linea = lineaVacia;
-                        System.out.println("El jugador "+jugadorBorrado+" ha sido eliminado de la base de datos");
+                        indicarJugadorBorrado(jugadorBorrado);
                         jugadorEliminado = true;
                     }
                     bw.write(linea);
@@ -87,7 +87,7 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if (!jugadorEliminado) System.out.println("El jugador "+jugadorBorrado+" no se encuentra en la base de datos");
+        if (!jugadorEliminado) indicarJugadorNoEnBDD(jugadorBorrado);
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
 
     }

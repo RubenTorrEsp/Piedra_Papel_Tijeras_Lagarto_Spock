@@ -60,6 +60,11 @@ public class ControladorUsuarios {
         }
     }
 
+    // Método que crea un jugador y lo incorpora a la lista
+    public void crearJugador() {
+        
+    }
+
     // Método que elimina un jugador de la lista
     public Boolean eliminarUsuario() {
         System.out.println("Indique qué jugador desea eliminar:");

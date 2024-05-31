@@ -4,7 +4,9 @@ import java.io.*;
 import java.util.Scanner;
 
 import static tools.Textos.*;
+import static tools.Textos.eliminarJugador;
 import static main.Common.*;
+import static main.User.*;
 
 
 public class ControladorUsuarios {
@@ -22,8 +24,7 @@ public class ControladorUsuarios {
                 mostrarJugadores();
                 break;
             case "2":
-                // Crear usuario
-                System.out.println(opcionNoDisponible);
+                crearJugador();
                 break;
             case "3":
                 // Modificar usuario
@@ -62,7 +63,19 @@ public class ControladorUsuarios {
 
     // Método que crea un jugador y lo incorpora a la lista
     public void crearJugador() {
-
+        System.out.println("Indique el jugador que desea crear");
+        String jugadorNuevo = scanner.nextLine();
+        Boolean jugadorExistente = usuarioExiste(jugadorNuevo);
+        if (!jugadorExistente) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
+                bw.newLine();
+                bw.write(jugadorNuevo+puntuacionInicial);
+                System.out.println("El jugador "+jugadorNuevo+" ha sido añadido a la base de datos");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else System.out.println("El jugador "+jugadorNuevo+" ya se encuentra en la base de datos");
     }
 
     // Método que elimina un jugador de la lista
@@ -89,7 +102,6 @@ public class ControladorUsuarios {
         }
         if (!jugadorEliminado) indicarJugadorNoEnBDD(jugadorBorrado);
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
-
     }
 
     // Método que modifica el nombre de un usuario

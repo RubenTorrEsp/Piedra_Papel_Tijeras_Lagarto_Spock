@@ -35,7 +35,7 @@ public class User {
     }
 
     // Método que comprueba si el usuario existe
-    public Boolean usuarioExiste(String nombreUsuario) {
+    public static Boolean usuarioExiste(String nombreUsuario) {
         Boolean usuarioExiste = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             while ((linea = br.readLine()) != null) {
@@ -48,7 +48,7 @@ public class User {
     }
 
     // Método que crea un usuario nuevo
-    public void crearNuevoUsuario(String nombreJugadorNuevo) {
+    public static void crearNuevoUsuario(String nombreJugadorNuevo) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             bw.newLine();
             bw.write(nombreJugadorNuevo + puntuacionInicial);

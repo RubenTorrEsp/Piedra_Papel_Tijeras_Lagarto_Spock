@@ -85,6 +85,14 @@ public class Textos {
         public static void mostrarJugador(String nombre, String puntuacion) {
          System.out.println("Nombre: "+nombre+". Puntuación: "+puntuacion);
         }
+        // Crear jugadores
+        public static final String jugadorParaCrear = "Indique el jugador que desea crear";
+        public static void indicarJugadorCreado(String jugadorCreado) {
+            System.out.println("El jugador "+jugadorCreado+" ha sido añadido a la base de datos");
+        }
+        public static void indicarJugadorYaEnBDD(String jugadorCreado) {
+            System.out.println("El jugador "+jugadorCreado+" ya se encuentra en la base de datos");
+        }
         // Eliminar jugadores
         public static final String eliminarJugador = "Indique qué jugador desea eliminar:";
         public static void indicarJugadorBorrado(String jugadorBorrado) {

@@ -73,10 +73,15 @@ public class Textos {
     public static final String errorEstatico = "static-access";
 
     // Textos de gestión de jugadores
+    public static final String mostrarJugadores = "Aquí se muestran los jugadores disponibles";
+    public static void mostrarJugador(String nombre, String puntuacion) {
+        System.out.println("Nombre: "+nombre+". Puntuación: "+puntuacion);
+    } 
     public static final String comprobarUsuario = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";
     public static final String usuarioEliminado = "Has llegado a 0 puntos y hemos eliminado al jugador. Eres mas malo que un dolor";
     public static final String usuarioCreado = "Usuario creado.";
-    
+    public static final String jugadorParaEliminar = "";
+
     public static final String eliminarJugador = "Indique qué jugador desea eliminar:";
     public static void indicarJugadorBorrado(String jugadorBorrado) {
         System.out.println("El jugador "+jugadorBorrado+" ha sido eliminado de la base de datos");

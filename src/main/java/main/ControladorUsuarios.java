@@ -63,19 +63,19 @@ public class ControladorUsuarios {
 
     // Método que crea un jugador y lo incorpora a la lista
     public void crearJugador() {
-        System.out.println("Indique el jugador que desea crear");
+        System.out.println(jugadorParaCrear);
         String jugadorNuevo = scanner.nextLine();
         Boolean jugadorExistente = usuarioExiste(jugadorNuevo);
         if (!jugadorExistente) {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
                 bw.newLine();
                 bw.write(jugadorNuevo+puntuacionInicial);
-                System.out.println("El jugador "+jugadorNuevo+" ha sido añadido a la base de datos");
+                indicarJugadorCreado(jugadorNuevo);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        else System.out.println("El jugador "+jugadorNuevo+" ya se encuentra en la base de datos");
+        else indicarJugadorYaEnBDD(jugadorNuevo);
     }
 
     // Método que elimina un jugador de la lista

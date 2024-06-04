@@ -92,7 +92,7 @@ public class ControladorUsuarios {
                         jugadorExistente = true;
                         System.out.println("Indique el nuevo nombre para el jugador");
                         String nuevoNombre = scanner.nextLine();
-                        linea = nuevoNombre+separadorUsuarios+partes[1]
+                        linea = nuevoNombre+separadorUsuarios+partes[1];
                     }
                     bw.write(linea);
                     bw.newLine();

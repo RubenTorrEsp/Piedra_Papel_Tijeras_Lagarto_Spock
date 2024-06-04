@@ -83,6 +83,21 @@ public class ControladorUsuarios {
         System.out.println("Indique qué jugador quiere modificar");
         String jugadorModificado = scanner.nextLine();
         Boolean jugadorExistente = false;
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(separadorUsuarios);
+                if (!linea.trim().isEmpty()) {
+                    if (partes.length == 2 && partes[0].equals(jugadorModificado)) {
+                        jugadorExistente = true;
+                    }
+                    bw.write(linea);
+                    bw.newLine();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     // Método que elimina un jugador de la lista

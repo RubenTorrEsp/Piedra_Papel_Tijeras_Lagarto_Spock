@@ -80,7 +80,9 @@ public class ControladorUsuarios {
 
     // Método que modifica los valores de un usuario
     public void modificarJugador() {
-        
+        System.out.println("Indique qué jugador quiere modificar");
+        String jugadorModificado = scanner.nextLine();
+        Boolean jugadorExistente = false;
     }
 
     // Método que elimina un jugador de la lista

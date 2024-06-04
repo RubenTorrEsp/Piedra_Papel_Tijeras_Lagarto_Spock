@@ -78,6 +78,11 @@ public class ControladorUsuarios {
         else indicarJugadorYaEnBDD(jugadorNuevo);
     }
 
+    // Método que modifica los valores de un usuario
+    public void modificarJugador() {
+        
+    }
+
     // Método que elimina un jugador de la lista
     public void eliminarJugador() {
         System.out.println(eliminarJugador);

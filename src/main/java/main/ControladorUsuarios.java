@@ -101,6 +101,7 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        if(!jugadorExistente) System.out.println("El jugador indicado no existe");
     }
 
     // Método que elimina un jugador de la lista

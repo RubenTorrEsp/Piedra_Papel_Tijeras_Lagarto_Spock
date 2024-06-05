@@ -28,7 +28,7 @@ public class ControladorUsuarios {
                 break;
             case "3":
                 // Modificar usuario
-                System.out.println(opcionNoDisponible);
+                modificarJugador();
                 break;
             case "4":
                 eliminarJugador();

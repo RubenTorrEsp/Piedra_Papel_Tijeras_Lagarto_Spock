@@ -93,6 +93,10 @@ public class Textos {
         public static void indicarJugadorYaEnBDD(String jugadorCreado) {
             System.out.println("El jugador "+jugadorCreado+" ya se encuentra en la base de datos");
         }
+        // Modificar jugadores
+        public static final String modificarJugador = "Indique qué jugador quiere modificar";
+        public static final String nuevoNombre = "Indique el nuevo nombre para el jugador";
+        public static final String jugadorNoExiste = "El jugador indicado no existe";
         // Eliminar jugadores
         public static final String eliminarJugador = "Indique qué jugador desea eliminar:";
         public static void indicarJugadorBorrado(String jugadorBorrado) {

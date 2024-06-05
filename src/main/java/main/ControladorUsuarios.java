@@ -80,7 +80,7 @@ public class ControladorUsuarios {
 
     // Método que modifica los valores de un usuario
     public void modificarJugador() {
-        System.out.println("Indique qué jugador quiere modificar");
+        System.out.println(modificarJugador);
         String jugadorModificado = scanner.nextLine();
         Boolean jugadorExistente = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
@@ -90,7 +90,7 @@ public class ControladorUsuarios {
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(jugadorModificado)) {
                         jugadorExistente = true;
-                        System.out.println("Indique el nuevo nombre para el jugador");
+                        System.out.println(nuevoNombre);
                         String nuevoNombre = scanner.nextLine();
                         linea = nuevoNombre+separadorUsuarios+partes[1];
                     }
@@ -101,7 +101,7 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if(!jugadorExistente) System.out.println("El jugador indicado no existe");
+        if(!jugadorExistente) System.out.println(jugadorNoExiste);
     }
 
     // Método que elimina un jugador de la lista

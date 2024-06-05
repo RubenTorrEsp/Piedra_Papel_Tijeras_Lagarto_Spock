@@ -27,7 +27,6 @@ public class ControladorUsuarios {
                 crearJugador();
                 break;
             case "3":
-                // Modificar usuario
                 modificarJugador();
                 break;
             case "4":

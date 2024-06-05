@@ -102,6 +102,7 @@ public class ControladorUsuarios {
             e.printStackTrace();
         }
         if(!jugadorExistente) System.out.println(jugadorNoExiste);
+        reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
     }
 
     // Método que elimina un jugador de la lista

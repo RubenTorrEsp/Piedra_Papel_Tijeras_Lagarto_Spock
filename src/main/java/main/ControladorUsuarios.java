@@ -132,7 +132,28 @@ public class ControladorUsuarios {
 
     // Metodo que reinicia la puntuacion de un jugador
     public void reiniciarJugador() {
-        
+        System.out.println("Indique el jugador que desea reiniciar");
+        String jugadorReiniciado = scanner.nextLine();
+        Boolean jugadorExistente = false;
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(separadorUsuarios);
+                if (!linea.trim().isEmpty()) {
+                    if (partes.length == 2 && partes[0].equals(jugadorReiniciado)) {
+                        linea = partes[0]+";50";
+                        System.out.println("El jugador "+jugadorReiniciado+" vuelve a tener ahora 50 puntos.");;
+                        jugadorExistente = true;
+                    }
+                    bw.write(linea);
+                    bw.newLine();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(!jugadorExistente) System.out.println("El jugador "+jugadorReiniciado+" no se encuentra en la base de datos");
+        reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
     }
 
 }

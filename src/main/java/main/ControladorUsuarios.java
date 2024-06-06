@@ -130,6 +130,9 @@ public class ControladorUsuarios {
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
     }
 
-    
+    // Metodo que reinicia la puntuacion de un jugador
+    public void reiniciarJugador() {
+        
+    }
 
 }

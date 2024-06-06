@@ -130,24 +130,6 @@ public class ControladorUsuarios {
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
     }
 
-    // Método que modifica el nombre de un usuario
-    public void editarUsuario(String nombreUsuario, String nuevoNombre) {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(separadorUsuarios);
-                if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) {
-                        linea = nuevoNombre+separadorUsuarios+nuevaPuntuacion;
-                    }
-                    bw.write(linea);
-                    bw.newLine();
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
-    }
     
+
 }

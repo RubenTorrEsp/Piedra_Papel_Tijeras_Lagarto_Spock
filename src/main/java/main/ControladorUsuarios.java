@@ -33,8 +33,7 @@ public class ControladorUsuarios {
                 eliminarJugador();
                 break;
             case "5":
-                // Reiniciar usuario
-                System.out.println(opcionNoDisponible);
+                reiniciarJugador();
                 break;
             case "0":
                 System.out.println(seleccionSalir+"\n"+rejugarNegativo);

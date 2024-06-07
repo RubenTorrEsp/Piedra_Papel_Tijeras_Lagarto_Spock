@@ -8,7 +8,6 @@ import static tools.Textos.eliminarJugador;
 import static main.Common.*;
 import static main.User.*;
 
-
 public class ControladorUsuarios {
 
     Scanner scanner = new Scanner(System.in);

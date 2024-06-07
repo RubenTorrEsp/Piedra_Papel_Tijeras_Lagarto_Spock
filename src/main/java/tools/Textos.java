@@ -105,6 +105,14 @@ public class Textos {
         public static void indicarJugadorNoEnBDD(String jugadorBorrado) {
             System.out.println("El jugador "+jugadorBorrado+" no se encuentra en la base de datos");
         }
+        // Reiniciar jugadores
+        public static final String reiniciarJugador = "Indique el jugador que desea reiniciar";
+        public static void indicarJugadorReiniciado(String jugadorReiniciado) {
+            System.out.println("El jugador "+jugadorReiniciado+" vuelve a tener ahora 50 puntos.");
+        }
+        public static void indicarJugadorNoEstaEnBDD(String jugadorReiniciado) {
+            System.out.println("El jugador "+jugadorReiniciado+" no se encuentra en la base de datos");
+        }
 
     // Textos de resolución de enfrentamientos
     public static final String victoria = "Enhorabuena!! Has ganado, porque ";

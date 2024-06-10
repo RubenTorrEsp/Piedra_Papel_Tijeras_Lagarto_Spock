@@ -46,7 +46,6 @@ public class Textos {
     public static final String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número:";
     public static final String rejugarNegativo = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";
     public static final String lineaVacia = "";
-    public static final String opcionNoDisponible = "Opcion no disponible en estos momentos";
 
     // Textos de seleccion
     public static final String seleccionNumero1 = "1";
@@ -63,6 +62,7 @@ public class Textos {
     public static final String seleccionSpock = "spock";
     public static final String seleccionSalirTexto = "salir";
     public static final String seleccionSI = "si";
+    public static final String opcionNoDisponible = "Opcion no disponible en estos momentos";
 
     // Textos de configuracion
     public static final String separadorUsuarios = ";";

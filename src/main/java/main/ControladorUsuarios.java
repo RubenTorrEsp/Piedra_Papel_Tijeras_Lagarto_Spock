@@ -149,7 +149,7 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if(!jugadorExistente) indicarJugadorNoEstaEnBDD(jugadorReiniciado);
+        if(!jugadorExistente) indicarJugadorNoEnBDD(jugadorReiniciado);
         reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
     }
 

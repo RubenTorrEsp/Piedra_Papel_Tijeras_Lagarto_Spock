@@ -79,6 +79,9 @@ public class Textos {
     public static void definicionUser(String nombre, Integer puntuacion){
         System.out.println("El jugador "+nombre+" está ahora activo con "+puntuacion+" puntos.");
     }
+    public static void indicarJugadorNoEnBDD(String jugador) {
+        System.out.println("El jugador "+jugador+" no se encuentra en la base de datos");
+    }
         // Clase ControladorUsuarios
         // Mostrar jugadores
         public static final String mostrarJugadores = "Aquí se muestran los jugadores disponibles";
@@ -102,16 +105,10 @@ public class Textos {
         public static void indicarJugadorBorrado(String jugadorBorrado) {
             System.out.println("El jugador "+jugadorBorrado+" ha sido eliminado de la base de datos");
         }
-        public static void indicarJugadorNoEnBDD(String jugadorBorrado) {
-            System.out.println("El jugador "+jugadorBorrado+" no se encuentra en la base de datos");
-        }
         // Reiniciar jugadores
         public static final String reiniciarJugador = "Indique el jugador que desea reiniciar";
         public static void indicarJugadorReiniciado(String jugadorReiniciado) {
             System.out.println("El jugador "+jugadorReiniciado+" vuelve a tener ahora 50 puntos.");
-        }
-        public static void indicarJugadorNoEstaEnBDD(String jugadorReiniciado) {
-            System.out.println("El jugador "+jugadorReiniciado+" no se encuentra en la base de datos");
         }
 
     // Textos de resolución de enfrentamientos

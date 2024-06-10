@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.Scanner;
 
 import static tools.Textos.*;
-import static tools.Textos.eliminarJugador;
 import static main.Common.*;
 import static main.User.*;
 

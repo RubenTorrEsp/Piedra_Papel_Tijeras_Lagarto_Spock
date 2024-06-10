@@ -1,5 +1,6 @@
 Programa completado, futuras implementaciones
 
+-Creación del método salir, para recopilar código repetido
 -Reestructurar ciclo para que no solicite el jugador hasta que se elija el juego
 -Podium
 -BDD para usuarios

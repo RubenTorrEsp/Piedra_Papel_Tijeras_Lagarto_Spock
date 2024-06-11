@@ -8,20 +8,22 @@ import java.util.Scanner;
 public class _Main {
     
     static Scanner scanner = new Scanner(System.in);
+    static User jugador;
 
     public static void main(String[] args) throws IOException {
-        User jugador = new User(establecerUsuario());
-        inicio(jugador);
+        inicio();
     }
 
-    public static void inicio(User jugador) throws IOException {
+    public static void inicio() throws IOException {
         System.out.println(bienvenida);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case seleccionNumero1:
+                jugador = new User(establecerUsuario());
                 while(Common.reJugar) new JuegoExtendido(jugador);
                 break;
             case seleccionNumero2:
+                jugador = new User(establecerUsuario());    
                 while(Common.reJugar) new JuegoClasico(jugador);
                 break;
             case seleccionNumero9:

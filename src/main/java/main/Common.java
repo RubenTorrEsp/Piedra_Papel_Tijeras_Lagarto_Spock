@@ -43,6 +43,11 @@ public class Common {
         return seleccionJugador;
     }
 
+    // Método salir, que corta el programa
+    public static void salir() {
+        
+    }
+
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
     public static void comprobarVictoria(String jugador, String maquina, User user) throws IOException {
         System.out.println(seleccionJugador+jugador);

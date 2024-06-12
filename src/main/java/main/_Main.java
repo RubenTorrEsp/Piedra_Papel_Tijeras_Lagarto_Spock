@@ -1,6 +1,7 @@
 package main;
 
 import static tools.Textos.*;
+import static main.Common.*;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -28,6 +29,9 @@ public class _Main {
                 break;
             case seleccionNumero9:
                 new ControladorUsuarios();
+                break;
+            case seleccionNumero0:
+                salir();
                 break;
             default:
                 System.out.println(seleccionInvalida);

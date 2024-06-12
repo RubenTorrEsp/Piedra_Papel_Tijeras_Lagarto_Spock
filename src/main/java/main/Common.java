@@ -45,7 +45,8 @@ public class Common {
 
     // Método salir, que corta el programa
     public static void salir() {
-        
+        System.out.println(seleccionSalir);
+        System.out.println(rejugarNegativo);
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina

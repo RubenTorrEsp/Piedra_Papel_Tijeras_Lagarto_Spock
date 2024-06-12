@@ -34,7 +34,7 @@ public class ControladorUsuarios {
                 reiniciarJugador();
                 break;
             case seleccionNumero0:
-                System.out.println(seleccionSalir+"\n"+rejugarNegativo);
+                salir();
                 break;
             default:
                 System.out.println(seleccionInvalida);

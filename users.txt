@@ -1,5 +1,5 @@
-Ruben;193
-Marta;243
+Ruben;192
+Marta;242
 Ampi;72
 Marco;7
 Paco;50

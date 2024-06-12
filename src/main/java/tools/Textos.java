@@ -8,7 +8,7 @@ public class Textos {
     // Textos de opciones
     public static final String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!\n"+
     "Elija qué desea indicando el numero:\n"+
-    "1- Jugar al juego extendido\n"+
+    "1- Juego extendido\n"+
     "2- Juego clásico\n"+
     "9- Gestionar usuarios\n\n"+
     "0- Salir";

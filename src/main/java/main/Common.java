@@ -15,7 +15,7 @@ public class Common {
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
     @SuppressWarnings("static-access")
-    public static String refactorizar(String seleccionJugador, User jugador) throws IOException{
+    public static String refactorizar(String seleccionJugador, User jugador) throws IOException {
         switch (seleccionJugador) {
             case seleccionNumero1:
                 seleccionJugador = seleccionPiedra;
@@ -35,7 +35,7 @@ public class Common {
             case seleccionNumero0:
             case seleccionSalirTexto:
                 seleccionJugador = seleccionSalirTexto;
-                jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);
+                salir(jugador);
                 break;
             default:
                 break;
@@ -43,10 +43,17 @@ public class Common {
         return seleccionJugador;
     }
 
-    // Método salir, que corta el programa
+    // Métodos salir, que cortan el programa
     public static void salir() {
         System.out.println(seleccionSalir);
         System.out.println(rejugarNegativo);
+    }
+
+    @SuppressWarnings("static-access")
+    public static void salir(User jugador) throws IOException {
+        System.out.println(seleccionSalir);
+        System.out.println(rejugarNegativo);
+        jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina

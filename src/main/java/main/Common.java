@@ -9,12 +9,10 @@ import static tools.Textos.*;
 
 public class Common {
 
-    // Creación del scanner
     static Scanner scanner = new Scanner(System.in);
     static Boolean reJugar = true;
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
-    @SuppressWarnings("static-access")
     public static String refactorizar(String seleccionJugador, User jugador) throws IOException {
         switch (seleccionJugador) {
             case seleccionNumero1:

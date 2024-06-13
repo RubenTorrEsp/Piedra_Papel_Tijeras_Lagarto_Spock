@@ -20,13 +20,8 @@ public class JuegoClasico extends Common{
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
     public void jugarDeNuevo(User jugador) throws IOException{
         System.out.println(opcionesJuegoClasico);
-
         if(obtenerEntrada(jugador)){
-            if (seleccionJugador == seleccionSalirTexto) {
-                System.out.println(seleccionSalir);
-                System.out.println(rejugarNegativo);
-                reJugar = false;
-            }
+            if (seleccionJugador == seleccionSalirTexto) reJugar = false;
             else {
                 comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina(3), jugador);
                 reJugar(jugador);

@@ -45,13 +45,13 @@ public class Common {
 
     // Métodos salir, que cortan el programa
     public static void salir() {
-        System.out.println(seleccionSalir);
+        System.out.println(seleccionadoSalir);
         System.out.println(rejugarNegativo);
     }
 
     @SuppressWarnings("static-access")
     public static void salir(User jugador) throws IOException {
-        System.out.println(seleccionSalir);
+        System.out.println(seleccionadoSalir);
         System.out.println(rejugarNegativo);
         jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);
     }

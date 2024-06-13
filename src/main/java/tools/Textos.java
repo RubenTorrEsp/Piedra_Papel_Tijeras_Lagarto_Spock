@@ -41,7 +41,7 @@ public class Textos {
     public static final String seleccionJugador = "Has elegido ";
     public static final String seleccionMaquina = "La máquina ha elegido ";
     public static final String seleccionInvalida = "Selección no válida.";
-    public static final String seleccionSalir = "Ha seleccionado salir.";
+    public static final String seleccionadoSalir = "Ha seleccionado salir.";
     public static final String seleccionRejugar = "¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.";
     public static final String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número:";
     public static final String rejugarNegativo = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";

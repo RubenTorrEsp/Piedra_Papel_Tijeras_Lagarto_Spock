@@ -60,7 +60,7 @@ public class Textos {
     public static final String seleccionTijeras = "tijeras";
     public static final String seleccionLagarto = "lagarto";
     public static final String seleccionSpock = "spock";
-    public static final String seleccionSalirTexto = "salir";
+    public static final String seleccionSalir = "salir";
     public static final String seleccionSI = "si";
     public static final String opcionNoDisponible = "Opcion no disponible en estos momentos";
 

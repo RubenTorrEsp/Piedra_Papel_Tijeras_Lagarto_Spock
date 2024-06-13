@@ -21,7 +21,7 @@ public class JuegoExtendido extends Common {
     public void jugarDeNuevo(User jugador) throws IOException {
         System.out.println(opcionesJuegoExtendido);
         if(obtenerEntrada(jugador)){
-            if (seleccionJugador == seleccionSalirTexto) reJugar = false;
+            if (seleccionJugador == seleccionSalir) reJugar = false;
             else {
                 comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina(5), jugador);
                 reJugar(jugador);

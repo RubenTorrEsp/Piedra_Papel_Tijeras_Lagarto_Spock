@@ -33,8 +33,8 @@ public class Common {
                 seleccionJugador = seleccionSpock;
                 break;
             case seleccionNumero0:
-            case seleccionSalirTexto:
-                seleccionJugador = seleccionSalirTexto;
+            case seleccionSalir:
+                seleccionJugador = seleccionSalir;
                 salir(jugador);
                 break;
             default:

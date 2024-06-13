@@ -1,7 +1,5 @@
 Programa completado, futuras implementaciones
 
--Creación del método salir, para recopilar código repetido (EN PROCESO)
-
 -Podium
 -BDD para usuarios
 -Test unitarios del programa

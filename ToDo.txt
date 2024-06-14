@@ -7,6 +7,7 @@ Programa completado, futuras implementaciones
 -Sistema de apuestas
 -Interfaz
 -Idiomas
+-Traduccion del codigo
 -Añadir nuevos juegos
     -Cara o cruz
     -Pares o nones

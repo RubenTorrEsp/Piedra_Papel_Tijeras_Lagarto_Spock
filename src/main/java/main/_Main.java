@@ -48,8 +48,7 @@ public class _Main {
         return formatoJugador(respuestaSinFormato);
     }
 
-    // Método que arregla el formato del user escrito para evitar repeticiones
-    // estableciendo la primera letra en mayúuscula y el resto en minúscula
+    // Método que capitaliza el formato del jugador
     public static String formatoJugador(String jugador) {
         Integer indiceInicial = 0;
         Integer indiceResto = 1;

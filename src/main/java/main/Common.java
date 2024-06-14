@@ -58,7 +58,6 @@ public class Common {
     public static void comprobarVictoria(String jugador, String maquina, User user) throws IOException {
         System.out.println(seleccionJugador+jugador);
         System.out.println(seleccionMaquina+maquina);
-
         if(jugador == maquina) System.out.println(empate);
         else if (obtenerVictoria(jugador, maquina)) {
             victoria(jugador, maquina);

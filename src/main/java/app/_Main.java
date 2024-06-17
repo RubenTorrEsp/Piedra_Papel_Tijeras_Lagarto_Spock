@@ -1,7 +1,7 @@
-package main;
+package app;
 
+import static app.Common.*;
 import static tools.Textos.*;
-import static main.Common.*;
 
 import java.io.IOException;
 import java.util.Scanner;

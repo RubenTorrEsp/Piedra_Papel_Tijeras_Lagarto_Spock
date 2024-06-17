@@ -1,9 +1,9 @@
-package main;
+package app;
 
 import java.io.*;
 
+import static app.Common.*;
 import static tools.Textos.*;
-import static main.Common.*;
 
 public class User {
    

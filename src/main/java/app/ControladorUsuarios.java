@@ -1,11 +1,11 @@
-package main;
+package app;
 
 import java.io.*;
 import java.util.Scanner;
 
+import static app.Common.*;
+import static app.User.*;
 import static tools.Textos.*;
-import static main.Common.*;
-import static main.User.*;
 
 public class ControladorUsuarios {
 

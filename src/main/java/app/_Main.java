@@ -50,8 +50,8 @@ public class _Main {
 
     // Método que capitaliza el formato del jugador
     public static String formatoJugador(String jugador) {
-        Integer indiceInicial = 0;
-        Integer indiceResto = 1;
+        int indiceInicial = 0;
+        int indiceResto = 1;
         String inicial = jugador.substring(indiceInicial, indiceResto).toUpperCase();
         String resto = jugador.substring(indiceResto).toLowerCase();
         return inicial + resto;

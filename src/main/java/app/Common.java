@@ -1,6 +1,7 @@
 package app;
 
 import java.io.*;
+import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -58,7 +59,7 @@ public class Common {
     public static void comprobarVictoria(String jugador, String maquina, User user) throws IOException {
         System.out.println(seleccionJugador+jugador);
         System.out.println(seleccionMaquina+maquina);
-        if(jugador == maquina) System.out.println(empate);
+        if(Objects.equals(jugador, maquina)) System.out.println(empate);
         else if (obtenerVictoria(jugador, maquina)) {
             victoria(jugador, maquina);
             user.actualizarPuntuacion(user, true);
@@ -79,15 +80,12 @@ public class Common {
     @SuppressWarnings(errorEstatico)
     public static void reJugar(User jugador) throws IOException {
         System.out.println(seleccionRejugar);
-        switch (scanner.nextLine().toLowerCase()){
-            case seleccionSI:
-                System.out.println(rejugarAfirmativo);
-                break;
-            default:
-                reJugar = false;
-                System.out.println(rejugarNegativo);
-                jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);
-                break;
+        if (scanner.nextLine().equalsIgnoreCase(seleccionSI)) {
+            System.out.println(rejugarAfirmativo);
+        } else {
+            reJugar = false;
+            System.out.println(rejugarNegativo);
+            jugador.reescribirPuntuacion(jugador.nombre, jugador.puntuacion);
         }
     }
 

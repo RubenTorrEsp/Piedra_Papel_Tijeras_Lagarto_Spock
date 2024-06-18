@@ -78,7 +78,7 @@ public class ControladorUsuarios {
     public void modificarJugador() {
         System.out.println(modificarJugador);
         String jugadorModificado = scanner.nextLine();
-        Boolean jugadorExistente = false;
+        boolean jugadorExistente = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {
@@ -105,7 +105,7 @@ public class ControladorUsuarios {
     public void eliminarJugador() {
         System.out.println(eliminarJugador);
         String jugadorBorrado = scanner.nextLine();
-        Boolean jugadorEliminado = false;
+        boolean jugadorEliminado = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {
@@ -131,7 +131,7 @@ public class ControladorUsuarios {
     public void reiniciarJugador() {
         System.out.println(reiniciarJugador);
         String jugadorReiniciado = scanner.nextLine();
-        Boolean jugadorExistente = false;
+        boolean jugadorExistente = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {

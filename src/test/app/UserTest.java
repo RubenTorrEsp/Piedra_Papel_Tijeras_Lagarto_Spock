@@ -1,7 +1,13 @@
 package app;
 
+import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
+
+    @Test
+    void Test() {
+        assertTrue(true);
+    }
 
 }

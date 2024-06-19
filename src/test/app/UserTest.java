@@ -27,4 +27,9 @@ class UserTest {
         assertFalse(jugadorExiste, "El jugador comprobado sí aparece en la BDD.");
     }
 
+    @Test
+    void ReescribirPuntuacion_FuncionaCorrectamente() {
+
+    }
+
 }

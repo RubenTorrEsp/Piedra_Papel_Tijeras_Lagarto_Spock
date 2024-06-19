@@ -1,16 +1,21 @@
 package app;
 
 import org.junit.jupiter.api.*;
+
+import static app.User.*;
 import static org.junit.jupiter.api.Assertions.*;
+
+
 
 class UserTest {
 
     @Test
-    void Test() {
-        int actual = 1;
+    void UsuarioExisteFuncionaCorrectamente() {
+        String jugadorTest = "Hitler";
 
-        assertTrue(true);
-        assertEquals(1, actual);
+        boolean jugadorExiste = usuarioExiste(jugadorTest);
+
+        assertTrue(jugadorExiste, "El jugador comprobado no se encuentra en la BDD.");
     }
 
 }

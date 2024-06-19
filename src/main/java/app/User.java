@@ -35,8 +35,8 @@ public class User {
     }
 
     // Método que comprueba si el usuario existe
-    public static Boolean usuarioExiste(String nombreUsuario) {
-        Boolean usuarioExiste = false;
+    public static boolean usuarioExiste(String nombreUsuario) {
+        boolean usuarioExiste = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             while ((linea = br.readLine()) != null) {
                 if(linea.contains(nombreUsuario)) usuarioExiste = true;
@@ -69,7 +69,7 @@ public class User {
     }
 
     // Método que actualiza la puntuación del jugador en el archivo
-    public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion) throws IOException {
+    public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {
@@ -87,7 +87,7 @@ public class User {
     }
 
     // Método que elimina el usuario si la puntuacion llega a 0
-    public static void eliminarJugador(String nombreUsuario) throws IOException {
+    public static void eliminarJugador(String nombreUsuario) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {

@@ -29,7 +29,6 @@ class UserTest {
     void ReescribirPuntuacion_FuncionaCorrectamente() {
         int antiguaPuntuacion = 50;
         int nuevaPuntuacion = 30;
-
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(antiguaPuntuacion,puntuacionReal,"La puntuación recibida no coincide con la esperada");
 

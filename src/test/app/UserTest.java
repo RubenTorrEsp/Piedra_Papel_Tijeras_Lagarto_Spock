@@ -34,20 +34,20 @@ class UserTest {
         String jugadorTest = "playerTest060782";
         int antiguaPuntuacion = 50;
         int nuevaPuntuacion = 30;
-        String puntuacionReal;
+        int puntuacionReal = 0;
 
         reescribirPuntuacion(jugadorTest,nuevaPuntuacion);
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(jugadorTest)) puntuacionReal = partes[1];
+                    if (partes.length == 2 && partes[0].equals(jugadorTest)) puntuacionReal = Integer.parseInt(partes[1]);
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        assertEquals(nuevaPuntuacion,puntuacionReal, "La puntuación recibida no coincide con la esperada");
     }
 
 }

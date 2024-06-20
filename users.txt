@@ -1,4 +1,4 @@
-playerTest060782;50
+playerTest060782;30
 Ruben;194
 Marta;242
 Ampi;72

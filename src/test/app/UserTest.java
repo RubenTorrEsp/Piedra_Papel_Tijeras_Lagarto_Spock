@@ -2,9 +2,11 @@ package app;
 
 import org.junit.jupiter.api.*;
 
+import java.io.*;
+
 import static app.User.*;
 import static org.junit.jupiter.api.Assertions.*;
-
+import static tools.Textos.separadorUsuarios;
 
 
 class UserTest {
@@ -29,6 +31,22 @@ class UserTest {
 
     @Test
     void ReescribirPuntuacion_FuncionaCorrectamente() {
+        String jugadorTest = "playerTest060782";
+        int antiguaPuntuacion = 50;
+        int nuevaPuntuacion = 30;
+        String puntuacionReal;
+
+        reescribirPuntuacion(jugadorTest,nuevaPuntuacion);
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(separadorUsuarios);
+                if (!linea.trim().isEmpty()) {
+                    if (partes.length == 2 && partes[0].equals(jugadorTest)) puntuacionReal = partes[1];
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 

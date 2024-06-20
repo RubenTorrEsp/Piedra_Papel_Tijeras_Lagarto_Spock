@@ -1,12 +1,11 @@
 package app;
 
-import org.junit.jupiter.api.*;
+import static app.User.*;
+import static tools.Textos.*;
 
 import java.io.*;
-
-import static app.User.*;
+import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
-import static tools.Textos.separadorUsuarios;
 
 
 class UserTest {

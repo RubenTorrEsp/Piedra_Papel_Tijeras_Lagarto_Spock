@@ -44,6 +44,11 @@ class UserTest {
 
     }
 
+    @Test
+    void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
+
+    }
+
     int comprobarPuntuacion() {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {

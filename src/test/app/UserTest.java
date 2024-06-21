@@ -54,8 +54,16 @@ class UserTest {
     }
 
     @Test
-    void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
+    void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() throws IOException {
+        int puntuacionInicial = 50;
+        int puntuacionTrasVictoria = 49;
+        int puntuacionReal = comprobarPuntuacion();
+        assertEquals(puntuacionInicial,puntuacionReal,"La puntuación recibida no coincide con la esperada");
 
+        jugadorTest.actualizarPuntuacion(jugadorTest,false);
+        puntuacionReal = puntuacion;
+
+        assertEquals(puntuacionTrasVictoria,puntuacionReal);
     }
 
     int comprobarPuntuacion() {

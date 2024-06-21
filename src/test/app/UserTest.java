@@ -14,16 +14,20 @@ class UserTest {
     String jugadorTestNoExistente = "playerTest220694";
     User jugadorTest = new User(jugadorTestExistente);
 
+    String mensajeErrorJugadorNoEnBDD = "El jugador comprobado no se encuentra en la BDD.";
+    String mensajeErrorJugadorYaEnBDD = "El jugador comprobado sí aparece en la BDD.";
+    String mensajeErrorPuntuacionNoCoincide = "La puntuación recibida no coincide con la esperada";
+
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
         boolean jugadorExiste = usuarioExiste(jugadorTestExistente);
-        assertTrue(jugadorExiste, "El jugador comprobado no se encuentra en la BDD.");
+        assertTrue(jugadorExiste, mensajeErrorJugadorNoEnBDD);
     }
 
     @Test
     void UsuarioExiste_False_FuncionaCorrectamente() {
         boolean jugadorExiste = usuarioExiste(jugadorTestNoExistente);
-        assertFalse(jugadorExiste, "El jugador comprobado sí aparece en la BDD.");
+        assertFalse(jugadorExiste, mensajeErrorJugadorYaEnBDD);
     }
 
     @Test
@@ -31,11 +35,11 @@ class UserTest {
         int antiguaPuntuacion = 50;
         int nuevaPuntuacion = 30;
         int puntuacionReal = comprobarPuntuacion();
-        assertEquals(antiguaPuntuacion,puntuacionReal,"La puntuación recibida no coincide con la esperada");
+        assertEquals(antiguaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         reescribirPuntuacion(jugadorTestExistente,nuevaPuntuacion);
         puntuacionReal = comprobarPuntuacion();
-        assertEquals(nuevaPuntuacion,puntuacionReal,"La puntuación recibida no coincide con la esperada");
+        assertEquals(nuevaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         reescribirPuntuacion(jugadorTestExistente, antiguaPuntuacion);
     }
@@ -45,7 +49,7 @@ class UserTest {
         int puntuacionInicial = 50;
         int puntuacionTrasVictoria = 51;
         int puntuacionReal = comprobarPuntuacion();
-        assertEquals(puntuacionInicial,puntuacionReal,"La puntuación recibida no coincide con la esperada");
+        assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         jugadorTest.actualizarPuntuacion(jugadorTest,true);
         puntuacionReal = puntuacion;
@@ -58,7 +62,7 @@ class UserTest {
         int puntuacionInicial = 50;
         int puntuacionTrasVictoria = 49;
         int puntuacionReal = comprobarPuntuacion();
-        assertEquals(puntuacionInicial,puntuacionReal,"La puntuación recibida no coincide con la esperada");
+        assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         jugadorTest.actualizarPuntuacion(jugadorTest,false);
         puntuacionReal = puntuacion;

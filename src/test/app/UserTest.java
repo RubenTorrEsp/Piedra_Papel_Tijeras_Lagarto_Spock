@@ -39,6 +39,11 @@ class UserTest {
         reescribirPuntuacion(jugadorTestExistente, antiguaPuntuacion);
     }
 
+    @Test
+    void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
+
+    }
+
     int comprobarPuntuacion() {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {

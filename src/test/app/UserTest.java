@@ -12,6 +12,7 @@ class UserTest {
 
     String jugadorTestExistente = "playerTest060782";
     String jugadorTestNoExistente = "playerTest220694";
+    User jugadorTest = new User(jugadorTestExistente);
 
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
@@ -40,8 +41,16 @@ class UserTest {
     }
 
     @Test
-    void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
+    void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() throws IOException {
+        int puntuacionInicial = 50;
+        int puntuacionTrasVictoria = 51;
+        int puntuacionReal = comprobarPuntuacion();
+        assertEquals(puntuacionInicial,puntuacionReal,"La puntuación recibida no coincide con la esperada");
 
+        jugadorTest.actualizarPuntuacion(jugadorTest,true);
+        puntuacionReal = puntuacion;
+
+        assertEquals(puntuacionTrasVictoria,puntuacionReal);
     }
 
     @Test

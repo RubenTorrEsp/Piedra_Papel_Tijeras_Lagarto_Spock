@@ -3,6 +3,8 @@ package app;
 import static app.User.*;
 import static tools.Textos.*;
 
+import tools.Texts;
+
 import java.io.*;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,14 +17,10 @@ class UserTest {
     User jugadorTest = new User(jugadorTestExistente);
     int puntuacionInicial = 50;
 
-    String mensajeErrorJugadorNoEnBDD = "El jugador comprobado no se encuentra en la BDD.";
-    String mensajeErrorJugadorYaEnBDD = "El jugador comprobado sí aparece en la BDD.";
-    String mensajeErrorPuntuacionNoCoincide = "La puntuación recibida no coincide con la esperada";
-
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
         boolean jugadorExiste = usuarioExiste(jugadorTestExistente);
-        assertTrue(jugadorExiste, mensajeErrorJugadorNoEnBDD);
+        assertTrue(jugadorExiste, Texts.mensajeErrorJugadorNoEnBDD);
     }
 
     @Test

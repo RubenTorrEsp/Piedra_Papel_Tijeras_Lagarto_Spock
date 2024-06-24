@@ -13,6 +13,7 @@ class UserTest {
     String jugadorTestExistente = "playerTest060782";
     String jugadorTestNoExistente = "playerTest220694";
     User jugadorTest = new User(jugadorTestExistente);
+    int puntuacionInicial = 50;
 
     String mensajeErrorJugadorNoEnBDD = "El jugador comprobado no se encuentra en la BDD.";
     String mensajeErrorJugadorYaEnBDD = "El jugador comprobado sí aparece en la BDD.";
@@ -32,21 +33,19 @@ class UserTest {
 
     @Test
     void ReescribirPuntuacion_FuncionaCorrectamente() {
-        int antiguaPuntuacion = 50;
         int nuevaPuntuacion = 30;
         int puntuacionReal = comprobarPuntuacion();
-        assertEquals(antiguaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
+        assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         reescribirPuntuacion(jugadorTestExistente,nuevaPuntuacion);
         puntuacionReal = comprobarPuntuacion();
         assertEquals(nuevaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, antiguaPuntuacion);
+        reescribirPuntuacion(jugadorTestExistente, puntuacionInicial);
     }
 
     @Test
     void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() throws IOException {
-        int puntuacionInicial = 50;
         int puntuacionTrasVictoria = 51;
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
@@ -59,7 +58,6 @@ class UserTest {
 
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() throws IOException {
-        int puntuacionInicial = 50;
         int puntuacionTrasVictoria = 49;
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);

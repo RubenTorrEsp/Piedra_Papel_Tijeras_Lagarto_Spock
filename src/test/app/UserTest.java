@@ -3,7 +3,7 @@ package app;
 import static app.User.*;
 import static tools.Textos.*;
 
-import tools.Texts;
+import static tools.Texts.*;
 
 import java.io.*;
 import org.junit.jupiter.api.*;

@@ -20,7 +20,7 @@ class UserTest {
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
         boolean jugadorExiste = usuarioExiste(jugadorTestExistente);
-        assertTrue(jugadorExiste, Texts.mensajeErrorJugadorNoEnBDD);
+        assertTrue(jugadorExiste, mensajeErrorJugadorNoEnBDD);
     }
 
     @Test

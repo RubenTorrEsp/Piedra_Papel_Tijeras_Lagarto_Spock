@@ -14,7 +14,7 @@ public class Common {
     static Boolean reJugar = true;
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
-    public static String refactorizar(String seleccionJugador, User jugador) throws IOException {
+    public static String refactorizar(String seleccionJugador, User jugador) {
         switch (seleccionJugador) {
             case seleccionNumero1:
                 seleccionJugador = seleccionPiedra;
@@ -49,7 +49,7 @@ public class Common {
     }
 
     @SuppressWarnings("static-access")
-    public static void salir(User jugador) throws IOException {
+    public static void salir(User jugador) {
         System.out.println(seleccionadoSalir);
         System.out.println(rejugarNegativo);
         jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);
@@ -78,7 +78,7 @@ public class Common {
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
     @SuppressWarnings(errorEstatico)
-    public static void reJugar(User jugador) throws IOException {
+    public static void reJugar(User jugador) {
         System.out.println(seleccionRejugar);
         if (scanner.nextLine().equalsIgnoreCase(seleccionSI)) {
             System.out.println(rejugarAfirmativo);

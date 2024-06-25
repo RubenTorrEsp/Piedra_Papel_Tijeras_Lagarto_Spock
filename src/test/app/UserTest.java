@@ -56,14 +56,14 @@ class UserTest {
 
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() throws IOException {
-        int puntuacionTrasVictoria = 49;
+        int puntuacionTrasDerrota = 49;
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         jugadorTest.actualizarPuntuacion(jugadorTest,false);
         puntuacionReal = puntuacion;
 
-        assertEquals(puntuacionTrasVictoria,puntuacionReal);
+        assertEquals(puntuacionTrasDerrota,puntuacionReal);
     }
 
     int comprobarPuntuacion() {

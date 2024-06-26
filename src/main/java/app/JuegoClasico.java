@@ -40,7 +40,6 @@ public class JuegoClasico extends Common{
         }
         else {
             System.out.println(seleccionInvalida);
-            seleccionValida = false;
         }
         return seleccionValida;
     }

@@ -32,7 +32,7 @@ public class JuegoClasico extends Common{
 
     // Obtener la elección del jugador
     public Boolean obtenerEntrada(User jugador) throws IOException {
-        Boolean seleccionValida = false;
+        boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(elementosJuegoClasico.contains(seleccionJugador)) {
             seleccionValida = true;

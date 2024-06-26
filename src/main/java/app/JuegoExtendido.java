@@ -1,6 +1,7 @@
 package app;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Scanner;
 
 import static tools.Listas.*;
@@ -21,7 +22,7 @@ public class JuegoExtendido extends Common {
     public void jugarDeNuevo(User jugador) throws IOException {
         System.out.println(opcionesJuegoExtendido);
         if(obtenerEntrada(jugador)){
-            if (seleccionJugador == seleccionSalir) reJugar = false;
+            if (Objects.equals(seleccionJugador, seleccionSalir)) reJugar = false;
             else {
                 comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina(5), jugador);
                 reJugar(jugador);
@@ -31,7 +32,7 @@ public class JuegoExtendido extends Common {
     }
 
     // Obtener la elección del jugador
-    public boolean obtenerEntrada(User jugador) throws IOException {
+    public boolean obtenerEntrada(User jugador) {
         boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(elementosJuegoExtendido.contains(seleccionJugador)) {

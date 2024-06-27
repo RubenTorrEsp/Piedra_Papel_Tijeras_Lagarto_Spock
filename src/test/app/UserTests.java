@@ -10,7 +10,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-class UserTest {
+class UserTests {
 
     String jugadorTestExistente = "playerTest060782";
     String jugadorTestNoExistente = "playerTest220694";

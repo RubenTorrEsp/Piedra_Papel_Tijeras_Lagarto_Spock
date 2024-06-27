@@ -77,15 +77,14 @@ public class Common {
     }
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
-    @SuppressWarnings(errorEstatico)
-    public static void reJugar(User jugador) {
+    public static void reJugar() {
         System.out.println(seleccionRejugar);
         if (scanner.nextLine().equalsIgnoreCase(seleccionSI)) {
             System.out.println(rejugarAfirmativo);
         } else {
             reJugar = false;
             System.out.println(rejugarNegativo);
-            jugador.reescribirPuntuacion(jugador.nombre, jugador.puntuacion);
+            User.reescribirPuntuacion(User.nombre, User.puntuacion);
         }
     }
 

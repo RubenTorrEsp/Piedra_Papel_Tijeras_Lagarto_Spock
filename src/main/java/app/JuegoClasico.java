@@ -25,10 +25,10 @@ public class JuegoClasico extends Common{
             if (Objects.equals(seleccionJugador, seleccionSalir)) reJugar = false;
             else {
                 comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina(3), jugador);
-                reJugar(jugador);
+                reJugar();
             }
         }
-        else reJugar(jugador);
+        else reJugar();
     }
 
     // Obtener la elección del jugador

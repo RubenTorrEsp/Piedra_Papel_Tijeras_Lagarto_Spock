@@ -5,8 +5,8 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
-import static tools.Listas.*;
-import static tools.Textos.*;
+import static resources.Listas.*;
+import static resources.Textos.*;
 
 public class Common {
 

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import static app.Common.*;
 import static app.User.*;
-import static tools.Textos.*;
+import static resources.Textos.*;
 
 public class ControladorUsuarios {
 

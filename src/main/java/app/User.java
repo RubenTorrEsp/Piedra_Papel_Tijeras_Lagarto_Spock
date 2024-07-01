@@ -3,7 +3,7 @@ package app;
 import java.io.*;
 
 import static app.Common.*;
-import static tools.Textos.*;
+import static resources.Textos.*;
 
 public class User {
    

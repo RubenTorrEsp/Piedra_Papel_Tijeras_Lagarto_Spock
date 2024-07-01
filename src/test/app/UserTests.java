@@ -1,9 +1,9 @@
 package app;
 
 import static app.User.*;
-import static tools.Textos.*;
+import static resources.Textos.*;
 
-import static tools.Texts.*;
+import static resources.Texts.*;
 
 import java.io.*;
 import org.junit.jupiter.api.*;

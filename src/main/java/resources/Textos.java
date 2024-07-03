@@ -6,36 +6,44 @@ import java.util.Map;
 public class Textos {
     
     // Textos de opciones
-    public static final String bienvenida = "Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!\n"+
-    "Elija qué desea indicando el numero:\n"+
-    "1- Juego extendido\n"+
-    "2- Juego clásico\n"+
-    "9- Gestionar usuarios\n\n"+
-    "0- Salir";
+    public static final String bienvenida = """
+            Bienvenido al juego Piedra, Papel, Tijeras, Lagarto, Spock!
+            Elija qué desea indicando el numero:
+            1- Juego extendido
+            2- Juego clásico
+            9- Gestionar usuarios
 
-    public static final String opcionesJuegoExtendido = "Seleccione su opción con nombre o número, o elija salir:\n"+
-    "1 - Piedra\n"+
-    "2 - Papel\n"+
-    "3 - Tijeras\n"+
-    "4 - Lagarto\n"+
-    "5 - Spock\n\n"+
-    "0 - Salir\n"+
-    "-----------------------------------------------";
+            0- Salir""";
 
-    public static final String opcionesJuegoClasico = "Seleccione su opción con nombre o número, o elija salir:\n"+
-    "1 - Piedra\n"+
-    "2 - Papel\n"+
-    "3 - Tijeras\n\n"+
-    "0 - Salir\n"+
-    "-----------------------------------------------";
+    public static final String opcionesJuegoExtendido = """
+            Seleccione su opción con nombre o número, o elija salir:
+            1 - Piedra
+            2 - Papel
+            3 - Tijeras
+            4 - Lagarto
+            5 - Spock
+
+            0 - Salir
+            -----------------------------------------------""";
+
+    public static final String opcionesJuegoClasico = """
+            Seleccione su opción con nombre o número, o elija salir:
+            1 - Piedra
+            2 - Papel
+            3 - Tijeras
+
+            0 - Salir
+            -----------------------------------------------""";
     
-    public static final String opcionesGestorJugadores = "Indique qué desea realizar:\n"+
-    "1 - Consultar la lista de usuarios\n"+
-    "2 - Crear usuario\n"+
-    "3 - Modificar usuario\n"+
-    "4 - Eliminar usuario\n"+
-    "5 - Reiniciar usuario\n\n"+
-    "0 - Salir";
+    public static final String opcionesGestorJugadores = """
+            Indique qué desea realizar:
+            1 - Consultar la lista de usuarios
+            2 - Crear usuario
+            3 - Modificar usuario
+            4 - Eliminar usuario
+            5 - Reiniciar usuario
+
+            0 - Salir""";
 
     // Textos generales
     public static final String seleccionJugador = "Has elegido ";

@@ -70,6 +70,8 @@ public class Textos {
     public static final String nuevaPuntuacion = "La nueva puntuacion es ";
     public static final String archivoUsuarios = "users.txt";
     public static final String archivoUsuariosTemporal = "temp.txt";
+    public static final String archivoUsuariosTest = "src\\test\\resources\\userTest.txt";
+    public static final String archivoUsuariosTemporalTest = "src\\test\\resources\\temp.txt";
     public static final String errorEstatico = "static-access";
 
     // Textos de gestión de jugadores

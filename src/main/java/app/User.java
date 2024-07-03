@@ -61,7 +61,7 @@ public class User {
 
     // Método que actualiza la puntuación del jugador
     @SuppressWarnings(errorEstatico)
-    public void actualizarPuntuacion(User jugador, Boolean victoria) throws IOException {  
+    public void actualizarPuntuacion(User jugador, Boolean victoria) {
         if (victoria) jugador.puntuacion++;
         else jugador.puntuacion--;
         System.out.println(nuevaPuntuacion+jugador.puntuacion);

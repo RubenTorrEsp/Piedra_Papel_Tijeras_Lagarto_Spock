@@ -16,6 +16,9 @@ public class ControladorUsuariosTests {
 
     @Test
     void crearJugador_funcionaCorrectamente() {
+        int jugadoresIniciales = contarJugadoresEnBDD();
+        int jugadoresEsperados = jugadoresIniciales++;
+
 
     }
 

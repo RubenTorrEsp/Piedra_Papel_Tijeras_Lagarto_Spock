@@ -12,20 +12,18 @@ import static resources.Textos.*;
 public class ControladorUsuariosTests {
 
     String jugadorTest = "player220694";
-    static File archivoOriginal = new File(archivoUsuarios);
+    static File archivoOriginal = new File(archivoUsuariosTest);
 
     @Test
     void crearJugador_funcionaCorrectamente() {
 
     }
 
-    @Test
-    void contarJugadoresEnBDD() {
+    int contarJugadoresEnBDD() {
         int jugadores = 0;
 
         String linea;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
-            System.out.println(mostrarJugadores);
             while ((linea = br.readLine()) != null) {
                 if(linea.length() > 1) jugadores++;
             }
@@ -33,8 +31,7 @@ public class ControladorUsuariosTests {
             e.printStackTrace();
         }
 
-        System.out.println("El numero de jugadores es "+jugadores);
-        //return jugadores;
+        return jugadores;
     }
 
 }

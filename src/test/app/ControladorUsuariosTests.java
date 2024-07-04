@@ -19,22 +19,22 @@ public class ControladorUsuariosTests {
 
     }
 
-    int contarJugadoresEnBDD() {
+    @Test
+    void contarJugadoresEnBDD() {
         int jugadores = 0;
 
+        String linea;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             System.out.println(mostrarJugadores);
             while ((linea = br.readLine()) != null) {
-                if(linea.length() > 1) {
-                    String[] partes = linea.split(separadorUsuarios);
-                    mostrarJugador(partes[0], partes[1]);
-                }
+                if(linea.length() > 1) jugadores++;
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return jugadores;
+        System.out.println("El numero de jugadores es "+jugadores);
+        //return jugadores;
     }
 
 }

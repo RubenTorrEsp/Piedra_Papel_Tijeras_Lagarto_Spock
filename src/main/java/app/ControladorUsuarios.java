@@ -1,6 +1,7 @@
 package app;
 
 import java.io.*;
+import java.util.Optional;
 import java.util.Scanner;
 
 import static app.Common.*;
@@ -58,9 +59,11 @@ public class ControladorUsuarios {
     }
 
     // Método que crea un jugador y lo incorpora a la lista
-    public void crearJugador() {
+    public void crearJugador(Optional<String> nombreJugador) {
         System.out.println(jugadorParaCrear);
-        String jugadorNuevo = scanner.nextLine();
+        String jugadorNuevo = "";
+        if(nombreJugador.isPresent()) jugadorNuevo = String.valueOf(nombreJugador);
+        else jugadorNuevo = scanner.nextLine();
         boolean jugadorExistente = usuarioExiste(jugadorNuevo);
         if (!jugadorExistente) {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {

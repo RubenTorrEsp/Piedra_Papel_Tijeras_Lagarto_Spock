@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static resources.Textos.*;
 
 public class ControladorUsuariosTests {
@@ -19,7 +20,7 @@ public class ControladorUsuariosTests {
         int jugadoresIniciales = contarJugadoresEnBDD();
         int jugadoresEsperados = jugadoresIniciales++;
 
-
+        assertEquals(jugadoresEsperados, jugadoresIniciales-1);
     }
 
     int contarJugadoresEnBDD() {

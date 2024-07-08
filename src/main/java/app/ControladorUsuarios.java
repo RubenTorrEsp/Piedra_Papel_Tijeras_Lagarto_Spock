@@ -23,7 +23,7 @@ public class ControladorUsuarios {
                 mostrarJugadores();
                 break;
             case seleccionNumero2:
-                crearJugador();
+                crearJugador(Optional.empty());
                 break;
             case seleccionNumero3:
                 modificarJugador();

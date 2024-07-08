@@ -59,6 +59,7 @@ public class ControladorUsuarios {
     }
 
     // Método que crea un jugador y lo incorpora a la lista
+    // TODO: Completar el parámetro opcional, ahora mismo da error
     public void crearJugador(Optional<String> nombreJugador) {
         System.out.println(jugadorParaCrear);
         String jugadorNuevo = "";

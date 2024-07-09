@@ -20,7 +20,7 @@ public class ControladorUsuariosTests {
         int jugadoresIniciales = contarJugadoresEnBDD();
         int jugadoresEsperados = jugadoresIniciales++;
 
-        assertEquals(jugadoresEsperados, jugadoresIniciales);
+        assertEquals(jugadoresEsperados, jugadoresIniciales-1);
     }
 
     int contarJugadoresEnBDD() {

@@ -10,8 +10,8 @@ import static resources.Textos.*;
 
 public class ControladorUsuarios {
 
-    Scanner scanner = new Scanner(System.in);
     String linea;
+    static Scanner scanner = new Scanner(System.in);
     static File archivoOriginal = new File(archivoUsuarios);
     static File archivoTemporal = new File(archivoUsuariosTemporal);
 
@@ -60,9 +60,9 @@ public class ControladorUsuarios {
 
     // Método que crea un jugador y lo incorpora a la lista
     // TODO: Completar el parámetro opcional, ahora mismo da error
-    public void crearJugador(Optional<String> nombreJugador) {
+    public static void crearJugador(Optional<String> nombreJugador) {
         System.out.println(jugadorParaCrear);
-        String jugadorNuevo = "";
+        String jugadorNuevo;
         if(nombreJugador.isPresent()) jugadorNuevo = String.valueOf(nombreJugador);
         else jugadorNuevo = scanner.nextLine();
         boolean jugadorExistente = usuarioExiste(jugadorNuevo);

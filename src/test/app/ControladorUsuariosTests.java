@@ -6,9 +6,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static resources.Textos.*;
+import app.ControladorUsuarios.*;
 
 public class ControladorUsuariosTests {
 
@@ -21,6 +23,8 @@ public class ControladorUsuariosTests {
         int jugadoresEsperados = jugadoresIniciales++;
 
         assertEquals(jugadoresEsperados, jugadoresIniciales-1);
+
+        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest));
     }
 
     int contarJugadoresEnBDD() {

@@ -61,21 +61,20 @@ public class ControladorUsuarios {
     // Método que crea un jugador y lo incorpora a la lista
     // TODO: Completar el parámetro opcional, ahora mismo da error
     public static void crearJugador(Optional<String> nombreJugador) {
-        System.out.println(jugadorParaCrear);
         String jugadorNuevo;
-        if(nombreJugador.isPresent()) jugadorNuevo = String.valueOf(nombreJugador);
-        else jugadorNuevo = scanner.nextLine();
+        jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = usuarioExiste(jugadorNuevo);
         if (!jugadorExistente) {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
                 bw.newLine();
-                bw.write(jugadorNuevo+puntuacionInicial);
+                bw.write(jugadorNuevo + puntuacionInicial);
                 indicarJugadorCreado(jugadorNuevo);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else {
+            indicarJugadorYaEnBDD(jugadorNuevo);
         }
-        else indicarJugadorYaEnBDD(jugadorNuevo);
     }
 
     // Método que modifica los valores de un usuario

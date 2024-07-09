@@ -28,18 +28,12 @@ public class ControladorUsuariosTests {
     }
 
     int contarJugadoresEnBDD() {
-        int jugadores = 0;
-
-        String linea;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
-            while ((linea = br.readLine()) != null) {
-                if(linea.length() > 1) jugadores++;
-            }
+            return (int) br.lines().filter(linea -> linea.length() > 1).count();
         } catch (IOException e) {
             e.printStackTrace();
+            return 0;
         }
-
-        return jugadores;
     }
 
 }

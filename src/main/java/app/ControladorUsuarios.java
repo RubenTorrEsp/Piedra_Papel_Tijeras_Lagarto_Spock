@@ -23,7 +23,7 @@ public class ControladorUsuarios {
                 mostrarJugadores();
                 break;
             case seleccionNumero2:
-                crearJugador(Optional.empty());
+                crearJugador(Optional.empty(), archivoOriginal);
                 break;
             case seleccionNumero3:
                 modificarJugador();
@@ -60,12 +60,12 @@ public class ControladorUsuarios {
 
     // Método que crea un jugador y lo incorpora a la lista
     // TODO: Completar el parámetro opcional, ahora mismo da error
-    public static void crearJugador(Optional<String> nombreJugador) {
+    public static void crearJugador(Optional<String> nombreJugador, File archivo) {
         String jugadorNuevo;
         jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = usuarioExiste(jugadorNuevo);
         if (!jugadorExistente) {
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
                 bw.newLine();
                 bw.write(jugadorNuevo + puntuacionInicial);
                 indicarJugadorCreado(jugadorNuevo);

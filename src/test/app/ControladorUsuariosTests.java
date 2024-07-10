@@ -10,7 +10,6 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static resources.Textos.*;
-import app.ControladorUsuarios.*;
 
 public class ControladorUsuariosTests {
 
@@ -20,7 +19,7 @@ public class ControladorUsuariosTests {
     @Test
     void crearJugador_funcionaCorrectamente() {
         int jugadoresIniciales = contarJugadoresEnBDD();
-        int jugadoresEsperados = jugadoresIniciales++;
+        int jugadoresEsperados = jugadoresIniciales+1;
 
         ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest));
         int jugadoresTrasCreacion = contarJugadoresEnBDD();

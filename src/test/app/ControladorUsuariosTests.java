@@ -21,7 +21,7 @@ public class ControladorUsuariosTests {
         int jugadoresIniciales = contarJugadoresEnBDD();
         int jugadoresEsperados = jugadoresIniciales+1;
 
-        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest));
+        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginal);
         int jugadoresTrasCreacion = contarJugadoresEnBDD();
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);

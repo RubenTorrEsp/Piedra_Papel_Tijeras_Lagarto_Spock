@@ -15,7 +15,7 @@ public class User {
 
     // Constructor
     public User(String nombreUsuario) {
-        if(usuarioExiste(nombreUsuario)) establecerUsuario(nombreUsuario);      
+        if(usuarioExiste(nombreUsuario, archivoOriginal)) establecerUsuario(nombreUsuario);
         else crearNuevoUsuario(nombreUsuario);
     }
     
@@ -35,9 +35,9 @@ public class User {
     }
 
     // Método que comprueba si el usuario existe
-    public static boolean usuarioExiste(String nombreUsuario) {
+    public static boolean usuarioExiste(String nombreUsuario, File archivo) {
         boolean usuarioExiste = false;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             while ((linea = br.readLine()) != null) {
                 if(linea.contains(nombreUsuario)) usuarioExiste = true;
             }

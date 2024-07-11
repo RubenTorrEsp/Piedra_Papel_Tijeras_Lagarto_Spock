@@ -64,7 +64,7 @@ public class ControladorUsuarios {
     public static void crearJugador(Optional<String> nombreJugador, File archivo) {
         String jugadorNuevo;
         jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());
-        boolean jugadorExistente = usuarioExiste(jugadorNuevo);
+        boolean jugadorExistente = usuarioExiste(jugadorNuevo, archivo);
         if (!jugadorExistente) {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
                 bw.newLine();

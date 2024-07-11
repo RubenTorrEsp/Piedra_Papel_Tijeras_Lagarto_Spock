@@ -13,9 +13,10 @@ import static resources.Textos.*;
 
 public class ControladorUsuariosTests {
 
-    String jugadorTest = "player220694";
+    String jugadorTest = "playerTest220694";
     static File archivoOriginal = new File(archivoUsuariosTest);
 
+    // TODO: Revisar, no lanza error aunque no se cree el archivo
     @Test
     void crearJugador_funcionaCorrectamente() {
         int jugadoresIniciales = contarJugadoresEnBDD();

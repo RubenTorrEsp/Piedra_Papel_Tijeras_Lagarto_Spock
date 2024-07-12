@@ -16,17 +16,17 @@ class UserTests {
     String jugadorTestNoExistente = "playerTestNoExiste";
     User jugadorTest = new User(jugadorTestExistente);
     int puntuacionInicial = 50;
-    static File archivoOriginal = new File(archivoUsuariosTest);
+    static File archivoOriginalTests = new File(archivoUsuariosTest);
 
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
-        boolean jugadorExiste = usuarioExiste(jugadorTestExistente, archivoOriginal);
+        boolean jugadorExiste = usuarioExiste(jugadorTestExistente, archivoOriginalTests);
         assertTrue(jugadorExiste, mensajeErrorJugadorNoEnBDD);
     }
 
     @Test
     void UsuarioExiste_False_FuncionaCorrectamente() {
-        boolean jugadorExiste = usuarioExiste(jugadorTestNoExistente, archivoOriginal);
+        boolean jugadorExiste = usuarioExiste(jugadorTestNoExistente, archivoOriginalTests);
         assertFalse(jugadorExiste, mensajeErrorJugadorYaEnBDD);
     }
 
@@ -36,11 +36,11 @@ class UserTests {
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion);
+        reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion, archivoOriginalTests, archivoTemporal);
         puntuacionReal = comprobarPuntuacion();
         assertEquals(nuevaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, puntuacionInicial);
+        reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, archivoOriginalTests, archivoTemporal);
     }
 
     @Test

@@ -69,6 +69,7 @@ public class User {
     }
 
     // Método que actualiza la puntuación del jugador en el archivo
+    // TODO: Comprobar nombre de usuarios, mayusculas estricto
     public static void reescribirPuntuacion(
             String nombreUsuario,
             int nuevaPuntuacion,

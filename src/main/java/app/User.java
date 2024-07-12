@@ -69,7 +69,11 @@ public class User {
     }
 
     // Método que actualiza la puntuación del jugador en el archivo
-    public static void reescribirPuntuacion(String nombreUsuario, int nuevaPuntuacion) {
+    public static void reescribirPuntuacion(
+            String nombreUsuario,
+            int nuevaPuntuacion,
+            File archivoOriginal,
+            File archivoTemporal) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {

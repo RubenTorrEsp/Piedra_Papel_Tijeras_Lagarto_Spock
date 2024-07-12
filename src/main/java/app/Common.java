@@ -12,6 +12,8 @@ public class Common {
 
     static Scanner scanner = new Scanner(System.in);
     static Boolean reJugar = true;
+    static File archivoOriginal = new File(archivoUsuarios);
+    static File archivoTemporal = new File(archivoUsuariosTemporal);
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
     public static String refactorizar(String seleccionJugador, User jugador) {
@@ -52,7 +54,7 @@ public class Common {
     public static void salir(User jugador) {
         System.out.println(seleccionadoSalir);
         System.out.println(rejugarNegativo);
-        jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion);
+        jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion,archivoOriginal,archivoTemporal);
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
@@ -84,7 +86,7 @@ public class Common {
         } else {
             reJugar = false;
             System.out.println(rejugarNegativo);
-            User.reescribirPuntuacion(User.nombre, User.puntuacion);
+            User.reescribirPuntuacion(User.nombre, User.puntuacion,archivoOriginal,archivoTemporal);
         }
     }
 

@@ -26,7 +26,7 @@ public class ControladorUsuarios {
                 crearJugador(Optional.empty(), archivoOriginal);
                 break;
             case seleccionNumero3:
-                modificarJugador();
+                modificarJugador(archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero4:
                 eliminarJugador();
@@ -79,12 +79,12 @@ public class ControladorUsuarios {
     }
 
     // Método que modifica los valores de un usuario
-    public void modificarJugador() {
+    public void modificarJugador(File archivoReal, File archivoTemp) {
         System.out.println(modificarJugador);
         String jugadorModificado = scanner.nextLine();
         boolean jugadorExistente = false;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
@@ -102,7 +102,7 @@ public class ControladorUsuarios {
             e.printStackTrace();
         }
         if(!jugadorExistente) System.out.println(jugadorNoExiste);
-        reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
+        reescribirArchivoJugadores(archivoReal, archivoTemp);
     }
 
     // Método que elimina un jugador de la lista

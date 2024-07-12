@@ -13,19 +13,20 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserTests {
 
     String jugadorTestExistente = "playerTest060782";
-    String jugadorTestNoExistente = "playerTest220694";
+    String jugadorTestNoExistente = "playerTestNoExiste";
     User jugadorTest = new User(jugadorTestExistente);
     int puntuacionInicial = 50;
+    static File archivoOriginal = new File(archivoUsuariosTest);
 
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
-        boolean jugadorExiste = usuarioExiste(jugadorTestExistente);
+        boolean jugadorExiste = usuarioExiste(jugadorTestExistente, archivoOriginal);
         assertTrue(jugadorExiste, mensajeErrorJugadorNoEnBDD);
     }
 
     @Test
     void UsuarioExiste_False_FuncionaCorrectamente() {
-        boolean jugadorExiste = usuarioExiste(jugadorTestNoExistente);
+        boolean jugadorExiste = usuarioExiste(jugadorTestNoExistente, archivoOriginal);
         assertFalse(jugadorExiste, mensajeErrorJugadorYaEnBDD);
     }
 
@@ -35,7 +36,7 @@ class UserTests {
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente,nuevaPuntuacion);
+        reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion);
         puntuacionReal = comprobarPuntuacion();
         assertEquals(nuevaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
@@ -43,7 +44,7 @@ class UserTests {
     }
 
     @Test
-    void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() throws IOException {
+    void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
         int puntuacionTrasVictoria = 51;
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
@@ -55,7 +56,7 @@ class UserTests {
     }
 
     @Test
-    void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() throws IOException {
+    void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
         int puntuacionTrasDerrota = 49;
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);

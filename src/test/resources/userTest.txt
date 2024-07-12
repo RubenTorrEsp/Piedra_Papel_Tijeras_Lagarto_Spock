@@ -1,2 +1,2 @@
-playerTest060782;50
+playerTest060782;30
 playerTest220694;50

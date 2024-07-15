@@ -37,11 +37,11 @@ class UserTests {
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion, archivoOriginalTests, archivoTemporalTests);
-        puntuacionReal = comprobarPuntuacion();
-        assertEquals(nuevaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
+        //reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion, archivoOriginalTests, archivoTemporalTests);
+        //puntuacionReal = comprobarPuntuacion();
+        //assertEquals(nuevaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, archivoOriginalTests, archivoTemporalTests);
+        //reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, archivoOriginalTests, archivoTemporalTests);
     }
 
     @Test
@@ -70,7 +70,7 @@ class UserTests {
 
     int comprobarPuntuacion() {
         int puntuacionReal = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {

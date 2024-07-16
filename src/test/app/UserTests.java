@@ -33,27 +33,16 @@ class UserTests {
     //TODO: Averiguar por qué se reescribe el archivo users.txt
     @Test
     void ReescribirPuntuacion_FuncionaCorrectamente() {
-
         int nuevaPuntuacion = 30;
-
         int puntuacionReal = comprobarPuntuacion();
-
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
-        System.out.println(puntuacionReal);
-/*
         reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion, archivoOriginalTests, archivoTemporalTests);
-
         puntuacionReal = comprobarPuntuacion();
-
         assertEquals(nuevaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, archivoOriginalTests, archivoTemporalTests);
-
-        */
     }
-
-
 
     @Test
     void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {

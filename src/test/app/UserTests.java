@@ -30,7 +30,6 @@ class UserTests {
         assertFalse(jugadorExiste, mensajeErrorJugadorYaEnBDD);
     }
 
-    //TODO: Averiguar por qué se reescribe el archivo users.txt
     @Test
     void ReescribirPuntuacion_FuncionaCorrectamente() {
         int nuevaPuntuacion = 30;
@@ -44,6 +43,7 @@ class UserTests {
         reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, archivoOriginalTests, archivoTemporalTests);
     }
 
+    //TODO: El objeto User reescribe el archivo de usuarios. Pendiente de corregir
     @Test
     void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
         User jugadorTest = new User(jugadorTestExistente);

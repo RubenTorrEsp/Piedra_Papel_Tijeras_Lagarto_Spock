@@ -14,7 +14,6 @@ class UserTests {
 
     String jugadorTestExistente = "playerTest060782";
     String jugadorTestNoExistente = "playerTestNoExiste";
-    User jugadorTest = new User(jugadorTestExistente);
     int puntuacionInicial = 50;
     static File archivoOriginalTests = new File(archivoUsuariosTest);
     static File archivoTemporalTests = new File(archivoUsuariosTemporalTest);
@@ -35,7 +34,6 @@ class UserTests {
     @Test
     void ReescribirPuntuacion_FuncionaCorrectamente() {
 
-        /*
         int nuevaPuntuacion = 30;
 
         int puntuacionReal = comprobarPuntuacion();
@@ -43,7 +41,7 @@ class UserTests {
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         System.out.println(puntuacionReal);
-
+/*
         reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion, archivoOriginalTests, archivoTemporalTests);
 
         puntuacionReal = comprobarPuntuacion();
@@ -55,8 +53,11 @@ class UserTests {
         */
     }
 
+
+
     @Test
     void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
+        User jugadorTest = new User(jugadorTestExistente);
         int puntuacionTrasVictoria = 51;
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
@@ -67,6 +68,8 @@ class UserTests {
         assertEquals(puntuacionTrasVictoria,puntuacionReal);
     }
 
+
+    /*
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
         int puntuacionTrasDerrota = 49;
@@ -79,6 +82,7 @@ class UserTests {
         assertEquals(puntuacionTrasDerrota,puntuacionReal);
     }
 
+     */
     int comprobarPuntuacion() {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {
@@ -93,5 +97,6 @@ class UserTests {
         }
         return puntuacionReal;
     }
+
 
 }

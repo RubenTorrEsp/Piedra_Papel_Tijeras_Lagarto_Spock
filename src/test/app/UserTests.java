@@ -4,6 +4,7 @@ import static app.User.*;
 import static resources.Textos.*;
 
 import static tools.Texts.*;
+import tools.CommonFunctions.*;
 
 import java.io.*;
 import org.junit.jupiter.api.*;
@@ -70,21 +71,5 @@ class UserTests {
 
         assertEquals(puntuacionTrasDerrota,puntuacionReal);
     }
-
-    int comprobarPuntuacion() {
-        int puntuacionReal = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(separadorUsuarios);
-                if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(jugadorTestExistente)) puntuacionReal = Integer.parseInt(partes[1]);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return puntuacionReal;
-    }
-
 
 }

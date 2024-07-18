@@ -13,7 +13,7 @@ static File archivoTemporalTests = new File(archivoUsuariosTemporalTest);
 
 public class CommonFunctions {
 
-
+    //TODO: Comportamiento no funciona
     public int comprobarPuntuacion(String jugador) {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {

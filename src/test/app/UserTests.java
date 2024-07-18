@@ -56,8 +56,7 @@ class UserTests {
 
         assertEquals(puntuacionTrasVictoria,puntuacionReal);
     }
-
-
+    
     /*
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {

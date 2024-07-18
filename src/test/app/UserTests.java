@@ -56,10 +56,10 @@ class UserTests {
 
         assertEquals(puntuacionTrasVictoria,puntuacionReal);
     }
-    
-    /*
+
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
+        User jugadorTest = new User(jugadorTestExistente);
         int puntuacionTrasDerrota = 49;
         int puntuacionReal = comprobarPuntuacion();
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
@@ -70,7 +70,6 @@ class UserTests {
         assertEquals(puntuacionTrasDerrota,puntuacionReal);
     }
 
-     */
     int comprobarPuntuacion() {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {

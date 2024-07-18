@@ -57,6 +57,7 @@ class UserTests {
         assertEquals(puntuacionTrasVictoria,puntuacionReal);
     }
 
+    //TODO: El objeto User reescribe el archivo de usuarios. Pendiente de corregir
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
         User jugadorTest = new User(jugadorTestExistente);

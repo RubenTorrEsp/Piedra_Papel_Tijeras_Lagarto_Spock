@@ -1,15 +1,16 @@
 package app;
 
+import org.junit.jupiter.api.Test;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
 import static app.User.*;
-import static resources.Textos.*;
-
-import static tools.Texts.*;
-import tools.CommonFunctions.*;
-
-import java.io.*;
-import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
-
+import static resources.Textos.*;
+import static tools.Texts.*;
 
 class UserTests {
 
@@ -70,6 +71,21 @@ class UserTests {
         puntuacionReal = puntuacion;
 
         assertEquals(puntuacionTrasDerrota,puntuacionReal);
+    }
+
+    public int comprobarPuntuacion(String jugador) {
+        int puntuacionReal = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(separadorUsuarios);
+                if (!linea.trim().isEmpty()) {
+                    if (partes.length == 2 && partes[0].equals(jugador)) puntuacionReal = Integer.parseInt(partes[1]);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return puntuacionReal;
     }
 
 }

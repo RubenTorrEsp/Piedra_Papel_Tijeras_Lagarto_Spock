@@ -35,11 +35,11 @@ class UserTests {
     @Test
     void ReescribirPuntuacion_FuncionaCorrectamente() {
         int nuevaPuntuacion = 30;
-        int puntuacionReal = comprobarPuntuacion();
+        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente);
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion, archivoOriginalTests, archivoTemporalTests);
-        puntuacionReal = comprobarPuntuacion();
+        puntuacionReal = comprobarPuntuacion(jugadorTestExistente);
         assertEquals(nuevaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, archivoOriginalTests, archivoTemporalTests);
@@ -50,7 +50,7 @@ class UserTests {
     void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
         User jugadorTest = new User(jugadorTestExistente);
         int puntuacionTrasVictoria = 51;
-        int puntuacionReal = comprobarPuntuacion();
+        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente);
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         jugadorTest.actualizarPuntuacion(jugadorTest,true);
@@ -64,7 +64,7 @@ class UserTests {
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
         User jugadorTest = new User(jugadorTestExistente);
         int puntuacionTrasDerrota = 49;
-        int puntuacionReal = comprobarPuntuacion();
+        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente);
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         jugadorTest.actualizarPuntuacion(jugadorTest,false);

@@ -132,7 +132,7 @@ public class ControladorUsuarios {
     }
 
     // Metodo que reinicia la puntuacion de un jugador
-    public void reiniciarJugador() {
+    public void reiniciarJugador(File archivoReal, File archivoTemp) {
         System.out.println(reiniciarJugador);
         String jugadorReiniciado = scanner.nextLine();
         boolean jugadorExistente = false;
@@ -154,7 +154,7 @@ public class ControladorUsuarios {
             e.printStackTrace();
         }
         if(!jugadorExistente) indicarJugadorNoEnBDD(jugadorReiniciado);
-        reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
+        reescribirArchivoJugadores(archivoReal, archivoTemp);
     }
 
 }

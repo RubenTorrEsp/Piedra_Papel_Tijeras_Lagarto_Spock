@@ -65,7 +65,7 @@ public class User {
         if (victoria) jugador.puntuacion++;
         else jugador.puntuacion--;
         System.out.println(nuevaPuntuacion+jugador.puntuacion);
-        if (jugador.puntuacion == 0) eliminarJugador(jugador.nombre);               
+        if (jugador.puntuacion == 0) eliminarJugador(jugador.nombre, archivoUsers, archivoTemp);
     }
 
     // Método que actualiza la puntuación del jugador en el archivo
@@ -92,7 +92,10 @@ public class User {
     }
 
     // Método que elimina el usuario si la puntuacion llega a 0
-    public static void eliminarJugador(String nombreUsuario) {
+    public static void eliminarJugador(
+            String nombreUsuario,
+            File archivoOriginal,
+            File archivoTemporal) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {

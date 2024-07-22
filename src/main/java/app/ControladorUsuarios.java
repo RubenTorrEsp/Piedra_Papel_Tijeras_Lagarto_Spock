@@ -32,7 +32,7 @@ public class ControladorUsuarios {
                 eliminarJugador();
                 break;
             case seleccionNumero5:
-                reiniciarJugador();
+                reiniciarJugador(archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero0:
                 salir();

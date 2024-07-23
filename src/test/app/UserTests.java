@@ -48,7 +48,7 @@ class UserTests {
     //TODO: El objeto User reescribe el archivo de usuarios. Pendiente de corregir
     @Test
     void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
-        User jugadorTest = new User(jugadorTestExistente);
+        User jugadorTest = new User(jugadorTestExistente, archivoOriginalTests);
         int puntuacionTrasVictoria = 51;
         int puntuacionReal = comprobarPuntuacion(jugadorTestExistente);
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
@@ -62,7 +62,7 @@ class UserTests {
     //TODO: El objeto User reescribe el archivo de usuarios. Pendiente de corregir
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
-        User jugadorTest = new User(jugadorTestExistente);
+        User jugadorTest = new User(jugadorTestExistente, archivoOriginalTests);
         int puntuacionTrasDerrota = 49;
         int puntuacionReal = comprobarPuntuacion(jugadorTestExistente);
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);

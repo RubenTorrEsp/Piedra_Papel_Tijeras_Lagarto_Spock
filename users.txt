@@ -4,4 +4,3 @@ Ampi;72
 Marco;7
 Paco;50
 Nico;3
-playerTest060782;50

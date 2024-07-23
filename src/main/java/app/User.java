@@ -14,8 +14,8 @@ public class User {
     static File archivoTemp = new File(archivoUsuariosTemporal);
 
     // Constructor
-    public User(String nombreUsuario) {
-        if(usuarioExiste(nombreUsuario, archivoOriginal)) establecerUsuario(nombreUsuario);
+    public User(String nombreUsuario, File archivo) {
+        if(usuarioExiste(nombreUsuario, archivo)) establecerUsuario(nombreUsuario);
         else crearNuevoUsuario(nombreUsuario);
     }
     

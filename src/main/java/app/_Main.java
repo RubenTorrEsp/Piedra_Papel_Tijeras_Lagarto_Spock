@@ -45,7 +45,7 @@ public class _Main {
     public static String establecerUsuario(){
         System.out.println(comprobarUsuario);
         String respuestaSinFormato = formatoJugador(scanner.nextLine());
-        new User(formatoJugador(respuestaSinFormato));
+        new User(formatoJugador(respuestaSinFormato), archivoOriginal);
         definicionUser(User.nombre, User.puntuacion);
         return formatoJugador(respuestaSinFormato);
     }

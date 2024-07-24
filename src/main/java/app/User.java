@@ -15,13 +15,13 @@ public class User {
 
     // Constructor
     public User(String nombreUsuario, File archivo) {
-        if(usuarioExiste(nombreUsuario, archivo)) establecerUsuario(nombreUsuario);
+        if(usuarioExiste(nombreUsuario, archivo)) establecerUsuario(nombreUsuario, archivo);
         else crearNuevoUsuario(nombreUsuario);
     }
     
     // Método para establecer el usuario
-    public void establecerUsuario(String nombreUsuario) {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
+    public void establecerUsuario(String nombreUsuario, File archivo) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (partes[0].equals(nombreUsuario)) {

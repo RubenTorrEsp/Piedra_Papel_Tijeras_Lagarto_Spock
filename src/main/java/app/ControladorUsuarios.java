@@ -29,7 +29,7 @@ public class ControladorUsuarios {
                 modificarJugador(archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero4:
-                eliminarJugador();
+                eliminarJugador(archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero5:
                 reiniciarJugador(archivoOriginal, archivoTemporal);
@@ -106,12 +106,12 @@ public class ControladorUsuarios {
     }
 
     // Método que elimina un jugador de la lista
-    public void eliminarJugador() {
+    public void eliminarJugador(File archivoReal, File archivoTemp) {
         System.out.println(eliminarJugador);
         String jugadorBorrado = scanner.nextLine();
         boolean jugadorEliminado = false;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
@@ -128,7 +128,7 @@ public class ControladorUsuarios {
             e.printStackTrace();
         }
         if (!jugadorEliminado) indicarJugadorNoEnBDD(jugadorBorrado);
-        reescribirArchivoJugadores(archivoOriginal, archivoTemporal);
+        reescribirArchivoJugadores(archivoReal, archivoTemp);
     }
 
     // Metodo que reinicia la puntuacion de un jugador

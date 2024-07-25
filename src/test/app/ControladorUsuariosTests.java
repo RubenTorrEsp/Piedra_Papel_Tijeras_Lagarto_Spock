@@ -17,7 +17,7 @@ public class ControladorUsuariosTests {
     static File archivoOriginal = new File(archivoUsuariosTest);
 
     @Test
-    void crearJugador_funcionaCorrectamente() {
+    void crearJugador_JugadorNoExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD();
         int jugadoresEsperados = jugadoresIniciales+1;
 
@@ -25,6 +25,21 @@ public class ControladorUsuariosTests {
         int jugadoresTrasCreacion = contarJugadoresEnBDD();
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
+    }
+
+    @Test
+    void crearJugador_JugadorYaEnBDD() {
+
+    }
+
+    @Test
+    void eliminarJugador_jugadorExistente() {
+
+    }
+
+    @Test
+    void eliminarJugador_jugadorNoExistente() {
+
     }
 
     int contarJugadoresEnBDD() {

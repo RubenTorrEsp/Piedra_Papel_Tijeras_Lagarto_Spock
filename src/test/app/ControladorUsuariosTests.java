@@ -29,7 +29,12 @@ public class ControladorUsuariosTests {
 
     @Test
     void crearJugador_JugadorYaEnBDD() {
+        int jugadoresEsperados = contarJugadoresEnBDD();
 
+        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginal);
+        int jugadoresTrasCreacion = contarJugadoresEnBDD();
+
+        assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
     }
 
     @Test

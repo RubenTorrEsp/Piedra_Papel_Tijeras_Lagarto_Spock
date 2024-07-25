@@ -45,7 +45,6 @@ class UserTests {
         reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, archivoOriginalTests, archivoTemporalTests);
     }
 
-    //TODO: El objeto User ya no reescribe, pero no se crea el user. Revisar
     @Test
     void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
         User jugadorTest = new User(jugadorTestExistente, archivoOriginalTests);
@@ -59,7 +58,6 @@ class UserTests {
         assertEquals(puntuacionTrasVictoria,puntuacionReal);
     }
 
-    //TODO: El objeto User ya no reescribe, pero no se crea el user. Revisar
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
         User jugadorTest = new User(jugadorTestExistente, archivoOriginalTests);

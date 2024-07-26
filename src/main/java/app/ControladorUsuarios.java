@@ -10,7 +10,7 @@ import static resources.Textos.*;
 
 public class ControladorUsuarios {
 
-    String linea;
+    static String linea;
     static Scanner scanner = new Scanner(System.in);
     static File archivoOriginal = new File(archivoUsuarios);
     static File archivoTemporal = new File(archivoUsuariosTemporal);
@@ -106,7 +106,7 @@ public class ControladorUsuarios {
     }
 
     // Método que elimina un jugador de la lista
-    public void eliminarJugador(File archivoReal, File archivoTemp) {
+    public static void eliminarJugador(File archivoReal, File archivoTemp) {
         System.out.println(eliminarJugador);
         String jugadorBorrado = scanner.nextLine();
         boolean jugadorEliminado = false;

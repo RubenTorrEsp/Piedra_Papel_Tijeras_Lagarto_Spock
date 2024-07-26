@@ -39,6 +39,7 @@ public class ControladorUsuariosTests {
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
     }
 
+    // TODO: Solicita el user por consola
     @Test
     void eliminarJugador_jugadorExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD();

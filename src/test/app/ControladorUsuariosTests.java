@@ -14,14 +14,16 @@ import static resources.Textos.*;
 public class ControladorUsuariosTests {
 
     String jugadorTest = "playerTest220694";
-    static File archivoOriginal = new File(archivoUsuariosTest);
+    static File archivoOriginalTests = new File(archivoUsuariosTest);
+    static File archivoTemporalTests = new File(archivoUsuariosTemporalTest);
+
 
     @Test
     void crearJugador_JugadorNoExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD();
         int jugadoresEsperados = jugadoresIniciales+1;
 
-        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginal);
+        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests);
         int jugadoresTrasCreacion = contarJugadoresEnBDD();
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
@@ -31,7 +33,7 @@ public class ControladorUsuariosTests {
     void crearJugador_JugadorYaEnBDD() {
         int jugadoresEsperados = contarJugadoresEnBDD();
 
-        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginal);
+        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests);
         int jugadoresTrasCreacion = contarJugadoresEnBDD();
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
@@ -39,7 +41,9 @@ public class ControladorUsuariosTests {
 
     @Test
     void eliminarJugador_jugadorExistente() {
+        int jugadoresIniciales = contarJugadoresEnBDD();
 
+        ControladorUsuarios.eliminarJugador(archivoOriginalTests, archivoTemporalTests);
     }
 
     @Test
@@ -48,7 +52,7 @@ public class ControladorUsuariosTests {
     }
 
     int contarJugadoresEnBDD() {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {
             return (int) br.lines().filter(linea -> linea.length() > 1).count();
         } catch (IOException e) {
             e.printStackTrace();

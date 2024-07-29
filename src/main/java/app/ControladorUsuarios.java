@@ -29,7 +29,7 @@ public class ControladorUsuarios {
                 modificarJugador(archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero4:
-                eliminarJugador(archivoOriginal, archivoTemporal);
+                eliminarJugador(Optional.empty(), archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero5:
                 reiniciarJugador(archivoOriginal, archivoTemporal);
@@ -108,7 +108,8 @@ public class ControladorUsuarios {
     // Método que elimina un jugador de la lista
     public static void eliminarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
         System.out.println(eliminarJugador);
-        String jugadorBorrado = nombreJugador.orElseGet(() -> scanner.nextLine());
+        String jugadorBorrado;
+        jugadorBorrado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorEliminado = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {

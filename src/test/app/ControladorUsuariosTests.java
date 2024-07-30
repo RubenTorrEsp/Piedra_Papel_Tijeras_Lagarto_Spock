@@ -54,7 +54,6 @@ public class ControladorUsuariosTests {
     @Test
     void eliminarJugador_jugadorNoExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD();
-        int jugadoresEsperados = jugadoresIniciales;
     }
 
     int contarJugadoresEnBDD() {

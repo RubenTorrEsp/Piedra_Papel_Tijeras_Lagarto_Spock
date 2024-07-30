@@ -54,6 +54,9 @@ public class ControladorUsuariosTests {
     @Test
     void eliminarJugador_jugadorNoExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD();
+
+        ControladorUsuarios.eliminarJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests, archivoTemporalTests);
+        int jugadoresTrasEliminacion = contarJugadoresEnBDD();
     }
 
     int contarJugadoresEnBDD() {

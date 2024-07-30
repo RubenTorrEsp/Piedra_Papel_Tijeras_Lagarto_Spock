@@ -14,6 +14,7 @@ import static resources.Textos.*;
 public class ControladorUsuariosTests {
 
     String jugadorTest = "playerTest220694";
+    String jugadorTestNoExistente = "playerNoExistente";
     static File archivoOriginalTests = new File(archivoUsuariosTest);
     static File archivoTemporalTests = new File(archivoUsuariosTemporalTest);
 
@@ -55,7 +56,7 @@ public class ControladorUsuariosTests {
     void eliminarJugador_jugadorNoExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD();
 
-        ControladorUsuarios.eliminarJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests, archivoTemporalTests);
+        ControladorUsuarios.eliminarJugador(Optional.ofNullable(jugadorTestNoExistente), archivoOriginalTests, archivoTemporalTests);
         int jugadoresTrasEliminacion = contarJugadoresEnBDD();
 
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);

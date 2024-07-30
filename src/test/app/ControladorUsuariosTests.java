@@ -57,6 +57,8 @@ public class ControladorUsuariosTests {
 
         ControladorUsuarios.eliminarJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests, archivoTemporalTests);
         int jugadoresTrasEliminacion = contarJugadoresEnBDD();
+
+        assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
     }
 
     int contarJugadoresEnBDD() {

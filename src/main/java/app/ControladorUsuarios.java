@@ -79,7 +79,7 @@ public class ControladorUsuarios {
     }
 
     // Método que modifica los valores de un usuario
-    public void modificarJugador(File archivoReal, File archivoTemp) {
+    public void modificarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
         System.out.println(modificarJugador);
         String jugadorModificado = scanner.nextLine();
         boolean jugadorExistente = false;

@@ -80,7 +80,7 @@ public class ControladorUsuarios {
     // Método que modifica los valores de un usuario
     public void modificarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
         System.out.println(modificarJugador);
-        String jugadorModificado = scanner.nextLine();
+        String jugadorModificado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {

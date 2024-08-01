@@ -26,7 +26,7 @@ public class ControladorUsuarios {
                 crearJugador(Optional.empty(), archivoOriginal);
                 break;
             case seleccionNumero3:
-                modificarJugador(archivoOriginal, archivoTemporal);
+                modificarJugador(Optional.empty(), archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero4:
                 eliminarJugador(Optional.empty(), archivoOriginal, archivoTemporal);

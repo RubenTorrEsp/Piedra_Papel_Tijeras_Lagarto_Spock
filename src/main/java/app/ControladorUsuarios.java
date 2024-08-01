@@ -59,7 +59,6 @@ public class ControladorUsuarios {
     }
 
     // Método que crea un jugador y lo incorpora a la lista
-    // TODO: Completar el parámetro opcional, ahora mismo da error
     // TODO: Está repitiendo jugadores
     public static void crearJugador(Optional<String> nombreJugador, File archivo) {
         String jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());

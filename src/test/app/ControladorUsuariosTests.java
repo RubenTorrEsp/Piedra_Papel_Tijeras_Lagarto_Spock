@@ -8,7 +8,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Optional;
 
-import static app.User.usuarioExiste;
+import static app.User.*;
+import static app.ControladorUsuarios.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static resources.Textos.*;
 
@@ -45,13 +46,27 @@ public class ControladorUsuariosTests {
 
     @Test
     void modificarJugador_jugadorExistente() {
-        String jugadorAntesDeModificar = "playerTest251289";
-        String jugadorDespuesDeModificcar  = "playerTestNewName";
-
-        boolean jugador1Existe = usuarioExiste(jugadorAntesDeModificar, archivoOriginalTests);
-        boolean jugador2Existe = usuarioExiste(jugadorDespuesDeModificcar, archivoOriginalTests);
+        boolean jugador1Existe = usuarioExiste(jugadorTestParaModificar, archivoOriginalTests);
+        boolean jugador2Existe = usuarioExiste(jugadorNuevoNombre, archivoOriginalTests);
         assertTrue(jugador1Existe);
         assertFalse(jugador2Existe);
+
+        modificarJugador(
+                Optional.ofNullable(jugadorTestParaModificar),
+                Optional.ofNullable(jugadorNuevoNombre),
+                archivoOriginalTests,
+                archivoTemporalTests);
+
+        jugador1Existe = usuarioExiste(jugadorTestParaModificar, archivoOriginalTests);
+        jugador2Existe = usuarioExiste(jugadorNuevoNombre, archivoOriginalTests);
+        assertFalse(jugador1Existe);
+        assertTrue(jugador2Existe);
+
+        modificarJugador(
+                Optional.ofNullable(jugadorNuevoNombre),
+                Optional.ofNullable(jugadorTestParaModificar),
+                archivoOriginalTests,
+                archivoTemporalTests);
     }
 
     @Test

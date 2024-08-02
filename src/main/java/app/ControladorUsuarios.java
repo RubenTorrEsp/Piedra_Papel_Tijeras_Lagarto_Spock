@@ -77,7 +77,7 @@ public class ControladorUsuarios {
     }
 
     // Método que modifica los valores de un usuario
-    public void modificarJugador(
+    public static void modificarJugador(
             Optional<String> nombreJugador,
             Optional<String> nuevoNombre,
             File archivoReal,

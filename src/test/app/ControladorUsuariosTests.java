@@ -48,7 +48,8 @@ public class ControladorUsuariosTests {
         String jugadorAntesDeModificar = "playerTest251289";
         String jugadorDespuesDeModificcar  = "playerTestNewName";
 
-        Boolean jugadorExiste = usuarioExiste(jugadorAntesDeModificar, archivoOriginalTests);
+        boolean jugadorExiste = usuarioExiste(jugadorAntesDeModificar, archivoOriginalTests);
+        assertTrue(jugadorExiste);
     }
 
     @Test

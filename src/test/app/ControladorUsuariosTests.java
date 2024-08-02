@@ -44,7 +44,8 @@ public class ControladorUsuariosTests {
 
     @Test
     void modificarJugador_jugadorExistente() {
-        
+        String jugadorAntesDeModificar = "playerTest251289";
+        String jugadorDespuesDeModificcar  = "playerTestNewName";
     }
 
     @Test

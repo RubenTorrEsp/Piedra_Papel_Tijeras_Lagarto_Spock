@@ -14,6 +14,8 @@ import static resources.Textos.*;
 public class ControladorUsuariosTests {
 
     String jugadorTest = "playerTest220694";
+    String jugadorTestParaModificar = "playerTest251289";
+    String jugadorNuevoNombre = "playerTestNewName";
     String jugadorTestNoExistente = "playerNoExistente";
     static File archivoOriginalTests = new File(archivoUsuariosTest);
     static File archivoTemporalTests = new File(archivoUsuariosTemporalTest);
@@ -38,6 +40,11 @@ public class ControladorUsuariosTests {
         int jugadoresTrasCreacion = contarJugadoresEnBDD();
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
+    }
+
+    @Test
+    void modificarJugador_jugadorExistente() {
+        
     }
 
     @Test

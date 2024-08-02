@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Optional;
 
+import static app.User.usuarioExiste;
 import static org.junit.jupiter.api.Assertions.*;
 import static resources.Textos.*;
 
@@ -46,6 +47,8 @@ public class ControladorUsuariosTests {
     void modificarJugador_jugadorExistente() {
         String jugadorAntesDeModificar = "playerTest251289";
         String jugadorDespuesDeModificcar  = "playerTestNewName";
+
+        Boolean jugadorExiste = usuarioExiste(jugadorAntesDeModificar, archivoOriginalTests);
     }
 
     @Test

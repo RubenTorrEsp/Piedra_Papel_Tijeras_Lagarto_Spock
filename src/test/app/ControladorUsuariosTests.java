@@ -51,6 +51,7 @@ public class ControladorUsuariosTests {
         boolean jugador1Existe = usuarioExiste(jugadorAntesDeModificar, archivoOriginalTests);
         boolean jugador2Existe = usuarioExiste(jugadorDespuesDeModificcar, archivoOriginalTests);
         assertTrue(jugador1Existe);
+        assertFalse(jugador2Existe);
     }
 
     @Test

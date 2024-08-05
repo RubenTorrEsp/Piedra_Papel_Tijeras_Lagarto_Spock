@@ -135,9 +135,9 @@ public class ControladorUsuarios {
     }
 
     // Metodo que reinicia la puntuacion de un jugador
-    public void reiniciarJugador(File archivoReal, File archivoTemp) {
+    public void reiniciarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
         System.out.println(reiniciarJugador);
-        String jugadorReiniciado = scanner.nextLine();
+        String jugadorReiniciado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {

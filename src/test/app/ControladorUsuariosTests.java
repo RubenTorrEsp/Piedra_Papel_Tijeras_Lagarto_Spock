@@ -95,6 +95,11 @@ public class ControladorUsuariosTests {
 
     }
 
+    @Test
+    void reiniciarJugador_jugadorNoExistente() {
+
+    }
+
     int contarJugadoresEnBDD() {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {
             return (int) br.lines().filter(linea -> linea.length() > 1).count();

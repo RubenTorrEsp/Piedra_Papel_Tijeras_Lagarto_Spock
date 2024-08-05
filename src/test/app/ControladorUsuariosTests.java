@@ -47,25 +47,21 @@ public class ControladorUsuariosTests {
 
     @Test
     void modificarJugador_jugadorExistente() {
-        boolean jugador1Existe = usuarioExiste(jugadorTestParaModificar, archivoOriginalTests);
-        boolean jugador2Existe = usuarioExiste(jugadorNuevoNombre, archivoOriginalTests);
-        assertTrue(jugador1Existe);
-        assertFalse(jugador2Existe);
+        assertTrue(usuarioExiste(jugadorTestParaModificar, archivoOriginalTests));
+        assertFalse(usuarioExiste(jugadorNuevoNombre, archivoOriginalTests));
 
         modificarJugador(
-                Optional.ofNullable(jugadorTestParaModificar),
-                Optional.ofNullable(jugadorNuevoNombre),
+                Optional.of(jugadorTestParaModificar),
+                Optional.of(jugadorNuevoNombre),
                 archivoOriginalTests,
                 archivoTemporalTests);
 
-        jugador1Existe = usuarioExiste(jugadorTestParaModificar, archivoOriginalTests);
-        jugador2Existe = usuarioExiste(jugadorNuevoNombre, archivoOriginalTests);
-        assertFalse(jugador1Existe);
-        assertTrue(jugador2Existe);
+        assertFalse(usuarioExiste(jugadorTestParaModificar, archivoOriginalTests));
+        assertTrue(usuarioExiste(jugadorNuevoNombre, archivoOriginalTests));
 
         modificarJugador(
-                Optional.ofNullable(jugadorNuevoNombre),
-                Optional.ofNullable(jugadorTestParaModificar),
+                Optional.of(jugadorNuevoNombre),
+                Optional.of(jugadorTestParaModificar),
                 archivoOriginalTests,
                 archivoTemporalTests);
     }

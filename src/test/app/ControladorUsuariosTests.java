@@ -90,6 +90,11 @@ public class ControladorUsuariosTests {
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
     }
 
+    @Test
+    void reiniciarJugador_jugadorExistente() {
+
+    }
+
     int contarJugadoresEnBDD() {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {
             return (int) br.lines().filter(linea -> linea.length() > 1).count();

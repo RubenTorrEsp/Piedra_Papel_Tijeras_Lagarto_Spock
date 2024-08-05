@@ -17,6 +17,7 @@ public class ControladorUsuariosTests {
 
     String jugadorTest = "playerTest220694";
     String jugadorTestParaModificar = "playerTest251289";
+    String jugadorTestParaReiniciar = "playerTest090880";
     String jugadorNuevoNombre = "playerTestNewName";
     String jugadorTestNoExistente = "playerNoExistente";
     static File archivoOriginalTests = new File(archivoUsuariosTest);

@@ -9,7 +9,7 @@ import static app.User.linea;
 import static resources.Textos.separadorUsuarios;
 
 public class Funciones {
-    public int comprobarPuntuacion(String jugador, File file) {
+    public static int comprobarPuntuacion(String jugador, File file) {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((linea = br.readLine()) != null) {

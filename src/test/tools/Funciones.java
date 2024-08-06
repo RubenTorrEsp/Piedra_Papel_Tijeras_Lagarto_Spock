@@ -9,6 +9,7 @@ import static app.User.linea;
 import static resources.Textos.separadorUsuarios;
 
 public class Funciones {
+
     public static int comprobarPuntuacion(String jugador, File file) {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -22,6 +23,15 @@ public class Funciones {
             e.printStackTrace();
         }
         return puntuacionReal;
+    }
+
+    public static int contarJugadoresEnBDD(File file) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            return (int) br.lines().filter(linea -> linea.length() > 1).count();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 
 }

@@ -88,13 +88,17 @@ public class ControladorUsuariosTests {
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
     }
 
+    //TODO: Reestablecer la puntuacion del jugador
+    //TODO: Creacion de los asserts
     @Test
     void reiniciarJugador_jugadorExistente() {
         int puntuacionPrevia = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
         System.out.println(STR."la puntuacion es \{puntuacionPrevia}");
 
-        reiniciarJugador(Optional.of(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
+        reiniciarJugador(Optional.ofNullable(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
+
+        puntuacionPrevia = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
         System.out.println(STR."la puntuacion es \{puntuacionPrevia}");
     }

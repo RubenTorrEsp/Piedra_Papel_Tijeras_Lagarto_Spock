@@ -106,9 +106,4 @@ public class ControladorUsuariosTests {
         }
     }
 
-    //TODO: Completar comportamiento para eliminar previamente al jugador SI EXISTE antes de intentar crearlo
-    void eliminarJugadorTests() {
-
-    }
-
 }

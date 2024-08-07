@@ -94,7 +94,9 @@ public class ControladorUsuariosTests {
 
         System.out.println(STR."la puntuacion es \{puntuacionPrevia}");
 
+        reiniciarJugador(Optional.of(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
 
+        System.out.println(STR."la puntuacion es \{puntuacionPrevia}");
     }
 
     @Test

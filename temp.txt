@@ -1,0 +1,6 @@
+Ruben;194
+Marta;242
+Ampi;72
+Marco;7
+Paco;50
+Nico;3

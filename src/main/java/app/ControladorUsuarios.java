@@ -134,7 +134,7 @@ public class ControladorUsuarios {
     }
 
     // Metodo que reinicia la puntuacion de un jugador
-    public void reiniciarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
+    public static void reiniciarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
         System.out.println(reiniciarJugador);
         String jugadorReiniciado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = false;

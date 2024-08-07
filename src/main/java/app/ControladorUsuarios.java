@@ -138,8 +138,8 @@ public class ControladorUsuarios {
         System.out.println(reiniciarJugador);
         String jugadorReiniciado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = false;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {

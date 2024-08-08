@@ -100,9 +100,9 @@ public class ControladorUsuariosTests {
         System.out.println(STR."la puntuacion es \{puntuacionReal}");
 
         reiniciarJugador(Optional.ofNullable(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
-
         puntuacionReal = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
+        assertEquals(puntuacionDespues,puntuacionReal);
         System.out.println(STR."la puntuacion es \{puntuacionReal}");
     }
 

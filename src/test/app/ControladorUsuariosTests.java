@@ -92,8 +92,11 @@ public class ControladorUsuariosTests {
     //TODO: Creacion de los asserts
     @Test
     void reiniciarJugador_jugadorExistente() {
+        int puntuacionAntes = 30;
+        int puntuacionDespues = 50;
         int puntuacionPrevia = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
+        assertEquals(puntuacionAntes,puntuacionPrevia);
         System.out.println(STR."la puntuacion es \{puntuacionPrevia}");
 
         reiniciarJugador(Optional.ofNullable(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);

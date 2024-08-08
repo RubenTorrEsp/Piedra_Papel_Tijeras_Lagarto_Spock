@@ -94,16 +94,16 @@ public class ControladorUsuariosTests {
     void reiniciarJugador_jugadorExistente() {
         int puntuacionAntes = 30;
         int puntuacionDespues = 50;
-        int puntuacionPrevia = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
+        int puntuacionReal = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
-        assertEquals(puntuacionAntes,puntuacionPrevia);
-        System.out.println(STR."la puntuacion es \{puntuacionPrevia}");
+        assertEquals(puntuacionAntes,puntuacionReal);
+        System.out.println(STR."la puntuacion es \{puntuacionReal}");
 
         reiniciarJugador(Optional.ofNullable(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
 
-        puntuacionPrevia = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
+        puntuacionReal = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
-        System.out.println(STR."la puntuacion es \{puntuacionPrevia}");
+        System.out.println(STR."la puntuacion es \{puntuacionReal}");
     }
 
     int contarJugadoresEnBDD() {

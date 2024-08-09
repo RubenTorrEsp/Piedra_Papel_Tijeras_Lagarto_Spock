@@ -104,6 +104,7 @@ public class ControladorUsuariosTests {
         reescribirPuntuacion(jugadorTestParaReiniciar, puntuacionAntes, archivoOriginalTests, archivoTemporalTests);
     }
 
+    // TODO: Eliminar el comportamiento y trasladarlo a la clase Funciones
     int contarJugadoresEnBDD() {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginalTests))) {
             return (int) br.lines().filter(linea -> linea.length() > 1).count();

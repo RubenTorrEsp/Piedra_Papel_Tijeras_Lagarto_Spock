@@ -88,7 +88,6 @@ public class ControladorUsuariosTests {
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
     }
 
-    //TODO: Reestablecer la puntuacion del jugador
     @Test
     void reiniciarJugador_jugadorExistente() {
         int puntuacionAntes = 30;
@@ -101,6 +100,8 @@ public class ControladorUsuariosTests {
         puntuacionReal = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
         assertEquals(puntuacionDespues,puntuacionReal);
+
+        reescribirPuntuacion(jugadorTestParaReiniciar, puntuacionAntes, archivoOriginalTests, archivoTemporalTests);
     }
 
     int contarJugadoresEnBDD() {

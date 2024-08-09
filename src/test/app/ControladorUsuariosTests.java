@@ -89,7 +89,6 @@ public class ControladorUsuariosTests {
     }
 
     //TODO: Reestablecer la puntuacion del jugador
-    //TODO: Creacion de los asserts
     @Test
     void reiniciarJugador_jugadorExistente() {
         int puntuacionAntes = 30;

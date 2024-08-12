@@ -24,21 +24,21 @@ public class ControladorUsuariosTests {
 
     @Test
     void crearJugador_JugadorNoExistente() {
-        int jugadoresIniciales = contarJugadoresEnBDD();
+        int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
         int jugadoresEsperados = jugadoresIniciales+1;
 
         ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests);
-        int jugadoresTrasCreacion = contarJugadoresEnBDD();
+        int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
     }
 
     @Test
     void crearJugador_JugadorYaEnBDD() {
-        int jugadoresEsperados = contarJugadoresEnBDD();
+        int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests);
 
         ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests);
-        int jugadoresTrasCreacion = contarJugadoresEnBDD();
+        int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
     }
@@ -66,21 +66,21 @@ public class ControladorUsuariosTests {
 
     @Test
     void eliminarJugador_jugadorExistente() {
-        int jugadoresIniciales = contarJugadoresEnBDD();
+        int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
         int jugadoresEsperados = jugadoresIniciales-1;
 
         ControladorUsuarios.eliminarJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests, archivoTemporalTests);
-        int jugadoresTrasEliminacion = contarJugadoresEnBDD();
+        int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasEliminacion);
     }
 
     @Test
     void eliminarJugador_jugadorNoExistente() {
-        int jugadoresIniciales = contarJugadoresEnBDD();
+        int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
 
         ControladorUsuarios.eliminarJugador(Optional.ofNullable(jugadorTestNoExistente), archivoOriginalTests, archivoTemporalTests);
-        int jugadoresTrasEliminacion = contarJugadoresEnBDD();
+        int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
     }

@@ -67,12 +67,10 @@ public class ControladorUsuariosTests {
     @Test
     void eliminarJugador_jugadorExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
-        int jugadoresEsperados = jugadoresIniciales-1;
 
-        ControladorUsuarios.eliminarJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests, archivoTemporalTests);
-        int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
+        ControladorUsuarios.eliminarJugador(Optional.of(jugadorTest), archivoOriginalTests, archivoTemporalTests);
 
-        assertEquals(jugadoresEsperados, jugadoresTrasEliminacion);
+        assertEquals(jugadoresIniciales - 1, contarJugadoresEnBDD(archivoOriginalTests));
     }
 
     @Test

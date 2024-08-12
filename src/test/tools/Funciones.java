@@ -25,7 +25,14 @@ public class Funciones {
         return puntuacionReal;
     }
 
-
+    int contarJugadoresEnBDD(File archivo) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
+            return (int) br.lines().filter(linea -> linea.length() > 1).count();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
 
     //TODO: Completar comportamiento para eliminar previamente al jugador SI EXISTE antes de intentar crearlo
     void eliminarJugadorTests() {

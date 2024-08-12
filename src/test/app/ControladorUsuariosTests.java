@@ -2,17 +2,14 @@ package app;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Optional;
 
 import static app.User.*;
 import static app.ControladorUsuarios.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static resources.Textos.*;
-import static tools.Funciones.comprobarPuntuacion;
+import static tools.Funciones.*;
 
 public class ControladorUsuariosTests {
 

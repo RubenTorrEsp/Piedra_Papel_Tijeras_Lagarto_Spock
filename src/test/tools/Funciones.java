@@ -25,7 +25,7 @@ public class Funciones {
         return puntuacionReal;
     }
 
-    int contarJugadoresEnBDD(File archivo) {
+    public static int contarJugadoresEnBDD(File archivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             return (int) br.lines().filter(linea -> linea.length() > 1).count();
         } catch (IOException e) {

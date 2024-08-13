@@ -32,13 +32,11 @@ class UserTests {
 
     @Test
     void ReescribirPuntuacion_FuncionaCorrectamente() {
-        int nuevaPuntuacion = 30;
-        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, archivoOriginalTests);
-        assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
+        assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, archivoOriginalTests), mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion, archivoOriginalTests, archivoTemporalTests);
-        puntuacionReal = comprobarPuntuacion(jugadorTestExistente, archivoOriginalTests);
-        assertEquals(nuevaPuntuacion,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
+        reescribirPuntuacion(jugadorTestExistente, 30, archivoOriginalTests, archivoTemporalTests);
+
+        assertEquals(nuevaPuntuacion, comprobarPuntuacion(jugadorTestExistente, archivoOriginalTests), mensajeErrorPuntuacionNoCoincide);
 
         reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, archivoOriginalTests, archivoTemporalTests);
     }

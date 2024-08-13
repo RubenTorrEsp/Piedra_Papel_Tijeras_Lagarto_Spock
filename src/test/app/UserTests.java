@@ -16,7 +16,7 @@ class UserTests {
     String jugadorTestNoExistente = "playerTestNoExiste";
     int puntuacionInicial = 50;
     static File testUsersFile = new File(archivoUsuariosTest);
-    static File archivoTemporalTests = new File(archivoUsuariosTemporalTest);
+    static File tempFile = new File(archivoUsuariosTemporalTest);
 
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
@@ -34,11 +34,11 @@ class UserTests {
     void ReescribirPuntuacion_FuncionaCorrectamente() {
         assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, 30, testUsersFile, archivoTemporalTests);
+        reescribirPuntuacion(jugadorTestExistente, 30, testUsersFile, tempFile);
 
         assertEquals(nuevaPuntuacion, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, testUsersFile, archivoTemporalTests);
+        reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, testUsersFile, tempFile);
     }
 
     @Test

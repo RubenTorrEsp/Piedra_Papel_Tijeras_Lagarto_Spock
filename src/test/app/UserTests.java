@@ -15,37 +15,37 @@ class UserTests {
     String jugadorTestExistente = "playerTest060782";
     String jugadorTestNoExistente = "playerTestNoExiste";
     int puntuacionInicial = 50;
-    static File archivoOriginalTests = new File(archivoUsuariosTest);
+    static File testUsersFile = new File(archivoUsuariosTest);
     static File archivoTemporalTests = new File(archivoUsuariosTemporalTest);
 
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
-        boolean jugadorExiste = usuarioExiste(jugadorTestExistente, archivoOriginalTests);
+        boolean jugadorExiste = usuarioExiste(jugadorTestExistente, testUsersFile);
         assertTrue(jugadorExiste, mensajeErrorJugadorNoEnBDD);
     }
 
     @Test
     void UsuarioExiste_False_FuncionaCorrectamente() {
-        boolean jugadorExiste = usuarioExiste(jugadorTestNoExistente, archivoOriginalTests);
+        boolean jugadorExiste = usuarioExiste(jugadorTestNoExistente, testUsersFile);
         assertFalse(jugadorExiste, mensajeErrorJugadorYaEnBDD);
     }
 
     @Test
     void ReescribirPuntuacion_FuncionaCorrectamente() {
-        assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, archivoOriginalTests), mensajeErrorPuntuacionNoCoincide);
+        assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, 30, archivoOriginalTests, archivoTemporalTests);
+        reescribirPuntuacion(jugadorTestExistente, 30, testUsersFile, archivoTemporalTests);
 
-        assertEquals(nuevaPuntuacion, comprobarPuntuacion(jugadorTestExistente, archivoOriginalTests), mensajeErrorPuntuacionNoCoincide);
+        assertEquals(nuevaPuntuacion, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
 
-        reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, archivoOriginalTests, archivoTemporalTests);
+        reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, testUsersFile, archivoTemporalTests);
     }
 
     @Test
     void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
-        User jugadorTest = new User(jugadorTestExistente, archivoOriginalTests);
+        User jugadorTest = new User(jugadorTestExistente, testUsersFile);
         int puntuacionTrasVictoria = 51;
-        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, archivoOriginalTests);
+        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testUsersFile);
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         jugadorTest.actualizarPuntuacion(jugadorTest,true);
@@ -56,9 +56,9 @@ class UserTests {
 
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
-        User jugadorTest = new User(jugadorTestExistente, archivoOriginalTests);
+        User jugadorTest = new User(jugadorTestExistente, testUsersFile);
         int puntuacionTrasDerrota = 49;
-        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, archivoOriginalTests);
+        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testUsersFile);
         assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
         jugadorTest.actualizarPuntuacion(jugadorTest,false);

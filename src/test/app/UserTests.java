@@ -48,7 +48,7 @@ class UserTests {
 
         jugadorTest.actualizarPuntuacion(jugadorTest, true);
 
-        assertEquals(puntuacionTrasVictoria,puntuacionReal);
+        assertEquals(51, comprobarPuntuacion(jugadorTestExistente, testUsersFile));
     }
 
     @Test

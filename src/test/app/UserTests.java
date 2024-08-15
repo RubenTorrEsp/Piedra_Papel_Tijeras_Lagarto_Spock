@@ -31,7 +31,7 @@ class UserTests {
     }
 
     @Test
-    void ReescribirPuntuacion() {
+    void ReescribirPuntuacion_Test() {
         assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
 
         reescribirPuntuacion(jugadorTestExistente, 30, testUsersFile, tempFile);

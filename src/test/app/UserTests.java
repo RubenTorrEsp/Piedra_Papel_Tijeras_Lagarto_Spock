@@ -42,7 +42,7 @@ class UserTests {
     }
 
     @Test
-    void ActualizarPuntuacion_Victoria_FuncionaCorrectamente() {
+    void ActualizarPuntuacion_Victoria() {
         User jugadorTest = new User(jugadorTestExistente, testUsersFile);
         assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
 

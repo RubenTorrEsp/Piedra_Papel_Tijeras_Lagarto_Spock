@@ -54,8 +54,7 @@ class UserTests {
         User jugadorTest = new User(jugadorTestExistente, testUsersFile);
         assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
 
-        jugadorTest.actualizarPuntuacion(jugadorTest,false);
-        puntuacionReal = puntuacion;
+        jugadorTest.actualizarPuntuacion(jugadorTest, true);
 
         assertEquals(puntuacionTrasDerrota,puntuacionReal);
     }

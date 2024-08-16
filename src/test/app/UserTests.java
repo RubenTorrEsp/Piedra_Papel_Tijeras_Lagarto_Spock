@@ -52,9 +52,7 @@ class UserTests {
     @Test
     void ActualizarPuntuacion_Derrota_FuncionaCorrectamente() {
         User jugadorTest = new User(jugadorTestExistente, testUsersFile);
-        int puntuacionTrasDerrota = 49;
-        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testUsersFile);
-        assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
+        assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
 
         jugadorTest.actualizarPuntuacion(jugadorTest,false);
         puntuacionReal = puntuacion;

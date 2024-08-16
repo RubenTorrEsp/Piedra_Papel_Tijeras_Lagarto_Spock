@@ -42,21 +42,27 @@ class UserTests {
     @Test
     void ActualizarPuntuacion_Victoria() {
         User jugadorTest = new User(jugadorTestExistente, testUsersFile);
-        assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
+        int puntuacionTrasVictoria = 51;
+        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testUsersFile);
+        assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
-        jugadorTest.actualizarPuntuacion(jugadorTest, true);
+        jugadorTest.actualizarPuntuacion(jugadorTest,true);
+        puntuacionReal = puntuacion;
 
-        assertEquals(51, comprobarPuntuacion(jugadorTestExistente, testUsersFile));
+        assertEquals(puntuacionTrasVictoria,puntuacionReal);
     }
 
     @Test
     void ActualizarPuntuacion_Derrota() {
         User jugadorTest = new User(jugadorTestExistente, testUsersFile);
-        assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
+        int puntuacionTrasDerrota = 49;
+        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testUsersFile);
+        assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
 
-        jugadorTest.actualizarPuntuacion(jugadorTest, false);
+        jugadorTest.actualizarPuntuacion(jugadorTest,false);
+        puntuacionReal = puntuacion;
 
-        assertEquals(49, comprobarPuntuacion(jugadorTestExistente, testUsersFile));
+        assertEquals(puntuacionTrasDerrota,puntuacionReal);
     }
 
 }

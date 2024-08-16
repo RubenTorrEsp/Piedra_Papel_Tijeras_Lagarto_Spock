@@ -35,7 +35,7 @@ class UserTests {
         assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
 
         reescribirPuntuacion(jugadorTestExistente, 30, testUsersFile, tempFile);
-        assertEquals(nuevaPuntuacion, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
+        assertEquals(30, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
         reescribirPuntuacion(jugadorTestExistente, puntuacionInicial, testUsersFile, tempFile);
     }
 

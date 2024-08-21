@@ -61,6 +61,10 @@ public class Common {
     public static void comprobarVictoria(String jugador, String maquina, User user) {
         System.out.println(seleccionJugador+jugador);
         System.out.println(seleccionMaquina+maquina);
+        if (jugador.equals(maquina)) {
+            System.out.println(empate);
+
+
         if(Objects.equals(jugador, maquina)) System.out.println(empate);
         else if (obtenerVictoria(jugador, maquina)) {
             victoria(jugador, maquina);

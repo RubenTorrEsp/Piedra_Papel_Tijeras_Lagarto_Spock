@@ -1,7 +1,6 @@
 package app;
 
 import java.io.*;
-import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -63,16 +62,11 @@ public class Common {
         System.out.println(seleccionMaquina+maquina);
         if (jugador.equals(maquina)) {
             System.out.println(empate);
-
-
-        if(Objects.equals(jugador, maquina)) System.out.println(empate);
-        else if (obtenerVictoria(jugador, maquina)) {
-            victoria(jugador, maquina);
-            user.actualizarPuntuacion(user, true);
-        }
-        else {
-            derrota(jugador, maquina);
-            user.actualizarPuntuacion(user, false);
+        } else {
+            boolean victoriaJugador = obtenerVictoria(jugador, maquina);
+            if (victoriaJugador) victoria(jugador, maquina);
+            else derrota(jugador, maquina);
+            user.actualizarPuntuacion(user, victoriaJugador);
         }
     }
 

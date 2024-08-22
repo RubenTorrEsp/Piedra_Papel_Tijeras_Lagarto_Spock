@@ -114,14 +114,13 @@ public class ControladorUsuarios {
         boolean jugadorEliminado = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
+            String linea;
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
-                if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(jugadorBorrado)) {
-                        linea = lineaVacia;
-                        indicarJugadorBorrado(jugadorBorrado);
-                        jugadorEliminado = true;
-                    }
+                if (partes.length == 2 && partes[0].equals(jugadorBorrado)) {
+                    indicarJugadorBorrado(jugadorBorrado);
+                    jugadorEliminado = true;
+                } else {
                     bw.write(linea);
                     bw.newLine();
                 }

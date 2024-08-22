@@ -108,7 +108,10 @@ public class ControladorUsuarios {
     }
 
     // Método que elimina un jugador de la lista
-    public static void eliminarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
+    public static void eliminarJugador(
+            Optional<String> nombreJugador,
+            File archivoReal,
+            File archivoTemp) {
         System.out.println(eliminarJugador);
         String jugadorBorrado = nombreJugador.orElseGet(scanner::nextLine);
         boolean jugadorEliminado = false;

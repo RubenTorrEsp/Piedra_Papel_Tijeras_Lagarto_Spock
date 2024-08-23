@@ -85,8 +85,6 @@ public class ControladorUsuariosTests {
 
     @Test
     void reiniciarJugador_jugadorExistente() {
-        int puntuacionAntes = 30;
-        int puntuacionDespues = 50;
         int puntuacionReal = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
         assertEquals(30,puntuacionReal);

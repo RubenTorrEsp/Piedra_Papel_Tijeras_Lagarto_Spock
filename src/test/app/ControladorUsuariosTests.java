@@ -89,14 +89,14 @@ public class ControladorUsuariosTests {
         int puntuacionDespues = 50;
         int puntuacionReal = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
-        assertEquals(puntuacionAntes,puntuacionReal);
+        assertEquals(30,puntuacionReal);
 
         reiniciarJugador(Optional.ofNullable(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
         puntuacionReal = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
-        assertEquals(puntuacionDespues,puntuacionReal);
+        assertEquals(50 ,puntuacionReal);
 
-        reescribirPuntuacion(jugadorTestParaReiniciar, puntuacionAntes, archivoOriginalTests, archivoTemporalTests);
+        reescribirPuntuacion(jugadorTestParaReiniciar, 30, archivoOriginalTests, archivoTemporalTests);
     }
 
 }

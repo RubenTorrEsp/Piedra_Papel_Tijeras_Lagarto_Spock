@@ -85,15 +85,11 @@ public class ControladorUsuariosTests {
 
     @Test
     void reiniciarJugador_jugadorExistente() {
-        int puntuacionReal = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
-
-        assertEquals(30,puntuacionReal);
+        assertEquals(30,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
 
         reiniciarJugador(Optional.ofNullable(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
-        puntuacionReal = comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests);
 
-        assertEquals(50 ,puntuacionReal);
-
+        assertEquals(50 ,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
         reescribirPuntuacion(jugadorTestParaReiniciar, 30, archivoOriginalTests, archivoTemporalTests);
     }
 

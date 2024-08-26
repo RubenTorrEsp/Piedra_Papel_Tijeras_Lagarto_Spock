@@ -34,7 +34,7 @@ public class Funciones {
         }
     }
 
-    //TODO: Completar comportamiento para eliminar previamente al jugador SI EXISTE antes de intentar crearlo
+    //TODO: Completar comportamiento para reiniciar la base de datos
     void reiniciarBDD() {
 
     }

@@ -1,6 +1,7 @@
 package app;
 
 import org.junit.jupiter.api.Test;
+import tools.Funciones;
 
 import java.io.File;
 import java.util.Optional;
@@ -9,9 +10,8 @@ import static app.User.*;
 import static app.ControladorUsuarios.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static resources.Textos.*;
-import static tools.Funciones.*;
 
-public class ControladorUsuariosTests {
+public class ControladorUsuariosTests extends Funciones {
 
     String jugadorTest = "playerTest220694";
     String jugadorTestParaModificar = "playerTest251289";

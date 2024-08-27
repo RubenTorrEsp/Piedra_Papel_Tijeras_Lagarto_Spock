@@ -9,15 +9,9 @@ import java.util.Optional;
 import static app.User.*;
 import static app.ControladorUsuarios.*;
 import static org.junit.jupiter.api.Assertions.*;
-import static resources.Textos.*;
 
 public class ControladorUsuariosTests extends Funciones {
 
-    String jugadorTest = "playerTest220694";
-    String jugadorTestParaModificar = "playerTest251289";
-    String jugadorTestParaReiniciar = "playerTest090880";
-    String jugadorNuevoNombre = "playerTestNewName";
-    String jugadorTestNoExistente = "playerNoExistente";
     static File archivoOriginalTests = new File(archivoUsuariosTest);
     static File archivoTemporalTests = new File(archivoUsuariosTemporalTest);
 

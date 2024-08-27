@@ -10,7 +10,7 @@ import java.io.IOException;
 import static app.User.linea;
 import static resources.Textos.separadorUsuarios;
 
-public class Funciones {
+public class Funciones extends Texts {
 
     public static int comprobarPuntuacion(String jugador, File file) {
         int puntuacionReal = 0;

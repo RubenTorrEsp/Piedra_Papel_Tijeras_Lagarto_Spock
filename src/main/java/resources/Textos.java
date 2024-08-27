@@ -85,24 +85,24 @@ public class Textos {
     public static final String usuarioEliminado = "Has llegado a 0 puntos y hemos eliminado al jugador. Eres mas malo que un dolor";
     public static final String usuarioCreado = "Usuario creado.";
     public static void definicionUser(String nombre, Integer puntuacion){
-        System.out.println("El jugador "+nombre+" está ahora activo con "+puntuacion+" puntos.");
+        System.out.println(STR."El jugador \{nombre} está ahora activo con \{puntuacion} puntos.");
     }
     public static void indicarJugadorNoEnBDD(String jugador) {
-        System.out.println("El jugador "+jugador+" no se encuentra en la base de datos");
+        System.out.println(STR."El jugador \{jugador} no se encuentra en la base de datos");
     }
         // Clase ControladorUsuarios
         // Mostrar jugadores
         public static final String mostrarJugadores = "Aquí se muestran los jugadores disponibles";
         public static void mostrarJugador(String nombre, String puntuacion) {
-         System.out.println("Nombre: "+nombre+". Puntuación: "+puntuacion);
+         System.out.println(STR."Nombre: \{nombre}. Puntuación: \{puntuacion}");
         }
         // Crear jugadores
         public static final String jugadorParaCrear = "Indique el jugador que desea crear";
         public static void indicarJugadorCreado(String jugadorCreado) {
-            System.out.println("El jugador "+jugadorCreado+" ha sido añadido a la base de datos");
+            System.out.println(STR."El jugador \{jugadorCreado} ha sido añadido a la base de datos");
         }
         public static void indicarJugadorYaEnBDD(String jugadorCreado) {
-            System.out.println("El jugador "+jugadorCreado+" ya se encuentra en la base de datos");
+            System.out.println(STR."El jugador \{jugadorCreado} ya se encuentra en la base de datos");
         }
         // Modificar jugadores
         public static final String modificarJugador = "Indique qué jugador quiere modificar";
@@ -111,12 +111,12 @@ public class Textos {
         // Eliminar jugadores
         public static final String eliminarJugador = "Indique qué jugador desea eliminar:";
         public static void indicarJugadorBorrado(String jugadorBorrado) {
-            System.out.println("El jugador "+jugadorBorrado+" ha sido eliminado de la base de datos");
+            System.out.println(STR."El jugador \{jugadorBorrado} ha sido eliminado de la base de datos");
         }
         // Reiniciar jugadores
         public static final String reiniciarJugador = "Indique el jugador que desea reiniciar";
         public static void indicarJugadorReiniciado(String jugadorReiniciado) {
-            System.out.println("El jugador "+jugadorReiniciado+" vuelve a tener ahora 50 puntos.");
+            System.out.println(STR."El jugador \{jugadorReiniciado} vuelve a tener ahora 50 puntos.");
         }
 
     // Textos de resolución de enfrentamientos

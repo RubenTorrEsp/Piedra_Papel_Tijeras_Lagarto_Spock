@@ -1,6 +1,7 @@
 package app;
 
 import org.junit.jupiter.api.Test;
+import tools.Funciones;
 
 import java.io.File;
 
@@ -8,9 +9,8 @@ import static app.User.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static resources.Textos.*;
 import static tools.Texts.*;
-import static tools.Funciones.*;
 
-class UserTests {
+class UserTests extends Funciones {
 
     String jugadorTestExistente = "playerTest060782";
     String jugadorTestNoExistente = "playerTestNoExiste";

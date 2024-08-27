@@ -2,12 +2,16 @@ package tools;
 
 public class Texts {
 
+    // Archivos
+    public static final String archivoUsuariosTest = "src\\test\\resources\\userTest.txt";
+    public static final String archivoUsuariosTemporalTest = "src\\test\\resources\\tempTest.txt";
+
     // Jugadores
-    public static String jugadorTest = "playerTest220694";
-    public static String jugadorTestParaModificar = "playerTest251289";
-    public static String jugadorTestParaReiniciar = "playerTest090880";
-    public static String jugadorNuevoNombre = "playerTestNewName";
-    public static String jugadorTestNoExistente = "playerNoExistente";
+    public String jugadorTest = "playerTest220694";
+    public String jugadorTestParaModificar = "playerTest251289";
+    public String jugadorTestParaReiniciar = "playerTest090880";
+    public String jugadorNuevoNombre = "playerTestNewName";
+    public String jugadorTestNoExistente = "playerNoExistente";
 
     // Mensajes de error
     public static String mensajeErrorJugadorNoEnBDD = "El jugador comprobado no se encuentra en la BDD.";

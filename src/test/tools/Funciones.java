@@ -1,5 +1,7 @@
 package tools;
 
+import org.junit.jupiter.api.BeforeEach;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -35,8 +37,9 @@ public class Funciones {
     }
 
     //TODO: Completar comportamiento para reiniciar la base de datos
+    @BeforeEach
     void reiniciarBDD() {
-
+        System.out.println("Se va a realizar 1 test");
     }
 
 }

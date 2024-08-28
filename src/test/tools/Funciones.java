@@ -17,10 +17,9 @@ public class Funciones extends Texts {
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
-
                 if (partes.length == 2 && partes[0].equals(jugador)) {
                     puntuacionReal = Integer.parseInt(partes[1].trim());
-                    break; // Salimos del bucle una vez encontrada la puntuación del jugador
+                    break;
                 }
             }
         } catch (IOException e) {

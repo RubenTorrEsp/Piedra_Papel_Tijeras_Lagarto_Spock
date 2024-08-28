@@ -14,10 +14,7 @@ public class Funciones extends Texts {
 
     public static int comprobarPuntuacion(String jugador, File file) {
         int puntuacionReal = 0;
-
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String linea;
-
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(separadorUsuarios);
 
@@ -31,7 +28,6 @@ public class Funciones extends Texts {
         } catch (NumberFormatException e) {
             System.err.println("Formato de puntuación inválido para el jugador " + jugador + ": " + e.getMessage());
         }
-
         return puntuacionReal;
     }
 

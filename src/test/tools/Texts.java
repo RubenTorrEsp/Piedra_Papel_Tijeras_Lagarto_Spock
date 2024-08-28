@@ -11,6 +11,7 @@ public class Texts {
     public String jugadorTestParaModificar = "playerTest251289";
     public String jugadorTestParaReiniciar = "playerTest090880";
     public String jugadorNuevoNombre = "playerTestNewName";
+    public String jugadorTestExistente = "playerTest060782";
     public String jugadorTestNoExistente = "playerNoExistente";
 
     // Mensajes de error

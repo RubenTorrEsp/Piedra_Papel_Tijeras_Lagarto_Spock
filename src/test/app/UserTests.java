@@ -7,13 +7,9 @@ import java.io.File;
 
 import static app.User.*;
 import static org.junit.jupiter.api.Assertions.*;
-import static resources.Textos.*;
-import static tools.Texts.*;
 
 class UserTests extends Funciones {
 
-    String jugadorTestExistente = "playerTest060782";
-    String jugadorTestNoExistente = "playerTestNoExiste";
     int puntuacionInicial = 50;
     static File testUsersFile = new File(archivoUsuariosTest);
     static File tempFile = new File(archivoUsuariosTemporalTest);

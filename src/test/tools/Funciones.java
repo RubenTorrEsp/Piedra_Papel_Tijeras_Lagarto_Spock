@@ -23,9 +23,9 @@ public class Funciones extends Texts {
                 }
             }
         } catch (IOException e) {
-            System.err.println("Error al leer el archivo: " + e.getMessage());
+            System.err.println(STR."Error al leer el archivo: \{e.getMessage()}");
         } catch (NumberFormatException e) {
-            System.err.println("Formato de puntuación inválido para el jugador " + jugador + ": " + e.getMessage());
+            System.err.println(STR."Formato de puntuación inválido para el jugador \{jugador}: \{e.getMessage()}");
         }
         return puntuacionReal;
     }

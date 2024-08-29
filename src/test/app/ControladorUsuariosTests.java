@@ -18,8 +18,7 @@ public class ControladorUsuariosTests extends Funciones {
 
     @Test
     void crearJugador_JugadorNoExistente() {
-        int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
-        int jugadoresEsperados = jugadoresIniciales+1;
+        int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests)+1;
 
         ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests);
         int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);

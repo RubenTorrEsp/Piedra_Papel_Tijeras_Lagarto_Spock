@@ -40,7 +40,7 @@ public class Funciones extends Texts {
         }
     }
 
-    //TODO: Completar comportamiento para reiniciar la base de datos
+    //TODO: Comportamiento completado. Falta actualizar correctamente el archivo
     @BeforeEach
     void reiniciarBDD() throws IOException {
         System.out.println("Se va a realizar 1 test");

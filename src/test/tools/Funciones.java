@@ -52,6 +52,5 @@ public class Funciones extends Texts {
 
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
     }
-    }
 
 }

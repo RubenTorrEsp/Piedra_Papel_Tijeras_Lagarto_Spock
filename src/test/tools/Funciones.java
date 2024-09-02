@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.*;
 
 import static app.User.linea;
 import static resources.Textos.separadorUsuarios;
@@ -41,8 +42,16 @@ public class Funciones extends Texts {
 
     //TODO: Completar comportamiento para reiniciar la base de datos
     @BeforeEach
-    void reiniciarBDD() {
+    void reiniciarBDD() throws IOException {
         System.out.println("Se va a realizar 1 test");
+
+        Path sourcePath = Paths.get(archivoUsuariosTestTemplate);
+        Path destinationPath = Paths.get(archivoUsuariosTest);
+
+        Files.newBufferedWriter(destinationPath, StandardOpenOption.TRUNCATE_EXISTING).close();
+
+        Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+    }
     }
 
 }

@@ -13,6 +13,17 @@ import static resources.Textos.separadorUsuarios;
 
 public class Funciones extends Texts {
 
+    @BeforeEach
+    void reiniciarBDD() throws IOException {
+        System.out.println("Se va a realizar 1 test");
+
+        Path sourcePath = Paths.get(archivoUsuariosTestTemplate);
+        Path destinationPath = Paths.get(archivoUsuariosTest);
+
+        Files.newBufferedWriter(destinationPath, StandardOpenOption.TRUNCATE_EXISTING).close();
+        Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+    }
+
     public static int comprobarPuntuacion(String jugador, File file) {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -38,17 +49,6 @@ public class Funciones extends Texts {
             e.printStackTrace();
             return 0;
         }
-    }
-
-    @BeforeEach
-    void reiniciarBDD() throws IOException {
-        System.out.println("Se va a realizar 1 test");
-
-        Path sourcePath = Paths.get(archivoUsuariosTestTemplate);
-        Path destinationPath = Paths.get(archivoUsuariosTest);
-
-        Files.newBufferedWriter(destinationPath, StandardOpenOption.TRUNCATE_EXISTING).close();
-        Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
     }
 
 }

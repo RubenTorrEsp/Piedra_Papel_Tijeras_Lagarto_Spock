@@ -20,7 +20,7 @@ public class ControladorUsuariosTests extends Funciones {
     void crearJugador_JugadorNoExistente() {
         int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests)+1;
 
-        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests);
+        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTestParaCrear), archivoOriginalTests);
         int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);

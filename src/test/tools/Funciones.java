@@ -40,7 +40,6 @@ public class Funciones extends Texts {
         }
     }
 
-    //TODO: Comportamiento completado. Falta actualizar correctamente el archivo
     @BeforeEach
     void reiniciarBDD() throws IOException {
         System.out.println("Se va a realizar 1 test");
@@ -49,7 +48,6 @@ public class Funciones extends Texts {
         Path destinationPath = Paths.get(archivoUsuariosTest);
 
         Files.newBufferedWriter(destinationPath, StandardOpenOption.TRUNCATE_EXISTING).close();
-
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
     }
 

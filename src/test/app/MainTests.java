@@ -9,12 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MainTests extends Funciones {
 
-    String nombreSinFormato = "user_Test";
-
     @Test
     void FormatoJugador_FuncionaCorrectamente() {
         String nombreEsperado = "User_test";
-        String nombreTrasFormatear = formatoJugador(nombreSinFormato);
+        String nombreTrasFormatear = formatoJugador(jugadorSinFormato);
 
         assertEquals(nombreEsperado,nombreTrasFormatear);
     }

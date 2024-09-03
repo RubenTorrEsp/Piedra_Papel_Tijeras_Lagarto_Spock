@@ -10,10 +10,22 @@ public class Texts {
     // Jugadores
     public String jugadorTestExistente = "playerTest060782";
     public String jugadorTest = "playerTest220694";
+    public String jugadorTestParaCrear = "playerTest200995";
     public String jugadorTestParaModificar = "playerTest251289";
     public String jugadorTestParaReiniciar = "playerTest090880";
     public String jugadorNuevoNombre = "playerTestNewName";
     public String jugadorTestNoExistente = "playerNoExistente";
+    public String jugadorSinFormato = "user_Test";
+
+    // Puntuaciones
+    public int puntuacionInicial = 50;
+    public int puntuacionTrasVictoria = 51;
+    public int puntuacionTrasDerrota = 49;
+    public int nuevaPuntuacion = 30;
+
+    // Comportamientos
+    public boolean victoria = true;
+    public boolean derrota = false;
 
     // Mensajes de error
     public static String mensajeErrorJugadorNoEnBDD = "El jugador comprobado no se encuentra en la BDD.";

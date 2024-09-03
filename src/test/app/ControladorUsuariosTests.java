@@ -49,12 +49,6 @@ public class ControladorUsuariosTests extends Funciones {
 
         assertFalse(usuarioExiste(jugadorTestParaModificar, archivoOriginalTests));
         assertTrue(usuarioExiste(jugadorNuevoNombre, archivoOriginalTests));
-
-        modificarJugador(
-                Optional.of(jugadorNuevoNombre),
-                Optional.of(jugadorTestParaModificar),
-                archivoOriginalTests,
-                archivoTemporalTests);
     }
 
     @Test
@@ -83,7 +77,6 @@ public class ControladorUsuariosTests extends Funciones {
         reiniciarJugador(Optional.ofNullable(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
 
         assertEquals(50 ,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
-        reescribirPuntuacion(jugadorTestParaReiniciar, 30, archivoOriginalTests, archivoTemporalTests);
     }
 
 }

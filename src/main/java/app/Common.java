@@ -66,7 +66,7 @@ public class Common {
             boolean victoriaJugador = obtenerVictoria(jugador, maquina);
             if (victoriaJugador) victoria(jugador, maquina);
             else derrota(jugador, maquina);
-            user.actualizarPuntuacion(user, victoriaJugador);
+            user.actualizarPuntuacion(victoriaJugador);
         }
     }
 

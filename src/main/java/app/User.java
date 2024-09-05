@@ -48,7 +48,7 @@ public class User {
     }
 
     // Método que crea un usuario nuevo
-    // TODO: Posible comportamiento repetido en clase ControladorUsuarios
+    // TODO: Posible comportamiento repetido en la clase ControladorUsuarios
     public static void crearNuevoUsuario(String nombreJugadorNuevo) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
             bw.newLine();
@@ -61,7 +61,8 @@ public class User {
     }
 
     // Método que actualiza la puntuación del jugador
-    public void actualizarPuntuacion(User jugador, Boolean victoria) {
+    // TODO: Eliminacion de las referencias al jugador
+    public void actualizarPuntuacion(Boolean victoria) {
         if (victoria) puntuacion++;
         else puntuacion--;
         System.out.println(nuevaPuntuacion + puntuacion);

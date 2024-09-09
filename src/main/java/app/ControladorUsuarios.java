@@ -59,7 +59,7 @@ public class ControladorUsuarios {
     }
 
     // Método que crea un jugador y lo incorpora a la lista
-    // TODO: Está repitiendo jugadores
+    // TODO: Evitar que rompa el ciclo de la app
     public static void crearJugador(Optional<String> nombreJugador, File archivo) {
         System.out.println(jugadorParaCrear);
         String jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());

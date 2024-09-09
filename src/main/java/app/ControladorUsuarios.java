@@ -60,7 +60,6 @@ public class ControladorUsuarios {
 
     // Método que crea un jugador y lo incorpora a la lista
     // TODO: Está repitiendo jugadores
-    // TODO: Posible comportamiento repetido en clase User
     public static void crearJugador(Optional<String> nombreJugador, File archivo) {
         String jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = usuarioExiste(jugadorNuevo, archivo);

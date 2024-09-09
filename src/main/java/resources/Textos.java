@@ -88,6 +88,7 @@ public class Textos {
     public static void indicarJugadorNoEnBDD(String jugador) {
         System.out.println(STR."El jugador \{jugador} no se encuentra en la base de datos");
     }
+
         // Clase ControladorUsuarios
         // Mostrar jugadores
         public static final String mostrarJugadores = "Aquí se muestran los jugadores disponibles";
@@ -103,6 +104,7 @@ public class Textos {
             System.out.println(STR."El jugador \{jugadorCreado} ya se encuentra en la base de datos");
         }
         // Modificar jugadores
+        public static final String CREAR_JUGADOR = "Indique el nombre del jugador que quiere crear";
         public static final String modificarJugador = "Indique qué jugador quiere modificar";
         public static final String nuevoNombre = "Indique el nuevo nombre para el jugador";
         public static final String jugadorNoExiste = "El jugador indicado no existe";

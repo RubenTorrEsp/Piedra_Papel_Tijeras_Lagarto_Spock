@@ -1,8 +1,10 @@
 package app;
 
 import java.io.*;
+import java.util.Optional;
 
 import static app.Common.*;
+import static app.ControladorUsuarios.crearJugador;
 import static resources.Textos.*;
 
 public class User {
@@ -16,7 +18,7 @@ public class User {
     // Constructor
     public User(String nombreUsuario, File archivo) {
         if(usuarioExiste(nombreUsuario, archivo)) establecerUsuario(nombreUsuario, archivo);
-        else crearNuevoUsuario(nombreUsuario);
+        else crearJugador(Optional.ofNullable(nombreUsuario), archivoUsers);
     }
     
     // Método para establecer el usuario
@@ -45,19 +47,6 @@ public class User {
             e.printStackTrace();
         }
         return usuarioExiste;
-    }
-
-    // Método que crea un usuario nuevo
-    // TODO: Posible comportamiento repetido en la clase ControladorUsuarios
-    public static void crearNuevoUsuario(String nombreJugadorNuevo) {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoUsuarios, true))) {
-            bw.newLine();
-            bw.write(nombreJugadorNuevo + puntuacionInicial);
-            nombre = nombreJugadorNuevo;
-            puntuacion = 50;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     // Método que actualiza la puntuación del jugador

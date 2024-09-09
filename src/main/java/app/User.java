@@ -61,7 +61,6 @@ public class User {
     }
 
     // Método que actualiza la puntuación del jugador
-    // TODO: Eliminacion de las referencias al jugador
     public void actualizarPuntuacion(Boolean victoria) {
         if (victoria) puntuacion++;
         else puntuacion--;

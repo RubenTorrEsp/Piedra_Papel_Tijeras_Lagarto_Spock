@@ -15,8 +15,6 @@ public class Funciones extends Texts {
 
     @BeforeEach
     void reiniciarBDD() throws IOException {
-        System.out.println("Se va a realizar 1 test");
-
         Path sourcePath = Paths.get(archivoUsuariosTestTemplate);
         Path destinationPath = Paths.get(archivoUsuariosTest);
 

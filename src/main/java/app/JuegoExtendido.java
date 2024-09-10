@@ -1,6 +1,5 @@
 package app;
 
-import java.io.IOException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -14,7 +13,7 @@ public class JuegoExtendido extends Common {
     String seleccionJugador;
 
     // Constructor del programa y ciclo de vida
-    public JuegoExtendido(User jugador) throws IOException {
+    public JuegoExtendido(User jugador) {
         jugarDeNuevo(jugador);
     }
 

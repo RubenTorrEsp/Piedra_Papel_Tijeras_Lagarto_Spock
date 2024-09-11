@@ -12,15 +12,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ControladorUsuariosTests extends Funciones {
 
-    static File archivoOriginalTests = new File(archivoUsuariosTest);
-    static File archivoTemporalTests = new File(archivoUsuariosTemporalTest);
+    static File archivoOriginalTests = new File(USER_TEST_FILE);
+    static File archivoTemporalTests = new File(USER_TEST_TEMP);
 
 
     @Test
     void crearJugador_JugadorNoExistente() {
         int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests)+1;
 
-        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTestParaCrear), archivoOriginalTests);
+        ControladorUsuarios.crearJugador(Optional.of(jugadorTestParaCrear), archivoOriginalTests);
         int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
@@ -30,7 +30,7 @@ public class ControladorUsuariosTests extends Funciones {
     void crearJugador_JugadorYaEnBDD() {
         int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests);
 
-        ControladorUsuarios.crearJugador(Optional.ofNullable(jugadorTest), archivoOriginalTests);
+        ControladorUsuarios.crearJugador(Optional.of(jugadorTest), archivoOriginalTests);
         int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
@@ -64,7 +64,7 @@ public class ControladorUsuariosTests extends Funciones {
     void eliminarJugador_jugadorNoExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
 
-        ControladorUsuarios.eliminarJugador(Optional.ofNullable(jugadorTestNoExistente), archivoOriginalTests, archivoTemporalTests);
+        ControladorUsuarios.eliminarJugador(Optional.of(jugadorTestNoExistente), archivoOriginalTests, archivoTemporalTests);
         int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
@@ -74,7 +74,7 @@ public class ControladorUsuariosTests extends Funciones {
     void reiniciarJugador_jugadorExistente() {
         assertEquals(nuevaPuntuacion,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
 
-        reiniciarJugador(Optional.ofNullable(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
+        reiniciarJugador(Optional.of(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
 
         assertEquals(puntuacionInicial ,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
     }

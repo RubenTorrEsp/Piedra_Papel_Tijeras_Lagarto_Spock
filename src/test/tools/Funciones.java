@@ -15,8 +15,8 @@ public class Funciones extends Texts {
 
     @BeforeEach
     void reiniciarBDD() throws IOException {
-        Path sourcePath = Paths.get(archivoUsuariosTestTemplate);
-        Path destinationPath = Paths.get(archivoUsuariosTest);
+        Path sourcePath = Paths.get(USER_TEST_TEMPLATE);
+        Path destinationPath = Paths.get(USER_TEST_FILE);
 
         Files.newBufferedWriter(destinationPath, StandardOpenOption.TRUNCATE_EXISTING).close();
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);

@@ -3,9 +3,9 @@ package tools;
 public class Texts {
 
     // Archivos
-    public static final String archivoUsuariosTest = "src\\test\\resources\\userTest.txt";
-    public final String archivoUsuariosTestTemplate = "src\\test\\resources\\userTestTemplate.txt";
-    public static final String archivoUsuariosTemporalTest = "src\\test\\resources\\tempTest.txt";
+    public static final String USER_TEST_FILE = "src\\test\\resources\\userTest.txt";
+    public static final String USER_TEST_TEMPLATE = "src\\test\\resources\\userTestTemplate.txt";
+    public static final String USER_TEST_TEMP = "src\\test\\resources\\tempTest.txt";
 
     // Jugadores
     public final String jugadorTestExistente = "playerTest060782";

@@ -8,28 +8,28 @@ public class Texts {
     public static final String archivoUsuariosTemporalTest = "src\\test\\resources\\tempTest.txt";
 
     // Jugadores
-    public String jugadorTestExistente = "playerTest060782";
-    public String jugadorTest = "playerTest220694";
-    public String jugadorTestParaCrear = "playerTest200995";
-    public String jugadorTestParaModificar = "playerTest251289";
-    public String jugadorTestParaReiniciar = "playerTest090880";
-    public String jugadorNuevoNombre = "playerTestNewName";
-    public String jugadorTestNoExistente = "playerNoExistente";
-    public String jugadorSinFormato = "user_Test";
+    public static final String jugadorTestExistente = "playerTest060782";
+    public static final String jugadorTest = "playerTest220694";
+    public static final String jugadorTestParaCrear = "playerTest200995";
+    public static final String jugadorTestParaModificar = "playerTest251289";
+    public static final String jugadorTestParaReiniciar = "playerTest090880";
+    public static final String jugadorNuevoNombre = "playerTestNewName";
+    public static final String jugadorTestNoExistente = "playerNoExistente";
+    public static final String jugadorSinFormato = "user_Test";
 
     // Puntuaciones
-    public int puntuacionInicial = 50;
-    public int puntuacionTrasVictoria = 51;
-    public int puntuacionTrasDerrota = 49;
-    public int nuevaPuntuacion = 30;
+    public static final int puntuacionInicial = 50;
+    public static final int puntuacionTrasVictoria = 51;
+    public static final int puntuacionTrasDerrota = 49;
+    public static final int nuevaPuntuacion = 30;
 
     // Comportamientos
-    public boolean victoria = true;
-    public boolean derrota = false;
+    public static final boolean victoria = true;
+    public static final boolean derrota = false;
 
     // Mensajes de error
-    public static String mensajeErrorJugadorNoEnBDD = "El jugador comprobado no se encuentra en la BDD.";
-    public static String mensajeErrorJugadorYaEnBDD = "El jugador comprobado sí aparece en la BDD.";
-    public static String mensajeErrorPuntuacionNoCoincide = "La puntuación recibida no coincide con la esperada";
+    public static final String PLATER_NOT_IN_DB = "El jugador comprobado no se encuentra en la BDD.";
+    public static final String PLAYER_ALREADY_IN_DB = "El jugador comprobado sí aparece en la BDD.";
+    public static final String SCORE_NOT_MATCH = "La puntuación recibida no coincide con la esperada";
 
 }

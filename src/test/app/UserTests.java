@@ -16,30 +16,30 @@ class UserTests extends Funciones {
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
         boolean jugadorExiste = usuarioExiste(jugadorTestExistente, testUsersFile);
-        assertTrue(jugadorExiste, mensajeErrorJugadorNoEnBDD);
+        assertTrue(jugadorExiste, PLATER_NOT_IN_DB);
     }
 
     @Test
     void UsuarioExiste_False_FuncionaCorrectamente() {
         boolean jugadorExiste = usuarioExiste(jugadorTestNoExistente, testUsersFile);
-        assertFalse(jugadorExiste, mensajeErrorJugadorYaEnBDD);
+        assertFalse(jugadorExiste, PLAYER_ALREADY_IN_DB);
     }
 
     @Test
     void ReescribirPuntuacion_Test() {
-        assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
+        assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testUsersFile), SCORE_DOES_NOT_MATCH);
 
         reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion, testUsersFile, tempFile);
-        assertEquals(nuevaPuntuacion, comprobarPuntuacion(jugadorTestExistente, testUsersFile), mensajeErrorPuntuacionNoCoincide);
+        assertEquals(nuevaPuntuacion, comprobarPuntuacion(jugadorTestExistente, testUsersFile), SCORE_DOES_NOT_MATCH);
     }
 
     @Test
     void ActualizarPuntuacion_Victoria() {
         User jugadorTest = new User(jugadorTestExistente, testUsersFile);
         int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testUsersFile);
-        assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
+        assertEquals(puntuacionInicial,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
-        jugadorTest.actualizarPuntuacion(victoria);
+        jugadorTest.actualizarPuntuacion(VICTORY);
         puntuacionReal = puntuacion;
 
         assertEquals(puntuacionTrasVictoria,puntuacionReal);
@@ -49,9 +49,9 @@ class UserTests extends Funciones {
     void ActualizarPuntuacion_Derrota() {
         User jugadorTest = new User(jugadorTestExistente, testUsersFile);
         int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testUsersFile);
-        assertEquals(puntuacionInicial,puntuacionReal,mensajeErrorPuntuacionNoCoincide);
+        assertEquals(puntuacionInicial,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
-        jugadorTest.actualizarPuntuacion(derrota);
+        jugadorTest.actualizarPuntuacion(DEFEAT);
         puntuacionReal = puntuacion;
 
         assertEquals(puntuacionTrasDerrota,puntuacionReal);

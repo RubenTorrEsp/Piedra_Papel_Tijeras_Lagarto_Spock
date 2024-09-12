@@ -39,6 +39,7 @@ public class ControladorUsuarios {
                 break;
             default:
                 System.out.println(seleccionInvalida);
+                new ControladorUsuarios();
                 break;
         }
     }
@@ -93,7 +94,7 @@ public class ControladorUsuarios {
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(jugadorModificado)) {
                         jugadorExistente = true;
-                        System.out.println(nuevoNombre);
+                        System.out.println(nombreNuevo);
                         String nombre = nuevoNombre.orElseGet(() -> scanner.nextLine());
                         linea = nombre+separadorUsuarios+partes[1];
                     }
@@ -104,8 +105,11 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if(!jugadorExistente) System.out.println(jugadorNoExiste);
-        reescribirArchivoJugadores(archivoReal, archivoTemp);
+        if(!jugadorExistente) {
+            System.out.println(jugadorNoExiste);
+            new ControladorUsuarios();
+        }
+        else reescribirArchivoJugadores(archivoReal, archivoTemp);
     }
 
     // Método que elimina un jugador de la lista

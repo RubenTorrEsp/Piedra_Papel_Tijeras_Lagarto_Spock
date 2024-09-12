@@ -105,7 +105,7 @@ public class Textos {
         }
         // Modificar jugadores
         public static final String modificarJugador = "Indique qué jugador quiere modificar";
-        public static final String nuevoNombre = "Indique el nuevo nombre para el jugador";
+        public static final String nombreNuevo = "Indique el nuevo nombre para el jugador";
         public static final String jugadorNoExiste = "El jugador indicado no existe";
         // Eliminar jugadores
         public static final String eliminarJugador = "Indique qué jugador desea eliminar:";

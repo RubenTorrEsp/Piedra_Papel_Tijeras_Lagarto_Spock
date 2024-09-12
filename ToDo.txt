@@ -10,6 +10,7 @@ Programa completado, futuras implementaciones
 -Idioma
 -Refactorizacion
 -Traduccion del codigo
+-Documentacion
 -Añadir nuevos juegos
     -Cara o cruz
     -Pares o nones

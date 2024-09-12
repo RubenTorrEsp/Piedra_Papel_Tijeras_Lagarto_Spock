@@ -23,16 +23,16 @@ public class ControladorUsuarios {
                 mostrarJugadores();
                 break;
             case seleccionNumero2:
-                crearJugador(Optional.empty(), archivoOriginal);
+                crearJugador(nombreVacio, archivoOriginal);
                 break;
             case seleccionNumero3:
-                modificarJugador(Optional.empty(), Optional.empty(), archivoOriginal, archivoTemporal);
+                modificarJugador(nombreVacio, nombreVacio, archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero4:
-                eliminarJugador(Optional.empty(), archivoOriginal, archivoTemporal);
+                eliminarJugador(nombreVacio, archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero5:
-                reiniciarJugador(Optional.empty(), archivoOriginal, archivoTemporal);
+                reiniciarJugador(nombreVacio, archivoOriginal, archivoTemporal);
                 break;
             case seleccionNumero0:
                 salir();

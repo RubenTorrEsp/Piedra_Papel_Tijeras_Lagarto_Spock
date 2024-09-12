@@ -13,11 +13,11 @@ public class _Main {
     static User jugador;
     static File archivoOriginal = new File(archivoUsuarios);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         inicio();
     }
 
-    public static void inicio() throws IOException {
+    public static void inicio() {
         System.out.println(bienvenida);
         String eleccion = scanner.nextLine();
         switch (eleccion) {

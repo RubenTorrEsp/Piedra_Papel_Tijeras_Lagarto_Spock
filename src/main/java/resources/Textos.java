@@ -2,6 +2,7 @@ package resources;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class Textos {
     
@@ -54,6 +55,8 @@ public class Textos {
     public static final String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número:";
     public static final String rejugarNegativo = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";
     public static final String lineaVacia = "";
+    public static final Optional<String> nombreVacio = Optional.empty();
+
 
     // Textos de seleccion
     public static final String seleccionNumero1 = "1";

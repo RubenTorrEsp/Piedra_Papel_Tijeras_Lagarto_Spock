@@ -136,7 +136,10 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if (!jugadorEliminado) indicarJugadorNoEnBDD(jugadorBorrado);
+        if (!jugadorEliminado) {
+            indicarJugadorNoEnBDD(jugadorBorrado);
+            new ControladorUsuarios();
+        }
         reescribirArchivoJugadores(archivoReal, archivoTemp);
     }
 
@@ -162,7 +165,10 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if(!jugadorExistente) indicarJugadorNoEnBDD(jugadorReiniciado);
+        if(!jugadorExistente) {
+            indicarJugadorNoEnBDD(jugadorReiniciado);
+            new ControladorUsuarios();
+        }
         reescribirArchivoJugadores(archivoReal, archivoTemp);
     }
 

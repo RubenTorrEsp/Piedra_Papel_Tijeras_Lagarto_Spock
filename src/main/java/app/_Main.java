@@ -4,7 +4,6 @@ import static app.Common.*;
 import static resources.Textos.*;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class _Main {

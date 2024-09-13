@@ -37,6 +37,7 @@ public class _Main {
                 break;
             default:
                 System.out.println(seleccionInvalida);
+                inicio();
                 break;
         }
     }

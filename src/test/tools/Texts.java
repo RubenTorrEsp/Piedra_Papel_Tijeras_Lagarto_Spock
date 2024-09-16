@@ -18,10 +18,10 @@ public class Texts {
     public final String jugadorSinFormato = "user_Test";
 
     // Puntuaciones
-    public final int puntuacionInicial = 50;
-    public final int puntuacionTrasVictoria = 51;
-    public final int puntuacionTrasDerrota = 49;
-    public final int nuevaPuntuacion = 30;
+    public final int SCORE_INIT = 50;
+    public final int SCORE_VICTORY = 51;
+    public final int SCORE_DEFEAT = 49;
+    public final int SCORE_NEW = 30;
 
     // Comportamientos
     public final boolean VICTORY = true;

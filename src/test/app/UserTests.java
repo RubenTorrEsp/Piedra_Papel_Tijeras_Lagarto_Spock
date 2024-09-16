@@ -42,7 +42,7 @@ class UserTests extends Funciones {
         jugadorTest.actualizarPuntuacion(VICTORY);
         puntuacionReal = puntuacion;
 
-        assertEquals(puntuacionTrasVictoria,puntuacionReal);
+        assertEquals(SCORE_VICTORY,puntuacionReal);
     }
 
     @Test
@@ -54,7 +54,7 @@ class UserTests extends Funciones {
         jugadorTest.actualizarPuntuacion(DEFEAT);
         puntuacionReal = puntuacion;
 
-        assertEquals(puntuacionTrasDerrota,puntuacionReal);
+        assertEquals(SCORE_DEFEAT,puntuacionReal);
     }
 
 }

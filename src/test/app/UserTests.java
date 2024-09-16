@@ -27,10 +27,10 @@ class UserTests extends Funciones {
 
     @Test
     void ReescribirPuntuacion_Test() {
-        assertEquals(puntuacionInicial, comprobarPuntuacion(jugadorTestExistente, testFile), SCORE_DOES_NOT_MATCH);
+        assertEquals(SCORE_INIT, comprobarPuntuacion(jugadorTestExistente, testFile), SCORE_DOES_NOT_MATCH);
 
-        reescribirPuntuacion(jugadorTestExistente, nuevaPuntuacion, testFile, tempFile);
-        assertEquals(nuevaPuntuacion, comprobarPuntuacion(jugadorTestExistente, testFile), SCORE_DOES_NOT_MATCH);
+        reescribirPuntuacion(jugadorTestExistente, SCORE_NEW, testFile, tempFile);
+        assertEquals(SCORE_NEW, comprobarPuntuacion(jugadorTestExistente, testFile), SCORE_DOES_NOT_MATCH);
     }
 
     @Test

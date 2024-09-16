@@ -37,7 +37,7 @@ class UserTests extends Funciones {
     void ActualizarPuntuacion_Victoria() {
         User jugadorTest = new User(jugadorTestExistente, testFile);
         int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testFile);
-        assertEquals(puntuacionInicial,puntuacionReal,SCORE_DOES_NOT_MATCH);
+        assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
         jugadorTest.actualizarPuntuacion(VICTORY);
         puntuacionReal = puntuacion;
@@ -49,7 +49,7 @@ class UserTests extends Funciones {
     void ActualizarPuntuacion_Derrota() {
         User jugadorTest = new User(jugadorTestExistente, testFile);
         int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testFile);
-        assertEquals(puntuacionInicial,puntuacionReal,SCORE_DOES_NOT_MATCH);
+        assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
         jugadorTest.actualizarPuntuacion(DEFEAT);
         puntuacionReal = puntuacion;

@@ -72,11 +72,11 @@ public class ControladorUsuariosTests extends Funciones {
 
     @Test
     void reiniciarJugador_jugadorExistente() {
-        assertEquals(nuevaPuntuacion,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
+        assertEquals(SCORE_NEW,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
 
         reiniciarJugador(Optional.of(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
 
-        assertEquals(puntuacionInicial ,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
+        assertEquals(SCORE_INIT ,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
     }
 
 }

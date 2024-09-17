@@ -12,7 +12,7 @@ public class MainTests extends Funciones {
     @Test
     void FormatoJugador_FuncionaCorrectamente() {
         String nombreEsperado = "User_test";
-        String nombreTrasFormatear = formatoJugador(jugadorSinFormato);
+        String nombreTrasFormatear = formatoJugador(PLAYER_UNFORMATTED);
 
         assertEquals(nombreEsperado,nombreTrasFormatear);
     }

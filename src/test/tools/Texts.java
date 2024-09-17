@@ -10,12 +10,12 @@ public class Texts {
     // Jugadores
     public final String jugadorTestExistente = "playerTest060782";
     public final String jugadorTest = "playerTest220694";
-    public final String jugadorTestParaCrear = "playerTest200995";
-    public final String jugadorTestParaModificar = "playerTest251289";
-    public final String jugadorTestParaReiniciar = "playerTest090880";
-    public final String jugadorNuevoNombre = "playerTestNewName";
-    public final String jugadorTestNoExistente = "playerNoExistente";
-    public final String jugadorSinFormato = "user_Test";
+    public final String PLAYER_CREATE = "playerTest200995";
+    public final String PLAYER_MODIFY = "playerTest251289";
+    public final String PLAYER_RESTART = "playerTest090880";
+    public final String PLAYER_NEW_NAME = "playerTestNewName";
+    public final String PLAYER_NON_EXISTED = "playerNoExistente";
+    public final String PLAYER_UNFORMATTED = "user_Test";
 
     // Puntuaciones
     public final int SCORE_INIT = 50;

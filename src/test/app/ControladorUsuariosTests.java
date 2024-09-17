@@ -20,7 +20,7 @@ public class ControladorUsuariosTests extends Funciones {
     void crearJugador_JugadorNoExistente() {
         int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests)+1;
 
-        ControladorUsuarios.crearJugador(Optional.of(jugadorTestParaCrear), archivoOriginalTests);
+        ControladorUsuarios.crearJugador(Optional.of(PLAYER_CREATE), archivoOriginalTests);
         int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
@@ -38,17 +38,17 @@ public class ControladorUsuariosTests extends Funciones {
 
     @Test
     void modificarJugador_jugadorExistente() {
-        assertTrue(usuarioExiste(jugadorTestParaModificar, archivoOriginalTests));
-        assertFalse(usuarioExiste(jugadorNuevoNombre, archivoOriginalTests));
+        assertTrue(usuarioExiste(PLAYER_MODIFY, archivoOriginalTests));
+        assertFalse(usuarioExiste(PLAYER_NEW_NAME, archivoOriginalTests));
 
         modificarJugador(
-                Optional.of(jugadorTestParaModificar),
-                Optional.of(jugadorNuevoNombre),
+                Optional.of(PLAYER_MODIFY),
+                Optional.of(PLAYER_NEW_NAME),
                 archivoOriginalTests,
                 archivoTemporalTests);
 
-        assertFalse(usuarioExiste(jugadorTestParaModificar, archivoOriginalTests));
-        assertTrue(usuarioExiste(jugadorNuevoNombre, archivoOriginalTests));
+        assertFalse(usuarioExiste(PLAYER_MODIFY, archivoOriginalTests));
+        assertTrue(usuarioExiste(PLAYER_NEW_NAME, archivoOriginalTests));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class ControladorUsuariosTests extends Funciones {
     void eliminarJugador_jugadorNoExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
 
-        ControladorUsuarios.eliminarJugador(Optional.of(jugadorTestNoExistente), archivoOriginalTests, archivoTemporalTests);
+        ControladorUsuarios.eliminarJugador(Optional.of(PLAYER_NON_EXISTED), archivoOriginalTests, archivoTemporalTests);
         int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
@@ -72,11 +72,11 @@ public class ControladorUsuariosTests extends Funciones {
 
     @Test
     void reiniciarJugador_jugadorExistente() {
-        assertEquals(SCORE_NEW,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
+        assertEquals(SCORE_NEW,comprobarPuntuacion(PLAYER_RESTART, archivoOriginalTests));
 
-        reiniciarJugador(Optional.of(jugadorTestParaReiniciar), archivoOriginalTests, archivoTemporalTests);
+        reiniciarJugador(Optional.of(PLAYER_RESTART), archivoOriginalTests, archivoTemporalTests);
 
-        assertEquals(SCORE_INIT ,comprobarPuntuacion(jugadorTestParaReiniciar, archivoOriginalTests));
+        assertEquals(SCORE_INIT ,comprobarPuntuacion(PLAYER_RESTART, archivoOriginalTests));
     }
 
 }

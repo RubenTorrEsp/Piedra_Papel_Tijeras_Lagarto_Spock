@@ -17,7 +17,7 @@ public class _Main {
     }
 
     public static void inicio() {
-        System.out.println(bienvenida);
+        System.out.println(WELLCOME);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case seleccionNumero1:

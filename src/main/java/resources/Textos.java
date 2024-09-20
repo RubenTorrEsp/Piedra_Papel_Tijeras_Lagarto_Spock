@@ -59,13 +59,13 @@ public class Textos {
 
 
     // Textos de seleccion
-    public static final String NUUMBER_1 = "1";
-    public static final String NUUMBER_2 = "2";
-    public static final String NUUMBER_3 = "3";
-    public static final String NUUMBER_4 = "4";
-    public static final String NUUMBER_5 = "5";
-    public static final String NUUMBER_9 = "9";
-    public static final String NUUMBER_0 = "0";
+    public static final String NUMBER_1 = "1";
+    public static final String NUMBER_2 = "2";
+    public static final String NUMBER_3 = "3";
+    public static final String NUMBER_4 = "4";
+    public static final String NUMBER_5 = "5";
+    public static final String NUMBER_9 = "9";
+    public static final String NUMBER_0 = "0";
     public static final String seleccionPiedra = "piedra";
     public static final String seleccionPapel = "papel";
     public static final String seleccionTijeras = "tijeras";

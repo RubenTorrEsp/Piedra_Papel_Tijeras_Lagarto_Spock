@@ -17,12 +17,12 @@ public class Common {
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
     public static String refactorizar(String seleccionJugador, User jugador) {
         switch (seleccionJugador) {
-            case seleccionNumero1 -> seleccionJugador = seleccionPiedra;
-            case seleccionNumero2 -> seleccionJugador = seleccionPapel;
-            case seleccionNumero3 -> seleccionJugador = seleccionTijeras;
-            case seleccionNumero4 -> seleccionJugador = seleccionLagarto;
-            case seleccionNumero5 -> seleccionJugador = seleccionSpock;
-            case seleccionNumero0, seleccionSalir -> {
+            case NUMBER_1 -> seleccionJugador = seleccionPiedra;
+            case NUMBER_2 -> seleccionJugador = seleccionPapel;
+            case NUMBER_3 -> seleccionJugador = seleccionTijeras;
+            case NUMBER_4 -> seleccionJugador = seleccionLagarto;
+            case NUMBER_5 -> seleccionJugador = seleccionSpock;
+            case NUMBER_0, seleccionSalir -> {
                 seleccionJugador = seleccionSalir;
                 salir(jugador);
             }

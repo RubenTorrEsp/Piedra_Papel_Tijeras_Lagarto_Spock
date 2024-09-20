@@ -19,22 +19,22 @@ public class ControladorUsuarios {
         System.out.println(opcionesGestorJugadores);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
-            case seleccionNumero1:
+            case NUMBER_1:
                 mostrarJugadores();
                 break;
-            case seleccionNumero2:
+            case NUMBER_2:
                 crearJugador(nombreVacio, archivoOriginal);
                 break;
-            case seleccionNumero3:
+            case NUMBER_3:
                 modificarJugador(nombreVacio, nombreVacio, archivoOriginal, archivoTemporal);
                 break;
-            case seleccionNumero4:
+            case NUMBER_4:
                 eliminarJugador(nombreVacio, archivoOriginal, archivoTemporal);
                 break;
-            case seleccionNumero5:
+            case NUMBER_5:
                 reiniciarJugador(nombreVacio, archivoOriginal, archivoTemporal);
                 break;
-            case seleccionNumero0:
+            case NUMBER_0:
                 salir();
                 break;
             default:

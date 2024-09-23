@@ -10,23 +10,22 @@ import static java.util.List.*;
 public class Listas {
 
     // Lista de elementos aceptados en el juego extendido
-    public static List<String> elementosJuegoExtendido = of(new String[]{
-            "piedra",
-            "papel",
-            "tijeras",
-            "spock",
-            "lagarto",
-            "salir",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "0"
-    });
+    public static List<String> elementosJuegoExtendido = of(
+        "piedra",
+        "papel",
+        "tijeras",
+        "spock",
+        "lagarto",
+        "salir",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "0");
 
     // Lista de elementos aceptados en el juego extendido
-    public static List<String> elementosJuegoClasico = of(new String[]{
+    public static List<String> elementosJuegoClasico = of(
         "piedra",
         "papel",
         "tijeras",
@@ -34,8 +33,7 @@ public class Listas {
         "1",
         "2",
         "3",
-        "0"
-    });
+        "0");
 
     // Listas de elementos a los que vence cada uno
     private static final Map<String, List<String>> listasVictoria = new HashMap<>();

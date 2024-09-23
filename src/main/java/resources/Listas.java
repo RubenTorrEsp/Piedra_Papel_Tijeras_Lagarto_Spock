@@ -5,26 +5,28 @@ import java.util.Map;
 import java.util.List;
 import java.util.Arrays;
 
+import static java.util.List.*;
+
 public class Listas {
 
     // Lista de elementos aceptados en el juego extendido
-    public static List<String> elementosJuegoExtendido = List.of(new String[]{
-        "piedra",
-        "papel",
-        "tijeras",
-        "spock",
-        "lagarto",
-        "salir",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "0"
+    public static List<String> elementosJuegoExtendido = of(new String[]{
+            "piedra",
+            "papel",
+            "tijeras",
+            "spock",
+            "lagarto",
+            "salir",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "0"
     });
 
     // Lista de elementos aceptados en el juego extendido
-    public static List<String> elementosJuegoClasico = List.of(new String[]{
+    public static List<String> elementosJuegoClasico = of(new String[]{
         "piedra",
         "papel",
         "tijeras",

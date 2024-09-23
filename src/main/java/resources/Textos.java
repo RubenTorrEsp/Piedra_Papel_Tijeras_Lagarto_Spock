@@ -66,13 +66,13 @@ public class Textos {
     public static final String NUMBER_5 = "5";
     public static final String NUMBER_9 = "9";
     public static final String NUMBER_0 = "0";
-    public static final String seleccionPiedra = "piedra";
-    public static final String seleccionPapel = "papel";
-    public static final String seleccionTijeras = "tijeras";
-    public static final String seleccionLagarto = "lagarto";
-    public static final String seleccionSpock = "spock";
-    public static final String seleccionSalir = "salir";
-    public static final String seleccionSI = "si";
+    public static final String SELECT_ROCK = "piedra";
+    public static final String SELECT_PAPER = "papel";
+    public static final String SELECT_SCISSORS = "tijeras";
+    public static final String SELECT_WIZARD = "lagarto";
+    public static final String SELECT_SPOCK = "spock";
+    public static final String SELECT_OUT = "salir";
+    public static final String SELECT_YES = "si";
     public static final String opcionNoDisponible = "Opcion no disponible en estos momentos";
 
     // Textos de configuracion

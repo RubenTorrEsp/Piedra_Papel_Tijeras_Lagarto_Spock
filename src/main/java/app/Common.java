@@ -17,13 +17,13 @@ public class Common {
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
     public static String refactorizar(String seleccionJugador, User jugador) {
         switch (seleccionJugador) {
-            case NUMBER_1 -> seleccionJugador = seleccionPiedra;
-            case NUMBER_2 -> seleccionJugador = seleccionPapel;
-            case NUMBER_3 -> seleccionJugador = seleccionTijeras;
-            case NUMBER_4 -> seleccionJugador = seleccionLagarto;
-            case NUMBER_5 -> seleccionJugador = seleccionSpock;
-            case NUMBER_0, seleccionSalir -> {
-                seleccionJugador = seleccionSalir;
+            case NUMBER_1 -> seleccionJugador = SELECT_ROCK;
+            case NUMBER_2 -> seleccionJugador = SELECT_PAPER;
+            case NUMBER_3 -> seleccionJugador = SELECT_SCISSORS;
+            case NUMBER_4 -> seleccionJugador = SELECT_WIZARD;
+            case NUMBER_5 -> seleccionJugador = SELECT_SPOCK;
+            case NUMBER_0, SELECT_OUT -> {
+                seleccionJugador = SELECT_OUT;
                 salir(jugador);
             }
         }  
@@ -66,7 +66,7 @@ public class Common {
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
     public static void reJugar() {
         System.out.println(seleccionRejugar);
-        if (scanner.nextLine().equalsIgnoreCase(seleccionSI)) {
+        if (scanner.nextLine().equalsIgnoreCase(SELECT_YES)) {
             System.out.println(rejugarAfirmativo);
         } else {
             reJugar = false;

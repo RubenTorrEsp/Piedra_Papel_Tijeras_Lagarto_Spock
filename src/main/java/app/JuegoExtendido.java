@@ -21,7 +21,7 @@ public class JuegoExtendido extends Common {
     public void jugarDeNuevo(User jugador) {
         System.out.println(opcionesJuegoExtendido);
         if(obtenerEntrada(jugador)){
-            if (Objects.equals(seleccionJugador, seleccionSalir)) reJugar = false;
+            if (Objects.equals(seleccionJugador, SELECT_OUT)) reJugar = false;
             else {
                 comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina(5), jugador);
                 reJugar();

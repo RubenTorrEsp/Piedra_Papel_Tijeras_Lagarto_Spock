@@ -45,8 +45,8 @@ public class Common {
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
     public static void comprobarVictoria(String jugador, String maquina, User user) {
-        System.out.println(seleccionJugador+jugador);
-        System.out.println(seleccionMaquina+maquina);
+        System.out.println(SELECT_PLAYER+jugador);
+        System.out.println(SELECT_MACHINE+maquina);
         if (jugador.equals(maquina)) {
             System.out.println(empate);
         } else {

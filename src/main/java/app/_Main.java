@@ -1,7 +1,7 @@
 package app;
 
 import static app.Common.*;
-import static resources.Textos.*;
+import static resources.Texts.*;
 
 import java.io.File;
 import java.util.Scanner;

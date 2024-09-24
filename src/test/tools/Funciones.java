@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.nio.file.*;
 
 import static app.User.linea;
-import static resources.Textos.separadorUsuarios;
+import static resources.Texts.separadorUsuarios;
 
 public class Funciones extends Texts {
 

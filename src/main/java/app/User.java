@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import static app.Common.*;
 import static app.ControladorUsuarios.crearJugador;
-import static resources.Textos.*;
+import static resources.Texts.*;
 
 public class User {
    

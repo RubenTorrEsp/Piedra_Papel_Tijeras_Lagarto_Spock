@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 import static resources.Listas.*;
-import static resources.Textos.*;
+import static resources.Texts.*;
 
 public class JuegoExtendido extends Common {
 

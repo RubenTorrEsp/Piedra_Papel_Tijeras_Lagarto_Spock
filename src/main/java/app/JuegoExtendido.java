@@ -39,7 +39,7 @@ public class JuegoExtendido extends Common {
             seleccionJugador = refactorizar(seleccionJugador, jugador);
         }
         else {
-            System.out.println(seleccionInvalida);
+            System.out.println(SELECT_INVALID);
         }
         return seleccionValida;
     }

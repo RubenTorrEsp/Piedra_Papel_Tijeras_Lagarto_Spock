@@ -19,7 +19,7 @@ public class JuegoExtendido extends Common {
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
     public void jugarDeNuevo(User jugador) {
-        System.out.println(opcionesJuegoExtendido);
+        System.out.println(OPTIONS_EXTENDED);
         if(obtenerEntrada(jugador)){
             if (Objects.equals(seleccionJugador, SELECT_OUT)) reJugar = false;
             else {

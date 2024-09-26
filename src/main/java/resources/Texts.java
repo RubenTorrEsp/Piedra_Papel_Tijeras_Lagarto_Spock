@@ -49,7 +49,7 @@ public class Texts {
     // Textos generales
     public static final String SELECT_PLAYER = "Has elegido ";
     public static final String SELECT_MACHINE = "La máquina ha elegido ";
-    public static final String seleccionInvalida = "Selección no válida.";
+    public static final String SELECT_INVALID = "Selección no válida.";
     public static final String seleccionadoSalir = "Ha seleccionado salir.";
     public static final String seleccionRejugar = "¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.";
     public static final String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número:";

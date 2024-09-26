@@ -16,7 +16,7 @@ public class ControladorUsuarios {
     static File archivoTemporal = new File(archivoUsuariosTemporal);
 
     public ControladorUsuarios() {
-        System.out.println(opcionesGestorJugadores);
+        System.out.println(OPTIONS_PLAYER);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
             case NUMBER_1:

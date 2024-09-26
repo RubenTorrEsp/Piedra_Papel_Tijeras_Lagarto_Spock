@@ -38,7 +38,7 @@ public class ControladorUsuarios {
                 salir();
                 break;
             default:
-                System.out.println(seleccionInvalida);
+                System.out.println(SELECT_INVALID);
                 new ControladorUsuarios();
                 break;
         }

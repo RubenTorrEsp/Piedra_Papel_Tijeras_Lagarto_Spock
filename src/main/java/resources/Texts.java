@@ -16,7 +16,7 @@ public class Texts {
 
             0- Salir""";
 
-    public static final String opcionesJuegoExtendido = """
+    public static final String OPTIONS_EXTENDED = """
             Seleccione su opción con nombre o número, o elija salir:
             1 - Piedra
             2 - Papel
@@ -27,7 +27,7 @@ public class Texts {
             0 - Salir
             -----------------------------------------------""";
 
-    public static final String opcionesJuegoClasico = """
+    public static final String OPTIONS_CLASSIC = """
             Seleccione su opción con nombre o número, o elija salir:
             1 - Piedra
             2 - Papel
@@ -36,7 +36,7 @@ public class Texts {
             0 - Salir
             -----------------------------------------------""";
     
-    public static final String opcionesGestorJugadores = """
+    public static final String OPTIONS_PLAYER = """
             Indique qué desea realizar:
             1 - Consultar la lista de usuarios
             2 - Crear usuario

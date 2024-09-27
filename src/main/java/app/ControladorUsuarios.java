@@ -23,16 +23,16 @@ public class ControladorUsuarios {
                 mostrarJugadores();
                 break;
             case NUMBER_2:
-                crearJugador(nombreVacio, archivoOriginal);
+                crearJugador(EMPTY_NAME, archivoOriginal);
                 break;
             case NUMBER_3:
-                modificarJugador(nombreVacio, nombreVacio, archivoOriginal, archivoTemporal);
+                modificarJugador(EMPTY_NAME, EMPTY_NAME, archivoOriginal, archivoTemporal);
                 break;
             case NUMBER_4:
-                eliminarJugador(nombreVacio, archivoOriginal, archivoTemporal);
+                eliminarJugador(EMPTY_NAME, archivoOriginal, archivoTemporal);
                 break;
             case NUMBER_5:
-                reiniciarJugador(nombreVacio, archivoOriginal, archivoTemporal);
+                reiniciarJugador(EMPTY_NAME, archivoOriginal, archivoTemporal);
                 break;
             case NUMBER_0:
                 salir();

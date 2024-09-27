@@ -32,14 +32,14 @@ public class Common {
 
     // Métodos salir, que cortan el programa
     public static void salir() {
-        System.out.println(seleccionadoSalir);
-        System.out.println(rejugarNegativo);
+        System.out.println(SELECT_EXIT);
+        System.out.println(REPLAY_NO);
     }
 
     @SuppressWarnings("static-access")
     public static void salir(User jugador) {
-        System.out.println(seleccionadoSalir);
-        System.out.println(rejugarNegativo);
+        System.out.println(SELECT_EXIT);
+        System.out.println(REPLAY_NO);
         jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion,archivoOriginal,archivoTemporal);
     }
 
@@ -65,12 +65,12 @@ public class Common {
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
     public static void reJugar() {
-        System.out.println(seleccionRejugar);
+        System.out.println(SELECT_REPLAY);
         if (scanner.nextLine().equalsIgnoreCase(SELECT_YES)) {
-            System.out.println(rejugarAfirmativo);
+            System.out.println(REPLAY_YES);
         } else {
             reJugar = false;
-            System.out.println(rejugarNegativo);
+            System.out.println(REPLAY_NO);
             User.reescribirPuntuacion(User.nombre, User.puntuacion,archivoOriginal,archivoTemporal);
         }
     }

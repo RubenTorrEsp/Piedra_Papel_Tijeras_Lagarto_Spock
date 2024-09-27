@@ -50,12 +50,12 @@ public class Texts {
     public static final String SELECT_PLAYER = "Has elegido ";
     public static final String SELECT_MACHINE = "La máquina ha elegido ";
     public static final String SELECT_INVALID = "Selección no válida.";
-    public static final String seleccionadoSalir = "Ha seleccionado salir.";
-    public static final String seleccionRejugar = "¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.";
-    public static final String rejugarAfirmativo = "Has elegido volver a jugar. Elija su opción con nombre o número:";
-    public static final String rejugarNegativo = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";
-    public static final String lineaVacia = "";
-    public static final Optional<String> nombreVacio = Optional.empty();
+    public static final String SELECT_EXIT = "Ha seleccionado salir.";
+    public static final String SELECT_REPLAY = "¿Desea volver a jugar? Escriba \"Si\" para jugar otra vez.";
+    public static final String REPLAY_YES = "Has elegido volver a jugar. Elija su opción con nombre o número:";
+    public static final String REPLAY_NO = "Gracias por jugar a Piedra, Papel, Tijera, Lagarto, Spock.\nEsperamos que haya disfrutado y que vuelva pronto";
+    public static final String EMPTY_ROW = "";
+    public static final Optional<String> EMPTY_NAME = Optional.empty();
 
 
     // Textos de seleccion

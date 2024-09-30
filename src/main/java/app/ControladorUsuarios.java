@@ -67,7 +67,7 @@ public class ControladorUsuarios {
         if (!jugadorExistente) {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
                 bw.newLine();
-                bw.write(jugadorNuevo + puntuacionInicial);
+                bw.write(jugadorNuevo + SCORE_START);
                 indicarJugadorCreado(jugadorNuevo);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -154,7 +154,7 @@ public class ControladorUsuarios {
                 String[] partes = linea.split(separadorUsuarios);
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(jugadorReiniciado)) {
-                        linea = partes[0]+puntuacionInicial;
+                        linea = partes[0]+SCORE_START;
                         indicarJugadorReiniciado(jugadorReiniciado);
                         jugadorExistente = true;
                     }

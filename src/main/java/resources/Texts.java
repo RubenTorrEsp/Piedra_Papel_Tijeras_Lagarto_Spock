@@ -73,7 +73,7 @@ public class Texts {
     public static final String SELECT_SPOCK = "spock";
     public static final String SELECT_OUT = "salir";
     public static final String SELECT_YES = "si";
-    public static final String opcionNoDisponible = "Opcion no disponible en estos momentos";
+    public static final String OPTION_UNAVAILABLE = "Opcion no disponible en estos momentos";
 
     // Textos de configuracion
     public static final String separadorUsuarios = ";";

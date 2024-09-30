@@ -53,7 +53,7 @@ public class User {
     public void actualizarPuntuacion(Boolean victoria) {
         if (victoria) puntuacion++;
         else puntuacion--;
-        System.out.println(nuevaPuntuacion + puntuacion);
+        System.out.println(SCORE_NEW + puntuacion);
         if (puntuacion == 0) eliminarJugador(nombre, archivoUsers, archivoTemp);
     }
 

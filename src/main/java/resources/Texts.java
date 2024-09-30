@@ -77,8 +77,8 @@ public class Texts {
 
     // Textos de configuracion
     public static final String separadorUsuarios = ";";
-    public static final String puntuacionInicial = ";50";
-    public static final String nuevaPuntuacion = "La nueva puntuacion es ";
+    public static final String SCORE_START = ";50";
+    public static final String SCORE_NEW = "La nueva puntuacion es ";
     public static final String archivoUsuarios = "users.txt";
     public static final String archivoUsuariosTemporal = "temp.txt";
 

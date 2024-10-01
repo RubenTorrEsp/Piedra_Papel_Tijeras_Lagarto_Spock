@@ -84,7 +84,7 @@ public class Texts {
 
     // Textos de gestión de jugadores
     public static final String CHECK_PLAYER = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";
-    public static final String usuarioEliminado = "Has llegado a 0 puntos y hemos eliminado al jugador. Eres mas malo que un dolor";
+    public static final String PLAYER_ERASED = "Has llegado a 0 puntos y hemos eliminado al jugador. Eres mas malo que un dolor";
     public static void definicionUser(String nombre, Integer puntuacion){
         System.out.println(STR."El jugador \{nombre} está ahora activo con \{puntuacion} puntos.");
     }

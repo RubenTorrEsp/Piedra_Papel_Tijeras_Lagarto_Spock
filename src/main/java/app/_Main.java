@@ -10,7 +10,7 @@ public class _Main {
     
     static Scanner scanner = new Scanner(System.in);
     static User jugador;
-    static File archivoOriginal = new File(archivoUsuarios);
+    static File archivoOriginal = new File(FILE_USERS);
 
     public static void main(String[] args) {
         inicio();

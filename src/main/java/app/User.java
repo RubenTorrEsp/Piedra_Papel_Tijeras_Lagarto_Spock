@@ -97,7 +97,7 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        reescribirArchivoJugadores(archivoOriginal, archivoTemporal, usuarioEliminado);
+        reescribirArchivoJugadores(archivoOriginal, archivoTemporal, PLAYER_ERASED);
         System.exit(0);
     }
     

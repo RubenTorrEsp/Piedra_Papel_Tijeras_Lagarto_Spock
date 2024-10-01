@@ -11,8 +11,8 @@ public class Common {
 
     static Scanner scanner = new Scanner(System.in);
     static Boolean reJugar = true;
-    static File archivoOriginal = new File(archivoUsuarios);
-    static File archivoTemporal = new File(archivoUsuariosTemporal);
+    static File archivoOriginal = new File(FILE_USERS);
+    static File archivoTemporal = new File(FILE_TEMP);
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
     public static String refactorizar(String seleccionJugador, User jugador) {

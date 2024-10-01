@@ -12,8 +12,8 @@ public class User {
     public static String nombre;
     public static Integer puntuacion;
     public static String linea;
-    static File archivoUsers = new File(archivoUsuarios);
-    static File archivoTemp = new File(archivoUsuariosTemporal);
+    static File archivoUsers = new File(FILE_USERS);
+    static File archivoTemp = new File(FILE_TEMP);
 
     // Constructor
     public User(String nombreUsuario, File archivo) {

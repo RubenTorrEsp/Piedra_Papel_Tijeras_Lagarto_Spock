@@ -79,8 +79,8 @@ public class Texts {
     public static final String separadorUsuarios = ";";
     public static final String SCORE_START = ";50";
     public static final String SCORE_NEW = "La nueva puntuacion es ";
-    public static final String archivoUsuarios = "users.txt";
-    public static final String archivoUsuariosTemporal = "temp.txt";
+    public static final String FILE_USERS = "users.txt";
+    public static final String FILE_TEMP = "temp.txt";
 
     // Textos de gestión de jugadores
     public static final String CHECK_PLAYER = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";

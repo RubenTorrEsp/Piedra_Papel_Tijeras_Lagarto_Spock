@@ -12,8 +12,9 @@ public class ControladorUsuarios {
 
     static String linea;
     static Scanner scanner = new Scanner(System.in);
-    static File archivoOriginal = new File(archivoUsuarios);
-    static File archivoTemporal = new File(archivoUsuariosTemporal);
+    static File archivoOriginal = new File(FILE_USERS);
+    static File archivoTemporal = new File(FILE_TEMP
+    );
 
     public ControladorUsuarios() {
         System.out.println(OPTIONS_PLAYER);

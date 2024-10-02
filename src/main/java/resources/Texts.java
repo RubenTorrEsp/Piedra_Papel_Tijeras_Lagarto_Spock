@@ -122,7 +122,7 @@ public class Texts {
         }
 
     // Textos de resolución de enfrentamientos
-    public static final String victoria = "Enhorabuena!! Has ganado, porque ";
+    public static final String VICTORY = "Enhorabuena!! Has ganado, porque ";
     public static final String derrota = "Lo siento!! Has perdido, porque ";
     public static final String empate = "Empate!! Aprovecha el momento o vuelve a por más.";
 

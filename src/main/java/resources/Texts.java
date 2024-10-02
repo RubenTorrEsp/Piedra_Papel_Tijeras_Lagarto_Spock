@@ -124,7 +124,7 @@ public class Texts {
     // Textos de resolución de enfrentamientos
     public static final String VICTORY = "Enhorabuena!! Has ganado, porque ";
     public static final String DEFEAT = "Lo siento!! Has perdido, porque ";
-    public static final String empate = "Empate!! Aprovecha el momento o vuelve a por más.";
+    public static final String TIE = "Empate!! Aprovecha el momento o vuelve a por más.";
 
     // Mapa de textos de victoria en enfrentamientos
     public static final Map<String, String> strings = new HashMap<>();

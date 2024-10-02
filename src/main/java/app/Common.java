@@ -48,7 +48,7 @@ public class Common {
         System.out.println(SELECT_PLAYER+jugador);
         System.out.println(SELECT_MACHINE+maquina);
         if (jugador.equals(maquina)) {
-            System.out.println(empate);
+            System.out.println(TIE);
         } else {
             boolean victoriaJugador = obtenerVictoria(jugador, maquina);
             if (victoriaJugador) victoria(jugador, maquina);

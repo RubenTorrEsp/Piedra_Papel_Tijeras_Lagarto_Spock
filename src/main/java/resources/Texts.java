@@ -153,6 +153,6 @@ public class Texts {
 
     // Comportamiento que genera el texto que resuelve el enfrentamiento como derrota
     public static void derrota(String jugador, String maquina){
-        System.out.println(derrota+obtenerTexto(maquina.concat("_").concat(jugador)));
+        System.out.println(DEFEAT+obtenerTexto(maquina.concat("_").concat(jugador)));
     }
 }

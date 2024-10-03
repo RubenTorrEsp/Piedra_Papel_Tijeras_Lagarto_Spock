@@ -111,7 +111,7 @@ public class Texts {
         public static final String nombreNuevo = "Indique el nuevo nombre para el jugador";
         public static final String jugadorNoExiste = "El jugador indicado no existe";
         // Eliminar jugadores
-        public static final String eliminarJugador = "Indique qué jugador desea eliminar:";
+        public static final String PLAYER_DELETE = "Indique qué jugador desea eliminar:";
         public static void indicarJugadorBorrado(String jugadorBorrado) {
             System.out.println(STR."El jugador \{jugadorBorrado} ha sido eliminado de la base de datos");
         }

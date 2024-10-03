@@ -85,7 +85,7 @@ public class ControladorUsuarios {
             Optional<String> nuevoNombre,
             File archivoReal,
             File archivoTemp) {
-        System.out.println(modificarJugador);
+        System.out.println(PLAYER_MODIFY);
         String jugadorModificado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
@@ -107,7 +107,7 @@ public class ControladorUsuarios {
             e.printStackTrace();
         }
         if(!jugadorExistente) {
-            System.out.println(jugadorNoExiste);
+            System.out.println(PLAYER_NOT_EXIST);
             new ControladorUsuarios();
         }
         else reescribirArchivoJugadores(archivoReal, archivoTemp);
@@ -118,7 +118,7 @@ public class ControladorUsuarios {
             Optional<String> nombreJugador,
             File archivoReal,
             File archivoTemp) {
-        System.out.println(eliminarJugador);
+        System.out.println(PLAYER_DELETE);
         String jugadorBorrado = nombreJugador.orElseGet(scanner::nextLine);
         boolean jugadorEliminado = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
@@ -146,7 +146,7 @@ public class ControladorUsuarios {
 
     // Metodo que reinicia la puntuacion de un jugador
     public static void reiniciarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
-        System.out.println(reiniciarJugador);
+        System.out.println(PLAYER_RESTART);
         String jugadorReiniciado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));

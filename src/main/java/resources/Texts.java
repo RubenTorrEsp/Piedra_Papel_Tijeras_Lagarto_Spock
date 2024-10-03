@@ -116,7 +116,7 @@ public class Texts {
             System.out.println(STR."El jugador \{jugadorBorrado} ha sido eliminado de la base de datos");
         }
         // Reiniciar jugadores
-        public static final String reiniciarJugador = "Indique el jugador que desea reiniciar";
+        public static final String PLAYER_RESTART = "Indique el jugador que desea reiniciar";
         public static void indicarJugadorReiniciado(String jugadorReiniciado) {
             System.out.println(STR."El jugador \{jugadorReiniciado} vuelve a tener ahora 50 puntos.");
         }

@@ -107,9 +107,9 @@ public class Texts {
             System.out.println(STR."El jugador \{jugadorCreado} ya se encuentra en la base de datos");
         }
         // Modificar jugadores
-        public static final String modificarJugador = "Indique qué jugador quiere modificar";
+        public static final String PLAYER_MODIFY = "Indique qué jugador quiere modificar";
         public static final String nombreNuevo = "Indique el nuevo nombre para el jugador";
-        public static final String jugadorNoExiste = "El jugador indicado no existe";
+        public static final String PLAYER_NOT_EXIST = "El jugador indicado no existe";
         // Eliminar jugadores
         public static final String PLAYER_DELETE = "Indique qué jugador desea eliminar:";
         public static void indicarJugadorBorrado(String jugadorBorrado) {

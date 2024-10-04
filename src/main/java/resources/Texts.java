@@ -108,7 +108,7 @@ public class Texts {
         }
         // Modificar jugadores
         public static final String PLAYER_MODIFY = "Indique qué jugador quiere modificar";
-        public static final String nombreNuevo = "Indique el nuevo nombre para el jugador";
+        public static final String NEW_NAME = "Indique el nuevo nombre para el jugador";
         public static final String PLAYER_NOT_EXIST = "El jugador indicado no existe";
         // Eliminar jugadores
         public static final String PLAYER_DELETE = "Indique qué jugador desea eliminar:";

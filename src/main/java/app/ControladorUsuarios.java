@@ -48,7 +48,7 @@ public class ControladorUsuarios {
     // Método que muestra una lista de todos los jugadores disponibles
     public void mostrarJugadores(){
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
-            System.out.println(mostrarJugadores);
+            System.out.println(SHOW_PLAYERS);
             while ((linea = br.readLine()) != null) {
                 if(linea.length() > 1) {
                     String[] partes = linea.split(separadorUsuarios);

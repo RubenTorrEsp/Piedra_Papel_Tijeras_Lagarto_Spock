@@ -127,23 +127,23 @@ public class Texts {
     public static final String TIE = "Empate!! Aprovecha el momento o vuelve a por más.";
 
     // Mapa de textos de victoria en enfrentamientos
-    public static final Map<String, String> strings = new HashMap<>();
+    public static final Map<String, String> STRINGS = new HashMap<>();
     static {
-        strings.put("piedra_tijeras", "la piedra ROMPE las tijeras.");
-        strings.put("piedra_lagarto", "la piedra APLASTA al lagarto.");
-        strings.put("tijeras_papel", "las tijeras CORTAN el papel.");
-        strings.put("tijeras_lagarto", "las tijeras DECAPITAN al lagarto.");
-        strings.put("papel_piedra", "el papel ENVUELVE la piedra.");
-        strings.put("papel_spock", "el papel DESAUTORIZA a Spock.");
-        strings.put("lagarto_papel", "el lagarto SE COME el papel.");
-        strings.put("lagarto_spock", "el lagarto ENVENENA a Spock.");
-        strings.put("spock_piedra", "Spock DESINTEGRA la piedra.");
-        strings.put("spock_tijeras", "Spock DESMONTA las tijeras.");
+        STRINGS.put("piedra_tijeras", "la piedra ROMPE las tijeras.");
+        STRINGS.put("piedra_lagarto", "la piedra APLASTA al lagarto.");
+        STRINGS.put("tijeras_papel", "las tijeras CORTAN el papel.");
+        STRINGS.put("tijeras_lagarto", "las tijeras DECAPITAN al lagarto.");
+        STRINGS.put("papel_piedra", "el papel ENVUELVE la piedra.");
+        STRINGS.put("papel_spock", "el papel DESAUTORIZA a Spock.");
+        STRINGS.put("lagarto_papel", "el lagarto SE COME el papel.");
+        STRINGS.put("lagarto_spock", "el lagarto ENVENENA a Spock.");
+        STRINGS.put("spock_piedra", "Spock DESINTEGRA la piedra.");
+        STRINGS.put("spock_tijeras", "Spock DESMONTA las tijeras.");
     }
 
     // Comportamiento para, pasado el nombre del enfrentamiento, obtener el texto
     public static String obtenerTexto(String nombre) {
-        return strings.get(nombre);
+        return STRINGS.get(nombre);
     }
 
     // Comportamiento que genera el texto que resuelve el enfrentamiento como victoria

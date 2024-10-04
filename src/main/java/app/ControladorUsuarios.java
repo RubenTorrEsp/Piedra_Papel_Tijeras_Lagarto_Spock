@@ -95,7 +95,7 @@ public class ControladorUsuarios {
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(jugadorModificado)) {
                         jugadorExistente = true;
-                        System.out.println(nombreNuevo);
+                        System.out.println(NEW_NAME);
                         String nombre = nuevoNombre.orElseGet(() -> scanner.nextLine());
                         linea = nombre+separadorUsuarios+partes[1];
                     }

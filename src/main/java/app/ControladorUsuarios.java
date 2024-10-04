@@ -62,7 +62,7 @@ public class ControladorUsuarios {
 
     // Método que crea un jugador y lo incorpora a la lista
     public static void crearJugador(Optional<String> nombreJugador, File archivo) {
-        System.out.println(jugadorParaCrear);
+        System.out.println(PLAYER_CREATE);
         String jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = usuarioExiste(jugadorNuevo, archivo);
         if (!jugadorExistente) {

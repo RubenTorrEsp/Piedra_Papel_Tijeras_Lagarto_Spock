@@ -99,7 +99,7 @@ public class Texts {
          System.out.println(STR."Nombre: \{nombre}. Puntuación: \{puntuacion}");
         }
         // Crear jugadores
-        public static final String jugadorParaCrear = "Indique el jugador que desea crear";
+        public static final String PLAYER_CREATE = "Indique el jugador que desea crear";
         public static void indicarJugadorCreado(String jugadorCreado) {
             System.out.println(STR."El jugador \{jugadorCreado} ha sido añadido a la base de datos");
         }

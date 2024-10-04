@@ -94,7 +94,7 @@ public class Texts {
 
         // Clase ControladorUsuarios
         // Mostrar jugadores
-        public static final String mostrarJugadores = "Aquí se muestran los jugadores disponibles";
+        public static final String SHOW_PLAYERS = "Aquí se muestran los jugadores disponibles";
         public static void mostrarJugador(String nombre, String puntuacion) {
          System.out.println(STR."Nombre: \{nombre}. Puntuación: \{puntuacion}");
         }

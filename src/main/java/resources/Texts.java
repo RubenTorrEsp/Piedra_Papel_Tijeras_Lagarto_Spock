@@ -76,7 +76,7 @@ public class Texts {
     public static final String OPTION_UNAVAILABLE = "Opcion no disponible en estos momentos";
 
     // Textos de configuracion
-    public static final String separadorUsuarios = ";";
+    public static final String SEPARATOR = ";";
     public static final String SCORE_START = ";50";
     public static final String SCORE_NEW = "La nueva puntuacion es ";
     public static final String FILE_USERS = "users.txt";

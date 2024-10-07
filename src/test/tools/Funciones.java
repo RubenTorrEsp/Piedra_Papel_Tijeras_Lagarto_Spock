@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.nio.file.*;
 
 import static app.User.linea;
-import static resources.Texts.separadorUsuarios;
+import static resources.Texts.SEPARATOR;
 
 public class Funciones extends Texts {
 
@@ -26,7 +26,7 @@ public class Funciones extends Texts {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(separadorUsuarios);
+                String[] partes = linea.split(SEPARATOR);
                 if (partes.length == 2 && partes[0].equals(jugador)) {
                     puntuacionReal = Integer.parseInt(partes[1].trim());
                     break;

@@ -51,7 +51,7 @@ public class ControladorUsuarios {
             System.out.println(SHOW_PLAYERS);
             while ((linea = br.readLine()) != null) {
                 if(linea.length() > 1) {
-                    String[] partes = linea.split(separadorUsuarios);
+                    String[] partes = linea.split(SEPARATOR);
                     mostrarJugador(partes[0], partes[1]);
                 }
             }
@@ -91,13 +91,13 @@ public class ControladorUsuarios {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(separadorUsuarios);
+                String[] partes = linea.split(SEPARATOR);
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(jugadorModificado)) {
                         jugadorExistente = true;
                         System.out.println(NEW_NAME);
                         String nombre = nuevoNombre.orElseGet(() -> scanner.nextLine());
-                        linea = nombre+separadorUsuarios+partes[1];
+                        linea = nombre+SEPARATOR+partes[1];
                     }
                     bw.write(linea);
                     bw.newLine();
@@ -125,7 +125,7 @@ public class ControladorUsuarios {
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
             String linea;
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(separadorUsuarios);
+                String[] partes = linea.split(SEPARATOR);
                 if (partes.length == 2 && partes[0].equals(jugadorBorrado)) {
                     indicarJugadorBorrado(jugadorBorrado);
                     jugadorEliminado = true;
@@ -152,7 +152,7 @@ public class ControladorUsuarios {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(separadorUsuarios);
+                String[] partes = linea.split(SEPARATOR);
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(jugadorReiniciado)) {
                         linea = partes[0]+SCORE_START;

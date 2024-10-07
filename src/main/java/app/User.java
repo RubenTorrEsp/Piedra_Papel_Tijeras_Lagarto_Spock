@@ -25,7 +25,7 @@ public class User {
     public void establecerUsuario(String nombreUsuario, File archivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(separadorUsuarios);
+                String[] partes = linea.split(SEPARATOR);
                 if (partes[0].equals(nombreUsuario)) {
                     nombre = partes[0];
                     puntuacion = Integer.parseInt(partes[1]);
@@ -66,9 +66,9 @@ public class User {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(separadorUsuarios);
+                String[] partes = linea.split(SEPARATOR);
                 if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = nombreUsuario+separadorUsuarios+nuevaPuntuacion;
+                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = nombreUsuario+SEPARATOR+nuevaPuntuacion;
                     bw.write(linea);
                     bw.newLine();
                 }
@@ -87,7 +87,7 @@ public class User {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(separadorUsuarios);
+                String[] partes = linea.split(SEPARATOR);
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = EMPTY_ROW;
                     bw.write(linea);

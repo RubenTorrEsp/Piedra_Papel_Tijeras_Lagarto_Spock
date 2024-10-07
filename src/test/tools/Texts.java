@@ -9,7 +9,7 @@ public class Texts {
 
     // Jugadores
     public final String jugadorTestExistente = "playerTest060782";
-    public final String jugadorTest = "playerTest220694";
+    public final String PLAYER_TEST = "playerTest220694";
     public final String PLAYER_CREATE = "playerTest200995";
     public final String PLAYER_MODIFY = "playerTest251289";
     public final String PLAYER_RESTART = "playerTest090880";

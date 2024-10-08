@@ -15,7 +15,7 @@ class UserTests extends Funciones {
 
     @Test
     void UsuarioExiste_True_FuncionaCorrectamente() {
-        boolean jugadorExiste = usuarioExiste(jugadorTestExistente, testFile);
+        boolean jugadorExiste = usuarioExiste(PLAYER_EXISTS, testFile);
         assertTrue(jugadorExiste, PLATER_NOT_IN_DB);
     }
 
@@ -27,16 +27,16 @@ class UserTests extends Funciones {
 
     @Test
     void ReescribirPuntuacion_Test() {
-        assertEquals(SCORE_INIT, comprobarPuntuacion(jugadorTestExistente, testFile), SCORE_DOES_NOT_MATCH);
+        assertEquals(SCORE_INIT, comprobarPuntuacion(PLAYER_EXISTS, testFile), SCORE_DOES_NOT_MATCH);
 
-        reescribirPuntuacion(jugadorTestExistente, SCORE_NEW, testFile, tempFile);
-        assertEquals(SCORE_NEW, comprobarPuntuacion(jugadorTestExistente, testFile), SCORE_DOES_NOT_MATCH);
+        reescribirPuntuacion(PLAYER_EXISTS, SCORE_NEW, testFile, tempFile);
+        assertEquals(SCORE_NEW, comprobarPuntuacion(PLAYER_EXISTS, testFile), SCORE_DOES_NOT_MATCH);
     }
 
     @Test
     void ActualizarPuntuacion_Victoria() {
-        User jugadorTest = new User(jugadorTestExistente, testFile);
-        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testFile);
+        User jugadorTest = new User(PLAYER_EXISTS, testFile);
+        int puntuacionReal = comprobarPuntuacion(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
         jugadorTest.actualizarPuntuacion(VICTORY);
@@ -47,8 +47,8 @@ class UserTests extends Funciones {
 
     @Test
     void ActualizarPuntuacion_Derrota() {
-        User jugadorTest = new User(jugadorTestExistente, testFile);
-        int puntuacionReal = comprobarPuntuacion(jugadorTestExistente, testFile);
+        User jugadorTest = new User(PLAYER_EXISTS, testFile);
+        int puntuacionReal = comprobarPuntuacion(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
         jugadorTest.actualizarPuntuacion(DEFEAT);

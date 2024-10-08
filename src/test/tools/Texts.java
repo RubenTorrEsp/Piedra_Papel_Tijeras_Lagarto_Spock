@@ -8,7 +8,7 @@ public class Texts {
     public static final String USER_TEST_TEMP = "src\\test\\resources\\tempTest.txt";
 
     // Jugadores
-    public final String jugadorTestExistente = "playerTest060782";
+    public final String PLAYER_EXISTS = "playerTest060782";
     public final String PLAYER_TEST = "playerTest220694";
     public final String PLAYER_CREATE = "playerTest200995";
     public final String PLAYER_MODIFY = "playerTest251289";

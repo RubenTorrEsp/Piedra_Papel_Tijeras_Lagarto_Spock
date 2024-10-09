@@ -26,16 +26,16 @@ public class ControladorUsuariosTests extends Funciones {
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
     }
 
-    //TODO: Arreglar test. Escribe por consola y solicita respuesta
-//    @Test
-//    void crearJugador_JugadorYaEnBDD() {
-//        int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests);
-//
-//        ControladorUsuarios.crearJugador(Optional.of(PLAYER_TEST), archivoOriginalTests);
-//        int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
-//
-//        assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
-//    }
+//    TODO: Arreglar test. Escribe por consola y solicita respuesta
+    @Test
+    void crearJugador_JugadorYaEnBDD() {
+        int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests);
+
+        ControladorUsuarios.crearJugador(Optional.of(PLAYER_TEST), archivoOriginalTests);
+        int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
+
+        assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
+    }
 
     @Test
     void modificarJugador_jugadorExistente() {

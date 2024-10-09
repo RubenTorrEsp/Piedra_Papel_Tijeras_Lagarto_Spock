@@ -139,7 +139,7 @@ public class ControladorUsuarios {
         }
         if (!jugadorEliminado) {
             indicarJugadorNoEnBDD(jugadorBorrado);
-            new ControladorUsuarios();
+            if(nombreJugador.isEmpty()) new ControladorUsuarios();
         }
         reescribirArchivoJugadores(archivoReal, archivoTemp);
     }

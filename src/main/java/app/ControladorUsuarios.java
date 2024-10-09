@@ -75,7 +75,7 @@ public class ControladorUsuarios {
             }
         } else {
             indicarJugadorYaEnBDD(jugadorNuevo);
-            new ControladorUsuarios();
+            if(nombreJugador.isEmpty()) new ControladorUsuarios();
         }
     }
 

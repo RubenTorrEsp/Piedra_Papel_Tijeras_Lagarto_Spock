@@ -60,7 +60,6 @@ public class ControladorUsuariosTests extends Funciones {
         assertEquals(jugadoresIniciales - 1, contarJugadoresEnBDD(archivoOriginalTests));
     }
 
-    //TODO: Arreglar test. Escribe por consola y solicita respuesta
     @Test
     void eliminarJugador_jugadorNoExistente() {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);

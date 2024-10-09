@@ -61,15 +61,15 @@ public class ControladorUsuariosTests extends Funciones {
     }
 
     //TODO: Arreglar test. Escribe por consola y solicita respuesta
-//    @Test
-//    void eliminarJugador_jugadorNoExistente() {
-//        int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
-//
-//        ControladorUsuarios.eliminarJugador(Optional.of(PLAYER_NON_EXISTED), archivoOriginalTests, archivoTemporalTests);
-//        int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
-//
-//        assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
-//    }
+    @Test
+    void eliminarJugador_jugadorNoExistente() {
+        int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
+
+        ControladorUsuarios.eliminarJugador(Optional.of(PLAYER_NON_EXISTED), archivoOriginalTests, archivoTemporalTests);
+        int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
+
+        assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
+    }
 
     @Test
     void reiniciarJugador_jugadorExistente() {

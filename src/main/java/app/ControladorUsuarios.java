@@ -58,6 +58,7 @@ public class ControladorUsuarios {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        volverAlControlador();
     }
 
     // TODO: Crear continuación para cuando se crea el jugador
@@ -78,6 +79,7 @@ public class ControladorUsuarios {
             indicarJugadorYaEnBDD(jugadorNuevo);
             if(nombreJugador.isEmpty()) new ControladorUsuarios();
         }
+        volverAlControlador();
     }
 
     // TODO: Crear continuación para cuando se crea el jugador
@@ -113,6 +115,7 @@ public class ControladorUsuarios {
             new ControladorUsuarios();
         }
         else reescribirArchivoJugadores(archivoReal, archivoTemp);
+        volverAlControlador();
     }
 
     // TODO: Crear continuación para cuando se crea el jugador
@@ -145,6 +148,7 @@ public class ControladorUsuarios {
             if(nombreJugador.isEmpty()) new ControladorUsuarios();
         }
         reescribirArchivoJugadores(archivoReal, archivoTemp);
+        volverAlControlador();
     }
 
     // TODO: Crear continuación para cuando se crea el jugador
@@ -175,9 +179,10 @@ public class ControladorUsuarios {
             new ControladorUsuarios();
         }
         reescribirArchivoJugadores(archivoReal, archivoTemp);
+        volverAlControlador();
     }
 
-    public void volverAlControlador() {
+    public static void volverAlControlador() {
         System.out.println("¿Desea realizar otra acción? Escriba \"Si\" para volver al controlador");
         String eleccion = scanner.nextLine();
         switch (eleccion) {

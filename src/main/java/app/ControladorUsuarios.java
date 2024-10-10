@@ -13,8 +13,7 @@ public class ControladorUsuarios {
     static String linea;
     static Scanner scanner = new Scanner(System.in);
     static File archivoOriginal = new File(FILE_USERS);
-    static File archivoTemporal = new File(FILE_TEMP
-    );
+    static File archivoTemporal = new File(FILE_TEMP);
 
     public ControladorUsuarios() {
         System.out.println(OPTIONS_PLAYER);
@@ -45,6 +44,7 @@ public class ControladorUsuarios {
         }
     }
 
+    // TODO: Crear continuación para cuando se crea el jugador
     // Método que muestra una lista de todos los jugadores disponibles
     public void mostrarJugadores(){
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
@@ -60,6 +60,7 @@ public class ControladorUsuarios {
         }
     }
 
+    // TODO: Crear continuación para cuando se crea el jugador
     // Método que crea un jugador y lo incorpora a la lista
     public static void crearJugador(Optional<String> nombreJugador, File archivo) {
         System.out.println(PLAYER_CREATE);
@@ -79,6 +80,7 @@ public class ControladorUsuarios {
         }
     }
 
+    // TODO: Crear continuación para cuando se crea el jugador
     // Método que modifica los valores de un usuario
     public static void modificarJugador(
             Optional<String> nombreJugador,
@@ -113,6 +115,7 @@ public class ControladorUsuarios {
         else reescribirArchivoJugadores(archivoReal, archivoTemp);
     }
 
+    // TODO: Crear continuación para cuando se crea el jugador
     // Método que elimina un jugador de la lista
     public static void eliminarJugador(
             Optional<String> nombreJugador,
@@ -144,6 +147,7 @@ public class ControladorUsuarios {
         reescribirArchivoJugadores(archivoReal, archivoTemp);
     }
 
+    // TODO: Crear continuación para cuando se crea el jugador
     // Metodo que reinicia la puntuacion de un jugador
     public static void reiniciarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
         System.out.println(PLAYER_RESTART);

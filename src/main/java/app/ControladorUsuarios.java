@@ -175,6 +175,18 @@ public class ControladorUsuarios {
             new ControladorUsuarios();
         }
         reescribirArchivoJugadores(archivoReal, archivoTemp);
+        System.out.println("¿Desea realizar otra acción? Escriba \"Si\" para volver al controlador");
+        String eleccion = scanner.nextLine();
+        switch (eleccion) {
+            case "Si":
+            case "si":
+            case "SI":
+                new ControladorUsuarios();
+                break;
+            default:
+                salir();
+                break;
+        }
     }
 
 }

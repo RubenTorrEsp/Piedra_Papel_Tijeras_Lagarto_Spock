@@ -175,6 +175,9 @@ public class ControladorUsuarios {
             new ControladorUsuarios();
         }
         reescribirArchivoJugadores(archivoReal, archivoTemp);
+    }
+
+    public void volverAlControlador() {
         System.out.println("¿Desea realizar otra acción? Escriba \"Si\" para volver al controlador");
         String eleccion = scanner.nextLine();
         switch (eleccion) {

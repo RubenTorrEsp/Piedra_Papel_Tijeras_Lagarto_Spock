@@ -180,7 +180,7 @@ public class ControladorUsuarios {
     public static void volverAlControlador() {
         System.out.println(BACK_TO_CONTROLLER);
         String eleccion = scanner.nextLine().toLowerCase();
-        if (eleccion.equals("si")) new ControladorUsuarios();
+        if (eleccion.equals(SELECT_YES)) new ControladorUsuarios();
         else salir();
     }
 

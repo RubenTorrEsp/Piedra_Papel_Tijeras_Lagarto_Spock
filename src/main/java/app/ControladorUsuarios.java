@@ -178,12 +178,10 @@ public class ControladorUsuarios {
     }
 
     public static void volverAlControlador() {
-        System.out.println("¿Desea realizar otra acción? Escriba \"Si\" para volver al controlador");
-        String eleccion = scanner.nextLine();
+        System.out.println(BACK_TO_CONTROLLER);
+        String eleccion = scanner.nextLine().toLowerCase();
         switch (eleccion) {
-            case "Si":
             case "si":
-            case "SI":
                 new ControladorUsuarios();
                 break;
             default:

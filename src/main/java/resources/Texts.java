@@ -93,6 +93,8 @@ public class Texts {
     }
 
         // Clase ControladorUsuarios
+        public static final String BACK_TO_CONTROLLER = "¿Desea realizar otra acción? Escriba \"Si\" para volver al controlador";
+
         // Mostrar jugadores
         public static final String SHOW_PLAYERS = "Aquí se muestran los jugadores disponibles";
         public static void mostrarJugador(String nombre, String puntuacion) {

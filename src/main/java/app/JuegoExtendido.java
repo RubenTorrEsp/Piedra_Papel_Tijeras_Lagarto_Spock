@@ -34,7 +34,7 @@ public class JuegoExtendido extends Common {
     public boolean obtenerEntrada(User jugador) {
         boolean seleccionValida = false;
         seleccionJugador = scanner.nextLine().toLowerCase();
-        if(elementosJuegoExtendido.contains(seleccionJugador)) {
+        if(ELEMENTS_EXTENDED.contains(seleccionJugador)) {
             seleccionValida = true;
             seleccionJugador = refactorizar(seleccionJugador, jugador);
         }

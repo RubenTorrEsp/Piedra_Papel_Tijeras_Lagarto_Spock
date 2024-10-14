@@ -10,7 +10,7 @@ import static java.util.List.*;
 public class Listas {
 
     // Lista de elementos aceptados en el juego extendido
-    public static List<String> elementosJuegoExtendido = of(
+    public static final List<String> ELEMENTS_EXTENDED = of(
         "piedra",
         "papel",
         "tijeras",
@@ -25,7 +25,7 @@ public class Listas {
         "0");
 
     // Lista de elementos aceptados en el juego extendido
-    public static List<String> elementosJuegoClasico = of(
+    public static final List<String> ELEMENTS_CLASSIC = of(
         "piedra",
         "papel",
         "tijeras",
@@ -36,18 +36,18 @@ public class Listas {
         "0");
 
     // Listas de elementos a los que vence cada uno
-    private static final Map<String, List<String>> listasVictoria = new HashMap<>();
+    private static final Map<String, List<String>> LISTS_VICTORY = new HashMap<>();
     static {
-        listasVictoria.put("piedra", Arrays.asList("tijeras", "lagarto"));
-        listasVictoria.put("papel", Arrays.asList("piedra", "spock"));
-        listasVictoria.put("tijeras", Arrays.asList("papel", "lagarto"));
-        listasVictoria.put("lagarto", Arrays.asList("spock", "papel"));
-        listasVictoria.put("spock", Arrays.asList("tijeras", "piedra"));
+        LISTS_VICTORY.put("piedra", Arrays.asList("tijeras", "lagarto"));
+        LISTS_VICTORY.put("papel", Arrays.asList("piedra", "spock"));
+        LISTS_VICTORY.put("tijeras", Arrays.asList("papel", "lagarto"));
+        LISTS_VICTORY.put("lagarto", Arrays.asList("spock", "papel"));
+        LISTS_VICTORY.put("spock", Arrays.asList("tijeras", "piedra"));
     }
 
     // Método que obtiene el elemento del jugador y el de la máquina y comprueba si el jugador gana o no.
     public static Boolean obtenerVictoria(String elemJugador, String elemMaquina) {
-        return listasVictoria.get(elemJugador).contains(elemMaquina);
+        return LISTS_VICTORY.get(elemJugador).contains(elemMaquina);
     }
 
 }

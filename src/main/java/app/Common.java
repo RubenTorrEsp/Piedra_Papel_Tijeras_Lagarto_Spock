@@ -60,7 +60,7 @@ public class Common {
     // Selección de elemento por parte de la máquina
     public static String obtenerSeleccionMaquina(Integer elementos) {
         Random random = new Random();
-        return elementosJuegoExtendido.get(random.nextInt(elementos));
+        return ELEMENTS_EXTENDED.get(random.nextInt(elementos));
     }
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import tools.Funciones;
 
 import java.io.File;
+import java.io.IOException;
 
 import static app.User.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,7 +27,7 @@ class UserTests extends Funciones {
     }
 
     @Test
-    void ReescribirPuntuacion_Test() {
+    void ReescribirPuntuacion_Test() throws IOException {
         assertEquals(SCORE_INIT, comprobarPuntuacion(PLAYER_EXISTS, testFile), SCORE_DOES_NOT_MATCH);
 
         reescribirPuntuacion(PLAYER_EXISTS, SCORE_NEW, testFile, tempFile);
@@ -34,7 +35,7 @@ class UserTests extends Funciones {
     }
 
     @Test
-    void ActualizarPuntuacion_Victoria() {
+    void ActualizarPuntuacion_Victoria() throws IOException {
         User jugadorTest = new User(PLAYER_EXISTS, testFile);
         int puntuacionReal = comprobarPuntuacion(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
@@ -46,7 +47,7 @@ class UserTests extends Funciones {
     }
 
     @Test
-    void ActualizarPuntuacion_Derrota() {
+    void ActualizarPuntuacion_Derrota() throws IOException {
         User jugadorTest = new User(PLAYER_EXISTS, testFile);
         int puntuacionReal = comprobarPuntuacion(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);

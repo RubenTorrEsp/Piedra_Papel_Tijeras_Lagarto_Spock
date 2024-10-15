@@ -2,10 +2,7 @@ package tools;
 
 import org.junit.jupiter.api.BeforeEach;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.*;
 
 import static app.User.linea;
@@ -22,7 +19,7 @@ public class Funciones extends Texts {
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
     }
 
-    public static int comprobarPuntuacion(String jugador, File file) {
+    public static int comprobarPuntuacion(String jugador, File file) throws IOException {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((linea = br.readLine()) != null) {
@@ -32,10 +29,6 @@ public class Funciones extends Texts {
                     break;
                 }
             }
-        } catch (IOException e) {
-            System.err.println(STR."Error al leer el archivo: \{e.getMessage()}");
-        } catch (NumberFormatException e) {
-            System.err.println(STR."Formato de puntuación inválido para el jugador \{jugador}: \{e.getMessage()}");
         }
         return puntuacionReal;
     }

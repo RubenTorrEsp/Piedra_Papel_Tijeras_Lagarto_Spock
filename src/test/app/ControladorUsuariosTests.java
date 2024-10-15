@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import tools.Funciones;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Optional;
 
 import static app.User.*;
@@ -71,7 +72,7 @@ public class ControladorUsuariosTests extends Funciones {
     }
 
     @Test
-    void reiniciarJugador_jugadorExistente() {
+    void reiniciarJugador_jugadorExistente() throws IOException {
         assertEquals(SCORE_NEW,comprobarPuntuacion(PLAYER_RESTART, archivoOriginalTests));
 
         reiniciarJugador(Optional.of(PLAYER_RESTART), archivoOriginalTests, archivoTemporalTests);

@@ -16,7 +16,7 @@ public class User {
     static File archivoTemp = new File(FILE_TEMP);
 
     // Constructor
-    public User(String nombreUsuario, File archivo) {
+    public User(String nombreUsuario, File archivo) throws IOException {
         if(usuarioExiste(nombreUsuario, archivo)) establecerUsuario(nombreUsuario, archivo);
         else crearJugador(Optional.ofNullable(nombreUsuario), archivoUsers);
     }

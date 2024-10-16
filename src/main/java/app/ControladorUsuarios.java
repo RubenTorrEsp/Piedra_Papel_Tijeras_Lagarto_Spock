@@ -15,7 +15,7 @@ public class ControladorUsuarios {
     static File archivoOriginal = new File(FILE_USERS);
     static File archivoTemporal = new File(FILE_TEMP);
 
-    public ControladorUsuarios() {
+    public ControladorUsuarios() throws IOException {
         System.out.println(OPTIONS_PLAYER);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
@@ -45,7 +45,7 @@ public class ControladorUsuarios {
     }
 
     // Método que muestra una lista de todos los jugadores disponibles
-    public void mostrarJugadores(){
+    public void mostrarJugadores() throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
             System.out.println(SHOW_PLAYERS);
             while ((linea = br.readLine()) != null) {
@@ -61,7 +61,7 @@ public class ControladorUsuarios {
     }
 
     // Método que crea un jugador y lo incorpora a la lista
-    public static void crearJugador(Optional<String> nombreJugador, File archivo) {
+    public static void crearJugador(Optional<String> nombreJugador, File archivo) throws IOException {
         System.out.println(PLAYER_CREATE);
         String jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = usuarioExiste(jugadorNuevo, archivo);
@@ -85,7 +85,7 @@ public class ControladorUsuarios {
             Optional<String> nombreJugador,
             Optional<String> nuevoNombre,
             File archivoReal,
-            File archivoTemp) {
+            File archivoTemp) throws IOException {
         System.out.println(PLAYER_MODIFY);
         String jugadorModificado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = false;
@@ -104,8 +104,6 @@ public class ControladorUsuarios {
                     bw.newLine();
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         if(!jugadorExistente) {
             System.out.println(PLAYER_NOT_EXIST);
@@ -119,7 +117,7 @@ public class ControladorUsuarios {
     public static void eliminarJugador(
             Optional<String> nombreJugador,
             File archivoReal,
-            File archivoTemp) {
+            File archivoTemp) throws IOException {
         System.out.println(PLAYER_DELETE);
         String jugadorBorrado = nombreJugador.orElseGet(scanner::nextLine);
         boolean jugadorEliminado = false;
@@ -148,7 +146,7 @@ public class ControladorUsuarios {
     }
 
     // Metodo que reinicia la puntuacion de un jugador
-    public static void reiniciarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) {
+    public static void reiniciarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) throws IOException {
         System.out.println(PLAYER_RESTART);
         String jugadorReiniciado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = false;
@@ -177,7 +175,7 @@ public class ControladorUsuarios {
         volverAlControlador();
     }
 
-    public static void volverAlControlador() {
+    public static void volverAlControlador() throws IOException {
         System.out.println(BACK_TO_CONTROLLER);
         String eleccion = scanner.nextLine().toLowerCase();
         if (eleccion.equals(SELECT_YES)) new ControladorUsuarios();

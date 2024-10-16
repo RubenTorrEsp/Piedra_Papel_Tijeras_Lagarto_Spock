@@ -54,8 +54,6 @@ public class ControladorUsuarios {
                     mostrarJugador(partes[0], partes[1]);
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         volverAlControlador();
     }
@@ -70,8 +68,6 @@ public class ControladorUsuarios {
                 bw.newLine();
                 bw.write(jugadorNuevo + SCORE_START);
                 indicarJugadorCreado(jugadorNuevo);
-            } catch (IOException e) {
-                e.printStackTrace();
             }
         } else {
             indicarJugadorYaEnBDD(jugadorNuevo);
@@ -134,8 +130,6 @@ public class ControladorUsuarios {
                     bw.newLine();
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         if (!jugadorEliminado) {
             indicarJugadorNoEnBDD(jugadorBorrado);
@@ -164,8 +158,6 @@ public class ControladorUsuarios {
                     bw.newLine();
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         if(!jugadorExistente) {
             indicarJugadorNoEnBDD(jugadorReiniciado);

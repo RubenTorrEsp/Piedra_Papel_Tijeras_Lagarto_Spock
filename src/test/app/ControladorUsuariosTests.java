@@ -18,7 +18,7 @@ public class ControladorUsuariosTests extends Funciones {
 
 
     @Test
-    void crearJugador_JugadorNoExistente() {
+    void crearJugador_JugadorNoExistente() throws IOException {
         int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests)+1;
 
         ControladorUsuarios.crearJugador(Optional.of(PLAYER_CREATE), archivoOriginalTests);
@@ -28,7 +28,7 @@ public class ControladorUsuariosTests extends Funciones {
     }
 
     @Test
-    void crearJugador_JugadorYaEnBDD() {
+    void crearJugador_JugadorYaEnBDD() throws IOException {
         int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests);
 
         ControladorUsuarios.crearJugador(Optional.of(PLAYER_TEST), archivoOriginalTests);
@@ -38,7 +38,7 @@ public class ControladorUsuariosTests extends Funciones {
     }
 
     @Test
-    void modificarJugador_jugadorExistente() {
+    void modificarJugador_jugadorExistente() throws IOException {
         assertTrue(usuarioExiste(PLAYER_MODIFY, archivoOriginalTests));
         assertFalse(usuarioExiste(PLAYER_NEW_NAME, archivoOriginalTests));
 
@@ -53,7 +53,7 @@ public class ControladorUsuariosTests extends Funciones {
     }
 
     @Test
-    void eliminarJugador_jugadorExistente() {
+    void eliminarJugador_jugadorExistente() throws IOException {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
 
         ControladorUsuarios.eliminarJugador(Optional.of(PLAYER_TEST), archivoOriginalTests, archivoTemporalTests);
@@ -62,7 +62,7 @@ public class ControladorUsuariosTests extends Funciones {
     }
 
     @Test
-    void eliminarJugador_jugadorNoExistente() {
+    void eliminarJugador_jugadorNoExistente() throws IOException {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
 
         ControladorUsuarios.eliminarJugador(Optional.of(PLAYER_NON_EXISTED), archivoOriginalTests, archivoTemporalTests);

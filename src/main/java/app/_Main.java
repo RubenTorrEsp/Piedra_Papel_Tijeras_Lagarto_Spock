@@ -4,6 +4,7 @@ import static app.Common.*;
 import static resources.Texts.*;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class _Main {
@@ -12,11 +13,9 @@ public class _Main {
     static User jugador;
     static File archivoOriginal = new File(FILE_USERS);
 
-    public static void main(String[] args) {
-        inicio();
-    }
+    public static void main(String[] args) throws IOException {inicio();}
 
-    public static void inicio() {
+    public static void inicio() throws IOException {
         System.out.println(WELLCOME);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
@@ -42,7 +41,7 @@ public class _Main {
     }
 
     // Método que establece el jugador
-    public static String establecerUsuario(){
+    public static String establecerUsuario() throws IOException {
         System.out.println(CHECK_PLAYER);
         String respuestaSinFormato = formatoJugador(scanner.nextLine());
         new User(formatoJugador(respuestaSinFormato), archivoOriginal);

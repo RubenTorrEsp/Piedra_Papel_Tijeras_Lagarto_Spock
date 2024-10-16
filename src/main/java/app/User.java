@@ -22,7 +22,7 @@ public class User {
     }
     
     // Método para establecer el usuario
-    public void establecerUsuario(String nombreUsuario, File archivo) {
+    public void establecerUsuario(String nombreUsuario, File archivo) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(SEPARATOR);
@@ -31,8 +31,6 @@ public class User {
                     puntuacion = Integer.parseInt(partes[1]);
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 

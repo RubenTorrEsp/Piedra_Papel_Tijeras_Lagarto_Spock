@@ -22,16 +22,16 @@ class UserTests extends Funciones {
 
     @Test
     void UsuarioExiste_False() {
-        boolean jugadorExiste = usuarioExiste(PLAYER_NON_EXISTED, testFile);
+        boolean jugadorExiste = usuarioExiste(PLAYER_NOT_EXISTS, testFile);
         assertFalse(jugadorExiste, PLAYER_ALREADY_IN_DB);
     }
 
     @Test
     void ReescribirPuntuacion_Test() throws IOException {
-        assertEquals(SCORE_INIT, comprobarPuntuacion(PLAYER_EXISTS, testFile), SCORE_DOES_NOT_MATCH);
+        assertEquals(SCORE_INIT, comprobarPuntuacion(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);
 
-        reescribirPuntuacion(PLAYER_EXISTS, SCORE_NEW, testFile, tempFile);
-        assertEquals(SCORE_NEW, comprobarPuntuacion(PLAYER_EXISTS, testFile), SCORE_DOES_NOT_MATCH);
+        reescribirPuntuacion(PLAYER_REWRITE_SCORE, SCORE_NEW, testFile, tempFile);
+        assertEquals(SCORE_NEW, comprobarPuntuacion(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);
     }
 
     @Test

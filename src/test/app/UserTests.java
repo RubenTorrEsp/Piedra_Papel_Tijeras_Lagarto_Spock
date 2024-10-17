@@ -15,13 +15,13 @@ class UserTests extends Funciones {
     static File tempFile = new File(USER_TEST_TEMP);
 
     @Test
-    void UsuarioExiste_True_FuncionaCorrectamente() {
+    void UsuarioExiste_True() {
         boolean jugadorExiste = usuarioExiste(PLAYER_EXISTS, testFile);
         assertTrue(jugadorExiste, PLATER_NOT_IN_DB);
     }
 
     @Test
-    void UsuarioExiste_False_FuncionaCorrectamente() {
+    void UsuarioExiste_False() {
         boolean jugadorExiste = usuarioExiste(PLAYER_NON_EXISTED, testFile);
         assertFalse(jugadorExiste, PLAYER_ALREADY_IN_DB);
     }

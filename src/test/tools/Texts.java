@@ -9,12 +9,15 @@ public class Texts {
 
     // Jugadores
     public final String PLAYER_EXISTS = "playerTest060782";
+    public final String PLAYER_NOT_EXISTS = "playerNoExistente";
+    public final String PLAYER_DELETE_FALSE = "playerTest010100";
+    public final String PLAYER_DELETE = "playerTest200995";
     public final String PLAYER_TEST = "playerTest220694";
     public final String PLAYER_CREATE = "playerTest200995";
-    public final String PLAYER_MODIFY = "playerTest251289";
     public final String PLAYER_RESTART = "playerTest090880";
+    public final String PLAYER_MODIFY = "playerTest251289";
     public final String PLAYER_NEW_NAME = "playerTestNewName";
-    public final String PLAYER_NON_EXISTED = "playerNoExistente";
+    public final String PLAYER_REWRITE_SCORE = "playerTest190590";
     public final String PLAYER_UNFORMATTED = "user_Test";
 
     // Puntuaciones

@@ -1,7 +1,5 @@
 Programa completado, futuras implementaciones
 
--Archivos de tests (EN PROCESO)
-
 -Podium
 -BDD para usuarios
 -Puntuaciones

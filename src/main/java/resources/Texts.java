@@ -65,6 +65,7 @@ public class Texts {
     public static final String NUMBER_3 = "3";
     public static final String NUMBER_4 = "4";
     public static final String NUMBER_5 = "5";
+    public static final String NUMBER_6 = "6";
     public static final String NUMBER_9 = "9";
     public static final String NUMBER_0 = "0";
     public static final String SELECT_ROCK = "piedra";

@@ -34,6 +34,9 @@ public class ControladorUsuarios {
             case NUMBER_5:
                 reiniciarJugador(EMPTY_NAME, archivoOriginal, archivoTemporal);
                 break;
+            case NUMBER_6:
+                System.out.println(OPTION_UNAVAILABLE);
+                break;
             case NUMBER_0:
                 salir();
                 break;

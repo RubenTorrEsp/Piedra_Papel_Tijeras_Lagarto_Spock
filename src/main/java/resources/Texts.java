@@ -43,6 +43,7 @@ public class Texts {
             3 - Modificar usuario
             4 - Eliminar usuario
             5 - Reiniciar usuario
+            6 - Consultar podium
 
             0 - Salir""";
 

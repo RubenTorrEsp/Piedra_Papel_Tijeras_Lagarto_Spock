@@ -36,6 +36,7 @@ public class ControladorUsuarios {
                 break;
             case NUMBER_6:
                 System.out.println(OPTION_UNAVAILABLE);
+
                 break;
             case NUMBER_0:
                 salir();
@@ -170,8 +171,17 @@ public class ControladorUsuarios {
         volverAlControlador();
     }
 
-    public static void  mostrarPodium(){
-
+    public static void  mostrarPodium(File archivoReal) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoReal)))  {
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(SEPARATOR);
+                if (!linea.trim().isEmpty()) {
+                    if (partes.length == 2) {
+                        System.out.println(linea);
+                    }
+                }
+            }
+        }
     }
 
     public static void volverAlControlador() throws IOException {

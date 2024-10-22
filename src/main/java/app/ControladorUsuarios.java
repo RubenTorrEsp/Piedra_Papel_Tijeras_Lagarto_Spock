@@ -36,7 +36,7 @@ public class ControladorUsuarios {
                 break;
             case NUMBER_6:
                 System.out.println(OPTION_UNAVAILABLE);
-
+                mostrarPodium(archivoOriginal);
                 break;
             case NUMBER_0:
                 salir();

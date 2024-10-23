@@ -183,6 +183,10 @@ public class ControladorUsuarios {
                 if (!linea.trim().isEmpty()) {
                     if (partes.length == 2) {
                         System.out.println(linea);
+                        List<Object> jugador = new ArrayList<>();
+                        jugador.add(partes[0]);
+                        jugador.add(partes[1]);
+                        jugadores.add(jugador);
                     }
                 }
             }

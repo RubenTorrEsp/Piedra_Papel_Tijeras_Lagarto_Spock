@@ -1,6 +1,8 @@
 package app;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -175,6 +177,7 @@ public class ControladorUsuarios {
     // TODO: Completar comportamiento
     public static void  mostrarPodium(File archivoReal) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal)))  {
+            List<List<Object>> jugadores = new ArrayList<>();
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(SEPARATOR);
                 if (!linea.trim().isEmpty()) {

@@ -187,6 +187,8 @@ public class ControladorUsuarios {
                         jugador.add(partes[0]);
                         jugador.add(partes[1]);
                         jugadores.add(jugador);
+
+                        System.out.println(STR."Jugador: \{jugador.get(0)}, Puntuacion: \{jugador.get(1)}");
                     }
                 }
             }

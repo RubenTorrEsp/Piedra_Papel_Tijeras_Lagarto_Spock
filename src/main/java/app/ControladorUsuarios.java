@@ -186,7 +186,14 @@ public class ControladorUsuarios {
                     }
                 }
             }
-            // Comportamiento para ordenar
+            jugadores.sort(new Comparator<List<Object>>() {
+                @Override
+                public int compare(List<Object> o1, List<Object> o2) {
+                    int puntuacion1 = Integer.parseInt((String) o1.get(1));
+                    int puntuacion2 = Integer.parseInt((String) o2.get(1));
+                    return Integer.compare(puntuacion2, puntuacion1);
+                }
+            });
             System.out.println(jugadores);
         }
     }

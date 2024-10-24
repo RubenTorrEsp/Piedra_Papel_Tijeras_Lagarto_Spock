@@ -1,10 +1,7 @@
 package app;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
 
 import static app.Common.*;
 import static app.User.*;
@@ -189,6 +186,12 @@ public class ControladorUsuarios {
                     }
                 }
             }
+            jugadores.sort(new Comparator<List<Object>>() {
+                @Override
+                public int compare(List<Object> o1, List<Object> o2) {
+                    return Integer.compare((int) o1.get(1), (int) o2.get(1));
+                }
+            });
             System.out.println(jugadores);
         }
     }

@@ -186,12 +186,7 @@ public class ControladorUsuarios {
                     }
                 }
             }
-            jugadores.sort(new Comparator<List<Object>>() {
-                @Override
-                public int compare(List<Object> o1, List<Object> o2) {
-                    return Integer.compare((int) o1.get(1), (int) o2.get(1));
-                }
-            });
+            // Comportamiento para ordenar
             System.out.println(jugadores);
         }
     }

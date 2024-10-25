@@ -1,6 +1,7 @@
 package resources;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -123,6 +124,15 @@ public class Texts {
         public static final String PLAYER_RESTART = "Indique el jugador que desea reiniciar";
         public static void indicarJugadorReiniciado(String jugadorReiniciado) {
             System.out.println(STR."El jugador \{jugadorReiniciado} vuelve a tener ahora 50 puntos.");
+        }
+        //Podium
+        public static void showPodium(List<List<Object>> jugadores) {
+            System.out.println("Medalla de ORO para...");
+            System.out.println(STR."El jugador \"\{jugadores.getFirst().getFirst()}\" con \{jugadores.getFirst().getLast()} puntos");
+            System.out.println("Medalla de PLATA para...");
+            System.out.println(STR."El jugador \"\{jugadores.get(1).getFirst()}\" con \{jugadores.get(1).getLast()} puntos");
+            System.out.println("Medalla de BRONCE para...");
+            System.out.println(STR."El jugador \"\{jugadores.get(2).getFirst()}\" con \{jugadores.get(2).getLast()} puntos");
         }
 
     // Textos de resolución de enfrentamientos

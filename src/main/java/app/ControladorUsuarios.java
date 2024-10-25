@@ -35,7 +35,6 @@ public class ControladorUsuarios {
                 reiniciarJugador(EMPTY_NAME, archivoOriginal, archivoTemporal);
                 break;
             case NUMBER_6:
-                System.out.println(OPTION_UNAVAILABLE);
                 mostrarPodium(archivoOriginal);
                 break;
             case NUMBER_0:

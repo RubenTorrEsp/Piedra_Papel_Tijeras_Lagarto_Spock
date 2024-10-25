@@ -191,7 +191,13 @@ public class ControladorUsuarios {
                 int puntuacion2 = Integer.parseInt((String) o2.get(1));
                 return Integer.compare(puntuacion2, puntuacion1);
             });
-            System.out.println(jugadores);
+
+
+            for(int i = 0; i < 3; i++){
+                System.out.println(jugadores.get(i));
+            }
+
+
         }
     }
 

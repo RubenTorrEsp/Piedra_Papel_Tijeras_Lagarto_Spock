@@ -194,7 +194,7 @@ public class ControladorUsuarios {
 
 
             for(int i = 0; i < 3; i++){
-                System.out.println(jugadores.get(i));
+                System.out.println(STR."Jugador: "+jugadores.get(i).getFirst()+" Puntuación: "+jugadores.get(i).getLast());
             }
 
 

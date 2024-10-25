@@ -191,13 +191,7 @@ public class ControladorUsuarios {
                 int puntuacion2 = Integer.parseInt((String) o2.get(1));
                 return Integer.compare(puntuacion2, puntuacion1);
             });
-
-
-            for(int i = 0; i < 3; i++){
-                System.out.println(STR."El ugador \{jugadores.get(i).getFirst()} con \{jugadores.get(i).getLast()} puntos");
-            }
-
-
+            showPodium(jugadores);
         }
     }
 

@@ -14,7 +14,6 @@ public class ControladorUsuarios {
     static File archivoOriginal = new File(FILE_USERS);
     static File archivoTemporal = new File(FILE_TEMP);
 
-    //TODO: Arreglo de la opcion podiuum cuando el comportamiento esté completado
     public ControladorUsuarios() throws IOException {
         System.out.println(OPTIONS_PLAYER);
         String eleccion = scanner.nextLine();

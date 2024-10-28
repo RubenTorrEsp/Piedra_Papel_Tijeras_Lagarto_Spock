@@ -38,9 +38,7 @@ public class JuegoClasico extends Common{
             seleccionValida = true;
             seleccionJugador = refactorizar(seleccionJugador, jugador);
         }
-        else {
-            System.out.println(SELECT_INVALID);
-        }
+        else System.out.println(SELECT_INVALID);
         return seleccionValida;
     }
 

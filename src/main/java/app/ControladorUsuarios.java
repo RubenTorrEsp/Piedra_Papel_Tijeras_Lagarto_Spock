@@ -170,7 +170,6 @@ public class ControladorUsuarios {
         volverAlControlador();
     }
 
-    // TODO: Completar comportamiento
     public static void  mostrarPodium(File archivoReal) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal)))  {
             List<List<Object>> jugadores = new ArrayList<>();

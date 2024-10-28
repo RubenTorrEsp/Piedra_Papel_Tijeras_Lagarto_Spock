@@ -1,6 +1,5 @@
 Programa completado, futuras implementaciones
 
--Podium
 -BDD para usuarios
 -Puntuaciones
 -Sistema de apuestas

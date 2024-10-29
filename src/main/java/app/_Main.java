@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class _Main {
     
     static Scanner scanner = new Scanner(System.in);
-    static User jugador;
+    static User player;
     static File archivoOriginal = new File(FILE_USERS);
 
     public static void main(String[] args) throws IOException {start();}
@@ -20,12 +20,12 @@ public class _Main {
         String select = scanner.nextLine();
         switch (select) {
             case NUMBER_1:
-                jugador = new User(establecerUsuario(), archivoOriginal);
-                while(Common.reJugar) new JuegoExtendido(jugador);
+                player = new User(establecerUsuario(), archivoOriginal);
+                while(Common.reJugar) new JuegoExtendido(player);
                 break;
             case NUMBER_2:
-                jugador = new User(establecerUsuario(), archivoOriginal);
-                while(Common.reJugar) new JuegoClasico(jugador);
+                player = new User(establecerUsuario(), archivoOriginal);
+                while(Common.reJugar) new JuegoClasico(player);
                 break;
             case NUMBER_9:
                 new ControladorUsuarios();

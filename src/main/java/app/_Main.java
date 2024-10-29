@@ -20,11 +20,11 @@ public class _Main {
         String select = scanner.nextLine();
         switch (select) {
             case NUMBER_1:
-                player = new User(establecerUsuario(), archivoOriginal);
+                player = new User(activatePlayer(), archivoOriginal);
                 while(Common.reJugar) new JuegoExtendido(player);
                 break;
             case NUMBER_2:
-                player = new User(establecerUsuario(), archivoOriginal);
+                player = new User(activatePlayer(), archivoOriginal);
                 while(Common.reJugar) new JuegoClasico(player);
                 break;
             case NUMBER_9:
@@ -41,7 +41,7 @@ public class _Main {
     }
 
     // Método que establece el jugador
-    public static String establecerUsuario() throws IOException {
+    public static String activatePlayer() throws IOException {
         System.out.println(CHECK_PLAYER);
         String respuestaSinFormato = formatoJugador(scanner.nextLine());
         new User(formatoJugador(respuestaSinFormato), archivoOriginal);

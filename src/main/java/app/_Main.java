@@ -43,10 +43,10 @@ public class _Main {
     // Método que establece el jugador
     public static String activatePlayer() throws IOException {
         System.out.println(CHECK_PLAYER);
-        String respuestaSinFormato = formatoJugador(scanner.nextLine());
-        new User(formatoJugador(respuestaSinFormato), archivoOriginal);
+        String unformatedAnswer = formatoJugador(scanner.nextLine());
+        new User(formatoJugador(unformatedAnswer), archivoOriginal);
         definicionUser(User.nombre, User.puntuacion);
-        return formatoJugador(respuestaSinFormato);
+        return formatoJugador(unformatedAnswer);
     }
 
     // Método que capitaliza el formato del jugador

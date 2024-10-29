@@ -13,9 +13,9 @@ public class _Main {
     static User jugador;
     static File archivoOriginal = new File(FILE_USERS);
 
-    public static void main(String[] args) throws IOException {inicio();}
+    public static void main(String[] args) throws IOException {start();}
 
-    public static void inicio() throws IOException {
+    public static void start() throws IOException {
         System.out.println(WELLCOME);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
@@ -35,7 +35,7 @@ public class _Main {
                 break;
             default:
                 System.out.println(SELECT_INVALID);
-                inicio();
+                start();
                 break;
         }
     }

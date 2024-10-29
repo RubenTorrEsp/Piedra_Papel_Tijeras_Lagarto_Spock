@@ -17,8 +17,8 @@ public class _Main {
 
     public static void start() throws IOException {
         System.out.println(WELLCOME);
-        String eleccion = scanner.nextLine();
-        switch (eleccion) {
+        String select = scanner.nextLine();
+        switch (select) {
             case NUMBER_1:
                 jugador = new User(establecerUsuario(), archivoOriginal);
                 while(Common.reJugar) new JuegoExtendido(jugador);

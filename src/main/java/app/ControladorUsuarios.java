@@ -5,14 +5,13 @@ import java.util.*;
 
 import static app.Common.*;
 import static app.User.*;
+import static app._Main.*;
 import static resources.Texts.*;
 
 public class ControladorUsuarios {
 
     static String linea;
     static Scanner scanner = new Scanner(System.in);
-    static File archivoOriginal = new File(FILE_USERS);
-    static File archivoTemporal = new File(FILE_TEMP);
 
     public ControladorUsuarios() throws IOException {
         System.out.println(OPTIONS_PLAYER);
@@ -22,19 +21,19 @@ public class ControladorUsuarios {
                 mostrarJugadores();
                 break;
             case NUMBER_2:
-                crearJugador(EMPTY_NAME, archivoOriginal);
+                crearJugador(EMPTY_NAME, filePlayers);
                 break;
             case NUMBER_3:
-                modificarJugador(EMPTY_NAME, EMPTY_NAME, archivoOriginal, archivoTemporal);
+                modificarJugador(EMPTY_NAME, EMPTY_NAME, filePlayers, fileTemp);
                 break;
             case NUMBER_4:
-                eliminarJugador(EMPTY_NAME, archivoOriginal, archivoTemporal);
+                eliminarJugador(EMPTY_NAME, filePlayers, fileTemp);
                 break;
             case NUMBER_5:
-                reiniciarJugador(EMPTY_NAME, archivoOriginal, archivoTemporal);
+                reiniciarJugador(EMPTY_NAME, filePlayers, fileTemp);
                 break;
             case NUMBER_6:
-                mostrarPodium(archivoOriginal);
+                mostrarPodium(filePlayers);
                 break;
             case NUMBER_0:
                 salir();
@@ -48,7 +47,7 @@ public class ControladorUsuarios {
 
     // Método que muestra una lista de todos los jugadores disponibles
     public void mostrarJugadores() throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePlayers))) {
             System.out.println(SHOW_PLAYERS);
             while ((linea = br.readLine()) != null) {
                 if(linea.length() > 1) {

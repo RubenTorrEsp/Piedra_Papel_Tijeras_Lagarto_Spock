@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import static app.Common.*;
 import static app.ControladorUsuarios.crearJugador;
+import static app._Main.*;
 import static resources.Texts.*;
 
 public class User {
@@ -12,13 +13,11 @@ public class User {
     public static String nombre;
     public static Integer puntuacion;
     public static String linea;
-    static File archivoUsers = new File(FILE_USERS);
-    static File archivoTemp = new File(FILE_TEMP);
 
     // Constructor
     public User(String nombreUsuario, File archivo) throws IOException {
         if(usuarioExiste(nombreUsuario, archivo)) establecerUsuario(nombreUsuario, archivo);
-        else crearJugador(Optional.ofNullable(nombreUsuario), archivoUsers);
+        else crearJugador(Optional.ofNullable(nombreUsuario), filePlayers);
     }
     
     // Método para establecer el usuario
@@ -52,7 +51,7 @@ public class User {
         if (victoria) puntuacion++;
         else puntuacion--;
         System.out.println(SCORE_NEW + puntuacion);
-        if (puntuacion == 0) eliminarJugador(nombre, archivoUsers, archivoTemp);
+        if (puntuacion == 0) eliminarJugador(nombre, filePlayers, fileTemp);
     }
 
     // Método que actualiza la puntuación del jugador en el archivo

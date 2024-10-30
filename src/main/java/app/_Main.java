@@ -12,6 +12,7 @@ public class _Main {
     static Scanner scanner = new Scanner(System.in);
     static User player;
     static File filePlayers = new File(FILE_USERS);
+    static File fileTemp = new File(FILE_TEMP);
 
     public static void main(String[] args) throws IOException {start();}
 

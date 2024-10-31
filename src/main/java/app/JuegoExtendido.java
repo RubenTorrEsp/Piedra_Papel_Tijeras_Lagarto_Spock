@@ -24,10 +24,10 @@ public class JuegoExtendido extends Common {
             if (Objects.equals(seleccionJugador, SELECT_OUT)) reJugar = false;
             else {
                 checkMatch(seleccionJugador, getSelectionMachine(5), jugador);
-                reJugar();
+                playAgain();
             }
         }
-        else reJugar();
+        else playAgain();
     }
 
     // Obtener la elección del jugador

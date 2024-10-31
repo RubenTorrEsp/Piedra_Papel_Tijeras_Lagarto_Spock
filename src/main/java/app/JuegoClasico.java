@@ -24,10 +24,10 @@ public class JuegoClasico extends Common{
             if (Objects.equals(seleccionJugador, SELECT_OUT)) reJugar = false;
             else {
                 checkMatch(seleccionJugador, getSelectionMachine(3), jugador);
-                reJugar();
+                playAgain();
             }
         }
-        else reJugar();
+        else playAgain();
     }
 
     // Obtener la elección del jugador

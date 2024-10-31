@@ -36,7 +36,7 @@ public class JuegoClasico extends Common{
         seleccionJugador = scanner.nextLine().toLowerCase();
         if(ELEMENTS_CLASSIC.contains(seleccionJugador)) {
             seleccionValida = true;
-            seleccionJugador = refactorizar(seleccionJugador, jugador);
+            seleccionJugador = refactor(seleccionJugador, jugador);
         }
         else System.out.println(SELECT_INVALID);
         return seleccionValida;

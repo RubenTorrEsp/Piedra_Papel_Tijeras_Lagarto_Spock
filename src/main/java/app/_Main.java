@@ -32,7 +32,7 @@ public class _Main {
                 new ControladorUsuarios();
                 break;
             case NUMBER_0:
-                salir();
+                goOut();
                 break;
             default:
                 System.out.println(SELECT_INVALID);

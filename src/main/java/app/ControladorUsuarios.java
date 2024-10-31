@@ -36,7 +36,7 @@ public class ControladorUsuarios {
                 mostrarPodium(filePlayers);
                 break;
             case NUMBER_0:
-                salir();
+                goOut();
                 break;
             default:
                 System.out.println(SELECT_INVALID);
@@ -195,7 +195,7 @@ public class ControladorUsuarios {
         System.out.println(BACK_TO_CONTROLLER);
         String eleccion = scanner.nextLine().toLowerCase();
         if (eleccion.equals(SELECT_YES)) new ControladorUsuarios();
-        else salir();
+        else goOut();
     }
 
 }

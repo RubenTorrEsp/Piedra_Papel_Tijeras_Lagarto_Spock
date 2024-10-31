@@ -23,7 +23,7 @@ public class Common {
             case NUMBER_5 -> seleccionJugador = SELECT_SPOCK;
             case NUMBER_0, SELECT_OUT -> {
                 seleccionJugador = SELECT_OUT;
-                salir(jugador);
+                goOut(jugador);
             }
         }  
         return seleccionJugador;

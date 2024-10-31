@@ -14,7 +14,7 @@ public class Common {
     static Boolean reJugar = true;
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
-    public static String refactorizar(String seleccionJugador, User jugador) {
+    public static String refactor(String seleccionJugador, User jugador) {
         switch (seleccionJugador) {
             case NUMBER_1 -> seleccionJugador = SELECT_ROCK;
             case NUMBER_2 -> seleccionJugador = SELECT_PAPER;
@@ -30,20 +30,20 @@ public class Common {
     }
 
     // Métodos salir, que cortan el programa
-    public static void salir() {
+    public static void goOut() {
         System.out.println(SELECT_EXIT);
         System.out.println(REPLAY_NO);
     }
 
     @SuppressWarnings("static-access")
-    public static void salir(User jugador) {
+    public static void goOut(User jugador) {
         System.out.println(SELECT_EXIT);
         System.out.println(REPLAY_NO);
         jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion,filePlayers,fileTemp);
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
-    public static void comprobarVictoria(String jugador, String maquina, User user) {
+    public static void checkMatch(String jugador, String maquina, User user) {
         System.out.println(SELECT_PLAYER+jugador);
         System.out.println(SELECT_MACHINE+maquina);
         if (jugador.equals(maquina)) {
@@ -57,13 +57,13 @@ public class Common {
     }
 
     // Selección de elemento por parte de la máquina
-    public static String obtenerSeleccionMaquina(Integer elementos) {
+    public static String getSelectionMachine(Integer elementos) {
         Random random = new Random();
         return ELEMENTS_EXTENDED.get(random.nextInt(elementos));
     }
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
-    public static void reJugar() {
+    public static void playAgain() {
         System.out.println(SELECT_REPLAY);
         if (scanner.nextLine().equalsIgnoreCase(SELECT_YES)) {
             System.out.println(REPLAY_YES);
@@ -75,14 +75,14 @@ public class Common {
     }
 
     // Método que reescribe el archivo de jugadores
-    public static void reescribirArchivoJugadores (File original, File temporal, String texto) {
+    public static void reWriteFilePlayers (File original, File temporal, String texto) {
         original.delete();
         temporal.renameTo(original);
         System.out.println(texto);
     }
 
     // Método que reescribe el archivo de jugadores
-    public static void reescribirArchivoJugadores (File original, File temporal) {
+    public static void reWriteFilePlayers (File original, File temporal) {
         original.delete();
         temporal.renameTo(original);
     }

@@ -23,7 +23,7 @@ public class JuegoExtendido extends Common {
         if(obtenerEntrada(jugador)){
             if (Objects.equals(seleccionJugador, SELECT_OUT)) reJugar = false;
             else {
-                comprobarVictoria(seleccionJugador, obtenerSeleccionMaquina(5), jugador);
+                checkMatch(seleccionJugador, obtenerSeleccionMaquina(5), jugador);
                 reJugar();
             }
         }

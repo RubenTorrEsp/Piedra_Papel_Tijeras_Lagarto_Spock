@@ -106,7 +106,7 @@ public class ControladorUsuarios {
             System.out.println(PLAYER_NOT_EXIST);
             new ControladorUsuarios();
         }
-        else reescribirArchivoJugadores(archivoReal, archivoTemp);
+        else reWriteFilePlayers(archivoReal, archivoTemp);
         volverAlControlador();
     }
 
@@ -136,7 +136,7 @@ public class ControladorUsuarios {
             indicarJugadorNoEnBDD(jugadorBorrado);
             if(nombreJugador.isEmpty()) new ControladorUsuarios();
         }
-        reescribirArchivoJugadores(archivoReal, archivoTemp);
+        reWriteFilePlayers(archivoReal, archivoTemp);
         volverAlControlador();
     }
 
@@ -164,7 +164,7 @@ public class ControladorUsuarios {
             indicarJugadorNoEnBDD(jugadorReiniciado);
             new ControladorUsuarios();
         }
-        reescribirArchivoJugadores(archivoReal, archivoTemp);
+        reWriteFilePlayers(archivoReal, archivoTemp);
         volverAlControlador();
     }
 

@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Optional;
 
 import static app.Common.*;
-import static app.ControladorUsuarios.crearJugador;
+import static app.PlayerControler.crearJugador;
 import static app._Main.*;
 import static resources.Texts.*;
 

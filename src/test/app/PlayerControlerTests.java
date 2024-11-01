@@ -11,7 +11,7 @@ import static app.User.*;
 import static app.PlayerControler.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ControladorUsuariosTests extends Funciones {
+public class PlayerControlerTests extends Funciones {
 
     static File archivoOriginalTests = new File(USER_TEST_FILE);
     static File archivoTemporalTests = new File(USER_TEST_TEMP);

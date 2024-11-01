@@ -8,12 +8,12 @@ import static app.User.*;
 import static app._Main.*;
 import static resources.Texts.*;
 
-public class ControladorUsuarios {
+public class PlayerControler {
 
     static String linea;
     static Scanner scanner = new Scanner(System.in);
 
-    public ControladorUsuarios() throws IOException {
+    public PlayerControler() throws IOException {
         System.out.println(OPTIONS_PLAYER);
         String eleccion = scanner.nextLine();
         switch (eleccion) {
@@ -40,7 +40,7 @@ public class ControladorUsuarios {
                 break;
             default:
                 System.out.println(SELECT_INVALID);
-                new ControladorUsuarios();
+                new PlayerControler();
                 break;
         }
     }
@@ -72,7 +72,7 @@ public class ControladorUsuarios {
             }
         } else {
             indicarJugadorYaEnBDD(jugadorNuevo);
-            if(nombreJugador.isEmpty()) new ControladorUsuarios();
+            if(nombreJugador.isEmpty()) new PlayerControler();
         }
         volverAlControlador();
     }
@@ -104,7 +104,7 @@ public class ControladorUsuarios {
         }
         if(!jugadorExistente) {
             System.out.println(PLAYER_NOT_EXIST);
-            new ControladorUsuarios();
+            new PlayerControler();
         }
         else reWriteFilePlayers(archivoReal, archivoTemp);
         volverAlControlador();
@@ -134,7 +134,7 @@ public class ControladorUsuarios {
         }
         if (!jugadorEliminado) {
             indicarJugadorNoEnBDD(jugadorBorrado);
-            if(nombreJugador.isEmpty()) new ControladorUsuarios();
+            if(nombreJugador.isEmpty()) new PlayerControler();
         }
         reWriteFilePlayers(archivoReal, archivoTemp);
         volverAlControlador();
@@ -162,7 +162,7 @@ public class ControladorUsuarios {
         }
         if(!jugadorExistente) {
             indicarJugadorNoEnBDD(jugadorReiniciado);
-            new ControladorUsuarios();
+            new PlayerControler();
         }
         reWriteFilePlayers(archivoReal, archivoTemp);
         volverAlControlador();
@@ -194,7 +194,7 @@ public class ControladorUsuarios {
     public static void volverAlControlador() throws IOException {
         System.out.println(BACK_TO_CONTROLLER);
         String eleccion = scanner.nextLine().toLowerCase();
-        if (eleccion.equals(SELECT_YES)) new ControladorUsuarios();
+        if (eleccion.equals(SELECT_YES)) new PlayerControler();
         else goOut();
     }
 

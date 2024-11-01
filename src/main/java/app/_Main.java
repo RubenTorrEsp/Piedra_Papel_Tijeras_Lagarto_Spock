@@ -29,7 +29,7 @@ public class _Main {
                 while(Common.reJugar) new JuegoClasico(player);
                 break;
             case NUMBER_9:
-                new ControladorUsuarios();
+                new PlayerControler();
                 break;
             case NUMBER_0:
                 goOut();

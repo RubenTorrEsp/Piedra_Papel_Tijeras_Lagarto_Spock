@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 import static app.User.*;
-import static app.ControladorUsuarios.*;
+import static app.PlayerControler.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ControladorUsuariosTests extends Funciones {
@@ -21,7 +21,7 @@ public class ControladorUsuariosTests extends Funciones {
     void crearJugador_JugadorNoExistente() throws IOException {
         int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests)+1;
 
-        ControladorUsuarios.crearJugador(Optional.of(PLAYER_CREATE), archivoOriginalTests);
+        PlayerControler.crearJugador(Optional.of(PLAYER_CREATE), archivoOriginalTests);
         int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
@@ -31,7 +31,7 @@ public class ControladorUsuariosTests extends Funciones {
     void crearJugador_JugadorYaEnBDD() throws IOException {
         int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests);
 
-        ControladorUsuarios.crearJugador(Optional.of(PLAYER_TEST), archivoOriginalTests);
+        PlayerControler.crearJugador(Optional.of(PLAYER_TEST), archivoOriginalTests);
         int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
@@ -56,7 +56,7 @@ public class ControladorUsuariosTests extends Funciones {
     void eliminarJugador_jugadorExistente() throws IOException {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
 
-        ControladorUsuarios.eliminarJugador(Optional.of(PLAYER_DELETE), archivoOriginalTests, archivoTemporalTests);
+        PlayerControler.eliminarJugador(Optional.of(PLAYER_DELETE), archivoOriginalTests, archivoTemporalTests);
 
         assertEquals(jugadoresIniciales - 1, contarJugadoresEnBDD(archivoOriginalTests));
     }
@@ -65,7 +65,7 @@ public class ControladorUsuariosTests extends Funciones {
     void eliminarJugador_jugadorNoExistente() throws IOException {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
 
-        ControladorUsuarios.eliminarJugador(Optional.of(PLAYER_DELETE_FALSE), archivoOriginalTests, archivoTemporalTests);
+        PlayerControler.eliminarJugador(Optional.of(PLAYER_DELETE_FALSE), archivoOriginalTests, archivoTemporalTests);
         int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);

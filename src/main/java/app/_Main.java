@@ -26,7 +26,7 @@ public class _Main {
                 break;
             case NUMBER_2:
                 player = new User(activatePlayer(), filePlayers);
-                while(Common.reJugar) new JuegoClasico(player);
+                while(Common.reJugar) new GameClassic(player);
                 break;
             case NUMBER_9:
                 new PlayerControler();

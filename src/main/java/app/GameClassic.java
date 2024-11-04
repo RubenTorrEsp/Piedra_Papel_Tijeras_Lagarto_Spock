@@ -10,7 +10,7 @@ public class GameClassic extends Common {
 
     // Creacion del elemento scanner y strings en los que se guarda el texto captado
     Scanner scanner = new Scanner(System.in);
-    String seleccionJugador;
+    String selectionPlayer;
 
     // Constructor del programa y ciclo de vida
     public GameClassic(User jugador) {
@@ -21,9 +21,9 @@ public class GameClassic extends Common {
     public void jugarDeNuevo(User jugador) {
         System.out.println(OPTIONS_CLASSIC);
         if(obtenerEntrada(jugador)){
-            if (Objects.equals(seleccionJugador, SELECT_OUT)) reJugar = false;
+            if (Objects.equals(selectionPlayer, SELECT_OUT)) reJugar = false;
             else {
-                checkMatch(seleccionJugador, getSelectionMachine(3), jugador);
+                checkMatch(selectionPlayer, getSelectionMachine(3), jugador);
                 playAgain();
             }
         }
@@ -33,10 +33,10 @@ public class GameClassic extends Common {
     // Obtener la elección del jugador
     public boolean obtenerEntrada(User jugador) {
         boolean seleccionValida = false;
-        seleccionJugador = scanner.nextLine().toLowerCase();
-        if(ELEMENTS_CLASSIC.contains(seleccionJugador)) {
+        selectionPlayer = scanner.nextLine().toLowerCase();
+        if(ELEMENTS_CLASSIC.contains(selectionPlayer)) {
             seleccionValida = true;
-            seleccionJugador = refactor(seleccionJugador, jugador);
+            selectionPlayer = refactor(selectionPlayer, jugador);
         }
         else System.out.println(SELECT_INVALID);
         return seleccionValida;

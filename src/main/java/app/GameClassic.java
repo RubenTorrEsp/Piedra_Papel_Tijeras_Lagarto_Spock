@@ -13,8 +13,8 @@ public class GameClassic extends Common {
     String selectionPlayer;
 
     // Constructor del programa y ciclo de vida
-    public GameClassic(User jugador) {
-        jugarDeNuevo(jugador);
+    public GameClassic(User player) {
+        jugarDeNuevo(player);
     }
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria

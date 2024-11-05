@@ -18,12 +18,12 @@ public class GameClassic extends Common {
     }
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
-    public void playClassic(User jugador) {
+    public void playClassic(User player) {
         System.out.println(OPTIONS_CLASSIC);
-        if(getEntry(jugador)){
+        if(getEntry(player)){
             if (Objects.equals(selectionPlayer, SELECT_OUT)) reJugar = false;
             else {
-                checkMatch(selectionPlayer, getSelectionMachine(3), jugador);
+                checkMatch(selectionPlayer, getSelectionMachine(3), player);
                 playAgain();
             }
         }

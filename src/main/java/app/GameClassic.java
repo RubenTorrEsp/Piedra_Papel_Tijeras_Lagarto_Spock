@@ -14,11 +14,11 @@ public class GameClassic extends Common {
 
     // Constructor del programa y ciclo de vida
     public GameClassic(User player) {
-        play(player);
+        playClassic(player);
     }
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
-    public void play(User jugador) {
+    public void playClassic(User jugador) {
         System.out.println(OPTIONS_CLASSIC);
         if(getEntry(jugador)){
             if (Objects.equals(selectionPlayer, SELECT_OUT)) reJugar = false;
@@ -31,12 +31,12 @@ public class GameClassic extends Common {
     }
 
     // Obtener la elección del jugador
-    public boolean getEntry(User jugador) {
+    public boolean getEntry(User player) {
         boolean selectValid = false;
         selectionPlayer = scanner.nextLine().toLowerCase();
         if(ELEMENTS_CLASSIC.contains(selectionPlayer)) {
             selectValid = true;
-            selectionPlayer = refactor(selectionPlayer, jugador);
+            selectionPlayer = refactor(selectionPlayer, player);
         }
         else System.out.println(SELECT_INVALID);
         return selectValid;

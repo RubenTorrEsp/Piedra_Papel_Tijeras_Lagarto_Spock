@@ -20,7 +20,7 @@ public class GameClassic extends Common {
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
     public void play(User jugador) {
         System.out.println(OPTIONS_CLASSIC);
-        if(obtenerEntrada(jugador)){
+        if(getEntry(jugador)){
             if (Objects.equals(selectionPlayer, SELECT_OUT)) reJugar = false;
             else {
                 checkMatch(selectionPlayer, getSelectionMachine(3), jugador);
@@ -31,7 +31,7 @@ public class GameClassic extends Common {
     }
 
     // Obtener la elección del jugador
-    public boolean obtenerEntrada(User jugador) {
+    public boolean getEntry(User jugador) {
         boolean seleccionValida = false;
         selectionPlayer = scanner.nextLine().toLowerCase();
         if(ELEMENTS_CLASSIC.contains(selectionPlayer)) {

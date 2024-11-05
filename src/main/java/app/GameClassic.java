@@ -21,7 +21,7 @@ public class GameClassic extends Common {
     public void playClassic(User player) {
         System.out.println(OPTIONS_CLASSIC);
         if(getEntry(player)){
-            if (Objects.equals(selectionPlayer, SELECT_OUT)) reJugar = false;
+            if (Objects.equals(selectionPlayer, SELECT_OUT)) rePlay = false;
             else {
                 checkMatch(selectionPlayer, getSelectionMachine(3), player);
                 playAgain();

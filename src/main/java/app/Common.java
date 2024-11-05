@@ -11,7 +11,7 @@ import static resources.Texts.*;
 public class Common {
 
     static Scanner scanner = new Scanner(System.in);
-    static Boolean reJugar = true;
+    static Boolean rePlay = true;
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
     public static String refactor(String seleccionJugador, User jugador) {
@@ -68,7 +68,7 @@ public class Common {
         if (scanner.nextLine().equalsIgnoreCase(SELECT_YES)) {
             System.out.println(REPLAY_YES);
         } else {
-            reJugar = false;
+            rePlay = false;
             System.out.println(REPLAY_NO);
             User.reescribirPuntuacion(User.nombre, User.puntuacion,filePlayers,fileTemp);
         }

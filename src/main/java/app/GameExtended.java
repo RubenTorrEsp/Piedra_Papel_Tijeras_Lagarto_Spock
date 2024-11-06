@@ -6,14 +6,14 @@ import java.util.Scanner;
 import static resources.Listas.*;
 import static resources.Texts.*;
 
-public class JuegoExtendido extends Common {
+public class GameExtended extends Common {
 
     // Creacion del elemento scanner y strings en los que se guarda el texto captado
     Scanner scanner = new Scanner(System.in);
     String seleccionJugador;
 
     // Constructor del programa y ciclo de vida
-    public JuegoExtendido(User jugador) {
+    public GameExtended(User jugador) {
         jugarDeNuevo(jugador);
     }
 

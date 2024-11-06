@@ -1,12 +1,11 @@
 Programa completado, futuras implementaciones
 
--Refactorizacion (En proceso)
+-Traduccion del codigo (En proceso)
 
 -BDD para usuarios
 -Sistema de apuestas
 -Interfaz
 -Idioma
--Traduccion del codigo
 -Documentacion
 -Añadir nuevos juegos
     -Cara o cruz

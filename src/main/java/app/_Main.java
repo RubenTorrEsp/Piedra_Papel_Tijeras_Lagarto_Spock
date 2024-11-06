@@ -22,7 +22,7 @@ public class _Main {
         switch (select) {
             case NUMBER_1:
                 player = new User(activatePlayer(), filePlayers);
-                while(Common.reJugar) new JuegoExtendido(player);
+                while(Common.reJugar) new GameExtended(player);
                 break;
             case NUMBER_2:
                 player = new User(activatePlayer(), filePlayers);

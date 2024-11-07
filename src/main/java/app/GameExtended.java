@@ -18,12 +18,12 @@ public class GameExtended extends Common {
     }
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
-    public void jugarDeNuevo(User jugador) {
+    public void jugarDeNuevo(User player) {
         System.out.println(OPTIONS_EXTENDED);
-        if(obtenerEntrada(jugador)){
+        if(obtenerEntrada(player)){
             if (Objects.equals(selectionPlayer, SELECT_OUT)) rePlay = false;
             else {
-                checkMatch(selectionPlayer, getSelectionMachine(5), jugador);
+                checkMatch(selectionPlayer, getSelectionMachine(5), player);
                 playAgain();
             }
         }

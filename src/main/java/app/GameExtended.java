@@ -13,8 +13,8 @@ public class GameExtended extends Common {
     String selectionPlayer;
 
     // Constructor del programa y ciclo de vida
-    public GameExtended(User jugador) {
-        jugarDeNuevo(jugador);
+    public GameExtended(User player) {
+        jugarDeNuevo(player);
     }
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria

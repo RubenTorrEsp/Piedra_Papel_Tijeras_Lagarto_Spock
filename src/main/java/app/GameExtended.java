@@ -32,16 +32,16 @@ public class GameExtended extends Common {
 
     // Obtener la elección del jugador
     public boolean getEntry(User player) {
-        boolean seleccionValida = false;
+        boolean selectValid = false;
         selectionPlayer = scanner.nextLine().toLowerCase();
         if(ELEMENTS_EXTENDED.contains(selectionPlayer)) {
-            seleccionValida = true;
+            selectValid = true;
             selectionPlayer = refactor(selectionPlayer, player);
         }
         else {
             System.out.println(SELECT_INVALID);
         }
-        return seleccionValida;
+        return selectValid;
     }
 
 }

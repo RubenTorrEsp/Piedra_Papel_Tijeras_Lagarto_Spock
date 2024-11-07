@@ -20,7 +20,7 @@ public class GameExtended extends Common {
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
     public void jugarDeNuevo(User player) {
         System.out.println(OPTIONS_EXTENDED);
-        if(obtenerEntrada(player)){
+        if(getEntry(player)){
             if (Objects.equals(selectionPlayer, SELECT_OUT)) rePlay = false;
             else {
                 checkMatch(selectionPlayer, getSelectionMachine(5), player);
@@ -31,7 +31,7 @@ public class GameExtended extends Common {
     }
 
     // Obtener la elección del jugador
-    public boolean obtenerEntrada(User jugador) {
+    public boolean getEntry(User jugador) {
         boolean seleccionValida = false;
         selectionPlayer = scanner.nextLine().toLowerCase();
         if(ELEMENTS_EXTENDED.contains(selectionPlayer)) {

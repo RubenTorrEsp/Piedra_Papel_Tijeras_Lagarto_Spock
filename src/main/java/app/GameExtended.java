@@ -21,7 +21,7 @@ public class GameExtended extends Common {
     public void jugarDeNuevo(User jugador) {
         System.out.println(OPTIONS_EXTENDED);
         if(obtenerEntrada(jugador)){
-            if (Objects.equals(seleccionJugador, SELECT_OUT)) reJugar = false;
+            if (Objects.equals(seleccionJugador, SELECT_OUT)) rePlay = false;
             else {
                 checkMatch(seleccionJugador, getSelectionMachine(5), jugador);
                 playAgain();

@@ -31,12 +31,12 @@ public class GameExtended extends Common {
     }
 
     // Obtener la elección del jugador
-    public boolean getEntry(User jugador) {
+    public boolean getEntry(User player) {
         boolean seleccionValida = false;
         selectionPlayer = scanner.nextLine().toLowerCase();
         if(ELEMENTS_EXTENDED.contains(selectionPlayer)) {
             seleccionValida = true;
-            selectionPlayer = refactor(selectionPlayer, jugador);
+            selectionPlayer = refactor(selectionPlayer, player);
         }
         else {
             System.out.println(SELECT_INVALID);

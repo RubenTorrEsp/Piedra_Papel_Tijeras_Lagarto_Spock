@@ -15,10 +15,10 @@ public class PlayerControler {
 
     public PlayerControler() throws IOException {
         System.out.println(OPTIONS_PLAYER);
-        String eleccion = scanner.nextLine();
-        switch (eleccion) {
+        String election = scanner.nextLine();
+        switch (election) {
             case NUMBER_1:
-                mostrarJugadores();
+                showPlayers();
                 break;
             case NUMBER_2:
                 crearJugador(EMPTY_NAME, filePlayers);
@@ -46,7 +46,7 @@ public class PlayerControler {
     }
 
     // Método que muestra una lista de todos los jugadores disponibles
-    public void mostrarJugadores() throws IOException {
+    public void showPlayers() throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(filePlayers))) {
             System.out.println(SHOW_PLAYERS);
             while ((linea = br.readLine()) != null) {

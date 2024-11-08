@@ -21,7 +21,7 @@ public class PlayerControler {
                 showPlayers();
                 break;
             case NUMBER_2:
-                crearJugador(EMPTY_NAME, filePlayers);
+                createPlayer(EMPTY_NAME, filePlayers);
                 break;
             case NUMBER_3:
                 modificarJugador(EMPTY_NAME, EMPTY_NAME, filePlayers, fileTemp);
@@ -60,7 +60,7 @@ public class PlayerControler {
     }
 
     // Método que crea un jugador y lo incorpora a la lista
-    public static void crearJugador(Optional<String> nombreJugador, File archivo) throws IOException {
+    public static void createPlayer(Optional<String> nombreJugador, File archivo) throws IOException {
         System.out.println(PLAYER_CREATE);
         String jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = usuarioExiste(jugadorNuevo, archivo);

@@ -33,7 +33,7 @@ public class PlayerControler {
                 reStartPlayer(EMPTY_NAME, filePlayers, fileTemp);
                 break;
             case NUMBER_6:
-                mostrarPodium(filePlayers);
+                showPodium(filePlayers);
                 break;
             case NUMBER_0:
                 goOut();

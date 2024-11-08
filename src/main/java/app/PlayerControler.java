@@ -24,7 +24,7 @@ public class PlayerControler {
                 createPlayer(EMPTY_NAME, filePlayers);
                 break;
             case NUMBER_3:
-                modificarJugador(EMPTY_NAME, EMPTY_NAME, filePlayers, fileTemp);
+                modifyPlayer(EMPTY_NAME, EMPTY_NAME, filePlayers, fileTemp);
                 break;
             case NUMBER_4:
                 eliminarJugador(EMPTY_NAME, filePlayers, fileTemp);
@@ -78,7 +78,7 @@ public class PlayerControler {
     }
 
     // Método que modifica los valores de un usuario
-    public static void modificarJugador(
+    public static void modifyPlayer(
             Optional<String> nombreJugador,
             Optional<String> nuevoNombre,
             File archivoReal,

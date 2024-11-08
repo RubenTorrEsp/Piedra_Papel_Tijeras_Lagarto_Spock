@@ -168,7 +168,7 @@ public class PlayerControler {
         volverAlControlador();
     }
 
-    public static void  mostrarPodium(File archivoReal) throws IOException {
+    public static void showPodium(File archivoReal) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal)))  {
             List<List<Object>> jugadores = new ArrayList<>();
             while ((linea = br.readLine()) != null) {
@@ -187,7 +187,7 @@ public class PlayerControler {
                 int puntuacion2 = Integer.parseInt((String) o2.get(1));
                 return Integer.compare(puntuacion2, puntuacion1);
             });
-            showPodium(jugadores);
+            podium(jugadores);
         }
     }
 

@@ -27,10 +27,10 @@ public class PlayerControler {
                 modifyPlayer(EMPTY_NAME, EMPTY_NAME, filePlayers, fileTemp);
                 break;
             case NUMBER_4:
-                eliminarJugador(EMPTY_NAME, filePlayers, fileTemp);
+                deletePlayer(EMPTY_NAME, filePlayers, fileTemp);
                 break;
             case NUMBER_5:
-                reiniciarJugador(EMPTY_NAME, filePlayers, fileTemp);
+                reStartPlayer(EMPTY_NAME, filePlayers, fileTemp);
                 break;
             case NUMBER_6:
                 mostrarPodium(filePlayers);
@@ -111,7 +111,7 @@ public class PlayerControler {
     }
 
     // Método que elimina un jugador de la lista
-    public static void eliminarJugador(
+    public static void deletePlayer(
             Optional<String> nombreJugador,
             File archivoReal,
             File archivoTemp) throws IOException {
@@ -141,7 +141,7 @@ public class PlayerControler {
     }
 
     // Metodo que reinicia la puntuacion de un jugador
-    public static void reiniciarJugador(Optional<String> nombreJugador, File archivoReal, File archivoTemp) throws IOException {
+    public static void reStartPlayer(Optional<String> nombreJugador, File archivoReal, File archivoTemp) throws IOException {
         System.out.println(PLAYER_RESTART);
         String jugadorReiniciado = nombreJugador.orElseGet(() -> scanner.nextLine());
         boolean jugadorExistente = false;

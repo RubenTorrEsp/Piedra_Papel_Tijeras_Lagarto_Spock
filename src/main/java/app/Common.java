@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import static app._Main.*;
-import static resources.Listas.*;
+import static resources.Lists.*;
 import static resources.Texts.*;
 
 public class Common {

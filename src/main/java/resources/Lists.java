@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 import static java.util.List.*;
 
-public class Listas {
+public class Lists {
 
     // Lista de elementos aceptados en el juego extendido
     public static final List<String> ELEMENTS_EXTENDED = of(

@@ -3,7 +3,7 @@ package app;
 import java.util.Objects;
 import java.util.Scanner;
 
-import static resources.Listas.*;
+import static resources.Lists.*;
 import static resources.Texts.*;
 
 public class GameClassic extends Common {

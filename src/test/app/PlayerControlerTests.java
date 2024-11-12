@@ -56,7 +56,7 @@ public class PlayerControlerTests extends Functions {
     void eliminarJugador_jugadorExistente() throws IOException {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
 
-        PlayerControler.eliminarJugador(Optional.of(PLAYER_DELETE), archivoOriginalTests, archivoTemporalTests);
+        PlayerControler.deletePlayer(Optional.of(PLAYER_DELETE), archivoOriginalTests, archivoTemporalTests);
 
         assertEquals(jugadoresIniciales - 1, contarJugadoresEnBDD(archivoOriginalTests));
     }
@@ -65,7 +65,7 @@ public class PlayerControlerTests extends Functions {
     void eliminarJugador_jugadorNoExistente() throws IOException {
         int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
 
-        PlayerControler.eliminarJugador(Optional.of(PLAYER_DELETE_FALSE), archivoOriginalTests, archivoTemporalTests);
+        PlayerControler.deletePlayer(Optional.of(PLAYER_DELETE_FALSE), archivoOriginalTests, archivoTemporalTests);
         int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
 
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);

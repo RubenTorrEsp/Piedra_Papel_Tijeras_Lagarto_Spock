@@ -8,7 +8,7 @@ import java.nio.file.*;
 import static app.User.linea;
 import static resources.Texts.SEPARATOR;
 
-public class Funciones extends Texts {
+public class Functions extends Texts {
 
     @BeforeEach
     void reiniciarBDD() throws IOException {

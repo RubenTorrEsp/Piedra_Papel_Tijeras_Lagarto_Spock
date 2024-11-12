@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
 
+import static app.PlayerControler.modifyPlayer;
 import static app.User.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -41,7 +42,7 @@ public class PlayerControlerTests extends Functions {
         assertTrue(usuarioExiste(PLAYER_MODIFY, archivoOriginalTests));
         assertFalse(usuarioExiste(PLAYER_NEW_NAME, archivoOriginalTests));
 
-        modificarJugador(
+        modifyPlayer(
                 Optional.of(PLAYER_MODIFY),
                 Optional.of(PLAYER_NEW_NAME),
                 archivoOriginalTests,

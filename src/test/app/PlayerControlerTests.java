@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
 
-import static app.PlayerControler.modifyPlayer;
+import static app.PlayerControler.*;
 import static app.User.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -75,7 +75,7 @@ public class PlayerControlerTests extends Functions {
     void reiniciarJugador_jugadorExistente() throws IOException {
         assertEquals(SCORE_NEW,comprobarPuntuacion(PLAYER_RESTART, archivoOriginalTests));
 
-        reiniciarJugador(Optional.of(PLAYER_RESTART), archivoOriginalTests, archivoTemporalTests);
+        reStartPlayer(Optional.of(PLAYER_RESTART), archivoOriginalTests, archivoTemporalTests);
 
         assertEquals(SCORE_INIT ,comprobarPuntuacion(PLAYER_RESTART, archivoOriginalTests));
     }

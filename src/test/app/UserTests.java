@@ -1,7 +1,7 @@
 package app;
 
 import org.junit.jupiter.api.Test;
-import tools.Funciones;
+import tools.Functions;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import static app.User.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserTests extends Funciones {
+class UserTests extends Functions {
 
     static File testFile = new File(USER_TEST_FILE);
     static File tempFile = new File(USER_TEST_TEMP);

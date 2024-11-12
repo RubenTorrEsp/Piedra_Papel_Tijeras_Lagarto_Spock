@@ -1,17 +1,16 @@
 package app;
 
 import org.junit.jupiter.api.Test;
-import tools.Funciones;
+import tools.Functions;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
 
 import static app.User.*;
-import static app.PlayerControler.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PlayerControlerTests extends Funciones {
+public class PlayerControlerTests extends Functions {
 
     static File archivoOriginalTests = new File(USER_TEST_FILE);
     static File archivoTemporalTests = new File(USER_TEST_TEMP);

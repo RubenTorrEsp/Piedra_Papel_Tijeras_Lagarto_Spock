@@ -19,20 +19,20 @@ public class PlayerControlerTests extends Functions {
 
     @Test
     void crearJugador_JugadorNoExistente() throws IOException {
-        int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests)+1;
+        int jugadoresEsperados = countPlayersInDB(archivoOriginalTests)+1;
 
         PlayerControler.createPlayer(Optional.of(PLAYER_CREATE), archivoOriginalTests);
-        int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
+        int jugadoresTrasCreacion = countPlayersInDB(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
     }
 
     @Test
     void crearJugador_JugadorYaEnBDD() throws IOException {
-        int jugadoresEsperados = contarJugadoresEnBDD(archivoOriginalTests);
+        int jugadoresEsperados = countPlayersInDB(archivoOriginalTests);
 
         PlayerControler.createPlayer(Optional.of(PLAYER_TEST), archivoOriginalTests);
-        int jugadoresTrasCreacion = contarJugadoresEnBDD(archivoOriginalTests);
+        int jugadoresTrasCreacion = countPlayersInDB(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
     }
@@ -54,19 +54,19 @@ public class PlayerControlerTests extends Functions {
 
     @Test
     void eliminarJugador_jugadorExistente() throws IOException {
-        int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
+        int jugadoresIniciales = countPlayersInDB(archivoOriginalTests);
 
         PlayerControler.deletePlayer(Optional.of(PLAYER_DELETE), archivoOriginalTests, archivoTemporalTests);
 
-        assertEquals(jugadoresIniciales - 1, contarJugadoresEnBDD(archivoOriginalTests));
+        assertEquals(jugadoresIniciales - 1, countPlayersInDB(archivoOriginalTests));
     }
 
     @Test
     void eliminarJugador_jugadorNoExistente() throws IOException {
-        int jugadoresIniciales = contarJugadoresEnBDD(archivoOriginalTests);
+        int jugadoresIniciales = countPlayersInDB(archivoOriginalTests);
 
         PlayerControler.deletePlayer(Optional.of(PLAYER_DELETE_FALSE), archivoOriginalTests, archivoTemporalTests);
-        int jugadoresTrasEliminacion = contarJugadoresEnBDD(archivoOriginalTests);
+        int jugadoresTrasEliminacion = countPlayersInDB(archivoOriginalTests);
 
         assertEquals(jugadoresIniciales, jugadoresTrasEliminacion);
     }

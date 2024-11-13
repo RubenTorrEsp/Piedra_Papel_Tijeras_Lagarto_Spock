@@ -23,9 +23,9 @@ public class Functions extends Texts {
         int realScore = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(SEPARATOR);
-                if (partes.length == 2 && partes[0].equals(player)) {
-                    realScore = Integer.parseInt(partes[1].trim());
+                String[] parts = linea.split(SEPARATOR);
+                if (parts.length == 2 && parts[0].equals(player)) {
+                    realScore = Integer.parseInt(parts[1].trim());
                     break;
                 }
             }
@@ -33,11 +33,10 @@ public class Functions extends Texts {
         return realScore;
     }
 
-    public static int contarJugadoresEnBDD(File archivo) {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
+    public static int countPlayersInDB(File file) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             return (int) br.lines().filter(linea -> linea.length() > 1).count();
         } catch (IOException e) {
-            e.printStackTrace();
             return 0;
         }
     }

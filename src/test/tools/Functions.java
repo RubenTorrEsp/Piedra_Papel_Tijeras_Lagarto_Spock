@@ -11,7 +11,7 @@ import static resources.Texts.SEPARATOR;
 public class Functions extends Texts {
 
     @BeforeEach
-    void reiniciarBDD() throws IOException {
+    void restartDB() throws IOException {
         Path sourcePath = Paths.get(USER_TEST_TEMPLATE);
         Path destinationPath = Paths.get(USER_TEST_FILE);
 

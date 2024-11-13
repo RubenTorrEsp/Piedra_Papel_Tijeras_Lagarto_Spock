@@ -19,7 +19,7 @@ public class Functions extends Texts {
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
     }
 
-    public static int comprobarPuntuacion(String jugador, File file) throws IOException {
+    public static int checkScore(String jugador, File file) throws IOException {
         int puntuacionReal = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((linea = br.readLine()) != null) {

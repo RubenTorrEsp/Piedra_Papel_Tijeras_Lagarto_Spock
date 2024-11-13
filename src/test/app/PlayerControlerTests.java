@@ -73,11 +73,11 @@ public class PlayerControlerTests extends Functions {
 
     @Test
     void reiniciarJugador_jugadorExistente() throws IOException {
-        assertEquals(SCORE_NEW,comprobarPuntuacion(PLAYER_RESTART, archivoOriginalTests));
+        assertEquals(SCORE_NEW, checkScore(PLAYER_RESTART, archivoOriginalTests));
 
         reStartPlayer(Optional.of(PLAYER_RESTART), archivoOriginalTests, archivoTemporalTests);
 
-        assertEquals(SCORE_INIT ,comprobarPuntuacion(PLAYER_RESTART, archivoOriginalTests));
+        assertEquals(SCORE_INIT , checkScore(PLAYER_RESTART, archivoOriginalTests));
     }
 
 }

@@ -28,16 +28,16 @@ class UserTests extends Functions {
 
     @Test
     void ReescribirPuntuacion_Test() throws IOException {
-        assertEquals(SCORE_INIT, comprobarPuntuacion(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);
+        assertEquals(SCORE_INIT, checkScore(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);
 
         reescribirPuntuacion(PLAYER_REWRITE_SCORE, SCORE_NEW, testFile, tempFile);
-        assertEquals(SCORE_NEW, comprobarPuntuacion(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);
+        assertEquals(SCORE_NEW, checkScore(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);
     }
 
     @Test
     void ActualizarPuntuacion_Victoria() throws IOException {
         User jugadorTest = new User(PLAYER_EXISTS, testFile);
-        int puntuacionReal = comprobarPuntuacion(PLAYER_EXISTS, testFile);
+        int puntuacionReal = checkScore(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
         jugadorTest.actualizarPuntuacion(VICTORY);
@@ -49,7 +49,7 @@ class UserTests extends Functions {
     @Test
     void ActualizarPuntuacion_Derrota() throws IOException {
         User jugadorTest = new User(PLAYER_EXISTS, testFile);
-        int puntuacionReal = comprobarPuntuacion(PLAYER_EXISTS, testFile);
+        int puntuacionReal = checkScore(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
         jugadorTest.actualizarPuntuacion(DEFEAT);

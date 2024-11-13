@@ -19,18 +19,18 @@ public class Functions extends Texts {
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
     }
 
-    public static int checkScore(String jugador, File file) throws IOException {
-        int puntuacionReal = 0;
+    public static int checkScore(String player, File file) throws IOException {
+        int realScore = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(SEPARATOR);
-                if (partes.length == 2 && partes[0].equals(jugador)) {
-                    puntuacionReal = Integer.parseInt(partes[1].trim());
+                if (partes.length == 2 && partes[0].equals(player)) {
+                    realScore = Integer.parseInt(partes[1].trim());
                     break;
                 }
             }
         }
-        return puntuacionReal;
+        return realScore;
     }
 
     public static int contarJugadoresEnBDD(File archivo) {

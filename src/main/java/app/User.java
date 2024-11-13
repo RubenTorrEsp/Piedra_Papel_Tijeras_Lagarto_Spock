@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Optional;
 
 import static app.Common.*;
-import static app.PlayerControler.crearJugador;
+import static app.PlayerControler.createPlayer;
 import static app._Main.*;
 import static resources.Texts.*;
 
@@ -17,7 +17,7 @@ public class User {
     // Constructor
     public User(String nombreUsuario, File archivo) throws IOException {
         if(usuarioExiste(nombreUsuario, archivo)) establecerUsuario(nombreUsuario, archivo);
-        else crearJugador(Optional.ofNullable(nombreUsuario), filePlayers);
+        else createPlayer(Optional.ofNullable(nombreUsuario), filePlayers);
     }
     
     // Método para establecer el usuario

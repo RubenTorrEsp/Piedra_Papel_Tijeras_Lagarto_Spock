@@ -11,7 +11,7 @@ import static resources.Texts.*;
 public class User {
    
     public static String name;
-    public static Integer puntuacion;
+    public static Integer score;
     public static String linea;
 
     // Constructor
@@ -27,7 +27,7 @@ public class User {
                 String[] partes = linea.split(SEPARATOR);
                 if (partes[0].equals(nombreUsuario)) {
                     name = partes[0];
-                    puntuacion = Integer.parseInt(partes[1]);
+                    score = Integer.parseInt(partes[1]);
                 }
             }
         }
@@ -48,10 +48,10 @@ public class User {
 
     // Método que actualiza la puntuación del jugador
     public void actualizarPuntuacion(Boolean victoria) {
-        if (victoria) puntuacion++;
-        else puntuacion--;
-        System.out.println(SCORE_NEW + puntuacion);
-        if (puntuacion == 0) eliminarJugador(name, filePlayers, fileTemp);
+        if (victoria) score++;
+        else score--;
+        System.out.println(SCORE_NEW + score);
+        if (score == 0) eliminarJugador(name, filePlayers, fileTemp);
     }
 
     // Método que actualiza la puntuación del jugador en el archivo

@@ -39,7 +39,7 @@ public class Common {
     public static void goOut(User jugador) {
         System.out.println(SELECT_EXIT);
         System.out.println(REPLAY_NO);
-        jugador.reescribirPuntuacion(jugador.nombre,jugador.puntuacion,filePlayers,fileTemp);
+        jugador.reescribirPuntuacion(jugador.name,jugador.puntuacion,filePlayers,fileTemp);
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
@@ -70,7 +70,7 @@ public class Common {
         } else {
             rePlay = false;
             System.out.println(REPLAY_NO);
-            User.reescribirPuntuacion(User.nombre, User.puntuacion,filePlayers,fileTemp);
+            User.reescribirPuntuacion(User.name, User.puntuacion,filePlayers,fileTemp);
         }
     }
 

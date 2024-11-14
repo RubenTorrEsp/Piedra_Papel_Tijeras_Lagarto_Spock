@@ -10,7 +10,7 @@ import static resources.Texts.*;
 
 public class User {
    
-    public static String nombre;
+    public static String name;
     public static Integer puntuacion;
     public static String linea;
 
@@ -26,7 +26,7 @@ public class User {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(SEPARATOR);
                 if (partes[0].equals(nombreUsuario)) {
-                    nombre = partes[0];
+                    name = partes[0];
                     puntuacion = Integer.parseInt(partes[1]);
                 }
             }
@@ -51,7 +51,7 @@ public class User {
         if (victoria) puntuacion++;
         else puntuacion--;
         System.out.println(SCORE_NEW + puntuacion);
-        if (puntuacion == 0) eliminarJugador(nombre, filePlayers, fileTemp);
+        if (puntuacion == 0) eliminarJugador(name, filePlayers, fileTemp);
     }
 
     // Método que actualiza la puntuación del jugador en el archivo

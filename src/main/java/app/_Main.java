@@ -46,7 +46,7 @@ public class _Main {
         System.out.println(CHECK_PLAYER);
         String unformatedAnswer = formatoJugador(scanner.nextLine());
         new User(formatoJugador(unformatedAnswer), filePlayers);
-        definicionUser(User.nombre, User.puntuacion);
+        definicionUser(User.name, User.puntuacion);
         return formatoJugador(unformatedAnswer);
     }
 

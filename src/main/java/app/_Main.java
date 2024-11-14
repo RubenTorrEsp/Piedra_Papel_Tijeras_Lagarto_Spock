@@ -22,11 +22,11 @@ public class _Main {
         switch (select) {
             case NUMBER_1:
                 player = new User(activatePlayer(), filePlayers);
-                while(Common.reJugar) new GameExtended(player);
+                while(Common.rePlay) new GameExtended(player);
                 break;
             case NUMBER_2:
                 player = new User(activatePlayer(), filePlayers);
-                while(Common.reJugar) new GameClassic(player);
+                while(Common.rePlay) new GameClassic(player);
                 break;
             case NUMBER_9:
                 new PlayerControler();

@@ -12,7 +12,7 @@ public class User {
    
     public static String name;
     public static Integer score;
-    public static String linea;
+    public static String line;
 
     // Constructor
     public User(String nombreUsuario, File archivo) throws IOException {
@@ -23,8 +23,8 @@ public class User {
     // Método para establecer el usuario
     public void establecerUsuario(String nombreUsuario, File archivo) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(SEPARATOR);
+            while ((line = br.readLine()) != null) {
+                String[] partes = line.split(SEPARATOR);
                 if (partes[0].equals(nombreUsuario)) {
                     name = partes[0];
                     score = Integer.parseInt(partes[1]);
@@ -37,8 +37,8 @@ public class User {
     public static boolean usuarioExiste(String nombreUsuario, File archivo) {
         boolean usuarioExiste = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
-            while ((linea = br.readLine()) != null) {
-                if(linea.contains(nombreUsuario)) usuarioExiste = true;
+            while ((line = br.readLine()) != null) {
+                if(line.contains(nombreUsuario)) usuarioExiste = true;
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -62,11 +62,11 @@ public class User {
             File archivoTemporal) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(SEPARATOR);
-                if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = nombreUsuario+SEPARATOR+nuevaPuntuacion;
-                    bw.write(linea);
+            while ((line = br.readLine()) != null) {
+                String[] partes = line.split(SEPARATOR);
+                if (!line.trim().isEmpty()) {
+                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) line = nombreUsuario+SEPARATOR+nuevaPuntuacion;
+                    bw.write(line);
                     bw.newLine();
                 }
             }
@@ -83,11 +83,11 @@ public class User {
             File archivoTemporal) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(SEPARATOR);
-                if (!linea.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) linea = EMPTY_ROW;
-                    bw.write(linea);
+            while ((line = br.readLine()) != null) {
+                String[] partes = line.split(SEPARATOR);
+                if (!line.trim().isEmpty()) {
+                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) line = EMPTY_ROW;
+                    bw.write(line);
                     bw.newLine();
                 }
             }

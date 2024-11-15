@@ -41,7 +41,7 @@ class UserTests extends Functions {
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
         jugadorTest.actualizarPuntuacion(VICTORY);
-        puntuacionReal = puntuacion;
+        puntuacionReal = score;
 
         assertEquals(SCORE_VICTORY,puntuacionReal);
     }
@@ -53,7 +53,7 @@ class UserTests extends Functions {
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
         jugadorTest.actualizarPuntuacion(DEFEAT);
-        puntuacionReal = puntuacion;
+        puntuacionReal = score;
 
         assertEquals(SCORE_DEFEAT,puntuacionReal);
     }

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import java.io.*;
 import java.nio.file.*;
 
-import static app.User.linea;
+import static app.User.line;
 import static resources.Texts.SEPARATOR;
 
 public class Functions extends Texts {
@@ -22,8 +22,8 @@ public class Functions extends Texts {
     public static int checkScore(String player, File file) throws IOException {
         int realScore = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            while ((linea = br.readLine()) != null) {
-                String[] parts = linea.split(SEPARATOR);
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(SEPARATOR);
                 if (parts.length == 2 && parts[0].equals(player)) {
                     realScore = Integer.parseInt(parts[1].trim());
                     break;

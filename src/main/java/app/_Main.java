@@ -54,9 +54,9 @@ public class _Main {
     public static String formatPlayer(String jugador) {
         int indexStart = 0;
         int indexRest = 1;
-        String inicial = jugador.substring(indexStart, indexRest).toUpperCase();
-        String resto = jugador.substring(indexRest).toLowerCase();
-        return inicial + resto;
+        String begin = jugador.substring(indexStart, indexRest).toUpperCase();
+        String rest = jugador.substring(indexRest).toLowerCase();
+        return begin + rest;
     }
     
 }

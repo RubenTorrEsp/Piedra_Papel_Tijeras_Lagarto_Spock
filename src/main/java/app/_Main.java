@@ -44,14 +44,14 @@ public class _Main {
     // Método que establece el jugador
     public static String activatePlayer() throws IOException {
         System.out.println(CHECK_PLAYER);
-        String unformatedAnswer = formatoJugador(scanner.nextLine());
-        new User(formatoJugador(unformatedAnswer), filePlayers);
+        String unformatedAnswer = formatPlayer(scanner.nextLine());
+        new User(formatPlayer(unformatedAnswer), filePlayers);
         definicionUser(User.name, User.score);
-        return formatoJugador(unformatedAnswer);
+        return formatPlayer(unformatedAnswer);
     }
 
     // Método que capitaliza el formato del jugador
-    public static String formatoJugador(String jugador) {
+    public static String formatPlayer(String jugador) {
         int indiceInicial = 0;
         int indiceResto = 1;
         String inicial = jugador.substring(indiceInicial, indiceResto).toUpperCase();

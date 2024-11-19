@@ -57,9 +57,9 @@ public class Common {
     }
 
     // Selección de elemento por parte de la máquina
-    public static String getSelectionMachine(Integer elementos) {
+    public static String getSelectionMachine(Integer elements) {
         Random random = new Random();
-        return ELEMENTS_EXTENDED.get(random.nextInt(elementos));
+        return ELEMENTS_EXTENDED.get(random.nextInt(elements));
     }
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
@@ -75,16 +75,16 @@ public class Common {
     }
 
     // Método que reescribe el archivo de jugadores
-    public static void reWriteFilePlayers (File original, File temporal, String texto) {
+    public static void reWriteFilePlayers (File original, File temp, String text) {
         original.delete();
-        temporal.renameTo(original);
-        System.out.println(texto);
+        temp.renameTo(original);
+        System.out.println(text);
     }
 
     // Método que reescribe el archivo de jugadores
-    public static void reWriteFilePlayers (File original, File temporal) {
+    public static void reWriteFilePlayers (File original, File temp) {
         original.delete();
-        temporal.renameTo(original);
+        temp.renameTo(original);
     }
 
 }

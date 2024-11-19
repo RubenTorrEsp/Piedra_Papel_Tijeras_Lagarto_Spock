@@ -36,10 +36,10 @@ public class Common {
     }
 
     @SuppressWarnings("static-access")
-    public static void goOut(User jugador) {
+    public static void goOut(User player) {
         System.out.println(SELECT_EXIT);
         System.out.println(REPLAY_NO);
-        jugador.reescribirPuntuacion(jugador.name,jugador.score,filePlayers,fileTemp);
+        player.reescribirPuntuacion(player.name,player.score,filePlayers,fileTemp);
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina

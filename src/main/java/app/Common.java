@@ -43,15 +43,15 @@ public class Common {
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
-    public static void checkMatch(String jugador, String maquina, User user) {
-        System.out.println(SELECT_PLAYER+jugador);
-        System.out.println(SELECT_MACHINE+maquina);
-        if (jugador.equals(maquina)) {
+    public static void checkMatch(String player, String machine, User user) {
+        System.out.println(SELECT_PLAYER+player);
+        System.out.println(SELECT_MACHINE+machine);
+        if (player.equals(machine)) {
             System.out.println(TIE);
         } else {
-            boolean victoriaJugador = obtenerVictoria(jugador, maquina);
-            if (victoriaJugador) victoria(jugador, maquina);
-            else derrota(jugador, maquina);
+            boolean victoriaJugador = obtenerVictoria(player, machine);
+            if (victoriaJugador) victoria(player, machine);
+            else derrota(player, machine);
             user.actualizarPuntuacion(victoriaJugador);
         }
     }

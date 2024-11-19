@@ -14,19 +14,19 @@ public class Common {
     static Boolean rePlay = true;
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
-    public static String refactor(String seleccionJugador, User jugador) {
-        switch (seleccionJugador) {
-            case NUMBER_1 -> seleccionJugador = SELECT_ROCK;
-            case NUMBER_2 -> seleccionJugador = SELECT_PAPER;
-            case NUMBER_3 -> seleccionJugador = SELECT_SCISSORS;
-            case NUMBER_4 -> seleccionJugador = SELECT_WIZARD;
-            case NUMBER_5 -> seleccionJugador = SELECT_SPOCK;
+    public static String refactor(String selectionPlayer, User player) {
+        switch (selectionPlayer) {
+            case NUMBER_1 -> selectionPlayer = SELECT_ROCK;
+            case NUMBER_2 -> selectionPlayer = SELECT_PAPER;
+            case NUMBER_3 -> selectionPlayer = SELECT_SCISSORS;
+            case NUMBER_4 -> selectionPlayer = SELECT_WIZARD;
+            case NUMBER_5 -> selectionPlayer = SELECT_SPOCK;
             case NUMBER_0, SELECT_OUT -> {
-                seleccionJugador = SELECT_OUT;
-                goOut(jugador);
+                selectionPlayer = SELECT_OUT;
+                goOut(player);
             }
         }  
-        return seleccionJugador;
+        return selectionPlayer;
     }
 
     // Métodos salir, que cortan el programa

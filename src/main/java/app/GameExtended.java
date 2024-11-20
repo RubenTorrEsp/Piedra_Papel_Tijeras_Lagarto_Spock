@@ -14,11 +14,11 @@ public class GameExtended extends Common {
 
     // Constructor del programa y ciclo de vida
     public GameExtended(User player) {
-        jugarDeNuevo(player);
+        playExtended(player);
     }
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
-    public void jugarDeNuevo(User player) {
+    public void playExtended(User player) {
         System.out.println(OPTIONS_EXTENDED);
         if(getEntry(player)){
             if (Objects.equals(selectionPlayer, SELECT_OUT)) rePlay = false;

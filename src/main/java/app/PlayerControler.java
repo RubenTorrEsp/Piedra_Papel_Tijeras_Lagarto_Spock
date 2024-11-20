@@ -112,31 +112,31 @@ public class PlayerControler {
 
     // Método que elimina un jugador de la lista
     public static void deletePlayer(
-            Optional<String> nombreJugador,
-            File archivoReal,
-            File archivoTemp) throws IOException {
+            Optional<String> playerName,
+            File fileReal,
+            File fileTemp) throws IOException {
         System.out.println(PLAYER_DELETE);
-        String jugadorBorrado = nombreJugador.orElseGet(scanner::nextLine);
-        boolean jugadorEliminado = false;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(SEPARATOR);
-                if (partes.length == 2 && partes[0].equals(jugadorBorrado)) {
-                    indicarJugadorBorrado(jugadorBorrado);
-                    jugadorEliminado = true;
+        String playerDeleted = playerName.orElseGet(scanner::nextLine);
+        boolean playerErased = false;
+        try (BufferedReader br = new BufferedReader(new FileReader(fileReal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(fileTemp))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(SEPARATOR);
+                if (parts.length == 2 && parts[0].equals(playerDeleted)) {
+                    indicarJugadorBorrado(playerDeleted);
+                    playerErased = true;
                 } else {
-                    bw.write(linea);
+                    bw.write(line);
                     bw.newLine();
                 }
             }
         }
-        if (!jugadorEliminado) {
-            indicarJugadorNoEnBDD(jugadorBorrado);
-            if(nombreJugador.isEmpty()) new PlayerControler();
+        if (!playerErased) {
+            indicarJugadorNoEnBDD(playerDeleted);
+            if(playerName.isEmpty()) new PlayerControler();
         }
-        reWriteFilePlayers(archivoReal, archivoTemp);
+        reWriteFilePlayers(fileReal, fileTemp);
         volverAlControlador();
     }
 

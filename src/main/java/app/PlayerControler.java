@@ -79,34 +79,34 @@ public class PlayerControler {
 
     // Método que modifica los valores de un usuario
     public static void modifyPlayer(
-            Optional<String> nombreJugador,
-            Optional<String> nuevoNombre,
-            File archivoReal,
-            File archivoTemp) throws IOException {
+            Optional<String> playerName,
+            Optional<String> newName,
+            File fileReal,
+            File fileTemp) throws IOException {
         System.out.println(PLAYER_MODIFY);
-        String jugadorModificado = nombreJugador.orElseGet(() -> scanner.nextLine());
-        boolean jugadorExistente = false;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
+        String playerModified = playerName.orElseGet(() -> scanner.nextLine());
+        boolean playerExists = false;
+        try (BufferedReader br = new BufferedReader(new FileReader(fileReal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(fileTemp))) {
             while ((line = br.readLine()) != null) {
-                String[] partes = line.split(SEPARATOR);
+                String[] parts = line.split(SEPARATOR);
                 if (!line.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(jugadorModificado)) {
-                        jugadorExistente = true;
+                    if (parts.length == 2 && parts[0].equals(playerModified)) {
+                        playerExists = true;
                         System.out.println(NEW_NAME);
-                        String nombre = nuevoNombre.orElseGet(() -> scanner.nextLine());
-                        line = nombre+SEPARATOR+partes[1];
+                        String name = newName.orElseGet(() -> scanner.nextLine());
+                        line = name+SEPARATOR+parts[1];
                     }
                     bw.write(line);
                     bw.newLine();
                 }
             }
         }
-        if(!jugadorExistente) {
+        if(!playerExists) {
             System.out.println(PLAYER_NOT_EXIST);
             new PlayerControler();
         }
-        else reWriteFilePlayers(archivoReal, archivoTemp);
+        else reWriteFilePlayers(fileReal, fileTemp);
         volverAlControlador();
     }
 

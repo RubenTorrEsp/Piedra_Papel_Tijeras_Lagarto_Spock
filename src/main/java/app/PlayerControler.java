@@ -171,26 +171,26 @@ public class PlayerControler {
         volverAlControlador();
     }
 
-    public static void showPodium(File archivoReal) throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoReal)))  {
-            List<List<Object>> jugadores = new ArrayList<>();
+    public static void showPodium(File file) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(file)))  {
+            List<List<Object>> players = new ArrayList<>();
             while ((line = br.readLine()) != null) {
-                String[] partes = line.split(SEPARATOR);
+                String[] parts = line.split(SEPARATOR);
                 if (!line.trim().isEmpty()) {
-                    if (partes.length == 2) {
-                        List<Object> jugador = new ArrayList<>();
-                        jugador.add(partes[0]);
-                        jugador.add(partes[1]);
-                        jugadores.add(jugador);
+                    if (parts.length == 2) {
+                        List<Object> player = new ArrayList<>();
+                        player.add(parts[0]);
+                        player.add(parts[1]);
+                        players.add(player);
                     }
                 }
             }
-            jugadores.sort((o1, o2) -> {
-                int puntuacion1 = Integer.parseInt((String) o1.get(1));
-                int puntuacion2 = Integer.parseInt((String) o2.get(1));
-                return Integer.compare(puntuacion2, puntuacion1);
+            players.sort((o1, o2) -> {
+                int score1 = Integer.parseInt((String) o1.get(1));
+                int score2 = Integer.parseInt((String) o2.get(1));
+                return Integer.compare(score2, score1);
             });
-            podium(jugadores);
+            podium(players);
         }
     }
 

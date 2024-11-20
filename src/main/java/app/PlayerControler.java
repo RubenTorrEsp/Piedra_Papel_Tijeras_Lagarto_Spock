@@ -60,19 +60,19 @@ public class PlayerControler {
     }
 
     // Método que crea un jugador y lo incorpora a la lista
-    public static void createPlayer(Optional<String> nombreJugador, File archivo) throws IOException {
+    public static void createPlayer(Optional<String> playerName, File file) throws IOException {
         System.out.println(PLAYER_CREATE);
-        String jugadorNuevo = nombreJugador.orElseGet(() -> scanner.nextLine());
-        boolean jugadorExistente = usuarioExiste(jugadorNuevo, archivo);
-        if (!jugadorExistente) {
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
+        String newPlayer = playerName.orElseGet(() -> scanner.nextLine());
+        boolean playerExists = usuarioExiste(newPlayer, file);
+        if (!playerExists) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
                 bw.newLine();
-                bw.write(jugadorNuevo + SCORE_START);
-                indicarJugadorCreado(jugadorNuevo);
+                bw.write(newPlayer + SCORE_START);
+                indicarJugadorCreado(newPlayer);
             }
         } else {
-            indicarJugadorYaEnBDD(jugadorNuevo);
-            if(nombreJugador.isEmpty()) new PlayerControler();
+            indicarJugadorYaEnBDD(newPlayer);
+            if(playerName.isEmpty()) new PlayerControler();
         }
         volverAlControlador();
     }

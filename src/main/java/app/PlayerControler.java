@@ -141,30 +141,33 @@ public class PlayerControler {
     }
 
     // Metodo que reinicia la puntuacion de un jugador
-    public static void reStartPlayer(Optional<String> nombreJugador, File archivoReal, File archivoTemp) throws IOException {
+    public static void reStartPlayer(
+            Optional<String> namePlayer,
+            File fileReal,
+            File fileTemp) throws IOException {
         System.out.println(PLAYER_RESTART);
-        String jugadorReiniciado = nombreJugador.orElseGet(() -> scanner.nextLine());
-        boolean jugadorExistente = false;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
+        String playerReStarted = namePlayer.orElseGet(() -> scanner.nextLine());
+        boolean playerExists = false;
+        try (BufferedReader br = new BufferedReader(new FileReader(fileReal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(fileTemp))) {
             while ((line = br.readLine()) != null) {
-                String[] partes = line.split(SEPARATOR);
+                String[] parts = line.split(SEPARATOR);
                 if (!line.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(jugadorReiniciado)) {
-                        line = partes[0]+SCORE_START;
-                        indicarJugadorReiniciado(jugadorReiniciado);
-                        jugadorExistente = true;
+                    if (parts.length == 2 && parts[0].equals(playerReStarted)) {
+                        line = parts[0]+SCORE_START;
+                        indicarJugadorReiniciado(playerReStarted);
+                        playerExists = true;
                     }
                     bw.write(line);
                     bw.newLine();
                 }
             }
         }
-        if(!jugadorExistente) {
-            indicarJugadorNoEnBDD(jugadorReiniciado);
+        if(!playerExists) {
+            indicarJugadorNoEnBDD(playerReStarted);
             new PlayerControler();
         }
-        reWriteFilePlayers(archivoReal, archivoTemp);
+        reWriteFilePlayers(fileReal, fileTemp);
         volverAlControlador();
     }
 

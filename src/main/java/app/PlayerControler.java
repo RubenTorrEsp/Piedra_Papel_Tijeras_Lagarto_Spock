@@ -10,7 +10,7 @@ import static resources.Texts.*;
 
 public class PlayerControler {
 
-    static String linea;
+    static String line;
     static Scanner scanner = new Scanner(System.in);
 
     public PlayerControler() throws IOException {
@@ -49,9 +49,9 @@ public class PlayerControler {
     public void showPlayers() throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(filePlayers))) {
             System.out.println(SHOW_PLAYERS);
-            while ((linea = br.readLine()) != null) {
-                if(linea.length() > 1) {
-                    String[] partes = linea.split(SEPARATOR);
+            while ((line = br.readLine()) != null) {
+                if(line.length() > 1) {
+                    String[] partes = line.split(SEPARATOR);
                     mostrarJugador(partes[0], partes[1]);
                 }
             }
@@ -88,16 +88,16 @@ public class PlayerControler {
         boolean jugadorExistente = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(SEPARATOR);
-                if (!linea.trim().isEmpty()) {
+            while ((line = br.readLine()) != null) {
+                String[] partes = line.split(SEPARATOR);
+                if (!line.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(jugadorModificado)) {
                         jugadorExistente = true;
                         System.out.println(NEW_NAME);
                         String nombre = nuevoNombre.orElseGet(() -> scanner.nextLine());
-                        linea = nombre+SEPARATOR+partes[1];
+                        line = nombre+SEPARATOR+partes[1];
                     }
-                    bw.write(linea);
+                    bw.write(line);
                     bw.newLine();
                 }
             }
@@ -147,15 +147,15 @@ public class PlayerControler {
         boolean jugadorExistente = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemp))) {
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(SEPARATOR);
-                if (!linea.trim().isEmpty()) {
+            while ((line = br.readLine()) != null) {
+                String[] partes = line.split(SEPARATOR);
+                if (!line.trim().isEmpty()) {
                     if (partes.length == 2 && partes[0].equals(jugadorReiniciado)) {
-                        linea = partes[0]+SCORE_START;
+                        line = partes[0]+SCORE_START;
                         indicarJugadorReiniciado(jugadorReiniciado);
                         jugadorExistente = true;
                     }
-                    bw.write(linea);
+                    bw.write(line);
                     bw.newLine();
                 }
             }
@@ -171,9 +171,9 @@ public class PlayerControler {
     public static void showPodium(File archivoReal) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivoReal)))  {
             List<List<Object>> jugadores = new ArrayList<>();
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(SEPARATOR);
-                if (!linea.trim().isEmpty()) {
+            while ((line = br.readLine()) != null) {
+                String[] partes = line.split(SEPARATOR);
+                if (!line.trim().isEmpty()) {
                     if (partes.length == 2) {
                         List<Object> jugador = new ArrayList<>();
                         jugador.add(partes[0]);

@@ -16,12 +16,12 @@ public class User {
 
     // Constructor
     public User(String userName, File file) throws IOException {
-        if(usuarioExiste(userName, file)) establecerUsuario(userName, file);
+        if(usuarioExiste(userName, file)) establishUser(userName, file);
         else createPlayer(Optional.ofNullable(userName), filePlayers);
     }
     
     // Método para establecer el usuario
-    public void establecerUsuario(String nombreUsuario, File archivo) throws IOException {
+    public void establishUser(String nombreUsuario, File archivo) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             while ((line = br.readLine()) != null) {
                 String[] partes = line.split(SEPARATOR);

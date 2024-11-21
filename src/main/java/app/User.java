@@ -15,9 +15,9 @@ public class User {
     public static String line;
 
     // Constructor
-    public User(String nombreUsuario, File archivo) throws IOException {
-        if(usuarioExiste(nombreUsuario, archivo)) establecerUsuario(nombreUsuario, archivo);
-        else createPlayer(Optional.ofNullable(nombreUsuario), filePlayers);
+    public User(String userName, File file) throws IOException {
+        if(usuarioExiste(userName, file)) establecerUsuario(userName, file);
+        else createPlayer(Optional.ofNullable(userName), filePlayers);
     }
     
     // Método para establecer el usuario

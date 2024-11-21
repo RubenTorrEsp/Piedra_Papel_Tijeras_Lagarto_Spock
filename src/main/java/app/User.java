@@ -21,13 +21,13 @@ public class User {
     }
     
     // Método para establecer el usuario
-    public void establishUser(String nombreUsuario, File archivo) throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
+    public void establishUser(String userName, File file) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((line = br.readLine()) != null) {
-                String[] partes = line.split(SEPARATOR);
-                if (partes[0].equals(nombreUsuario)) {
-                    name = partes[0];
-                    score = Integer.parseInt(partes[1]);
+                String[] parts = line.split(SEPARATOR);
+                if (parts[0].equals(userName)) {
+                    name = parts[0];
+                    score = Integer.parseInt(parts[1]);
                 }
             }
         }

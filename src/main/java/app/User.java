@@ -16,7 +16,7 @@ public class User {
 
     // Constructor
     public User(String userName, File file) throws IOException {
-        if(usuarioExiste(userName, file)) establishUser(userName, file);
+        if(userExists(userName, file)) establishUser(userName, file);
         else createPlayer(Optional.ofNullable(userName), filePlayers);
     }
     
@@ -34,7 +34,7 @@ public class User {
     }
 
     // Método que comprueba si el usuario existe
-    public static boolean usuarioExiste(String nombreUsuario, File archivo) {
+    public static boolean userExists(String nombreUsuario, File archivo) {
         boolean usuarioExiste = false;
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             while ((line = br.readLine()) != null) {

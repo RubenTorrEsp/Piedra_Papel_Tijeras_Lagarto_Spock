@@ -56,7 +56,7 @@ public class PlayerControler {
                 }
             }
         }
-        volverAlControlador();
+        backToController();
     }
 
     // Método que crea un jugador y lo incorpora a la lista
@@ -74,7 +74,7 @@ public class PlayerControler {
             indicarJugadorYaEnBDD(newPlayer);
             if(playerName.isEmpty()) new PlayerControler();
         }
-        volverAlControlador();
+        backToController();
     }
 
     // Método que modifica los valores de un usuario
@@ -107,7 +107,7 @@ public class PlayerControler {
             new PlayerControler();
         }
         else reWriteFilePlayers(fileReal, fileTemp);
-        volverAlControlador();
+        backToController();
     }
 
     // Método que elimina un jugador de la lista
@@ -137,7 +137,7 @@ public class PlayerControler {
             if(playerName.isEmpty()) new PlayerControler();
         }
         reWriteFilePlayers(fileReal, fileTemp);
-        volverAlControlador();
+        backToController();
     }
 
     // Metodo que reinicia la puntuacion de un jugador
@@ -168,7 +168,7 @@ public class PlayerControler {
             new PlayerControler();
         }
         reWriteFilePlayers(fileReal, fileTemp);
-        volverAlControlador();
+        backToController();
     }
 
     public static void showPodium(File file) throws IOException {
@@ -194,10 +194,10 @@ public class PlayerControler {
         }
     }
 
-    public static void volverAlControlador() throws IOException {
+    public static void backToController() throws IOException {
         System.out.println(BACK_TO_CONTROLLER);
-        String eleccion = scanner.nextLine().toLowerCase();
-        if (eleccion.equals(SELECT_YES)) new PlayerControler();
+        String election = scanner.nextLine().toLowerCase();
+        if (election.equals(SELECT_YES)) new PlayerControler();
         else goOut();
     }
 

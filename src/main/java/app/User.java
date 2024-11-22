@@ -34,67 +34,56 @@ public class User {
     }
 
     // Método que comprueba si el usuario existe
-    public static boolean userExists(String nombreUsuario, File archivo) {
-        boolean usuarioExiste = false;
-        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
+    public static boolean userExists(String userName, File file) {
+        boolean userExists = false;
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((line = br.readLine()) != null) {
-                if(line.contains(nombreUsuario)) usuarioExiste = true;
+                if(line.contains(userName)) userExists = true;
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return usuarioExiste;
+        return userExists;
     }
 
     // Método que actualiza la puntuación del jugador
-    public void actualizarPuntuacion(Boolean victoria) {
-        if (victoria) score++;
+    public void updateScore(Boolean victory) throws IOException {
+        if (victory) score++;
         else score--;
         System.out.println(SCORE_NEW + score);
-        if (score == 0) eliminarJugador(name, filePlayers, fileTemp);
+        if (score == 0) deletePlayer(name, filePlayers, fileTemp);
     }
 
     // Método que actualiza la puntuación del jugador en el archivo
-    public static void reescribirPuntuacion(
-            String nombreUsuario,
-            int nuevaPuntuacion,
-            File archivoOriginal,
-            File archivoTemporal) {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+    public static void reWriteScore(String userName, int newScore, File fileReal, File fileTemp) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileReal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(fileTemp))) {
             while ((line = br.readLine()) != null) {
-                String[] partes = line.split(SEPARATOR);
+                String[] parts = line.split(SEPARATOR);
                 if (!line.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) line = nombreUsuario+SEPARATOR+nuevaPuntuacion;
+                    if (parts.length == 2 && parts[0].equals(userName)) line = userName+SEPARATOR+newScore;
                     bw.write(line);
                     bw.newLine();
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-        reWriteFilePlayers(archivoOriginal, archivoTemporal);
+        reWriteFilePlayers(fileReal, fileTemp);
     }
 
     // Método que elimina el usuario si la puntuacion llega a 0
-    public static void eliminarJugador(
-            String nombreUsuario,
-            File archivoOriginal,
-            File archivoTemporal) {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoTemporal))) {
+    public static void deletePlayer(String userName, File fileReal, File fileTemp) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileReal));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(fileTemp))) {
             while ((line = br.readLine()) != null) {
-                String[] partes = line.split(SEPARATOR);
+                String[] parts = line.split(SEPARATOR);
                 if (!line.trim().isEmpty()) {
-                    if (partes.length == 2 && partes[0].equals(nombreUsuario)) line = EMPTY_ROW;
+                    if (parts.length == 2 && parts[0].equals(userName)) line = EMPTY_ROW;
                     bw.write(line);
                     bw.newLine();
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-        reWriteFilePlayers(archivoOriginal, archivoTemporal, PLAYER_ERASED);
+        reWriteFilePlayers(fileReal, fileTemp, PLAYER_ERASED);
         System.exit(0);
     }
     

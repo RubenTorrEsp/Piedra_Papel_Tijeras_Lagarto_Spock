@@ -63,7 +63,7 @@ public class PlayerControler {
     public static void createPlayer(Optional<String> playerName, File file) throws IOException {
         System.out.println(PLAYER_CREATE);
         String newPlayer = playerName.orElseGet(() -> scanner.nextLine());
-        boolean playerExists = usuarioExiste(newPlayer, file);
+        boolean playerExists = userExists(newPlayer, file);
         if (!playerExists) {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
                 bw.newLine();

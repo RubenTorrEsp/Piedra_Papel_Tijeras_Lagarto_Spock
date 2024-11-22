@@ -14,7 +14,7 @@ public class Common {
     static Boolean rePlay = true;
 
     // Método que recoge la eleccion del jugador y, si es numerica, la convierte en texto
-    public static String refactor(String selectionPlayer, User player) {
+    public static String refactor(String selectionPlayer, User player) throws IOException {
         switch (selectionPlayer) {
             case NUMBER_1 -> selectionPlayer = SELECT_ROCK;
             case NUMBER_2 -> selectionPlayer = SELECT_PAPER;
@@ -36,14 +36,14 @@ public class Common {
     }
 
     @SuppressWarnings("static-access")
-    public static void goOut(User player) {
+    public static void goOut(User player) throws IOException {
         System.out.println(SELECT_EXIT);
         System.out.println(REPLAY_NO);
-        player.reescribirPuntuacion(player.name,player.score,filePlayers,fileTemp);
+        player.reWriteScore(player.name,player.score,filePlayers,fileTemp);
     }
 
     // Comportamiento de comprobación del cruce entre la eleccion del jugador y la de la máquina
-    public static void checkMatch(String player, String machine, User user) {
+    public static void checkMatch(String player, String machine, User user) throws IOException {
         System.out.println(SELECT_PLAYER+player);
         System.out.println(SELECT_MACHINE+machine);
         if (player.equals(machine)) {
@@ -52,7 +52,7 @@ public class Common {
             boolean victoryPlayer = obtenerVictoria(player, machine);
             if (victoryPlayer) victoria(player, machine);
             else derrota(player, machine);
-            user.actualizarPuntuacion(victoryPlayer);
+            user.updateScore(victoryPlayer);
         }
     }
 
@@ -63,14 +63,14 @@ public class Common {
     }
 
     // Método por el que se pregunta al jugador si quiere jugar de nuevo
-    public static void playAgain() {
+    public static void playAgain() throws IOException {
         System.out.println(SELECT_REPLAY);
         if (scanner.nextLine().equalsIgnoreCase(SELECT_YES)) {
             System.out.println(REPLAY_YES);
         } else {
             rePlay = false;
             System.out.println(REPLAY_NO);
-            User.reescribirPuntuacion(User.name, User.score,filePlayers,fileTemp);
+            User.reWriteScore(User.name, User.score,filePlayers,fileTemp);
         }
     }
 

@@ -1,5 +1,6 @@
 package app;
 
+import java.io.IOException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -13,12 +14,12 @@ public class GameClassic extends Common {
     String selectionPlayer;
 
     // Constructor del programa y ciclo de vida
-    public GameClassic(User player) {
+    public GameClassic(User player) throws IOException {
         playClassic(player);
     }
 
     // Inicio del juego, recogida de seleccion del jugador y, si es una opcion correcta, comprobación de la victoria
-    public void playClassic(User player) {
+    public void playClassic(User player) throws IOException {
         System.out.println(OPTIONS_CLASSIC);
         if(getEntry(player)){
             if (Objects.equals(selectionPlayer, SELECT_OUT)) rePlay = false;
@@ -31,7 +32,7 @@ public class GameClassic extends Common {
     }
 
     // Obtener la elección del jugador
-    public boolean getEntry(User player) {
+    public boolean getEntry(User player) throws IOException {
         boolean selectValid = false;
         selectionPlayer = scanner.nextLine().toLowerCase();
         if(ELEMENTS_CLASSIC.contains(selectionPlayer)) {

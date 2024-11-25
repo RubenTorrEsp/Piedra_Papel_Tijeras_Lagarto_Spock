@@ -22,7 +22,7 @@ class UserTests extends Functions {
 
     @Test
     void UsuarioExiste_False() {
-        boolean jugadorExiste = usuarioExiste(PLAYER_NOT_EXISTS, testFile);
+        boolean jugadorExiste = userExists(PLAYER_NOT_EXISTS, testFile);
         assertFalse(jugadorExiste, PLAYER_ALREADY_IN_DB);
     }
 

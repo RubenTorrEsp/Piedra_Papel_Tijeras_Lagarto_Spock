@@ -39,8 +39,8 @@ public class PlayerControlerTests extends Functions {
 
     @Test
     void modificarJugador_jugadorExistente() throws IOException {
-        assertTrue(usuarioExiste(PLAYER_MODIFY, archivoOriginalTests));
-        assertFalse(usuarioExiste(PLAYER_NEW_NAME, archivoOriginalTests));
+        assertTrue(userExists(PLAYER_MODIFY, archivoOriginalTests));
+        assertFalse(userExists(PLAYER_NEW_NAME, archivoOriginalTests));
 
         modifyPlayer(
                 Optional.of(PLAYER_MODIFY),
@@ -48,8 +48,8 @@ public class PlayerControlerTests extends Functions {
                 archivoOriginalTests,
                 archivoTemporalTests);
 
-        assertFalse(usuarioExiste(PLAYER_MODIFY, archivoOriginalTests));
-        assertTrue(usuarioExiste(PLAYER_NEW_NAME, archivoOriginalTests));
+        assertFalse(userExists(PLAYER_MODIFY, archivoOriginalTests));
+        assertTrue(userExists(PLAYER_NEW_NAME, archivoOriginalTests));
     }
 
     @Test

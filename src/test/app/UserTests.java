@@ -30,7 +30,7 @@ class UserTests extends Functions {
     void ReescribirPuntuacion_Test() throws IOException {
         assertEquals(SCORE_INIT, checkScore(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);
 
-        reescribirPuntuacion(PLAYER_REWRITE_SCORE, SCORE_NEW, testFile, tempFile);
+        reWriteScore(PLAYER_REWRITE_SCORE, SCORE_NEW, testFile, tempFile);
         assertEquals(SCORE_NEW, checkScore(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);
     }
 

@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MainTests extends Functions {
 
     @Test
-    void FormatoJugador_FuncionaCorrectamente() {
+    void Player_Format_Works_As_Expected() {
         String nombreEsperado = "User_test";
         String nombreTrasFormatear = formatPlayer(PLAYER_UNFORMATTED);
 

@@ -11,10 +11,10 @@ public class MainTests extends Functions {
 
     @Test
     void Player_Format_Works_As_Expected() {
-        String nombreEsperado = "User_test";
+        String expectedName = "User_test";
         String nombreTrasFormatear = formatPlayer(PLAYER_UNFORMATTED);
 
-        assertEquals(nombreEsperado,nombreTrasFormatear);
+        assertEquals(expectedName,nombreTrasFormatear);
     }
 
 }

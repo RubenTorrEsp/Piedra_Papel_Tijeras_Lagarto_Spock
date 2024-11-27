@@ -16,7 +16,7 @@ class UserTests extends Functions {
 
     @Test
     void PlayerExsts_True() {
-        boolean jugadorExiste = userExists(PLAYER_EXISTS, testFile);
+        boolean playerExists = userExists(PLAYER_EXISTS, testFile);
         assertTrue(jugadorExiste, PLATER_NOT_IN_DB);
     }
 

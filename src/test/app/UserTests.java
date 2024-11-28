@@ -27,7 +27,7 @@ class UserTests extends Functions {
     }
 
     @Test
-    void ReescribirPuntuacion_Test() throws IOException {
+    void ReWrite_Score() throws IOException {
         assertEquals(SCORE_INIT, checkScore(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);
 
         reWriteScore(PLAYER_REWRITE_SCORE, SCORE_NEW, testFile, tempFile);

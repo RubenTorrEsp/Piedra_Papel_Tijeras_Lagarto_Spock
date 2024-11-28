@@ -35,7 +35,7 @@ class UserTests extends Functions {
     }
 
     @Test
-    void ActualizarPuntuacion_Victoria() throws IOException {
+    void Update_Score_Victory() throws IOException {
         User jugadorTest = new User(PLAYER_EXISTS, testFile);
         int puntuacionReal = checkScore(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);

@@ -48,7 +48,7 @@ class UserTests extends Functions {
 
     @Test
     void Update_Score_Defeat() throws IOException {
-        User jugadorTest = new User(PLAYER_EXISTS, testFile);
+        User playerTest = new User(PLAYER_EXISTS, testFile);
         int puntuacionReal = checkScore(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 

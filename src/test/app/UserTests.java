@@ -52,7 +52,7 @@ class UserTests extends Functions {
         int puntuacionReal = checkScore(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
-        jugadorTest.updateScore(DEFEAT);
+        playerTest.updateScore(DEFEAT);
         puntuacionReal = score;
 
         assertEquals(SCORE_DEFEAT,puntuacionReal);

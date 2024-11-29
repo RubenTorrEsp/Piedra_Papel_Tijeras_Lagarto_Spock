@@ -50,12 +50,12 @@ class UserTests extends Functions {
     void Update_Score_Defeat() throws IOException {
         User playerTest = new User(PLAYER_EXISTS, testFile);
         int realScore = checkScore(PLAYER_EXISTS, testFile);
-        assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
+        assertEquals(SCORE_INIT,realScore,SCORE_DOES_NOT_MATCH);
 
         playerTest.updateScore(DEFEAT);
-        puntuacionReal = score;
+        realScore = score;
 
-        assertEquals(SCORE_DEFEAT,puntuacionReal);
+        assertEquals(SCORE_DEFEAT,realScore);
     }
 
 }

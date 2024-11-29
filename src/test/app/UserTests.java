@@ -40,7 +40,7 @@ class UserTests extends Functions {
         int puntuacionReal = checkScore(PLAYER_EXISTS, testFile);
         assertEquals(SCORE_INIT,puntuacionReal,SCORE_DOES_NOT_MATCH);
 
-        jugadorTest.updateScore(VICTORY);
+        playerTest.updateScore(VICTORY);
         puntuacionReal = score;
 
         assertEquals(SCORE_VICTORY,puntuacionReal);

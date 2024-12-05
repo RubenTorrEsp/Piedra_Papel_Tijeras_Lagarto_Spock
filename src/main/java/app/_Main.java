@@ -46,7 +46,7 @@ public class _Main {
         System.out.println(CHECK_PLAYER);
         String unformatedAnswer = formatPlayer(scanner.nextLine());
         new User(formatPlayer(unformatedAnswer), filePlayers);
-        definicionUser(User.name, User.score);
+        playerActive(User.name, User.score);
         return formatPlayer(unformatedAnswer);
     }
 

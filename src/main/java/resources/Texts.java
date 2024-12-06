@@ -91,7 +91,7 @@ public class Texts {
     public static void playerActive(String nombre, Integer puntuacion){
         System.out.println(STR."El jugador \{nombre} está ahora activo con \{puntuacion} puntos.");
     }
-    public static void indicarJugadorNoEnBDD(String jugador) {
+    public static void indicatePlayerNotInDB(String jugador) {
         System.out.println(STR."El jugador \{jugador} no se encuentra en la base de datos");
     }
 

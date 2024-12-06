@@ -52,7 +52,7 @@ public class PlayerControler {
             while ((line = br.readLine()) != null) {
                 if(line.length() > 1) {
                     String[] partes = line.split(SEPARATOR);
-                    mostrarJugador(partes[0], partes[1]);
+                    showPlayer(partes[0], partes[1]);
                 }
             }
         }

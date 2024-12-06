@@ -100,7 +100,7 @@ public class Texts {
 
         // Mostrar jugadores
         public static final String SHOW_PLAYERS = "Aquí se muestran los jugadores disponibles";
-        public static void mostrarJugador(String nombre, String puntuacion) {
+        public static void showPlayer(String nombre, String puntuacion) {
          System.out.println(STR."Nombre: \{nombre}. Puntuación: \{puntuacion}");
         }
         // Crear jugadores

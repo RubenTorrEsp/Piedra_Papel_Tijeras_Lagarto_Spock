@@ -89,7 +89,7 @@ public class Texts {
     public static final String CHECK_PLAYER = "Escribe tu nombre de usuario y comprobaremos si ya has jugado antes.";
     public static final String PLAYER_ERASED = "Has llegado a 0 puntos y hemos eliminado al jugador. Eres mas malo que un dolor";
     public static void playerActive(String name, Integer puntuacion){
-        System.out.println(STR."El jugador \{nombre} está ahora activo con \{puntuacion} puntos.");
+        System.out.println(STR."El jugador \{name} está ahora activo con \{puntuacion} puntos.");
     }
     public static void indicatePlayerNotInDB(String jugador) {
         System.out.println(STR."El jugador \{jugador} no se encuentra en la base de datos");

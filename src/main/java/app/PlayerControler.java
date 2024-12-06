@@ -133,7 +133,7 @@ public class PlayerControler {
             }
         }
         if (!playerErased) {
-            indicarJugadorNoEnBDD(playerDeleted);
+            indicatePlayerNotInDB(playerDeleted);
             if(playerName.isEmpty()) new PlayerControler();
         }
         reWriteFilePlayers(fileReal, fileTemp);
@@ -164,7 +164,7 @@ public class PlayerControler {
             }
         }
         if(!playerExists) {
-            indicarJugadorNoEnBDD(playerReStarted);
+            indicatePlayerNotInDB(playerReStarted);
             new PlayerControler();
         }
         reWriteFilePlayers(fileReal, fileTemp);

@@ -92,7 +92,7 @@ public class Texts {
         System.out.println(STR."El jugador \{name} está ahora activo con \{score} puntos.");
     }
     public static void indicatePlayerNotInDB(String player) {
-        System.out.println(STR."El jugador \{jugador} no se encuentra en la base de datos");
+        System.out.println(STR."El jugador \{player} no se encuentra en la base de datos");
     }
 
         // Clase ControladorUsuarios

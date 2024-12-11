@@ -106,7 +106,7 @@ public class Texts {
         // Crear jugadores
         public static final String PLAYER_CREATE = "Indique el jugador que desea crear";
         public static void indicarJugadorCreado(String playerCreated) {
-            System.out.println(STR."El jugador \{jugadorCreado} ha sido añadido a la base de datos");
+            System.out.println(STR."El jugador \{playerCreated} ha sido añadido a la base de datos");
         }
         public static void indicarJugadorYaEnBDD(String jugadorCreado) {
             System.out.println(STR."El jugador \{jugadorCreado} ya se encuentra en la base de datos");

@@ -108,7 +108,7 @@ public class Texts {
         public static void indicarJugadorCreado(String playerCreated) {
             System.out.println(STR."El jugador \{playerCreated} ha sido añadido a la base de datos");
         }
-        public static void indicarJugadorYaEnBDD(String jugadorCreado) {
+        public static void indicarJugadorYaEnBDD(String playerInDB) {
             System.out.println(STR."El jugador \{jugadorCreado} ya se encuentra en la base de datos");
         }
         // Modificar jugadores

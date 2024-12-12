@@ -118,7 +118,7 @@ public class Texts {
         // Eliminar jugadores
         public static final String PLAYER_DELETE = "Indique qué jugador desea eliminar:";
         public static void indicarJugadorBorrado(String playerDeleted) {
-            System.out.println(STR."El jugador \{jugadorBorrado} ha sido eliminado de la base de datos");
+            System.out.println(STR."El jugador \{playerDeleted} ha sido eliminado de la base de datos");
         }
         // Reiniciar jugadores
         public static final String PLAYER_RESTART = "Indique el jugador que desea reiniciar";

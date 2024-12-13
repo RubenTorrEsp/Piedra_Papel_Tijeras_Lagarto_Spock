@@ -68,10 +68,10 @@ public class PlayerControler {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
                 bw.newLine();
                 bw.write(newPlayer + SCORE_START);
-                indicarJugadorCreado(newPlayer);
+                indicatePlayerCreated(newPlayer);
             }
         } else {
-            indicarJugadorYaEnBDD(newPlayer);
+            indicatePlayerInDB(newPlayer);
             if(playerName.isEmpty()) new PlayerControler();
         }
         backToController();

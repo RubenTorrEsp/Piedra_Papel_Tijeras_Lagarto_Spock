@@ -123,7 +123,7 @@ public class Texts {
         // Reiniciar jugadores
         public static final String PLAYER_RESTART = "Indique el jugador que desea reiniciar";
         public static void indicatePlayerReStarted(String playerReStarted) {
-            System.out.println(STR."El jugador \{jugadorReiniciado} vuelve a tener ahora 50 puntos.");
+            System.out.println(STR."El jugador \{playerReStarted} vuelve a tener ahora 50 puntos.");
         }
         //Podium
         public static void podium(List<List<Object>> jugadores) {

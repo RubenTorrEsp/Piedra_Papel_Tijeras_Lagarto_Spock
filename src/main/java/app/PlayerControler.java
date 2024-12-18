@@ -124,7 +124,7 @@ public class PlayerControler {
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(SEPARATOR);
                 if (parts.length == 2 && parts[0].equals(playerDeleted)) {
-                    indicarJugadorBorrado(playerDeleted);
+                    indicatePlayerDeleted(playerDeleted);
                     playerErased = true;
                 } else {
                     bw.write(line);

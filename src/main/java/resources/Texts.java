@@ -130,9 +130,9 @@ public class Texts {
             System.out.println("Medalla de ORO para...");
             System.out.println(STR."El jugador \"\{players.getFirst().getFirst()}\" con \{players.getFirst().getLast()} puntos");
             System.out.println("Medalla de PLATA para...");
-            System.out.println(STR."El jugador \"\{players.get(1).getFirst()}\" con \{jugadores.get(1).getLast()} puntos");
+            System.out.println(STR."El jugador \"\{players.get(1).getFirst()}\" con \{players.get(1).getLast()} puntos");
             System.out.println("Medalla de BRONCE para...");
-            System.out.println(STR."El jugador \"\{jugadores.get(2).getFirst()}\" con \{jugadores.get(2).getLast()} puntos");
+            System.out.println(STR."El jugador \"\{players.get(2).getFirst()}\" con \{players.get(2).getLast()} puntos");
         }
 
     // Textos de resolución de enfrentamientos

@@ -155,7 +155,7 @@ public class PlayerControler {
                 if (!line.trim().isEmpty()) {
                     if (parts.length == 2 && parts[0].equals(playerReStarted)) {
                         line = parts[0]+SCORE_START;
-                        indicarJugadorReiniciado(playerReStarted);
+                        indicatePlayerReStarted(playerReStarted);
                         playerExists = true;
                     }
                     bw.write(line);

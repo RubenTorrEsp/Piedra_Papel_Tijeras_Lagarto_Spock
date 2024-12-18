@@ -126,7 +126,7 @@ public class Texts {
             System.out.println(STR."El jugador \{playerReStarted} vuelve a tener ahora 50 puntos.");
         }
         //Podium
-        public static void podium(List<List<Object>> jugadores) {
+        public static void podium(List<List<Object>> players) {
             System.out.println("Medalla de ORO para...");
             System.out.println(STR."El jugador \"\{jugadores.getFirst().getFirst()}\" con \{jugadores.getFirst().getLast()} puntos");
             System.out.println("Medalla de PLATA para...");

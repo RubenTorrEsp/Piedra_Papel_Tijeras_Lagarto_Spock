@@ -128,7 +128,7 @@ public class Texts {
         //Podium
         public static void podium(List<List<Object>> players) {
             System.out.println("Medalla de ORO para...");
-            System.out.println(STR."El jugador \"\{players.getFirst().getFirst()}\" con \{jugadores.getFirst().getLast()} puntos");
+            System.out.println(STR."El jugador \"\{players.getFirst().getFirst()}\" con \{players.getFirst().getLast()} puntos");
             System.out.println("Medalla de PLATA para...");
             System.out.println(STR."El jugador \"\{jugadores.get(1).getFirst()}\" con \{jugadores.get(1).getLast()} puntos");
             System.out.println("Medalla de BRONCE para...");

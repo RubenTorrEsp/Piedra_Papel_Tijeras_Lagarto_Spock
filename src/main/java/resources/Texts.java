@@ -157,7 +157,7 @@ public class Texts {
 
     // Comportamiento para, pasado el nombre del enfrentamiento, obtener el texto
     public static String obtenerTexto(String name) {
-        return STRINGS.get(nombre);
+        return STRINGS.get(name);
     }
 
     // Comportamiento que genera el texto que resuelve el enfrentamiento como victoria

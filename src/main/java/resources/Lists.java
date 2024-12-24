@@ -46,7 +46,7 @@ public class Lists {
     }
 
     // Método que obtiene el elemento del jugador y el de la máquina y comprueba si el jugador gana o no.
-    public static Boolean obtenerVictoria(String elemJugador, String elemMaquina) {
+    public static Boolean getVictory(String elemJugador, String elemMaquina) {
         return LISTS_VICTORY.get(elemJugador).contains(elemMaquina);
     }
 

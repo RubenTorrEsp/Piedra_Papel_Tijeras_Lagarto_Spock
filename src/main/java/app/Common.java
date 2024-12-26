@@ -49,7 +49,7 @@ public class Common {
         if (player.equals(machine)) {
             System.out.println(TIE);
         } else {
-            boolean victoryPlayer = obtenerVictoria(player, machine);
+            boolean victoryPlayer = getVictory(player, machine);
             if (victoryPlayer) victoria(player, machine);
             else derrota(player, machine);
             user.updateScore(victoryPlayer);

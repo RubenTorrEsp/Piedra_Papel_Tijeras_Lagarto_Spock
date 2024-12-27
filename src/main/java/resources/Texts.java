@@ -162,7 +162,7 @@ public class Texts {
 
     // Comportamiento que genera el texto que resuelve el enfrentamiento como victoria
     public static void victoria(String player, String machine){
-        System.out.println(VICTORY+obtenerTexto(player.concat("_").concat(machine)));
+        System.out.println(VICTORY+getText(player.concat("_").concat(machine)));
     }
 
     // Comportamiento que genera el texto que resuelve el enfrentamiento como derrota

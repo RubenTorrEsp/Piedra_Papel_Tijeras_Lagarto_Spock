@@ -51,7 +51,7 @@ public class Common {
         } else {
             boolean victoryPlayer = getVictory(player, machine);
             if (victoryPlayer) victory(player, machine);
-            else derrota(player, machine);
+            else defeat(player, machine);
             user.updateScore(victoryPlayer);
         }
     }

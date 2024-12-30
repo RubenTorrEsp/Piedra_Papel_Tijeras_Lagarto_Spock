@@ -50,7 +50,7 @@ public class Common {
             System.out.println(TIE);
         } else {
             boolean victoryPlayer = getVictory(player, machine);
-            if (victoryPlayer) victoria(player, machine);
+            if (victoryPlayer) victory(player, machine);
             else derrota(player, machine);
             user.updateScore(victoryPlayer);
         }

@@ -18,7 +18,7 @@ public class PlayerControlerTests extends Functions {
 
 
     @Test
-    void crearJugador_JugadorNoExistente() throws IOException {
+    void createPlayer_JugadorNoExistente() throws IOException {
         int jugadoresEsperados = countPlayersInDB(archivoOriginalTests)+1;
 
         PlayerControler.createPlayer(Optional.of(PLAYER_CREATE), archivoOriginalTests);

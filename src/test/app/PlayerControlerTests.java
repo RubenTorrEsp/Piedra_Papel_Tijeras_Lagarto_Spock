@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerControlerTests extends Functions {
 
-    static File archivoOriginalTests = new File(USER_TEST_FILE);
+    static File originalFileTests = new File(USER_TEST_FILE);
     static File archivoTemporalTests = new File(USER_TEST_TEMP);
 
 

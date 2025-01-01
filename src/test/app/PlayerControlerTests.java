@@ -22,7 +22,7 @@ public class PlayerControlerTests extends Functions {
         int expectedPlayers = countPlayersInDB(originalFileTests)+1;
 
         createPlayer(Optional.of(PLAYER_CREATE), originalFileTests);
-        int playersAfterCreation = countPlayersInDB(archivoOriginalTests);
+        int playersAfterCreation = countPlayersInDB(originalFileTests);
 
         assertEquals(expectedPlayers, playersAfterCreation);
     }

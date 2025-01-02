@@ -31,7 +31,7 @@ public class PlayerControlerTests extends Functions {
     void crearJugador_JugadorYaEnBDD() throws IOException {
         int jugadoresEsperados = countPlayersInDB(originalFileTests);
 
-        PlayerControler.createPlayer(Optional.of(PLAYER_TEST), archivoOriginalTests);
+        PlayerControler.createPlayer(Optional.of(PLAYER_TEST), originalFileTests);
         int jugadoresTrasCreacion = countPlayersInDB(archivoOriginalTests);
 
         assertEquals(jugadoresEsperados, jugadoresTrasCreacion);

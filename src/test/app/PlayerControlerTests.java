@@ -45,7 +45,7 @@ public class PlayerControlerTests extends Functions {
         modifyPlayer(
                 Optional.of(PLAYER_MODIFY),
                 Optional.of(PLAYER_NEW_NAME),
-                archivoOriginalTests,
+                originalFileTests,
                 archivoTemporalTests);
 
         assertFalse(userExists(PLAYER_MODIFY, archivoOriginalTests));

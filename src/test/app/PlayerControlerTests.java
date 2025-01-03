@@ -48,7 +48,7 @@ public class PlayerControlerTests extends Functions {
                 originalFileTests,
                 archivoTemporalTests);
 
-        assertFalse(userExists(PLAYER_MODIFY, archivoOriginalTests));
+        assertFalse(userExists(PLAYER_MODIFY, originalFileTests));
         assertTrue(userExists(PLAYER_NEW_NAME, archivoOriginalTests));
     }
 

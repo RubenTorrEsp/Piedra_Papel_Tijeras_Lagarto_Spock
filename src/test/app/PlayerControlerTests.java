@@ -49,7 +49,7 @@ public class PlayerControlerTests extends Functions {
                 archivoTemporalTests);
 
         assertFalse(userExists(PLAYER_MODIFY, originalFileTests));
-        assertTrue(userExists(PLAYER_NEW_NAME, archivoOriginalTests));
+        assertTrue(userExists(PLAYER_NEW_NAME, originalFileTests));
     }
 
     @Test

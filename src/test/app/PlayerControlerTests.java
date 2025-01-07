@@ -77,7 +77,7 @@ public class PlayerControlerTests extends Functions {
 
         reStartPlayer(Optional.of(PLAYER_RESTART), originalFileTests, archivoTemporalTests);
 
-        assertEquals(SCORE_INIT , checkScore(PLAYER_RESTART, archivoOriginalTests));
+        assertEquals(SCORE_INIT , checkScore(PLAYER_RESTART, originalFileTests));
     }
 
 }

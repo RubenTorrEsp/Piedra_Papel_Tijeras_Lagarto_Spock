@@ -75,7 +75,7 @@ public class PlayerControlerTests extends Functions {
     void reiniciarJugador_jugadorExistente() throws IOException {
         assertEquals(SCORE_NEW, checkScore(PLAYER_RESTART, originalFileTests));
 
-        reStartPlayer(Optional.of(PLAYER_RESTART), originalFileTests, archivoTemporalTests);
+        reStartPlayer(Optional.of(PLAYER_RESTART), originalFileTests, temporalFileTests);
 
         assertEquals(SCORE_INIT , checkScore(PLAYER_RESTART, originalFileTests));
     }

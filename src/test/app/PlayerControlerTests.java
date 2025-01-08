@@ -46,7 +46,7 @@ public class PlayerControlerTests extends Functions {
                 Optional.of(PLAYER_MODIFY),
                 Optional.of(PLAYER_NEW_NAME),
                 originalFileTests,
-                archivoTemporalTests);
+                temporalFileTests);
 
         assertFalse(userExists(PLAYER_MODIFY, originalFileTests));
         assertTrue(userExists(PLAYER_NEW_NAME, originalFileTests));

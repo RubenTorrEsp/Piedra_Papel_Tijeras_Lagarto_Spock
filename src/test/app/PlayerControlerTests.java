@@ -34,7 +34,7 @@ public class PlayerControlerTests extends Functions {
         PlayerControler.createPlayer(Optional.of(PLAYER_TEST), originalFileTests);
         int jugadoresTrasCreacion = countPlayersInDB(originalFileTests);
 
-        assertEquals(jugadoresEsperados, jugadoresTrasCreacion);
+        assertEquals(expectedPlayers, jugadoresTrasCreacion);
     }
 
     @Test

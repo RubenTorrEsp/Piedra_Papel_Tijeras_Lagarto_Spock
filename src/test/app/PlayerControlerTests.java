@@ -38,7 +38,7 @@ public class PlayerControlerTests extends Functions {
     }
 
     @Test
-    void modificarJugador_jugadorExistente() throws IOException {
+    void modifyPlayer_existentPlayer() throws IOException {
         assertTrue(userExists(PLAYER_MODIFY, originalFileTests));
         assertFalse(userExists(PLAYER_NEW_NAME, originalFileTests));
 

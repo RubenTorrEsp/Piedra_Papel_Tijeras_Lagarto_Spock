@@ -54,7 +54,7 @@ public class PlayerControlerTests extends Functions {
 
     @Test
     void deletePlayer_playerExistent() throws IOException {
-        int jugadoresIniciales = countPlayersInDB(originalFileTests);
+        int startingPlayers = countPlayersInDB(originalFileTests);
 
         PlayerControler.deletePlayer(Optional.of(PLAYER_DELETE), originalFileTests, temporalFileTests);
 

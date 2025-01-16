@@ -68,7 +68,7 @@ public class PlayerControlerTests extends Functions {
         PlayerControler.deletePlayer(Optional.of(PLAYER_DELETE_FALSE), originalFileTests, temporalFileTests);
         int players = countPlayersInDB(originalFileTests);
 
-        assertEquals(startingPlayers, jugadoresTrasEliminacion);
+        assertEquals(startingPlayers, players);
     }
 
     @Test

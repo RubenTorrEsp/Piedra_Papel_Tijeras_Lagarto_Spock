@@ -17,6 +17,7 @@ public class PlayerControlerTests extends Functions {
     static File temporalFileTests = new File(USER_TEST_TEMP);
 
 
+//    TODO: Revision de tests. El comportamiento se queda esperando respuesta
     @Test
     void createPlayer_nonExistentPlayer() throws IOException {
         int expectedPlayers = countPlayersInDB(originalFileTests)+1;

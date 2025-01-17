@@ -26,6 +26,7 @@ class UserTests extends Functions {
         assertFalse(playerExists, PLAYER_ALREADY_IN_DB);
     }
 
+//    TODO: Tests no funciona. Revisar
     @Test
     void ReWrite_Score() throws IOException {
         assertEquals(SCORE_INIT, checkScore(PLAYER_REWRITE_SCORE, testFile), SCORE_DOES_NOT_MATCH);

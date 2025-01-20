@@ -191,6 +191,7 @@ public class PlayerControler {
                 return Integer.compare(score2, score1);
             });
             podium(players);
+            backToController();
         }
     }
 

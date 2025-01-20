@@ -1,7 +1,5 @@
 Programa completado, futuras implementaciones
 
--Traduccion del codigo (En proceso)
-
 -BDD para usuarios
 -Sistema de apuestas
 -Interfaz

@@ -3,6 +3,7 @@ package app;
 import org.junit.jupiter.api.Test;
 import tools.Functions;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
@@ -85,7 +86,19 @@ public class PlayerControlerTests extends Functions {
 
         assertEquals(SCORE_INIT , checkScore(PLAYER_RESTART, originalFileTests));
 
-        System.setIn("No");
+        String simulatedInput = "no";
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(simulatedInput.getBytes());
+        System.setIn(inputStream);
+
+        String response = getUserInput();
+    }
+
+    public static String getUserInput() {
+        System.out.print("Por favor, escribe 'si' o 'no': ");
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        String input = scanner.nextLine();
+        scanner.close();
+        return input;
     }
 
 }

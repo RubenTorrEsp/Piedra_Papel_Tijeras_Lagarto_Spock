@@ -94,7 +94,6 @@ public class PlayerControlerTests extends Functions {
     }
 
     public static String getUserInput() {
-        System.out.print("Por favor, escribe 'si' o 'no': ");
         java.util.Scanner scanner = new java.util.Scanner(System.in);
         String input = scanner.nextLine();
         scanner.close();

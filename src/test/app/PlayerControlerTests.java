@@ -84,6 +84,8 @@ public class PlayerControlerTests extends Functions {
         reStartPlayer(Optional.of(PLAYER_RESTART), originalFileTests, temporalFileTests);
 
         assertEquals(SCORE_INIT , checkScore(PLAYER_RESTART, originalFileTests));
+
+        System.setIn("No");
     }
 
 }

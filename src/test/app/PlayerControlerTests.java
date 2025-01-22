@@ -85,18 +85,11 @@ public class PlayerControlerTests extends Functions {
 
         assertEquals(SCORE_INIT , checkScore(PLAYER_RESTART, originalFileTests));
 
-        String simulatedInput = "no";
+        String simulatedInput = "no\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(simulatedInput.getBytes());
         System.setIn(inputStream);
 
-        String response = getUserInput();
-    }
-
-    public static String getUserInput() {
-        java.util.Scanner scanner = new java.util.Scanner(System.in);
-        String input = scanner.nextLine();
-        scanner.close();
-        return input;
+        String response = "No";
     }
 
 }

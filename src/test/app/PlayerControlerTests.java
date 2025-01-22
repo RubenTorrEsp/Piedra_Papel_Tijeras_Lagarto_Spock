@@ -17,8 +17,7 @@ public class PlayerControlerTests extends Functions {
     static File originalFileTests = new File(USER_TEST_FILE);
     static File temporalFileTests = new File(USER_TEST_TEMP);
 
-
-//    TODO: Revision de tests. El comportamiento se queda esperando respuesta
+// TODO: Revision de tests. El comportamiento se queda esperando respuesta
     @Test
     void createPlayer_nonExistentPlayer() throws IOException {
         int expectedPlayers = countPlayersInDB(originalFileTests)+1;
@@ -29,7 +28,7 @@ public class PlayerControlerTests extends Functions {
         assertEquals(expectedPlayers, playersAfterCreation);
     }
 
-    //    TODO: Revision de tests. El comportamiento se queda esperando respuesta
+// TODO: Revision de tests. El comportamiento se queda esperando respuesta
     @Test
     void createPlayer_playerAlreadyInDB() throws IOException {
         int expectedPlayers = countPlayersInDB(originalFileTests);
@@ -40,7 +39,7 @@ public class PlayerControlerTests extends Functions {
         assertEquals(expectedPlayers, playersAfterCreation);
     }
 
-    //    TODO: Revision de tests. El comportamiento se queda esperando respuesta
+// TODO: Revision de tests. El comportamiento se queda esperando respuesta
     @Test
     void modifyPlayer_existentPlayer() throws IOException {
         assertTrue(userExists(PLAYER_MODIFY, originalFileTests));
@@ -56,7 +55,7 @@ public class PlayerControlerTests extends Functions {
         assertTrue(userExists(PLAYER_NEW_NAME, originalFileTests));
     }
 
-    //    TODO: Revision de tests. El comportamiento se queda esperando respuesta
+// TODO: Revision de tests. El comportamiento se queda esperando respuesta
     @Test
     void deletePlayer_playerExistent() throws IOException {
         int startingPlayers = countPlayersInDB(originalFileTests);
@@ -66,7 +65,7 @@ public class PlayerControlerTests extends Functions {
         assertEquals(startingPlayers - 1, countPlayersInDB(originalFileTests));
     }
 
-    //    TODO: Revision de tests. El comportamiento se queda esperando respuesta
+// TODO: Revision de tests. El comportamiento se queda esperando respuesta
     @Test
     void deletePlayer_playerNonExistent() throws IOException {
         int startingPlayers = countPlayersInDB(originalFileTests);
@@ -77,7 +76,7 @@ public class PlayerControlerTests extends Functions {
         assertEquals(startingPlayers, playersAfterDeleting);
     }
 
-    //    TODO: Revision de tests. El comportamiento se queda esperando respuesta
+// TODO: Revision de tests. El comportamiento se queda esperando respuesta
     @Test
     void reiniciarJugador_jugadorExistente() throws IOException {
         assertEquals(SCORE_NEW, checkScore(PLAYER_RESTART, originalFileTests));

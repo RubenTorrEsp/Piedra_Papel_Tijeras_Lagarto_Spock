@@ -83,7 +83,9 @@ public class PlayerControlerTests extends Functions {
 
         reStartPlayer(Optional.of(PLAYER_RESTART), originalFileTests, temporalFileTests);
 
-
+        String simulatedInput = "no\n";
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(simulatedInput.getBytes());
+        System.setIn(inputStream);
 
         assertEquals(SCORE_INIT , checkScore(PLAYER_RESTART, originalFileTests));
     }
